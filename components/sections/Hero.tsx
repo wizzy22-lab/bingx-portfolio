@@ -1,10 +1,10 @@
-const TAGS = ['AI Agents', 'Crypto Trading', 'Decision UX', 'Dark Mode', 'Mobile First'];
+const TAGS = ['AI Agents', 'Crypto Trading', 'Decision UX'];
 
 const META = [
-  { label: 'ROLE', value: 'Product Designer (Lead, end-to-end)' },
+  { label: 'ROLE', value: 'Product Designer' },
   { label: 'SCOPE', value: 'Research · IA · Visual · Prototype · Usability Test' },
-  { label: 'DURATION', value: '8 weeks · Solo case study' },
-  { label: 'TEAM', value: '1 Designer (independent) · Reviewed with 2 PMs' },
+  { label: 'DURATION', value: '8 weeks' },
+  { label: 'TEAM', value: '2 Designer' },
 ];
 
 export default function Hero() {
@@ -13,10 +13,11 @@ export default function Hero() {
       <div className="section-inner">
         <div className="hero">
           <div>
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow">
-              Case Study · Crypto Trading UX
-            </p>
-            <h1 className="ds-display hero__title">BingX AI Master</h1>
+            <h1 className="ds-display hero__title">
+              BingX
+              <br />
+              AI Master
+            </h1>
             <p className="ds-body-lg hero__subtitle">
               Designing a decision structure for AI-driven crypto trading — so first-time
               investors can choose an agent with confidence, not impressions.
@@ -31,7 +32,7 @@ export default function Hero() {
           </div>
           <div
             className="ds-media-placeholder"
-            data-aspect="3/2"
+            data-aspect="4/3"
             role="img"
             aria-label="Final UI mockup — preference setup, agent comparison, and decision flow"
           >

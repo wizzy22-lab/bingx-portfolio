@@ -1,25 +1,23 @@
-import SectionHeader from '@/components/SectionHeader';
-
 const PROBLEMS = [
   {
-    eyebrow: 'PROBLEM 01',
-    title: 'Unclear differences',
-    body: 'Agent cards repeat the same metrics in the same order — nothing visually signals what makes each one distinct.',
+    number: '01.',
+    title: 'Too many Agents',
+    quote: 'I had to compare too many Agents at once.',
   },
   {
-    eyebrow: 'PROBLEM 02',
-    title: 'No decision criteria',
-    body: 'Users have no framework for what "good" looks like, so they default to whichever number is biggest.',
+    number: '02.',
+    title: 'Unclear AI Flow',
+    quote: "It wasn't obvious why I had to chat with an Agent.",
   },
   {
-    eyebrow: 'PROBLEM 03',
-    title: 'Information overload',
-    body: 'Every card pushes returns, drawdown, sharpe, and trade count — all weighted equally, all at once.',
+    number: '03.',
+    title: 'Unfamiliar AI UX',
+    quote: 'An AI-Agent-based investing system was hard to grasp.',
   },
   {
-    eyebrow: 'PROBLEM 04',
-    title: 'Impression-based choice',
-    body: 'When comparison fails, people pick by name, color, or position in the list.',
+    number: '04.',
+    title: 'Hard to compare strategies',
+    quote: "Strategy differences weren't quick to understand.",
   },
 ];
 
@@ -27,44 +25,26 @@ export default function BeforeExperience() {
   return (
     <section id="problem" className="section">
       <div className="section-inner">
-        <SectionHeader
-          eyebrow="Before · Current Experience"
-          title="Users could see every agent. They still couldn't pick one."
-        />
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
+          [ 02 — Current Experience ]
+        </p>
+        <h2 className="ds-h2 experience__title">
+          Users tried to explore,
+          <br />
+          but couldn&apos;t decide how to begin.
+        </h2>
 
-        <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-16)' }}>
-          <div
-            className="ds-media-placeholder"
-            data-aspect="16/9"
-            role="img"
-            aria-label="Existing BingX AI Master agent list screenshot"
-          >
-            <span className="ds-media-placeholder__label">Existing UI · Agent List</span>
-            <span className="ds-media-placeholder__meta">Captured before redesign</span>
-          </div>
-          <figcaption className="ds-media__caption">
-            Existing BingX AI Master agent list — captured before redesign.
-          </figcaption>
-        </figure>
-
-        <div className="ds-impact-grid ds-impact-grid--4col">
+        <div className="experience__grid">
           {PROBLEMS.map((p) => (
-            <article key={p.title} className="ds-insight ds-insight--dark">
-              <p className="ds-insight__eyebrow">{p.eyebrow}</p>
-              <h3 className="ds-insight__title">{p.title}</h3>
-              <p className="ds-insight__body">{p.body}</p>
+            <article key={p.number} className="experience__card">
+              <header className="experience__head">
+                <span className="experience__number">{p.number}</span>
+                <h3 className="experience__title-h3">{p.title}</h3>
+              </header>
+              <blockquote className="experience__quote">{p.quote}</blockquote>
             </article>
           ))}
         </div>
-
-        <blockquote
-          className="ds-pull-quote ds-pull-quote--dark"
-          style={{ marginTop: 'var(--space-16)' }}
-        >
-          <p className="ds-pull-quote__quote">
-            Exposure is not selection. Showing more agents didn't help users choose one.
-          </p>
-        </blockquote>
       </div>
     </section>
   );

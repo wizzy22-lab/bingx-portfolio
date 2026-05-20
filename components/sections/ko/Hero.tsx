@@ -1,10 +1,10 @@
-const TAGS = ['AI 에이전트', '암호화폐 트레이딩', '의사결정 UX', '다크 모드', '모바일 퍼스트'];
+const TAGS = ['AI 에이전트', '암호화폐 트레이딩', '의사결정 UX'];
 
 const META = [
-  { label: '역할', value: '프로덕트 디자이너 (리드 · 엔드-투-엔드)' },
+  { label: '역할', value: '프로덕트 디자이너' },
   { label: '범위', value: '리서치 · IA · 비주얼 · 프로토타입 · 사용성 테스트' },
-  { label: '기간', value: '8주 · 개인 케이스 스터디' },
-  { label: '팀', value: '디자이너 1명 · PM 2명 리뷰' },
+  { label: '기간', value: '8주' },
+  { label: '팀', value: '디자이너 2명' },
 ];
 
 export default function Hero() {
@@ -13,13 +13,14 @@ export default function Hero() {
       <div className="section-inner">
         <div className="hero">
           <div>
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow">
-              케이스 스터디 · 암호화폐 트레이딩 UX
-            </p>
-            <h1 className="ds-display hero__title">BingX AI 마스터</h1>
+            <h1 className="ds-display hero__title">
+              BingX
+              <br />
+              AI Master
+            </h1>
             <p className="ds-body-lg hero__subtitle">
-              AI 기반 암호화폐 트레이딩의 의사결정 구조 설계 — 처음 투자하는 사용자가 인상이
-              아닌 확신으로 에이전트를 선택할 수 있도록.
+              세계적인 투자거장들의 철학을 기반으로 한 AI Agent를 사용자가 더 명확하게
+              비교하고 선택할 수 있도록 의사결정 흐름 중심으로 재설계한 프로젝트
             </p>
             <div className="hero__tags">
               {TAGS.map((tag) => (
@@ -31,7 +32,7 @@ export default function Hero() {
           </div>
           <div
             className="ds-media-placeholder"
-            data-aspect="3/2"
+            data-aspect="4/3"
             role="img"
             aria-label="최종 UI 목업 — 선호도 설정, 에이전트 비교, 의사결정 플로우"
           >

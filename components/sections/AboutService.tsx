@@ -1,20 +1,19 @@
-import SectionHeader from '@/components/SectionHeader';
-
-const AGENTS = [
+const CRITERIA = [
   {
-    eyebrow: 'AGENT 01',
-    title: 'Buffett Style',
-    body: 'Value-led. Holds positions through volatility and buys conviction over momentum.',
+    title: '01. Investment Style',
+    body: 'Conservative investing\nVS\nAggressive investing for higher returns',
   },
   {
-    eyebrow: 'AGENT 02',
-    title: 'Aggressive Trader',
-    body: 'High-frequency. Captures short-term swings with tight stop-losses and rapid rotation.',
+    title: '02. Risk Threshold',
+    body: 'The level of risk one is willing\nto accept when investing',
   },
   {
-    eyebrow: 'AGENT 03',
-    title: 'Long-Term Investor',
-    body: 'Patience over noise. Builds positions over weeks; ignores intraday signal.',
+    title: '03. Market Interpretation',
+    body: 'How investment information is\nunderstood and judged',
+  },
+  {
+    title: '04. Trading Strategy',
+    body: 'The method of deciding\nwhen to buy and when to sell',
   },
 ];
 
@@ -22,23 +21,42 @@ export default function AboutService() {
   return (
     <section id="about" className="section">
       <div className="section-inner">
-        <SectionHeader
-          eyebrow="About the Service"
-          title="Philosophy-based trading agents, made approachable."
-          lede="BingX AI Master lets users delegate crypto trades to AI agents — each one built around a distinct investment philosophy. Instead of tuning indicators or writing scripts, a user picks an agent whose mindset matches their own risk appetite and timeframe."
-        />
-        <div
-          className="ds-impact-grid ds-impact-grid--3col-pattern"
-          style={{ marginTop: 'var(--space-12)' }}
-        >
-          {AGENTS.map((agent) => (
-            <article key={agent.title} className="ds-insight">
-              <p className="ds-insight__eyebrow">{agent.eyebrow}</p>
-              <h3 className="ds-insight__title">{agent.title}</h3>
-              <p className="ds-insight__body">{agent.body}</p>
-            </article>
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
+          [ 01 — About Service ]
+        </p>
+        <h2 className="ds-h2 about__title">
+          An AI investment agent service
+          <br />
+          built on world-class trading philosophies
+        </h2>
+        <p className="ds-body about__lede">
+          AI Master is an AI trading service that lets users choose between different AI
+          Agents — each grounded in the investment philosophy and strategy of renowned
+          investors.
+        </p>
+
+        <p className="ds-body about__intro">Each Agent is</p>
+
+        <div className="about__grid">
+          {CRITERIA.map((c) => (
+            <div key={c.title} className="about__criterion">
+              <div className="about__icon" aria-hidden />
+              <article className="about__card">
+                <h3 className="about__card-title">{c.title}</h3>
+                <p className="about__card-body">{c.body}</p>
+              </article>
+            </div>
           ))}
         </div>
+
+        <p className="ds-body about__closing">
+          designed differently across these dimensions —
+          <br />
+          users had to choose a MASTER that matched their own investment style
+        </p>
+        <p className="about__final">
+          In other words, users had to choose which investment philosophy to follow.
+        </p>
       </div>
     </section>
   );

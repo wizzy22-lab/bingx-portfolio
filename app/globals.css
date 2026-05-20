@@ -51,24 +51,29 @@ section[id] {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-12);
-  align-items: center;
+  align-items: start;
+  margin-bottom: var(--space-20);
 }
 
-.hero__title {
-  margin: 0 0 var(--space-6) 0;
+.hero__title,
+.ds-kr .hero__title.ds-display {
+  margin: 0 0 var(--space-10) 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-display-size);
+  line-height: var(--text-display-line-height);
+  letter-spacing: var(--text-display-letter-spacing);
 }
 
 .hero__subtitle {
   color: var(--text-secondary);
   margin: 0 0 var(--space-10) 0;
-  max-width: 540px;
+  max-width: 420px;
 }
 
 .hero__tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
-  margin-bottom: var(--space-12);
 }
 
 .hero__meta {
@@ -76,11 +81,10 @@ section[id] {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-6);
   padding-top: var(--space-8);
-  border-top: var(--border-thin) solid var(--border-hairline);
 }
 
 .hero__meta-row .ds-eyebrow {
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 
 .hero__meta-row p {
@@ -90,11 +94,213 @@ section[id] {
 
 @media (min-width: 768px) {
   .hero {
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: var(--space-16);
+    margin-bottom: var(--space-30);
   }
   .hero__meta {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* About service — 4-criteria layout (Figma 8:36) */
+.about__eyebrow {
+  display: block;
+}
+
+.about__title {
+  margin: var(--space-4) 0 0 0;
+  max-width: 720px;
+}
+
+.about__lede {
+  color: var(--text-secondary);
+  margin: var(--space-6) 0 0 0;
+  max-width: 720px;
+}
+
+.about__intro {
+  color: var(--text-secondary);
+  text-align: center;
+  margin: var(--space-20) 0 var(--space-6) 0;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+.about__criterion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.about__icon {
+  width: 120px;
+  height: 120px;
+  background: var(--bg-muted);
+  border-radius: var(--radius-card);
+  flex-shrink: 0;
+}
+
+.about__card {
+  width: 100%;
+  background: var(--bg-surface);
+  border-radius: var(--radius-card-lg);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  min-height: 180px;
+  justify-content: center;
+}
+
+.about__card-title {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.about__card-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-line-height);
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.about__closing {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: var(--space-20) auto 0 auto;
+  max-width: 640px;
+}
+
+.about__final {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  margin: var(--space-8) 0 0 0;
+}
+
+@media (min-width: 768px) {
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-10);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+.ds-kr .about__card-title,
+.ds-kr .about__card-body,
+.ds-kr .about__intro,
+.ds-kr .about__closing,
+.ds-kr .about__final,
+.ds-kr .about__lede {
+  font-family: var(--font-kr);
+}
+
+/* Current Experience — 2x2 problem cards (Figma 13:67) */
+.experience__eyebrow {
+  display: block;
+}
+
+.experience__title {
+  margin: var(--space-4) 0 var(--space-12) 0;
+  max-width: 720px;
+}
+
+.experience__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.experience__card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-card);
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  min-height: 240px;
+}
+
+.experience__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.experience__number {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-sig-48-size);
+  line-height: var(--text-sig-48-line-height);
+  letter-spacing: var(--text-sig-48-letter-spacing);
+  font-weight: var(--text-sig-48-weight);
+  color: var(--accent-yellow);
+  flex-shrink: 0;
+}
+
+.experience__title-h3 {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.experience__quote {
+  font-family: var(--font-kr);
+  font-size: 18px;
+  line-height: 29.7px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0;
+  padding-left: var(--space-4);
+  border-left: var(--border-thick) solid var(--accent-yellow);
+}
+
+@media (min-width: 768px) {
+  .experience__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .experience__title-h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  .experience__number {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+  .experience__card {
+    padding: var(--space-8) var(--space-6);
   }
 }
 
