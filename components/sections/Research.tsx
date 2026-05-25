@@ -61,87 +61,6 @@ const INSIGHT_GROUPS = [
   },
 ];
 
-const CRITERIA = [
-  {
-    eyebrow: 'EVALUATION 01',
-    text: 'Does the product help a user compare options?',
-  },
-  {
-    eyebrow: 'EVALUATION 02',
-    text: 'Does it offer a decision structure, not just data?',
-  },
-  {
-    eyebrow: 'EVALUATION 03',
-    text: 'Does it explain why an agent acted, not just what it did?',
-  },
-];
-
-const COMPARE_ROWS = [
-  ['Onboarding asks for risk profile', 'Yes — multi-step questionnaire', 'No'],
-  ['Side-by-side agent comparison', 'Limited (2 portfolios)', 'Not supported'],
-  ['Performance is contextualized', 'Benchmarked vs S&P/index', 'Raw % only'],
-  ['Decision rationale exposed', 'Strategy doc per portfolio', 'Indicator list only'],
-];
-
-const EMPATHY = [
-  { label: 'THINK', body: '"Which of these will actually make money for me?"', variant: '' },
-  {
-    label: 'FEEL',
-    body: 'Excited about AI, anxious about losing money on the wrong choice.',
-    variant: ' ds-insight--yellow',
-  },
-  {
-    label: 'SAY',
-    body: '"Just tell me which one is right for someone like me."',
-    variant: ' ds-insight--dark',
-  },
-  {
-    label: 'DO',
-    body: 'Scrolls the list three times, opens two detail pages, picks neither.',
-    variant: '',
-  },
-];
-
-const JOURNEY_IMPLICATIONS = [
-  'The compare step is where the experience breaks, not where it ends.',
-  'Adding more agents would deepen the drop, not soften it.',
-  'The redesign needs to insert a structure at "Compare," not before it.',
-];
-
-function SubsectionHeader({
-  eyebrow,
-  title,
-  lede,
-}: {
-  eyebrow: string;
-  title: string;
-  lede?: string;
-}) {
-  return (
-    <header style={{ marginBottom: 'var(--space-12)' }}>
-      <p className="ds-eyebrow ds-eyebrow--accent-blue">{eyebrow}</p>
-      <h3
-        className="ds-h2"
-        style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '820px' }}
-      >
-        {title}
-      </h3>
-      {lede && (
-        <p
-          className="ds-body-lg"
-          style={{
-            color: 'var(--text-secondary)',
-            margin: 'var(--space-6) 0 0 0',
-            maxWidth: '720px',
-          }}
-        >
-          {lede}
-        </p>
-      )}
-    </header>
-  );
-}
-
 export default function Research() {
   return (
     <section id="research" className="section">
@@ -339,86 +258,49 @@ export default function Research() {
           </p>
         </div>
 
-        {/* 05-5 Competitive Analysis */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.5 · Research · Competitive"
-            title="Where AI Master sits today, and where it could sit instead."
-          />
-          <ul className="ds-criteria-list">
-            {CRITERIA.map((c) => (
-              <li key={c.eyebrow} className="ds-criteria-list__item">
-                <span className="ds-criteria-list__dot" aria-hidden="true" />
-                <p className="ds-criteria-list__eyebrow">{c.eyebrow}</p>
-                <p className="ds-criteria-list__text">{c.text}</p>
-              </li>
-            ))}
-          </ul>
-          <table className="compare-table" aria-label="Competitive comparison">
-            <thead>
-              <tr>
-                <th scope="col">Criterion</th>
-                <th scope="col">Typical Robo-Advisor</th>
-                <th scope="col">BingX AI Master · Today</th>
-              </tr>
-            </thead>
-            <tbody>
-              {COMPARE_ROWS.map((row, i) => (
-                <tr key={i}>
-                  <td>{row[0]}</td>
-                  <td>{row[1]}</td>
-                  <td>{row[2]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {/* 06 Competitor Research (Figma 147:74) */}
+        <div className="research-competitor">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
+            [ 06 — Competitor research]
+          </p>
+          <h2 className="ds-h2 research-competitor__title">
+            Other Investment Services Guided
+            <br />
+            <span className="research-competitor__highlight">Decisions Step-by-Step</span>, but
+            AI Master Did Not
+          </h2>
 
-        {/* 05-6 Empathy Map */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.6 · Research · Empathy Map"
-            title="Inside the head of a first-time user choosing an agent."
-          />
-          <div className="ds-impact-grid ds-impact-grid--4col">
-            {EMPATHY.map((q) => (
-              <article key={q.label} className={`ds-insight${q.variant}`}>
-                <p className="ds-insight__eyebrow">{q.label}</p>
-                <p className="ds-insight__body" style={{ marginTop: 'var(--space-4)' }}>
-                  {q.body}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
+          <div className="research-competitor__layout">
+            <figure className="research-competitor__figure">
+              <div className="research-competitor__img" aria-hidden />
+              <figcaption className="research-competitor__caption">
+                [Comparing Decision Frameworks Across Investment Platforms
+                <br />
+                Source : Carmignac · Robo-advisor · Fund Service Interfaces]
+              </figcaption>
+            </figure>
 
-        {/* 05-7 Journey Map */}
-        <div>
-          <SubsectionHeader
-            eyebrow="05.7 · Research · Journey"
-            title="Confidence drops exactly where comparison should begin."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
-              data-aspect="16/9"
-              role="img"
-              aria-label="User journey map"
-            >
-              <span className="ds-media-placeholder__label">Journey Map · Emotion Curve</span>
-              <span className="ds-media-placeholder__meta">
-                Discover → Browse → Compare → Decide → Activate
-              </span>
+            <div className="research-competitor__copy">
+              <p>
+                Robo-advisors and fund platforms guided users step by step through investment
+                preferences, option comparisons, and final decision-making flows. They were
+                also designed around clear decision criteria such as expected returns, risk
+                levels, and investment periods, helping users make choices with greater
+                confidence.
+              </p>
+              <p>
+                In contrast, AI Master presented strategies through investor personas, without
+                clearly connecting comparison criteria to the recommendation flow. As a result,
+                users relied more on impressions such as imagery and atmosphere rather than
+                making logical strategy comparisons.
+              </p>
+              <p>
+                However, once real money became involved, this unclear decision structure
+                quickly turned into anxiety, causing many users to drop off before reaching the
+                final decision stage.
+              </p>
             </div>
-            <figcaption className="ds-media__caption">
-              Emotional journey across Discover → Browse → Compare → Decide → Activate.
-            </figcaption>
-          </figure>
-          <ul className="ds-research-finding__implication-list">
-            {JOURNEY_IMPLICATIONS.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>
