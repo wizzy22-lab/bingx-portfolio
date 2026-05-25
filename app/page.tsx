@@ -1,7 +1,6 @@
 import Hero from '@/components/sections/Hero';
 import AboutService from '@/components/sections/AboutService';
 import BeforeExperience from '@/components/sections/BeforeExperience';
-import Problem from '@/components/sections/Problem';
 import Research from '@/components/sections/Research';
 import Define from '@/components/sections/Define';
 import SolutionDirection from '@/components/sections/SolutionDirection';
@@ -25,7 +24,6 @@ export default function Home() {
       <AboutService />
       <Rule />
       <BeforeExperience />
-      <Problem />
       <Rule />
       <Research />
       <Rule />

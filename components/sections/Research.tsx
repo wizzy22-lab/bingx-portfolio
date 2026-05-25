@@ -1,51 +1,63 @@
-const PATTERNS = [
+const REVIEWS = [
   {
-    eyebrow: 'PATTERN 01',
-    title: 'Performance is not strategy',
-    body: "Users see APY but can't tell what bet the agent is making.",
+    initial: '',
+    name: 'prithvisimi',
+    date: 'Jan 7',
+    stars: 2,
+    text: 'use to difficult not good interface',
   },
   {
-    eyebrow: 'PATTERN 02',
-    title: 'Time horizon is invisible',
-    body: '"Aggressive" and "Conservative" labels mean nothing without a holding period.',
-  },
-  {
-    eyebrow: 'PATTERN 03',
-    title: 'Trust comes from explanation, not numbers',
-    body: 'Users want to know why an agent did what it did, not just that it worked.',
-  },
-];
-
-const QUOTES = [
-  {
-    quote: '"I just picked the one with the highest number. I didn\'t know what else to look at."',
-    attribution: 'P02 · 28 · first-time crypto user',
-  },
-  {
-    quote: '"The names sound like personalities, but the cards all read the same."',
-    attribution: 'P04 · 33 · casual trader',
-  },
-  {
-    quote: '"I\'d rather be told which one fits me than guess from twelve."',
-    attribution: 'P05 · 41 · ex-stocks investor',
+    initial: 'K',
+    name: 'kushalkumbhakar8',
+    date: 'Feb 2',
+    stars: 1,
+    text: "The interface feels too complex and hard to use. It's difficult to understand what to do.",
   },
 ];
 
-const CLUSTERS = [
+const SURVEY_STATS = [
   {
-    eyebrow: 'CLUSTER 01',
-    title: 'Comparison is the bottleneck',
-    body: "Users don't lack agents; they lack a way to compare them.",
+    value: '43.5',
+    text: 'Many users were not even aware that AI features existed in the service.',
   },
   {
-    eyebrow: 'CLUSTER 02',
-    title: 'Confidence is built before action',
-    body: 'Trust forms during selection, not after activation.',
+    value: '70',
+    text: 'Users expected AI to support decision-making rather than fully automate investment profits.',
   },
   {
-    eyebrow: 'CLUSTER 03',
-    title: 'Numbers without context are noise',
-    body: 'Returns and drawdown only become useful once a baseline is given.',
+    value: '76.9',
+    text: 'Users showed willingness to use the service if the explanations were clearer.',
+  },
+];
+
+const INSIGHT_GROUPS = [
+  {
+    variant: 'beginner',
+    title: 'Beginner Users',
+    cards: [
+      {
+        title: 'Information Overload · Structural Confusion',
+        body: 'Beginner users struggled to quickly identify where important information and features were located. The complex structure and inconsistent flows were increasing navigation fatigue and leading users to drop off during the experience.',
+      },
+      {
+        title: 'Limited Understanding of AI Features',
+        body: "Beginner users struggled to understand how the AI generated recommendations and made decisions. As the reasoning behind the recommendations and the AI's responsibility boundaries became less clear, users increasingly felt that they had no control over the outcome.",
+      },
+    ],
+  },
+  {
+    variant: 'advanced',
+    title: 'Advanced Users',
+    cards: [
+      {
+        title: 'Low Need for AI Automation',
+        body: 'Advanced users already had their own trading principles and rhythms. They valued the process of reading the market and making decisions themselves, and often perceived AI automation as something that reduced their sense of engagement in trading.',
+      },
+      {
+        title: 'Trust and Speed-Oriented Trading Environment',
+        body: 'Advanced users were highly sensitive to factors such as execution speed, system stability, and the reliability of the trading environment. Because even small errors could directly impact financial outcomes, trust in the platform itself became a critical part of the trading experience.',
+      },
+    ],
   },
 ];
 
@@ -145,138 +157,186 @@ export default function Research() {
           />
         </header>
 
-        {/* 05-1 Secondary Research */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.1 · Research · Secondary"
-            title="What people say when no one's helping them choose."
-            lede="Reddit, Discord, and YouTube comments from r/CryptoCurrency and BingX community threads (n ≈ 120 posts) surfaced three repeating shapes of complaint."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
-              data-aspect="16/9"
-              role="img"
-              aria-label="Community comment samples"
-            >
-              <span className="ds-media-placeholder__label">Community Comments</span>
-              <span className="ds-media-placeholder__meta">Reddit · Discord · YouTube</span>
+        {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
+        <div className="research-community">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
+            [ 03.1 — secondary research - Community source]
+          </p>
+          <h2 className="ds-h2 research-community__title">
+            Community Reactions Revealed Repeated Patterns of Confusion
+          </h2>
+
+          <div className="research-community__layout">
+            <figure className="research-community__collage">
+              <div className="research-community__collage-img" aria-hidden />
+              <figcaption className="research-community__collage-caption">
+                [Community Reactions - Reddit · Google Reviews · App Store Reviews]
+              </figcaption>
+            </figure>
+
+            <div className="research-community__cards">
+              {REVIEWS.map((r) => (
+                <article key={r.name} className="review-card">
+                  <header className="review-card__head">
+                    <div className="review-card__avatar" aria-hidden>
+                      {r.initial}
+                    </div>
+                    <div className="review-card__meta">
+                      <span className="review-card__name">{r.name}</span>
+                      <span className="review-card__date">{r.date}</span>
+                    </div>
+                  </header>
+                  <div
+                    className="review-card__stars"
+                    role="img"
+                    aria-label={`${r.stars} out of 5 stars`}
+                  >
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <span
+                        key={n}
+                        className={
+                          n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="review-card__text">{r.text}</p>
+                </article>
+              ))}
             </div>
-            <figcaption className="ds-media__caption">
-              Sampled community comments — September to November.
-            </figcaption>
-          </figure>
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {PATTERNS.map((p) => (
-              <article key={p.title} className="ds-insight ds-insight--dark">
-                <p className="ds-insight__eyebrow">{p.eyebrow}</p>
-                <h4 className="ds-insight__title">{p.title}</h4>
-                <p className="ds-insight__body">{p.body}</p>
+          </div>
+
+          <p className="research-community__closing">
+            Users were struggling to understand how to use the service.
+          </p>
+        </div>
+
+        {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
+        <div className="research-survey">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
+            [ 03.2 — secondary research - Survey]
+          </p>
+          <p className="research-survey__intro">
+            To verify whether these issues were consistently occurring across users, a survey
+            was conducted.
+          </p>
+
+          <div className="research-survey__layout">
+            <figure className="research-survey__collage">
+              <div className="research-survey__collage-img" aria-hidden />
+              <figcaption className="research-survey__collage-caption">
+                [Survey Findings - User Perception of AI Trading Features]
+              </figcaption>
+            </figure>
+
+            <div className="research-survey__stats">
+              {SURVEY_STATS.map((s, i) => (
+                <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
+                  <p className="survey-stat__number">
+                    <span className="survey-stat__value">{s.value}</span>
+                    <span className="survey-stat__suffix">%</span>
+                  </p>
+                  <p className="survey-stat__text">{s.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="research-survey__closing">
+            Rather than rejecting AI itself, users were hesitating to use the feature because
+            they did not fully understand its purpose, usage flow, or how to interpret the
+            results.
+          </p>
+          <p className="research-survey__closing">
+            However, the survey alone was not enough to clearly explain why these reactions
+            were occurring. In particular, it was necessary to understand how users with
+            different levels of trading experience perceived AI Master differently.
+          </p>
+        </div>
+
+        {/* 04 Primary Research — Interview (Figma 133:54) */}
+        <div className="research-primary">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
+            [ 04 — Primary research - interview]
+          </p>
+          <p className="research-primary__intro">
+            Interviews were conducted separately with beginner and advanced users.
+          </p>
+          <div className="research-duo research-duo--interview">
+            <figure className="research-duo__figure">
+              <div className="research-duo__img" aria-hidden />
+              <figcaption className="research-duo__caption">[Beginner users - ]</figcaption>
+            </figure>
+            <figure className="research-duo__figure">
+              <div className="research-duo__img" aria-hidden />
+              <figcaption className="research-duo__caption">[Advance User - ]</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        {/* 05 Analysis (Figma 133:54) */}
+        <div className="research-analysis">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
+            [ 05 — Analysis]
+          </p>
+          <p className="research-analysis__intro">
+            After analyzing the interviews, we found that although users expressed themselves
+            differently, similar emotional and behavioral patterns repeatedly appeared. To
+            better structure these patterns, we categorized user statements and grouped
+            similar contexts together through a color-coding process.
+          </p>
+          <div className="research-duo research-duo--analysis">
+            <figure className="research-duo__figure">
+              <div className="research-duo__img" aria-hidden />
+              <figcaption className="research-duo__caption">[Beginner users]</figcaption>
+            </figure>
+            <figure className="research-duo__figure">
+              <div className="research-duo__img" aria-hidden />
+              <figcaption className="research-duo__caption">[Advance User]</figcaption>
+            </figure>
+          </div>
+          <p className="research-analysis__closing">
+            Through color coding and affinity mapping of the interviews, we found that users
+            perceived AI Master in completely different ways depending on their level of
+            trading experience.
+          </p>
+        </div>
+
+        {/* Insight Section (Figma 139:54) */}
+        <div className="research-insight">
+          <div className="research-insight__groups">
+            {INSIGHT_GROUPS.map((g) => (
+              <article key={g.title} className={`insight-group insight-group--${g.variant}`}>
+                <h3 className="insight-group__title">{g.title}</h3>
+                {g.cards.map((c) => (
+                  <div key={c.title} className="insight-group__card">
+                    <h4 className="insight-group__card-title">{c.title}</h4>
+                    <p className="insight-group__card-body">{c.body}</p>
+                  </div>
+                ))}
               </article>
             ))}
           </div>
-        </div>
 
-        {/* 05-2 Survey */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.2 · Research · Survey (n = 64)"
-            title="Confidence drops before the trade even starts."
-          />
-          <div className="ds-stat-grid">
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">68</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                said they couldn't tell agents apart from the current list view
-              </p>
-            </div>
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">72</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                wanted a "help me choose" step before activating any agent
-              </p>
-            </div>
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">54</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                had abandoned a previous AI trading product mid-onboarding
-              </p>
-            </div>
-          </div>
-          <figure className="ds-media ds-media--full" style={{ marginTop: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
-              data-aspect="16/9"
-              role="img"
-              aria-label="Confidence chart"
-            >
-              <span className="ds-media-placeholder__label">Confidence by Step</span>
-              <span className="ds-media-placeholder__meta">Self-reported, 1–5 scale</span>
-            </div>
-            <figcaption className="ds-media__caption">
-              Self-reported confidence by step, scaled 1–5.
-            </figcaption>
-          </figure>
-        </div>
-
-        {/* 05-3 Interview */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.3 · Research · Interview (n = 6)"
-            title="In their own words."
-          />
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {QUOTES.map((q) => (
-              <blockquote key={q.attribution} className="ds-pull-quote">
-                <p className="ds-pull-quote__quote">{q.quote}</p>
-                <p className="ds-pull-quote__attribution">{q.attribution}</p>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-
-        {/* 05-4 Affinity Mapping */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.4 · Research · Affinity"
-            title="Clustering 140+ observations into three themes."
-            lede="Quotes and behaviors from secondary, survey, and interview data were grouped on a shared board. Three clusters emerged."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
-              data-aspect="16/9"
-              role="img"
-              aria-label="Affinity mapping board"
-            >
-              <span className="ds-media-placeholder__label">Affinity Mapping Board</span>
-              <span className="ds-media-placeholder__meta">140+ sticky notes · 3 clusters</span>
-            </div>
-            <figcaption className="ds-media__caption">
-              Affinity board — sticky-note clustering from research synthesis.
-            </figcaption>
-          </figure>
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {CLUSTERS.map((c) => (
-              <article key={c.title} className="ds-insight ds-insight--dark">
-                <p className="ds-insight__eyebrow">{c.eyebrow}</p>
-                <h4 className="ds-insight__title">{c.title}</h4>
-                <p className="ds-insight__body">{c.body}</p>
-              </article>
-            ))}
-          </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
+            insight
+          </p>
+          <p className="research-insight__closing">
+            As a result, AI Master felt overly complex for beginner users, while failing to
+            provide strong enough motivation for advanced users.
+          </p>
+          <p className="research-insight__closing">
+            In particular, many advanced users simply did not want AI involvement, because they
+            enjoyed the act of trading itself.
+          </p>
+          <p className="research-insight__closing research-insight__closing--lead">
+            Therefore, this project focused on helping beginner users{' '}
+            <span className="research-insight__highlight">
+              more easily understand strategy trading and confidently enter the experience.
+            </span>
+          </p>
         </div>
 
         {/* 05-5 Competitive Analysis */}

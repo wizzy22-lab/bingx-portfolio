@@ -1,19 +1,19 @@
 const CRITERIA = [
   {
-    title: '01. Investment Style',
-    body: 'Conservative investing\nVS\nAggressive investing for higher returns',
+    title: '1.Investment style',
+    body: 'Invest conservatively for stability  vs  invest more aggressively\nfor higher returns.',
   },
   {
-    title: '02. Risk Threshold',
-    body: 'The level of risk one is willing\nto accept when investing',
+    title: '2.Risk Toterance',
+    body: 'A measure of how much risk  you are willing to take when investing.',
   },
   {
-    title: '03. Market Interpretation',
-    body: 'How investment information is\nunderstood and judged',
+    title: '3.Market interpretation',
+    body: 'The way users understand and evaluate investment information when making decisions.',
   },
   {
-    title: '04. Trading Strategy',
-    body: 'The method of deciding\nwhen to buy and when to sell',
+    title: '4.Trading Strategy',
+    body: 'An investment approach that determines  when to buy and when to sell.',
   },
 ];
 
@@ -22,20 +22,19 @@ export default function AboutService() {
     <section id="about" className="section">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
-          [ 01 — About Service ]
+          [ 01 — about Service ]
         </p>
         <h2 className="ds-h2 about__title">
-          An AI investment agent service
-          <br />
-          built on world-class trading philosophies
+          An <span className="about__highlight">AI investment agent service</span>, powered by
+          world-renowned investment philosophies.
         </h2>
-        <p className="ds-body about__lede">
-          AI Master is an AI trading service that lets users choose between different AI
-          Agents — each grounded in the investment philosophy and strategy of renowned
+        <p className="about__lede">
+          AI Master is an AI trading service where users can choose between different AI
+          agents based on the investment philosophies and strategy styles of well-known
           investors.
         </p>
 
-        <p className="ds-body about__intro">Each Agent is</p>
+        <p className="about__intro">Each Agents</p>
 
         <div className="about__grid">
           {CRITERIA.map((c) => (
@@ -49,13 +48,14 @@ export default function AboutService() {
           ))}
         </div>
 
-        <p className="ds-body about__closing">
-          designed differently across these dimensions —
-          <br />
-          users had to choose a MASTER that matched their own investment style
+        <p className="about__closing">
+          Each agent was designed with different approaches,  and users had to choose the
+          MASTER  that best matched their investment style.
         </p>
         <p className="about__final">
-          In other words, users had to choose which investment philosophy to follow.
+          In other words, users had to decide which{' '}
+          <span className="about__highlight">investment philosophy</span> they wanted to
+          follow.
         </p>
       </div>
     </section>

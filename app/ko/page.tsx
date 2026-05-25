@@ -1,7 +1,6 @@
 import Hero from '@/components/sections/ko/Hero';
 import AboutService from '@/components/sections/ko/AboutService';
 import BeforeExperience from '@/components/sections/ko/BeforeExperience';
-import Problem from '@/components/sections/ko/Problem';
 import Research from '@/components/sections/ko/Research';
 import Define from '@/components/sections/ko/Define';
 import SolutionDirection from '@/components/sections/ko/SolutionDirection';
@@ -25,7 +24,6 @@ export default function HomeKo() {
       <AboutService />
       <Rule />
       <BeforeExperience />
-      <Problem />
       <Rule />
       <Research />
       <Rule />

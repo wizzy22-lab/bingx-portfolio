@@ -1,6 +1,7 @@
 :root {
   --font-sans: 'Manrope', -apple-system, system-ui, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Sora', 'Manrope', -apple-system, system-ui, sans-serif;
   --font-kr: 'Pretendard', -apple-system, system-ui, sans-serif;
 
   --text-display-size: 96px;
