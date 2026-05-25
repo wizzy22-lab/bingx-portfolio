@@ -3,6 +3,8 @@ import AboutService from '@/components/sections/AboutService';
 import BeforeExperience from '@/components/sections/BeforeExperience';
 import Research from '@/components/sections/Research';
 import Define from '@/components/sections/Define';
+import FeatureCategorization from '@/components/sections/FeatureCategorization';
+import Iteration from '@/components/sections/Iteration';
 import SolutionDirection from '@/components/sections/SolutionDirection';
 import Ideation from '@/components/sections/Ideation';
 import VisualStrategy from '@/components/sections/VisualStrategy';
@@ -28,6 +30,10 @@ export default function Home() {
       <Research />
       <Rule />
       <Define />
+      <Rule />
+      <FeatureCategorization />
+      <Rule />
+      <Iteration />
       <SolutionDirection />
       <Rule />
       <Ideation />

@@ -1,3 +1,10 @@
+const HMW = [
+  'How might we help beginner users easily understand the current step and the overall trading flow?',
+  'How might we help beginner users start trading with a clear understanding of how the AI features work?',
+  'How might we help users compare strategies and AI recommendations more clearly?',
+  'How might we provide AI features while still helping users maintain a sense of control?',
+];
+
 export default function Define() {
   return (
     <>
@@ -65,6 +72,34 @@ export default function Define() {
           </p>
         </div>
       </aside>
+
+      {/* 07.3 HMW — How Might We question cards (Figma 159:74) */}
+      <section id="define-hmw" className="section define-hmw">
+        <div className="section-inner">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow define-hmw__eyebrow">
+            [ 07.3 — Define - HMW]
+          </p>
+          <h2 className="ds-h2 define-hmw__title">
+            Key Questions for Reducing Beginner Users&rsquo;
+            <br />
+            Confusion, Decision Difficulty, and Anxiety
+          </h2>
+          <p className="define-hmw__intro">
+            Through the problem statement, we identified that beginner users expected AI to feel
+            easier to understand and trust. We then reorganized user feedback through a user
+            story-based approach, which led to four key questions most closely connected to the
+            project direction.
+          </p>
+          <ol className="define-hmw__grid">
+            {HMW.map((q, i) => (
+              <li key={i} className="define-hmw__card">
+                <span className="define-hmw__num">{String(i + 1).padStart(2, '0')}.</span>
+                <p className="define-hmw__q">{q}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
     </>
   );
 }
