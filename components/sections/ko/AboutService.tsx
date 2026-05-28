@@ -22,19 +22,18 @@ const CRITERIA = [
 ];
 
 export default function AboutService() {
-  const { ref, inView } = useInView<HTMLElement>();
+  const { ref, inView } = useInView<HTMLHeadingElement>();
 
   return (
-    <section
-      id="about"
-      ref={ref}
-      className={`section about${inView ? ' is-inview' : ''}`}
-    >
+    <section id="about" className="section">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
           [ 01 — about Service ]
         </p>
-        <h2 className="ds-h2 about__title">
+        <h2
+          ref={ref}
+          className={`ds-h2 about__title${inView ? ' is-revealed' : ''}`}
+        >
           <span className="about__title-mask">
             <span className="about__title-inner">
               세계적인 투자 철학을 기반으로 움직이는 AI 투자 Agent 서비스.
