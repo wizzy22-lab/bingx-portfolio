@@ -1,11 +1,3 @@
-const STAGES = [
-  { head: 'Onboarding', items: ['Identity (KYC)', 'Risk tendency test', 'Investment style test'] },
-  { head: 'Agent choice', items: ['AI Recommendation', 'Marketplace (Options)', 'Agent Performance'] },
-  { head: 'Strategy choice', items: ['Strategy Options', 'Backtesting data', 'Risk parameters'] },
-  { head: 'Invest', items: ['Asset allocation info', 'Setting amount', 'Review & Execute'] },
-  { head: 'Management', items: ['Dashboard', 'Portfolio', 'Auto Rebalancing'] },
-];
-
 export default function InformationArchitecture() {
   return (
     <section id="information-architecture" className="section ia">
@@ -19,27 +11,9 @@ export default function InformationArchitecture() {
         </h2>
 
         <div className="ia__body">
-          {/* Left: Decision Flow IA diagram (Figma 160:1928, 634×357) */}
+          {/* Left: IA diagram image placeholder (Figma 634×357) */}
           <figure className="ia__panel">
-            <div className="ia__diagram">
-              <p className="ia__diagram-title">
-                Decision Flow
-                <br />
-                Information Architecture
-              </p>
-              <div className="ia__columns">
-                {STAGES.map((stage) => (
-                  <div className="ia__column" key={stage.head}>
-                    <div className="ia__node ia__node--head">{stage.head}</div>
-                    {stage.items.map((item) => (
-                      <div className="ia__node" key={item}>
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div className="ia__placeholder" aria-hidden />
             <figcaption className="ia__caption">
               [ Decision Flow Information Architecture ]
             </figcaption>

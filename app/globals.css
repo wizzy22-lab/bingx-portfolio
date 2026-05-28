@@ -1784,62 +1784,24 @@ section[id] {
   gap: 12px;
 }
 
-/* IA diagram — modeled on the Figma panel (634×357); height follows content.
-   container-type lets the inner labels scale with the panel width via cqw. */
-.ia__diagram {
+/* IA diagram image placeholder — Figma panel 634×357 */
+.ia__placeholder {
   width: 100%;
+  aspect-ratio: 634 / 357;
   background: var(--bg-muted);
-  border: 1px solid var(--border-hairline);
+  border: 1px dashed var(--border-default);
   border-radius: 20px;
-  padding: 20px 16px;
-  container-type: inline-size;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
-.ia__diagram-title {
-  margin: 0;
-  text-align: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(11px, 2.9cqw, 18px);
-  line-height: 1.2;
-  letter-spacing: -0.45px;
-  color: var(--text-primary);
-}
-
-.ia__columns {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: clamp(4px, 1.2cqw, 8px);
-  align-content: start;
-}
-
-.ia__column {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(4px, 1.1cqw, 7px);
-}
-
-.ia__node {
-  border: 1px solid var(--border-default);
-  border-radius: 7px;
-  padding: clamp(5px, 1.6cqw, 9px) clamp(4px, 1.2cqw, 8px);
+.ia__placeholder::after {
+  content: 'Image';
   font-family: var(--font-sans);
-  font-size: clamp(7px, 1.6cqw, 10px);
-  line-height: 1.4;
-  letter-spacing: -0.1px;
-  color: var(--text-secondary);
-  background: var(--bg-surface);
-}
-
-.ia__node--head {
-  font-weight: 700;
-  color: var(--text-on-cream);
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
 }
 
 .ia__caption {
