@@ -8,6 +8,7 @@ import Iteration from '@/components/sections/Iteration';
 import Crazy8 from '@/components/sections/Crazy8';
 import InformationArchitecture from '@/components/sections/InformationArchitecture';
 import WireframeDesignSystem from '@/components/sections/WireframeDesignSystem';
+import KeyFeatures from '@/components/sections/KeyFeatures';
 import UserTest from '@/components/sections/UserTest';
 import Reflection from '@/components/sections/Reflection';
 
@@ -37,6 +38,8 @@ export default function Home() {
       <InformationArchitecture />
       <Rule />
       <WireframeDesignSystem />
+      <Rule />
+      <KeyFeatures />
       <Rule />
       <UserTest />
       <Rule />

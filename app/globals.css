@@ -1948,6 +1948,144 @@ section[id] {
   }
 }
 
+/* 09 Key Features — as-is / to-be comparison (Figma 240:79) */
+.kf__eyebrow {
+  display: block;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.kf__title,
+.kf__title.ds-h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 24px 0 0 0;
+  max-width: 560px;
+}
+
+.kf__compare {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.kf__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kf__para {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.kf__lead {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.kf__phone {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.kf__pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 4px 14px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 16.8px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
+}
+
+.kf__pill--accent {
+  color: var(--text-on-cream);
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+/* Phone-screen image placeholders (Figma 240×519 and 300×649) */
+.kf__screen {
+  width: 100%;
+  background: var(--bg-muted);
+  border: 1px dashed var(--border-default);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kf__screen::after {
+  content: 'Image';
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.kf__phone--asis .kf__screen {
+  aspect-ratio: 240 / 519;
+  max-width: 240px;
+}
+
+.kf__phone--tobe .kf__screen {
+  aspect-ratio: 300 / 649;
+  max-width: 300px;
+}
+
+.ds-kr .kf__title,
+.ds-kr .kf__title.ds-h2,
+.ds-kr .kf__para,
+.ds-kr .kf__lead {
+  font-family: var(--font-kr);
+}
+
+@media (min-width: 1024px) {
+  .kf__compare {
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) minmax(160px, 300px) minmax(0, 1fr);
+    gap: var(--space-8);
+    align-items: center;
+  }
+  /* center the two phone mockups so they meet in the middle */
+  .kf__phone--asis {
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: 767px) {
+  .kf__title,
+  .kf__title.ds-h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+}
+
 /* Site navigation */
 .site-nav {
   position: sticky;
