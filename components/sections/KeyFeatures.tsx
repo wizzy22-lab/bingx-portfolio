@@ -84,6 +84,44 @@ export default function KeyFeatures() {
             </div>
           </div>
         </article>
+
+        {/* Feature 3 — Familiar chat (as is → to be) */}
+        <article className="kf__feature">
+          <h2 className="ds-h2 kf__title">Chat Feels Familiar and Easy to Use</h2>
+
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
+              <p className="kf__label">[ PROBLEM ]</p>
+              <p className="kf__para">
+                Users did not understand why they suddenly needed to interact with the AI, and
+                perceived the AI interaction itself as unfamiliar and complicated.
+              </p>
+            </div>
+
+            {/* as is — phone (Figma 240×519) */}
+            <figure className="kf__phone kf__phone--asis">
+              <span className="kf__pill">as is</span>
+              <div className="kf__screen" aria-hidden />
+            </figure>
+
+            {/* to be — phone (Figma 300×649) */}
+            <figure className="kf__phone kf__phone--tobe">
+              <span className="kf__pill kf__pill--accent">to be</span>
+              <div className="kf__screen" aria-hidden />
+            </figure>
+
+            {/* to be — copy */}
+            <div className="kf__copy">
+              <h3 className="kf__lead">Change chat ICON design &amp; Location</h3>
+              <p className="kf__para">
+                Familiar messenger-style interaction patterns were applied, allowing users to
+                interact with the AI naturally without needing to learn a new system.
+              </p>
+              <div className="kf__detail" aria-hidden />
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   );

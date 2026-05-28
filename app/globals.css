@@ -2026,6 +2026,26 @@ section[id] {
   border-radius: 8px;
 }
 
+/* Supporting detail image placeholder (Figma Frame 3089, 369×144) */
+.kf__detail {
+  width: 100%;
+  aspect-ratio: 369 / 144;
+  background: var(--bg-muted);
+  border: 1px dashed var(--border-default);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kf__detail::after {
+  content: 'Image';
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
 .kf__phone {
   margin: 0;
   display: flex;
