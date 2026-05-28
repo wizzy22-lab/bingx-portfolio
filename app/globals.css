@@ -283,12 +283,35 @@ section[id] {
 .about.is-inview .about__criterion:nth-child(3) .about__icon { transition-delay: 0.24s; }
 .about.is-inview .about__criterion:nth-child(4) .about__icon { transition-delay: 0.32s; }
 
+/* Idle float — icons gently bob once revealed, offset so they drift out of sync */
+@keyframes about-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.about.is-inview .about__icon-img {
+  animation: about-float 3.2s var(--ease-in-out) infinite;
+}
+
+.about.is-inview .about__criterion:nth-child(1) .about__icon-img { animation-delay: 0s; }
+.about.is-inview .about__criterion:nth-child(2) .about__icon-img { animation-delay: -0.8s; }
+.about.is-inview .about__criterion:nth-child(3) .about__icon-img { animation-delay: -1.6s; }
+.about.is-inview .about__criterion:nth-child(4) .about__icon-img { animation-delay: -2.4s; }
+
 @media (prefers-reduced-motion: reduce) {
   .about__title,
   .about__icon {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .about__icon-img {
+    animation: none;
   }
   .about__card,
   .about__card:hover {
