@@ -3,10 +3,6 @@ import AboutService from '@/components/sections/ko/AboutService';
 import BeforeExperience from '@/components/sections/ko/BeforeExperience';
 import Research from '@/components/sections/ko/Research';
 import Define from '@/components/sections/ko/Define';
-import VisualStrategy from '@/components/sections/ko/VisualStrategy';
-import IADesign from '@/components/sections/ko/IADesign';
-import KeyFeatures from '@/components/sections/ko/KeyFeatures';
-import FinalDesign from '@/components/sections/ko/FinalDesign';
 import UserTest from '@/components/sections/ko/UserTest';
 import Reflection from '@/components/sections/ko/Reflection';
 
@@ -27,11 +23,6 @@ export default function HomeKo() {
       <Rule />
       <Define />
       <Rule />
-      <VisualStrategy />
-      <IADesign />
-      <KeyFeatures />
-      <Rule />
-      <FinalDesign />
       <UserTest />
       <Rule />
       <Reflection />
