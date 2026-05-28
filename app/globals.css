@@ -2026,16 +2026,23 @@ section[id] {
   border-radius: 8px;
 }
 
-/* Supporting detail image placeholder (Figma Frame 3089, 369×144) */
+/* Supporting detail image placeholders (Figma Frames 3089 369×144, 3094 484×299) */
 .kf__detail {
   width: 100%;
-  aspect-ratio: 369 / 144;
   background: var(--bg-muted);
   border: 1px dashed var(--border-default);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.kf__detail--wide {
+  aspect-ratio: 369 / 144;
+}
+
+.kf__detail--lg {
+  aspect-ratio: 484 / 299;
 }
 
 .kf__detail::after {

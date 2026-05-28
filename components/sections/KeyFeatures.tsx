@@ -118,7 +118,51 @@ export default function KeyFeatures() {
                 Familiar messenger-style interaction patterns were applied, allowing users to
                 interact with the AI naturally without needing to learn a new system.
               </p>
-              <div className="kf__detail" aria-hidden />
+              <div className="kf__detail kf__detail--wide" aria-hidden />
+            </div>
+          </div>
+        </article>
+
+        {/* Feature 4 — Key information & performance flow (as is → to be) */}
+        <article className="kf__feature">
+          <h2 className="ds-h2 kf__title">Key Information &amp; Performance Flow</h2>
+
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
+              <p className="kf__label">[ PROBLEM ]</p>
+              <p className="kf__para">
+                In the original AI Master experience, strategy comparison and performance review
+                were separated, causing frequent screen switching and interruptions in the
+                decision-making flow.
+              </p>
+              <p className="kf__para">
+                Key information was also scattered, making strategy differences difficult to
+                compare quickly.
+              </p>
+            </div>
+
+            {/* as is — phone (Figma 240×519) */}
+            <figure className="kf__phone kf__phone--asis">
+              <span className="kf__pill">as is</span>
+              <div className="kf__screen" aria-hidden />
+            </figure>
+
+            {/* to be — phone (Figma 300×649) */}
+            <figure className="kf__phone kf__phone--tobe">
+              <span className="kf__pill kf__pill--accent">to be</span>
+              <div className="kf__screen" aria-hidden />
+            </figure>
+
+            {/* to be — copy */}
+            <div className="kf__copy">
+              <h3 className="kf__lead">Prioritized Key Information for Strategy Comparison</h3>
+              <h3 className="kf__lead">Performance &amp; Charts Within the Same Flow</h3>
+              <p className="kf__para">
+                As a result, users were able to compare strategies and review performance more
+                smoothly and confidently without unnecessary navigation.
+              </p>
+              <div className="kf__detail kf__detail--lg" aria-hidden />
             </div>
           </div>
         </article>
