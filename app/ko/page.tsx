@@ -3,7 +3,6 @@ import AboutService from '@/components/sections/ko/AboutService';
 import BeforeExperience from '@/components/sections/ko/BeforeExperience';
 import Research from '@/components/sections/ko/Research';
 import Define from '@/components/sections/ko/Define';
-import SolutionDirection from '@/components/sections/ko/SolutionDirection';
 import Ideation from '@/components/sections/ko/Ideation';
 import VisualStrategy from '@/components/sections/ko/VisualStrategy';
 import IADesign from '@/components/sections/ko/IADesign';
@@ -28,7 +27,6 @@ export default function HomeKo() {
       <Research />
       <Rule />
       <Define />
-      <SolutionDirection />
       <Rule />
       <Ideation />
       <Rule />
