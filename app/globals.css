@@ -1776,6 +1776,13 @@ section[id] {
   content: 'Image';
 }
 
+.crazy8__media--filled {
+  display: block;
+  border: none;
+  background: none;
+  object-fit: cover;
+}
+
 .crazy8__caption {
   font-family: var(--font-sans);
   font-size: 12px;

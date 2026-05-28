@@ -21,7 +21,15 @@ export default function Crazy8() {
         <div className="crazy8__panels">
           {/* Left: Crazy 8 sketch video (Figma Frame 118, 634×357) */}
           <figure className="crazy8__panel">
-            <div className="crazy8__media crazy8__media--video" aria-hidden />
+            <video
+              className="crazy8__media crazy8__media--video crazy8__media--filled"
+              src="/videos/crazy-8.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden
+            />
             <figcaption className="crazy8__caption">
               [ Generating Multiple Interaction Ideas Through Crazy 8 ]
             </figcaption>
@@ -29,7 +37,12 @@ export default function Crazy8() {
 
           {/* Right: team voting board image (Figma Frame 117, 634×357) */}
           <figure className="crazy8__panel">
-            <div className="crazy8__media crazy8__media--image" aria-hidden />
+            <img
+              className="crazy8__media crazy8__media--image crazy8__media--filled"
+              src="/images/ideation/crazy-8-vote.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="crazy8__caption">
               [ Exploring Multiple Layout Directions Through Crazy 8s and Team Voting ]
             </figcaption>
