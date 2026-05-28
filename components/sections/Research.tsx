@@ -66,7 +66,7 @@ export default function Research() {
     <section id="research" className="section">
       <div className="section-inner">
         <header style={{ marginBottom: 'var(--space-20)' }}>
-          <p className="ds-eyebrow ds-eyebrow--accent-yellow">Research</p>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research__eyebrow">Research</p>
           <h2 className="ds-h1" style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}>
             Listening before designing — secondary, primary, and competitive.
           </h2>

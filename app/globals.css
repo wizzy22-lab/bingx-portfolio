@@ -2432,6 +2432,35 @@ section[id] {
   }
 }
 
+/* All section eyebrows share one spec (Figma: Manrope / 14 / Medium / 120% /
+   letter-spacing 0 / no uppercase). Centralized to keep every section identical
+   and override the .ds-eyebrow defaults (12px / 14.4px / 1.32px / uppercase). */
+.about__eyebrow,
+.experience__eyebrow,
+.research__eyebrow,
+.research-community__eyebrow,
+.research-survey__eyebrow,
+.research-primary__eyebrow,
+.research-analysis__eyebrow,
+.research-insight__eyebrow,
+.research-competitor__eyebrow,
+.define-sub__eyebrow,
+.define-hmw__eyebrow,
+.featcat__eyebrow,
+.iteration__eyebrow,
+.crazy8__eyebrow,
+.ia__eyebrow,
+.wds__eyebrow,
+.kf__eyebrow,
+.ut__eyebrow,
+.refl__eyebrow {
+  display: block;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 /* Site navigation */
 .site-nav {
   position: sticky;
