@@ -56,7 +56,12 @@ export default function Reflection() {
         </p>
 
         <div className="refl__cta">
-          <a className="refl__link" href="#" target="_blank" rel="noopener noreferrer">
+          <a
+            className="refl__link"
+            href="https://medium.com/@hazzysw/bingx-ai-master-app-revamp-chapter-03-how-anxiety-becomes-structured-5db6fc9ba9a9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Read the full research documentation on Medium →
           </a>
         </div>

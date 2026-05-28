@@ -32,17 +32,12 @@ export default function Hero() {
               ))}
             </div>
           </div>
-          <div
-            className="ds-media-placeholder"
+          <img
+            className="ds-media-placeholder media-fill"
             data-aspect="4/3"
-            role="img"
-            aria-label="Final UI mockup — preference setup, agent comparison, and decision flow"
-          >
-            <span className="ds-media-placeholder__label">Final UI Mockup</span>
-            <span className="ds-media-placeholder__meta">
-              Preference · Comparison · Decision flow
-            </span>
-          </div>
+            src="/images/hero/hero-thumbnail.png"
+            alt="Final UI mockup — preference setup, agent comparison, and decision flow"
+          />
         </div>
         <div className="hero__meta">
           {META.map((row) => (

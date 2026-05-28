@@ -32,17 +32,12 @@ export default function Hero() {
               ))}
             </div>
           </div>
-          <div
-            className="ds-media-placeholder"
+          <img
+            className="ds-media-placeholder media-fill"
             data-aspect="4/3"
-            role="img"
-            aria-label="최종 UI 목업 — 선호도 설정, 에이전트 비교, 의사결정 플로우"
-          >
-            <span className="ds-media-placeholder__label">최종 UI 목업</span>
-            <span className="ds-media-placeholder__meta">
-              선호도 · 비교 · 의사결정 플로우
-            </span>
-          </div>
+            src="/images/hero/hero-thumbnail.png"
+            alt="최종 UI 목업 — 선호도 설정, 에이전트 비교, 의사결정 플로우"
+          />
         </div>
         <div className="hero__meta">
           {META.map((row) => (
