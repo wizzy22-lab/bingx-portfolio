@@ -255,17 +255,19 @@ section[id] {
   font-weight: 700;
 }
 
-/* Scroll reveal — heading enters when the section comes into view */
-.about__title {
-  opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity var(--duration-slow) var(--ease-out),
-    transform var(--duration-slow) var(--ease-out);
+/* Scroll reveal — heading slides up from behind a mask (Cuberto-style line reveal) */
+.about__title-mask {
+  display: block;
+  overflow: hidden;
 }
 
-.about.is-inview .about__title {
-  opacity: 1;
+.about__title-inner {
+  display: block;
+  transform: translateY(105%);
+  transition: transform 0.85s var(--ease-out);
+}
+
+.about.is-inview .about__title-inner {
   transform: none;
 }
 
@@ -290,8 +292,7 @@ section[id] {
 .about.is-inview .about__criterion:nth-child(4) .about__icon-img { animation-delay: -2.4s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .about__title {
-    opacity: 1;
+  .about__title-inner {
     transform: none;
     transition: none;
   }

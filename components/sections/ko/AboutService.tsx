@@ -35,7 +35,11 @@ export default function AboutService() {
           [ 01 — about Service ]
         </p>
         <h2 className="ds-h2 about__title">
-          세계적인 투자 철학을 기반으로 움직이는 AI 투자 Agent 서비스.
+          <span className="about__title-mask">
+            <span className="about__title-inner">
+              세계적인 투자 철학을 기반으로 움직이는 AI 투자 Agent 서비스.
+            </span>
+          </span>
         </h2>
         <p className="about__lede">
           AI Master는 유명 투자자들의 투자 철학과 전략 스타일을 기반으로, 각기 다른 AI
