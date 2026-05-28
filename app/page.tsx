@@ -7,6 +7,7 @@ import FeatureCategorization from '@/components/sections/FeatureCategorization';
 import Iteration from '@/components/sections/Iteration';
 import Crazy8 from '@/components/sections/Crazy8';
 import InformationArchitecture from '@/components/sections/InformationArchitecture';
+import WireframeDesignSystem from '@/components/sections/WireframeDesignSystem';
 import UserTest from '@/components/sections/UserTest';
 import Reflection from '@/components/sections/Reflection';
 
@@ -34,6 +35,8 @@ export default function Home() {
       <Crazy8 />
       <Rule />
       <InformationArchitecture />
+      <Rule />
+      <WireframeDesignSystem />
       <Rule />
       <UserTest />
       <Rule />
