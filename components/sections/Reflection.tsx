@@ -1,9 +1,13 @@
+import RevealHeading from '@/components/RevealHeading';
+
 export default function Reflection() {
   return (
     <section id="reflection" className="section refl">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">[ 11 — Reflection ]</p>
-        <h2 className="ds-h2 refl__title">What I learned in this project</h2>
+        <RevealHeading level="h2" className="ds-h2 refl__title">
+          What I learned in this project
+        </RevealHeading>
 
         <div className="refl__cards">
           <article className="refl__card">

@@ -1,6 +1,4 @@
-'use client';
-
-import { useInView } from '@/lib/useInView';
+import RevealHeading from '@/components/RevealHeading';
 
 const CRITERIA = [
   {
@@ -22,24 +20,15 @@ const CRITERIA = [
 ];
 
 export default function AboutService() {
-  const { ref, inView } = useInView<HTMLHeadingElement>();
-
   return (
     <section id="about" className="section">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
           [ 01 — about Service ]
         </p>
-        <h2
-          ref={ref}
-          className={`ds-h2 about__title${inView ? ' is-revealed' : ''}`}
-        >
-          <span className="about__title-mask">
-            <span className="about__title-inner">
-              세계적인 투자 철학을 기반으로 움직이는 AI 투자 Agent 서비스.
-            </span>
-          </span>
-        </h2>
+        <RevealHeading level="h2" className="ds-h2 about__title">
+          세계적인 투자 철학을 기반으로 움직이는 AI 투자 Agent 서비스.
+        </RevealHeading>
         <p className="about__lede">
           AI Master는 유명 투자자들의 투자 철학과 전략 스타일을 기반으로, 각기 다른 AI
           Agent를 선택해 투자를 진행할 수 있는 AI 트레이딩 서비스입니다.

@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const PROBLEMS = [
   {
     number: '01.',
@@ -33,9 +35,9 @@ export default function BeforeExperience() {
         <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
           [ 02 — Current Experience ]
         </p>
-        <h2 className="ds-h2 experience__title">
+        <RevealHeading level="h2" className="ds-h2 experience__title">
           Users struggled to understand How the AI agents actually worked.
-        </h2>
+        </RevealHeading>
         <p className="experience__lede">
           Users were able to recognize the AI avatars through familiar investor imagery, but
           the service later introduced unfamiliar AI interaction patterns, making the overall

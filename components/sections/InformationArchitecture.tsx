@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 export default function InformationArchitecture() {
   return (
     <section id="information-architecture" className="section ia">
@@ -5,10 +7,10 @@ export default function InformationArchitecture() {
         <p className="ds-eyebrow ds-eyebrow--accent-yellow ia__eyebrow">
           [ 08.4 — Information architecture ]
         </p>
-        <h2 className="ds-h2 ia__title">
+        <RevealHeading level="h2" className="ds-h2 ia__title">
           The information architecture was redesigned around the user&rsquo;s decision-making
           flow.
-        </h2>
+        </RevealHeading>
 
         <div className="ia__body">
           {/* Left: IA diagram image placeholder (Figma 634×357) */}

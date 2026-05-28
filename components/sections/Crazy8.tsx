@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 export default function Crazy8() {
   return (
     <section id="crazy8" className="section crazy8">
@@ -5,9 +7,9 @@ export default function Crazy8() {
         <p className="ds-eyebrow ds-eyebrow--accent-yellow crazy8__eyebrow">
           [ 08.3 — Crazy 8s ]
         </p>
-        <h2 className="ds-h2 crazy8__title">
+        <RevealHeading level="h2" className="ds-h2 crazy8__title">
           We explored multiple layout directions and selected the clearest decision flow.
-        </h2>
+        </RevealHeading>
         <p className="crazy8__intro">
           Through Crazy 8s, we rapidly explored various interaction and layout directions for
           onboarding, agent recommendations, and strategy comparison flows.

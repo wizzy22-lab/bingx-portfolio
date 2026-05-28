@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const UNDERSTAND = [
   'who was currently making the decision',
   'why the AI was taking action',
@@ -16,11 +18,11 @@ export default function Iteration() {
         <p className="ds-eyebrow ds-eyebrow--accent-yellow iteration__eyebrow">
           [ 08.2 — Iteration]
         </p>
-        <h2 className="ds-h2 iteration__title">
+        <RevealHeading level="h2" className="ds-h2 iteration__title">
           The moment users started manually adjusting strategies,
           <br />
           the core identity of AI Master began to lose clarity.
-        </h2>
+        </RevealHeading>
 
         <div className="iteration__body">
           {/* Left: solution-reframing diagram (Figma 634×476) */}

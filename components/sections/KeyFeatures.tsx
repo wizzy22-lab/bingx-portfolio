@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 export default function KeyFeatures() {
   return (
     <section id="key-features" className="section kf">
@@ -6,7 +8,9 @@ export default function KeyFeatures() {
 
         {/* Feature 1 — Personalized Agents (as is → to be) */}
         <article className="kf__feature">
-          <h2 className="ds-h2 kf__title">Personalized Agents based on your preferences</h2>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            Personalized Agents based on your preferences
+          </RevealHeading>
 
           <div className="kf__compare">
             {/* as is — copy */}
@@ -49,7 +53,9 @@ export default function KeyFeatures() {
 
         {/* Feature 2 — Clear next action (to be ← as is, mirrored) */}
         <article className="kf__feature">
-          <h2 className="ds-h2 kf__title">Clear next action to explore strategies</h2>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            Clear next action to explore strategies
+          </RevealHeading>
           <div className="kf__bar" aria-hidden />
 
           <div className="kf__compare">
@@ -87,7 +93,9 @@ export default function KeyFeatures() {
 
         {/* Feature 3 — Familiar chat (as is → to be) */}
         <article className="kf__feature">
-          <h2 className="ds-h2 kf__title">Chat Feels Familiar and Easy to Use</h2>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            Chat Feels Familiar and Easy to Use
+          </RevealHeading>
 
           <div className="kf__compare">
             {/* as is — copy */}
@@ -125,7 +133,9 @@ export default function KeyFeatures() {
 
         {/* Feature 4 — Key information & performance flow (as is → to be) */}
         <article className="kf__feature">
-          <h2 className="ds-h2 kf__title">Key Information &amp; Performance Flow</h2>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            Key Information &amp; Performance Flow
+          </RevealHeading>
 
           <div className="kf__compare">
             {/* as is — copy */}

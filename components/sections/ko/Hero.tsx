@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const TAGS = ['AI 에이전트', '암호화폐 트레이딩', '의사결정 UX'];
 
 const META = [
@@ -13,11 +15,11 @@ export default function Hero() {
       <div className="section-inner">
         <div className="hero">
           <div>
-            <h1 className="ds-display hero__title">
+            <RevealHeading level="h1" className="ds-display hero__title">
               BingX
               <br />
               AI Master
-            </h1>
+            </RevealHeading>
             <p className="ds-body-lg hero__subtitle">
               세계적인 투자거장들의 철학을 기반으로 한 AI Agent를 사용자가 더 명확하게
               비교하고 선택할 수 있도록 의사결정 흐름 중심으로 재설계한 프로젝트

@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 type Props = {
   eyebrow: string;
   title: string;
@@ -11,16 +13,16 @@ export default function SectionHeader({
   lede,
   level = 'h2',
 }: Props) {
-  const TitleTag = level;
   return (
     <header style={{ marginBottom: 'var(--space-16)' }}>
       <p className="ds-eyebrow ds-eyebrow--accent-yellow">{eyebrow}</p>
-      <TitleTag
+      <RevealHeading
+        level={level}
         className={level === 'h1' ? 'ds-h1' : 'ds-h2'}
         style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}
       >
         {title}
-      </TitleTag>
+      </RevealHeading>
       {lede && (
         <p
           className="ds-body-lg"

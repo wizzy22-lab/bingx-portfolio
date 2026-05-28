@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const PROBLEMS = [
   {
     number: '01.',
@@ -29,9 +31,9 @@ export default function BeforeExperience() {
         <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
           [ 02 — Current Experience ]
         </p>
-        <h2 className="ds-h2 experience__title">
+        <RevealHeading level="h2" className="ds-h2 experience__title">
           유저들은 AI 에이전트가 실제로 어떻게 작동하는지 이해하기 어려워했습니다.
-        </h2>
+        </RevealHeading>
         <p className="experience__lede">
           유저들은 익숙한 투자자 이미지를 통해 AI 아바타를 인식할 수 있었지만, 이후 낯선 AI
           인터랙션 패턴이 도입되면서 전체 경험을 이해하기 어려웠습니다.

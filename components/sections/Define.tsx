@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const HMW = [
   'How might we help beginner users easily understand the current step and the overall trading flow?',
   'How might we help beginner users start trading with a clear understanding of how the AI features work?',
@@ -15,11 +17,11 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
             [ 07.1 — Define - Empathy map]
           </p>
-          <h2 className="ds-h2 define-sub__title">
+          <RevealHeading level="h2" className="ds-h2 define-sub__title">
             Users Relied on Impressions
             <br />
             Rather Than Clear Understanding
-          </h2>
+          </RevealHeading>
           <figure className="define-sub__figure">
             <div className="define-sub__img" aria-hidden />
             <figcaption className="define-sub__caption">[empathy mapping]</figcaption>
@@ -41,11 +43,11 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
             [ 07.2 — Define - User journey]
           </p>
-          <h2 className="ds-h2 define-sub__title">
+          <RevealHeading level="h2" className="ds-h2 define-sub__title">
             Users were experiencing even greater
             <br />
             confusion and uncertainty after execution.
-          </h2>
+          </RevealHeading>
           <figure className="define-sub__figure">
             <div className="define-sub__img" aria-hidden />
             <figcaption className="define-sub__caption">[user journey]</figcaption>
@@ -79,11 +81,11 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-hmw__eyebrow">
             [ 07.3 — Define - HMW]
           </p>
-          <h2 className="ds-h2 define-hmw__title">
+          <RevealHeading level="h2" className="ds-h2 define-hmw__title">
             Key Questions for Reducing Beginner Users&rsquo;
             <br />
             Confusion, Decision Difficulty, and Anxiety
-          </h2>
+          </RevealHeading>
           <p className="define-hmw__intro">
             Through the problem statement, we identified that beginner users expected AI to feel
             easier to understand and trust. We then reorganized user feedback through a user

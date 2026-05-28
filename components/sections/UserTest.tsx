@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const WORKED = [
   'The step-by-step flow became easier to understand',
   'Strategy comparison felt clearer and more structured',
@@ -16,11 +18,11 @@ export default function UserTest() {
     <section id="user-test" className="section ut">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
-        <h2 className="ds-h2 ut__title">
+        <RevealHeading level="h2" className="ds-h2 ut__title">
           Users Could Navigate the Decision Flow
           <br />
           More Clearly Than Before
-        </h2>
+        </RevealHeading>
 
         <div className="ut__top">
           {/* Left: usability test visual (Figma 634×476) */}

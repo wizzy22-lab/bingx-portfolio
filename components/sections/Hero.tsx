@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const TAGS = ['AI Agents', 'Crypto Trading', 'Decision UX'];
 
 const META = [
@@ -13,11 +15,11 @@ export default function Hero() {
       <div className="section-inner">
         <div className="hero">
           <div>
-            <h1 className="ds-display hero__title">
+            <RevealHeading level="h1" className="ds-display hero__title">
               BingX
               <br />
               AI Master
-            </h1>
+            </RevealHeading>
             <p className="ds-body-lg hero__subtitle">
               Designing a decision structure for AI-driven crypto trading — so first-time
               investors can choose an agent with confidence, not impressions.

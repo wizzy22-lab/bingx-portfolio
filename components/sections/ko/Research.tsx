@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const PATTERNS = [
   {
     eyebrow: '패턴 01',
@@ -108,12 +110,13 @@ function SubsectionHeader({
   return (
     <header style={{ marginBottom: 'var(--space-12)' }}>
       <p className="ds-eyebrow ds-eyebrow--accent-blue">{eyebrow}</p>
-      <h3
+      <RevealHeading
+        level="h3"
         className="ds-h2"
         style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '820px' }}
       >
         {title}
-      </h3>
+      </RevealHeading>
       {lede && (
         <p
           className="ds-body-lg"
@@ -136,9 +139,13 @@ export default function Research() {
       <div className="section-inner">
         <header style={{ marginBottom: 'var(--space-20)' }}>
           <p className="ds-eyebrow ds-eyebrow--accent-yellow">리서치</p>
-          <h2 className="ds-h1" style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}>
+          <RevealHeading
+            level="h2"
+            className="ds-h1"
+            style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}
+          >
             디자인 전에 듣기 — 2차·1차·경쟁사 리서치.
-          </h2>
+          </RevealHeading>
           <hr
             className="ds-divider ds-divider--accent-yellow"
             style={{ marginTop: 'var(--space-10)' }}

@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const REVIEWS = [
   {
     initial: '',
@@ -67,9 +69,13 @@ export default function Research() {
       <div className="section-inner">
         <header style={{ marginBottom: 'var(--space-20)' }}>
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research__eyebrow">Research</p>
-          <h2 className="ds-h1" style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}>
+          <RevealHeading
+            level="h2"
+            className="ds-h1"
+            style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}
+          >
             Listening before designing — secondary, primary, and competitive.
-          </h2>
+          </RevealHeading>
           <hr
             className="ds-divider ds-divider--accent-yellow"
             style={{ marginTop: 'var(--space-10)' }}
@@ -81,9 +87,9 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
             [ 03.1 — secondary research - Community source]
           </p>
-          <h2 className="ds-h2 research-community__title">
+          <RevealHeading level="h2" className="ds-h2 research-community__title">
             Community Reactions Revealed Repeated Patterns of Confusion
-          </h2>
+          </RevealHeading>
 
           <div className="research-community__layout">
             <figure className="research-community__collage">
@@ -263,12 +269,12 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
             [ 06 — Competitor research]
           </p>
-          <h2 className="ds-h2 research-competitor__title">
+          <RevealHeading level="h2" className="ds-h2 research-competitor__title">
             Other Investment Services Guided
             <br />
             <span className="research-competitor__highlight">Decisions Step-by-Step</span>, but
             AI Master Did Not
-          </h2>
+          </RevealHeading>
 
           <div className="research-competitor__layout">
             <figure className="research-competitor__figure">

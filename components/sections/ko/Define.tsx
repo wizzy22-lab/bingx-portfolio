@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const CARDS = [
   {
     eyebrow: '기존 경험',
@@ -21,12 +23,13 @@ export default function Define() {
     <section id="define" className="section">
       <div className="section-inner" style={{ textAlign: 'center' }}>
         <p className="ds-eyebrow ds-eyebrow--accent-yellow">정의</p>
-        <h2
+        <RevealHeading
+          level="h2"
           className="ds-display"
           style={{ margin: 'var(--space-6) auto 0', maxWidth: '1100px' }}
         >
           문제는 AI에 대한 이해가 아니라, 의사결정 구조의 부재였다.
-        </h2>
+        </RevealHeading>
         <p
           className="ds-body-lg"
           style={{

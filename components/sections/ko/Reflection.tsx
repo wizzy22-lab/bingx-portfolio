@@ -1,3 +1,5 @@
+import RevealHeading from '@/components/RevealHeading';
+
 const PARAGRAPHS = [
   '이 프로젝트에서 가장 어려웠던 것은 AI가 아니었다 — 12개의 선택지 앞에서 한 사람이 하나를 골라야 하는 순간이었다. 알고리즘은 얼마든지 많은 에이전트를 만들어낼 수 있다. 디자인의 일은, 사람이 그들 사이에서 선택할 방법을 만드는 것이다.',
   '리디자인의 모든 결정은 같은 방식으로 작동했다: 선택만 남을 때까지 화면에서 빼는 것. 12개의 지표 대신 세 가지 질문. 스크롤 대신 나란히 비교. 수익률 대신 추론.',
@@ -15,12 +17,13 @@ export default function Reflection() {
     <section id="reflection" className="section">
       <div className="section-inner" style={{ textAlign: 'center' }}>
         <p className="ds-eyebrow ds-eyebrow--accent-yellow">회고</p>
-        <h2
+        <RevealHeading
+          level="h2"
           className="ds-display"
           style={{ margin: 'var(--space-6) auto 0', maxWidth: '1100px' }}
         >
           AI를 디자인하는 것은, 의사결정을 디자인하는 것이다.
-        </h2>
+        </RevealHeading>
         <hr
           className="ds-divider ds-divider--accent-yellow"
           style={{ margin: 'var(--space-16) auto 0', maxWidth: '120px' }}
