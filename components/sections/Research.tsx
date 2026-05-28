@@ -155,7 +155,12 @@ export default function Research() {
 
           <div className="research-survey__layout">
             <figure className="research-survey__collage">
-              <div className="research-survey__collage-img" aria-hidden />
+              <img
+                className="research-survey__collage-img media-fill"
+                src="/images/research/survey.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-survey__collage-caption">
                 [Survey Findings - User Perception of AI Trading Features]
               </figcaption>

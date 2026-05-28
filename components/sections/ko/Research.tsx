@@ -221,15 +221,13 @@ export default function Research() {
             </div>
           </div>
           <figure className="ds-media ds-media--full" style={{ marginTop: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
+            <img
+              className="ds-media-placeholder media-fill"
               data-aspect="16/9"
-              role="img"
-              aria-label="확신도 차트"
-            >
-              <span className="ds-media-placeholder__label">단계별 확신도</span>
-              <span className="ds-media-placeholder__meta">자가응답, 1–5 척도</span>
-            </div>
+              src="/images/research/survey.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="ds-media__caption">
               단계별 자가응답 확신도, 1–5 척도.
             </figcaption>
