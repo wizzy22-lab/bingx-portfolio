@@ -5,7 +5,6 @@ import Research from '@/components/sections/Research';
 import Define from '@/components/sections/Define';
 import FeatureCategorization from '@/components/sections/FeatureCategorization';
 import Iteration from '@/components/sections/Iteration';
-import Ideation from '@/components/sections/Ideation';
 import VisualStrategy from '@/components/sections/VisualStrategy';
 import IADesign from '@/components/sections/IADesign';
 import KeyFeatures from '@/components/sections/KeyFeatures';
@@ -33,8 +32,6 @@ export default function Home() {
       <FeatureCategorization />
       <Rule />
       <Iteration />
-      <Rule />
-      <Ideation />
       <Rule />
       <VisualStrategy />
       <IADesign />
