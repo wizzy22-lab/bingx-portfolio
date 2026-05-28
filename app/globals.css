@@ -106,7 +106,10 @@ section[id] {
 /* About service — 4-criteria layout (Figma 39:274) */
 .about__eyebrow {
   display: block;
+  font-size: 14px;
+  line-height: 16.8px;
   letter-spacing: 0;
+  text-transform: none;
 }
 
 .about__title,
