@@ -1644,6 +1644,110 @@ section[id] {
   }
 }
 
+/* 08.3 Crazy 8s — layout exploration & team voting (Figma 228:1178) */
+.crazy8__eyebrow {
+  display: block;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.crazy8__title,
+.crazy8__title.ds-h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 24px 0 0 0;
+  max-width: 720px;
+}
+
+.crazy8__intro {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 24px 0 0 0;
+}
+
+.crazy8__panels {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.crazy8__panel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Media placeholders sized to the Figma panels (634×357) */
+.crazy8__media {
+  width: 100%;
+  aspect-ratio: 634 / 357;
+  background: var(--bg-muted);
+  border: 1px dashed var(--border-default);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crazy8__media::after {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
+}
+
+.crazy8__media--video::after {
+  content: 'Video';
+}
+
+.crazy8__media--image::after {
+  content: 'Image';
+}
+
+.crazy8__caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 500;
+  color: var(--text-accent-cool);
+  text-align: center;
+  margin: 0;
+}
+
+.ds-kr .crazy8__title,
+.ds-kr .crazy8__title.ds-h2,
+.ds-kr .crazy8__intro {
+  font-family: var(--font-kr);
+}
+
+@media (min-width: 1024px) {
+  .crazy8__panels {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .crazy8__title,
+  .crazy8__title.ds-h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+}
+
 /* Site navigation */
 .site-nav {
   position: sticky;
