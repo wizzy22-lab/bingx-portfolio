@@ -21,7 +21,12 @@ export default function FeatureCategorization() {
         <div className="featcat__panels">
           {/* Feature Categorization — AI Investment Decision System (Figma 634×634) */}
           <figure className="featcat__panel">
-            <div className="featcat__img" aria-hidden />
+            <img
+              className="featcat__img media-fill"
+              src="/images/ideation/feature-categorization.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="featcat__caption">
               [ Feature Categorization — AI Investment Decision System ]
             </figcaption>
@@ -29,7 +34,12 @@ export default function FeatureCategorization() {
 
           {/* Feature Prioritization — 2×2 matrix (Figma 634×634) */}
           <figure className="featcat__panel">
-            <div className="featcat__img" aria-hidden />
+            <img
+              className="featcat__img media-fill"
+              src="/images/ideation/feature-prioritization.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="featcat__caption">[ Feature Prioritization ]</figcaption>
           </figure>
         </div>

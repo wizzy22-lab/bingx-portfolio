@@ -1783,6 +1783,15 @@ section[id] {
   object-fit: cover;
 }
 
+/* Image dropped into a sized placeholder box — keeps the box's aspect-ratio,
+   clears the dashed-placeholder look, and covers the frame. */
+img.media-fill {
+  display: block;
+  border: none;
+  background: none;
+  object-fit: cover;
+}
+
 .crazy8__caption {
   font-family: var(--font-sans);
   font-size: 12px;

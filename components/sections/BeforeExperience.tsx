@@ -46,7 +46,12 @@ export default function BeforeExperience() {
 
         <div className="experience__layout">
           <figure className="experience__analysis">
-            <div className="experience__analysis-img" aria-hidden />
+            <img
+              className="experience__analysis-img media-fill"
+              src="/images/current-experience/current-service-analysis.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="experience__analysis-caption">
               [ Current Experience Analysis -Existing AI Master Flow &amp; Interface Review ]
             </figcaption>

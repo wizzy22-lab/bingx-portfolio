@@ -93,7 +93,12 @@ export default function Research() {
 
           <div className="research-community__layout">
             <figure className="research-community__collage">
-              <div className="research-community__collage-img" aria-hidden />
+              <img
+                className="research-community__collage-img media-fill"
+                src="/images/research/community-reactions.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-community__collage-caption">
                 [Community Reactions - Reddit · Google Reviews · App Store Reviews]
               </figcaption>
@@ -191,11 +196,21 @@ export default function Research() {
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
-              <div className="research-duo__img" aria-hidden />
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/beginner-user.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-duo__caption">[Beginner users - ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
-              <div className="research-duo__img" aria-hidden />
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/advanced-user.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-duo__caption">[Advance User - ]</figcaption>
             </figure>
           </div>
@@ -214,7 +229,12 @@ export default function Research() {
           </p>
           <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
-              <div className="research-duo__img" aria-hidden />
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/color-coding.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-duo__caption">[Beginner users]</figcaption>
             </figure>
             <figure className="research-duo__figure">
@@ -278,7 +298,12 @@ export default function Research() {
 
           <div className="research-competitor__layout">
             <figure className="research-competitor__figure">
-              <div className="research-competitor__img" aria-hidden />
+              <img
+                className="research-competitor__img media-fill"
+                src="/images/research/competitor-research.png"
+                alt=""
+                aria-hidden
+              />
               <figcaption className="research-competitor__caption">
                 [Comparing Decision Frameworks Across Investment Platforms
                 <br />

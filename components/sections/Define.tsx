@@ -23,7 +23,12 @@ export default function Define() {
             Rather Than Clear Understanding
           </RevealHeading>
           <figure className="define-sub__figure">
-            <div className="define-sub__img" aria-hidden />
+            <img
+              className="define-sub__img media-fill"
+              src="/images/define/empathy-map.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="define-sub__caption">[empathy mapping]</figcaption>
           </figure>
           <p className="define-sub__closing">
@@ -49,7 +54,12 @@ export default function Define() {
             confusion and uncertainty after execution.
           </RevealHeading>
           <figure className="define-sub__figure">
-            <div className="define-sub__img" aria-hidden />
+            <img
+              className="define-sub__img media-fill"
+              src="/images/define/user-journey.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="define-sub__caption">[user journey]</figcaption>
           </figure>
           <p className="define-sub__closing">

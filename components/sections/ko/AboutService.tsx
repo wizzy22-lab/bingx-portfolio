@@ -4,18 +4,22 @@ const CRITERIA = [
   {
     title: '1.투자 성향',
     body: '안정적으로 투자  vs  높은 수익을 위해 더 도전적으로\n투자',
+    icon: '/icons/about/investment-style.png',
   },
   {
     title: '2.리스크 기준',
     body: '투자할 때 어느 정도의 위험까지 감수할 수 있는지에 대한 기준',
+    icon: '/icons/about/risk-tolerance.png',
   },
   {
     title: '3.시장 해석 방식',
     body: '투자 정보를 어떤 기준으로 이해하고 판단하는지에 대한 방식',
+    icon: '/icons/about/market-interpretation.png',
   },
   {
     title: '4.매매 전략',
     body: '언제 사고, 언제 팔지 정하는 투자 방법',
+    icon: '/icons/about/trading-strategy.png',
   },
 ];
 
@@ -39,7 +43,9 @@ export default function AboutService() {
         <div className="about__grid">
           {CRITERIA.map((c) => (
             <div key={c.title} className="about__criterion">
-              <div className="about__icon" aria-hidden />
+              <div className="about__icon">
+                <img className="about__icon-img" src={c.icon} alt="" aria-hidden />
+              </div>
               <article className="about__card">
                 <h3 className="about__card-title">{c.title}</h3>
                 <p className="about__card-body">{c.body}</p>

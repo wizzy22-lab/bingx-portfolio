@@ -27,7 +27,12 @@ export default function Iteration() {
         <div className="iteration__body">
           {/* Left: solution-reframing diagram (Figma 634×476) */}
           <figure className="iteration__panel">
-            <div className="iteration__img" aria-hidden />
+            <img
+              className="iteration__img media-fill"
+              src="/images/ideation/solution-redefine-process.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="iteration__caption">
               [ Comparing Decision Frameworks Across Investment Platforms
               <br />

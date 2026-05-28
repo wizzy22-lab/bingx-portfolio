@@ -160,15 +160,13 @@ export default function Research() {
             lede="r/CryptoCurrency와 BingX 커뮤니티 스레드 (Reddit, Discord, YouTube 댓글 약 120건)에서 반복적으로 등장하는 세 가지 불만 패턴이 드러났다."
           />
           <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
+            <img
+              className="ds-media-placeholder media-fill"
               data-aspect="16/9"
-              role="img"
-              aria-label="커뮤니티 댓글 샘플"
-            >
-              <span className="ds-media-placeholder__label">커뮤니티 댓글</span>
-              <span className="ds-media-placeholder__meta">Reddit · Discord · YouTube</span>
-            </div>
+              src="/images/research/community-reactions.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="ds-media__caption">
               샘플 커뮤니티 댓글 — 9월부터 11월까지.
             </figcaption>
@@ -262,15 +260,13 @@ export default function Research() {
             lede="2차·설문·인터뷰에서 모은 발화와 행동을 한 보드 위에서 그룹핑했다. 세 가지 클러스터가 드러났다."
           />
           <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
+            <img
+              className="ds-media-placeholder media-fill"
               data-aspect="16/9"
-              role="img"
-              aria-label="친화도 매핑 보드"
-            >
-              <span className="ds-media-placeholder__label">친화도 매핑 보드</span>
-              <span className="ds-media-placeholder__meta">140+ 스티키 노트 · 3개 클러스터</span>
-            </div>
+              src="/images/research/color-coding.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="ds-media__caption">
               친화도 보드 — 리서치 정리에서 도출한 스티키 노트 클러스터링.
             </figcaption>
@@ -346,17 +342,13 @@ export default function Research() {
             title="비교가 시작되어야 할 자리에서 확신이 떨어진다."
           />
           <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <div
-              className="ds-media-placeholder"
+            <img
+              className="ds-media-placeholder media-fill"
               data-aspect="16/9"
-              role="img"
-              aria-label="사용자 여정 지도"
-            >
-              <span className="ds-media-placeholder__label">여정 지도 · 감정 곡선</span>
-              <span className="ds-media-placeholder__meta">
-                발견 → 탐색 → 비교 → 결정 → 활성화
-              </span>
-            </div>
+              src="/images/define/user-journey.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="ds-media__caption">
               발견 → 탐색 → 비교 → 결정 → 활성화 단계별 감정 여정.
             </figcaption>

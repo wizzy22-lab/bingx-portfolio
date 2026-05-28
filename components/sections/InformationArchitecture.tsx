@@ -15,7 +15,12 @@ export default function InformationArchitecture() {
         <div className="ia__body">
           {/* Left: IA diagram image placeholder (Figma 634×357) */}
           <figure className="ia__panel">
-            <div className="ia__placeholder" aria-hidden />
+            <img
+              className="ia__placeholder media-fill"
+              src="/images/ideation/ia.png"
+              alt=""
+              aria-hidden
+            />
             <figcaption className="ia__caption">
               [ Decision Flow Information Architecture ]
             </figcaption>
