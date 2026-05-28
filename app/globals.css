@@ -2002,11 +2002,35 @@ section[id] {
   margin: 0;
 }
 
+.kf__feature + .kf__feature {
+  margin-top: var(--space-40);
+}
+
+.kf__label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-accent-cool);
+  margin: 0 0 4px 0;
+}
+
+/* Step-indicator UI element placeholder (Figma Frame 3084, 758×42) */
+.kf__bar {
+  margin-top: var(--space-8);
+  width: 100%;
+  aspect-ratio: 758 / 42;
+  background: var(--bg-muted);
+  border: 1px dashed var(--border-default);
+  border-radius: 8px;
+}
+
 .kf__phone {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
@@ -2067,13 +2091,9 @@ section[id] {
 
 @media (min-width: 1024px) {
   .kf__compare {
-    grid-template-columns: minmax(0, 1fr) minmax(140px, 240px) minmax(160px, 300px) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 300px) minmax(140px, 300px) minmax(0, 1fr);
     gap: var(--space-8);
     align-items: center;
-  }
-  /* center the two phone mockups so they meet in the middle */
-  .kf__phone--asis {
-    align-items: flex-end;
   }
 }
 
