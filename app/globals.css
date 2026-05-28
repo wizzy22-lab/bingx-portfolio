@@ -1748,6 +1748,184 @@ section[id] {
   }
 }
 
+/* 08.4 Information architecture — decision-flow IA (Figma 230:74) */
+.ia__eyebrow {
+  display: block;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.ia__title,
+.ia__title.ds-h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 24px 0 0 0;
+  max-width: 820px;
+}
+
+.ia__body {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.ia__panel {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* IA diagram — modeled on the Figma panel (634×357); height follows content.
+   container-type lets the inner labels scale with the panel width via cqw. */
+.ia__diagram {
+  width: 100%;
+  background: var(--bg-muted);
+  border: 1px solid var(--border-hairline);
+  border-radius: 20px;
+  padding: 20px 16px;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ia__diagram-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(11px, 2.9cqw, 18px);
+  line-height: 1.2;
+  letter-spacing: -0.45px;
+  color: var(--text-primary);
+}
+
+.ia__columns {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(4px, 1.2cqw, 8px);
+  align-content: start;
+}
+
+.ia__column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 1.1cqw, 7px);
+}
+
+.ia__node {
+  border: 1px solid var(--border-default);
+  border-radius: 7px;
+  padding: clamp(5px, 1.6cqw, 9px) clamp(4px, 1.2cqw, 8px);
+  font-family: var(--font-sans);
+  font-size: clamp(7px, 1.6cqw, 10px);
+  line-height: 1.4;
+  letter-spacing: -0.1px;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+}
+
+.ia__node--head {
+  font-weight: 700;
+  color: var(--text-on-cream);
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.ia__caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 14.4px;
+  font-weight: 500;
+  color: var(--text-accent-cool);
+  text-align: center;
+  margin: 0;
+}
+
+.ia__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ia__para {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.ia__para + .ia__para {
+  margin-top: 16px;
+}
+
+.ia__list {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ia__list li {
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--text-secondary);
+}
+
+.ia__list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+}
+
+.ia__list + .ia__para {
+  margin-top: 16px;
+}
+
+.ds-kr .ia__title,
+.ds-kr .ia__title.ds-h2,
+.ds-kr .ia__para,
+.ds-kr .ia__list li {
+  font-family: var(--font-kr);
+}
+
+@media (min-width: 1024px) {
+  .ia__body {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ia__title,
+  .ia__title.ds-h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+}
+
 /* Site navigation */
 .site-nav {
   position: sticky;

@@ -6,6 +6,7 @@ import Define from '@/components/sections/Define';
 import FeatureCategorization from '@/components/sections/FeatureCategorization';
 import Iteration from '@/components/sections/Iteration';
 import Crazy8 from '@/components/sections/Crazy8';
+import InformationArchitecture from '@/components/sections/InformationArchitecture';
 import UserTest from '@/components/sections/UserTest';
 import Reflection from '@/components/sections/Reflection';
 
@@ -31,6 +32,8 @@ export default function Home() {
       <Iteration />
       <Rule />
       <Crazy8 />
+      <Rule />
+      <InformationArchitecture />
       <Rule />
       <UserTest />
       <Rule />
