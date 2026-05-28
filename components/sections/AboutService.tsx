@@ -1,3 +1,7 @@
+'use client';
+
+import { useInView } from '@/lib/useInView';
+
 const CRITERIA = [
   {
     title: '1.Investment style',
@@ -22,8 +26,14 @@ const CRITERIA = [
 ];
 
 export default function AboutService() {
+  const { ref, inView } = useInView<HTMLElement>();
+
   return (
-    <section id="about" className="section">
+    <section
+      id="about"
+      ref={ref}
+      className={`section about${inView ? ' is-inview' : ''}`}
+    >
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
           [ 01 — about Service ]
