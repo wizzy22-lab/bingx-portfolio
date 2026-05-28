@@ -25,8 +25,8 @@ export default function AboutService() {
           [ 01 — about Service ]
         </p>
         <h2 className="ds-h2 about__title">
-          An <span className="about__highlight">AI investment agent service</span>, powered by
-          world-renowned investment philosophies.
+          An <span className="about__highlight">AI investment agent service</span>,<br />
+          powered by world-renowned investment philosophies.
         </h2>
         <p className="about__lede">
           AI Master is an AI trading service where users can choose between different AI
