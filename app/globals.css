@@ -2288,6 +2288,147 @@ section[id] {
   }
 }
 
+/* 11 Reflection — what I learned (Figma 246:51) */
+.refl__eyebrow {
+  display: block;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.refl__title,
+.refl__title.ds-h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 43.2px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 24px 0 0 0;
+  max-width: 760px;
+}
+
+.refl__cards {
+  margin-top: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.refl__card {
+  border: 1px solid var(--border-hairline);
+  border-radius: 24px;
+  background: var(--bg-surface);
+  padding: var(--space-6);
+}
+
+.refl__card-title {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+}
+
+.refl__para {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.refl__list {
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.refl__list li {
+  position: relative;
+  padding-left: 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--text-secondary);
+}
+
+.refl__list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+}
+
+.refl__closing {
+  margin: var(--space-10) auto 0;
+  max-width: 820px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--text-secondary);
+}
+
+.refl__cta {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.refl__link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px 24px;
+  border: 1px solid var(--border-default);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.refl__link:hover {
+  background: var(--bg-muted);
+  border-color: var(--accent-blue);
+}
+
+.ds-kr .refl__title,
+.ds-kr .refl__title.ds-h2,
+.ds-kr .refl__card-title,
+.ds-kr .refl__para,
+.ds-kr .refl__list li,
+.ds-kr .refl__closing {
+  font-family: var(--font-kr);
+}
+
+@media (max-width: 767px) {
+  .refl__title,
+  .refl__title.ds-h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+  .refl__card-title {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+}
+
 /* Site navigation */
 .site-nav {
   position: sticky;

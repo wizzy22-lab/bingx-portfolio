@@ -1,45 +1,61 @@
-const PARAGRAPHS = [
-  "The hardest part of this project wasn't the AI — it was the moment a person looks at twelve options and has to pick one. Algorithms can generate any number of agents; the design job is to give people a way to choose between them.",
-  'Every decision in the redesign worked the same way: subtract from the screen until only the choice remained. Three questions instead of twelve metrics. Side-by-side instead of scroll. Reasoning instead of returns.',
-  "What I'd carry into the next AI project: don't design the model's output. Design the moment a person commits to it.",
-];
-
-const CLOSING = [
-  'Selection is its own step. Treat it that way in IA, copy, and visual hierarchy.',
-  "Numbers without baselines aren't data — they're decoration.",
-  'Trust is rebuilt on every screen after activation, not earned once at signup.',
-];
-
 export default function Reflection() {
   return (
-    <section id="reflection" className="section">
-      <div className="section-inner" style={{ textAlign: 'center' }}>
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow">Reflection</p>
-        <h2
-          className="ds-display"
-          style={{ margin: 'var(--space-6) auto 0', maxWidth: '1100px' }}
-        >
-          Designing AI is designing decisions.
-        </h2>
-        <hr
-          className="ds-divider ds-divider--accent-yellow"
-          style={{ margin: 'var(--space-16) auto 0', maxWidth: '120px' }}
-        />
-      </div>
-      <div
-        className="section-inner ds-research-finding"
-        style={{ marginTop: 'var(--space-16)' }}
-      >
-        {PARAGRAPHS.map((p) => (
-          <p key={p} className="ds-research-finding__paragraph">
-            {p}
-          </p>
-        ))}
-        <ul className="ds-research-finding__implication-list">
-          {CLOSING.map((c) => (
-            <li key={c}>{c}</li>
-          ))}
-        </ul>
+    <section id="reflection" className="section refl">
+      <div className="section-inner">
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">[ 11 — Reflection ]</p>
+        <h2 className="ds-h2 refl__title">What I learned in this project</h2>
+
+        <div className="refl__cards">
+          <article className="refl__card">
+            <h3 className="refl__card-title">
+              01. In AI UX, what mattered most was not &ldquo;more automation,&rdquo; but a flow
+              users could understand.
+            </h3>
+            <p className="refl__para">
+              Users did not simply want AI to make decisions for them. They wanted to understand:
+            </p>
+            <ul className="refl__list">
+              <li>what was currently happening</li>
+              <li>who was making the decision</li>
+              <li>and when they should intervene</li>
+            </ul>
+          </article>
+
+          <article className="refl__card">
+            <h3 className="refl__card-title">
+              02. A sense of control came less from &ldquo;direct manipulation&rdquo; and more from
+              &ldquo;feeling informed.&rdquo;
+            </h3>
+            <p className="refl__para">
+              At first, we explored giving users more configuration options. However, the core
+              experience of AI Master was not about designing strategies directly, but about
+              choosing and delegating judgment to the AI.
+            </p>
+          </article>
+
+          <article className="refl__card">
+            <h3 className="refl__card-title">
+              03. Trust in AI services was built not through features, but through how decision
+              structures were explained.
+            </h3>
+            <p className="refl__para">
+              Through this project, we learned that UX in AI services goes beyond improving
+              usability. It is also about helping users understand and trust the decision-making
+              flow, even in moments of uncertainty.
+            </p>
+          </article>
+        </div>
+
+        <p className="refl__closing">
+          This project was part of a broader exploration into human trust, autonomy, and AI
+          decision-making systems.
+        </p>
+
+        <div className="refl__cta">
+          <a className="refl__link" href="#" target="_blank" rel="noopener noreferrer">
+            Read the full research documentation on Medium →
+          </a>
+        </div>
       </div>
     </section>
   );
