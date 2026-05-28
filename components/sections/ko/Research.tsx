@@ -258,11 +258,14 @@ export default function Research() {
             lede="2차·설문·인터뷰에서 모은 발화와 행동을 한 보드 위에서 그룹핑했다. 세 가지 클러스터가 드러났다."
           />
           <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <img
+            <video
               className="ds-media-placeholder media-fill"
               data-aspect="16/9"
-              src="/images/research/color-coding.png"
-              alt=""
+              src="/videos/team-affinity.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
               aria-hidden
             />
             <figcaption className="ds-media__caption">

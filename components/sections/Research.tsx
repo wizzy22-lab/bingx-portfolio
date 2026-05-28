@@ -243,7 +243,15 @@ export default function Research() {
               <figcaption className="research-duo__caption">[Beginner users]</figcaption>
             </figure>
             <figure className="research-duo__figure">
-              <div className="research-duo__img" aria-hidden />
+              <video
+                className="research-duo__img media-fill"
+                src="/videos/team-affinity.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
               <figcaption className="research-duo__caption">[Advance User]</figcaption>
             </figure>
           </div>

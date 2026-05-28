@@ -27,13 +27,26 @@ export default function KeyFeatures() {
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
-              <div className="kf__screen" aria-hidden />
+              <img
+                className="kf__screen media-fill"
+                src="/images/key-features/feature-1-as-is.png"
+                alt=""
+                aria-hidden
+              />
             </figure>
 
             {/* to be — phone (Figma 300×649) */}
             <figure className="kf__phone kf__phone--tobe">
               <span className="kf__pill kf__pill--accent">to be</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-1-to-be.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* to be — copy */}
@@ -71,13 +84,29 @@ export default function KeyFeatures() {
             {/* to be — phone (Figma 300×649) */}
             <figure className="kf__phone kf__phone--tobe">
               <span className="kf__pill kf__pill--accent">to be</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-2-to-be.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-2-as-is.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* as is — copy */}
@@ -110,13 +139,26 @@ export default function KeyFeatures() {
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
-              <div className="kf__screen" aria-hidden />
+              <img
+                className="kf__screen media-fill"
+                src="/images/key-features/feature-3-as-is.png"
+                alt=""
+                aria-hidden
+              />
             </figure>
 
             {/* to be — phone (Figma 300×649) */}
             <figure className="kf__phone kf__phone--tobe">
               <span className="kf__pill kf__pill--accent">to be</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-3-to-be.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* to be — copy */}
@@ -155,13 +197,29 @@ export default function KeyFeatures() {
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-4-as-is.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* to be — phone (Figma 300×649) */}
             <figure className="kf__phone kf__phone--tobe">
               <span className="kf__pill kf__pill--accent">to be</span>
-              <div className="kf__screen" aria-hidden />
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-4-to-be.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
             </figure>
 
             {/* to be — copy */}

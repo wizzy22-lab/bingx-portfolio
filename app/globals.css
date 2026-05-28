@@ -1785,7 +1785,8 @@ section[id] {
 
 /* Image dropped into a sized placeholder box — keeps the box's aspect-ratio,
    clears the dashed-placeholder look, and covers the frame. */
-img.media-fill {
+img.media-fill,
+video.media-fill {
   display: block;
   border: none;
   background: none;

@@ -38,7 +38,12 @@ export default function UserTest() {
               In particular, the step-by-step structure and flow guidance helped beginner users
               better understand their current status and next actions.
             </p>
-            <div className="ut__media ut__media--wide" aria-hidden />
+            <img
+              className="ut__media ut__media--wide media-fill"
+              src="/images/user-test/sus-score.png"
+              alt=""
+              aria-hidden
+            />
           </div>
         </div>
 
