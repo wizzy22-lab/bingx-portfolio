@@ -67,21 +67,6 @@ export default function Research() {
   return (
     <section id="research" className="section">
       <div className="section-inner">
-        <header style={{ marginBottom: 'var(--space-20)' }}>
-          <p className="ds-eyebrow ds-eyebrow--accent-yellow research__eyebrow">Research</p>
-          <RevealHeading
-            level="h2"
-            className="ds-h1"
-            style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}
-          >
-            Listening before designing — secondary, primary, and competitive.
-          </RevealHeading>
-          <hr
-            className="ds-divider ds-divider--accent-yellow"
-            style={{ marginTop: 'var(--space-10)' }}
-          />
-        </header>
-
         {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
         <div className="research-community">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
