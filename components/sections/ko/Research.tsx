@@ -137,21 +137,6 @@ export default function Research() {
   return (
     <section id="research" className="section">
       <div className="section-inner">
-        <header style={{ marginBottom: 'var(--space-20)' }}>
-          <p className="ds-eyebrow ds-eyebrow--accent-yellow">리서치</p>
-          <RevealHeading
-            level="h2"
-            className="ds-h1"
-            style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '900px' }}
-          >
-            디자인 전에 듣기 — 2차·1차·경쟁사 리서치.
-          </RevealHeading>
-          <hr
-            className="ds-divider ds-divider--accent-yellow"
-            style={{ marginTop: 'var(--space-10)' }}
-          />
-        </header>
-
         {/* 05-1 Secondary Research */}
         <div style={{ marginBottom: 'var(--space-30)' }}>
           <SubsectionHeader
