@@ -26,7 +26,12 @@ export default function UserTest() {
 
         <div className="ut__top">
           {/* Left: usability test visual (Figma 634×476) */}
-          <div className="ut__media ut__media--tall" aria-hidden />
+          <img
+            className="ut__media ut__media--tall media-fill"
+            src="/images/user-test/user-test.jpg"
+            alt=""
+            aria-hidden
+          />
 
           {/* Right: summary + supporting visual (Figma 634×159) */}
           <div className="ut__summary">
