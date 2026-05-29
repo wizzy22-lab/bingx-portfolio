@@ -1,4 +1,5 @@
 import RevealHeading from '@/components/RevealHeading';
+import RevealOnView from '@/components/RevealOnView';
 
 const REVIEWS = [
   {
@@ -89,7 +90,7 @@ export default function Research() {
               </figcaption>
             </figure>
 
-            <div className="research-community__cards">
+            <RevealOnView className="research-community__cards">
               {REVIEWS.map((r) => (
                 <article key={r.name} className="review-card">
                   <header className="review-card__head">
@@ -120,7 +121,7 @@ export default function Research() {
                   <p className="review-card__text">{r.text}</p>
                 </article>
               ))}
-            </div>
+            </RevealOnView>
           </div>
 
           <p className="research-community__closing">
