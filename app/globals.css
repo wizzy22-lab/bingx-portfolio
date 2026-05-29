@@ -419,6 +419,7 @@ section[id] {
 
 .experience__card {
   background: var(--bg-surface);
+  border: 1px solid transparent;
   border-radius: 16px;
   padding: 16px 40px;
   display: flex;
@@ -427,6 +428,52 @@ section[id] {
   gap: 16px;
   min-height: 189px;
   box-sizing: border-box;
+  opacity: 0;
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-default),
+    box-shadow var(--duration-base) var(--ease-default);
+}
+
+/* Scroll-in: cards cascade up when the group enters view */
+.experience__cards.is-inview .experience__card {
+  opacity: 1;
+  animation: experience-card-in var(--duration-slow) var(--ease-out) backwards;
+}
+
+.experience__cards.is-inview .experience__card:nth-child(1) { animation-delay: 0.05s; }
+.experience__cards.is-inview .experience__card:nth-child(2) { animation-delay: 0.13s; }
+.experience__cards.is-inview .experience__card:nth-child(3) { animation-delay: 0.21s; }
+
+@keyframes experience-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Hover: lift + warning-toned border glow (these are problem cards) */
+.experience__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--error);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience__card {
+    opacity: 1;
+    transition: none;
+  }
+  .experience__cards.is-inview .experience__card {
+    animation: none;
+  }
+  .experience__card:hover {
+    transform: none;
+  }
 }
 
 .experience__head {

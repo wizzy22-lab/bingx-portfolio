@@ -1,4 +1,5 @@
 import RevealHeading from '@/components/RevealHeading';
+import RevealOnView from '@/components/RevealOnView';
 
 const PROBLEMS = [
   {
@@ -52,7 +53,7 @@ export default function BeforeExperience() {
             </figcaption>
           </figure>
 
-          <div className="experience__cards">
+          <RevealOnView className="experience__cards">
             {PROBLEMS.map((p) => (
               <article key={p.number} className="experience__card">
                 <header className="experience__head">
@@ -72,7 +73,7 @@ export default function BeforeExperience() {
                 </blockquote>
               </article>
             ))}
-          </div>
+          </RevealOnView>
         </div>
 
         <p className="experience__closing">
