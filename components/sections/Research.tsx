@@ -1,5 +1,6 @@
 import RevealHeading from '@/components/RevealHeading';
 import RevealOnView from '@/components/RevealOnView';
+import ScrambleNumber from '@/components/ScrambleNumber';
 
 const REVIEWS = [
   {
@@ -152,17 +153,22 @@ export default function Research() {
               </figcaption>
             </figure>
 
-            <div className="research-survey__stats">
+            <RevealOnView className="research-survey__stats">
               {SURVEY_STATS.map((s, i) => (
                 <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
                   <p className="survey-stat__number">
-                    <span className="survey-stat__value">{s.value}</span>
+                    <ScrambleNumber
+                      className="survey-stat__value"
+                      value={s.value}
+                      delay={800 + i * 100}
+                      duration={1200}
+                    />
                     <span className="survey-stat__suffix">%</span>
                   </p>
                   <p className="survey-stat__text">{s.text}</p>
                 </div>
               ))}
-            </div>
+            </RevealOnView>
           </div>
 
           <p className="research-survey__closing">

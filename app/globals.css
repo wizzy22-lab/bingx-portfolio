@@ -923,6 +923,7 @@ section[id] {
   font-size: 120px;
   line-height: 120px;
   letter-spacing: -6px;
+  font-variant-numeric: tabular-nums;
 }
 
 .survey-stat__suffix {
@@ -980,22 +981,27 @@ section[id] {
   .survey-stat--3 {
     width: 292px;
   }
-  /* dashed connector from each number back to the survey image */
+  /* dashed connector — anchored at the image-side end and draws toward the number
+     (width 0 -> full) when the stats scroll into view, before the value settles */
   .survey-stat::before {
     content: '';
     position: absolute;
     top: 60px;
-    right: 100%;
+    width: 0;
     border-top: 2px dashed var(--accent-yellow);
+    transition: width 0.8s var(--ease-out);
   }
-  .survey-stat--1::before {
-    width: 255px;
-  }
-  .survey-stat--2::before {
-    width: 106px;
-  }
-  .survey-stat--3::before {
-    width: 273px;
+  .survey-stat--1::before { left: -255px; }
+  .survey-stat--2::before { left: -106px; }
+  .survey-stat--3::before { left: -273px; }
+  .research-survey__stats.is-inview .survey-stat--1::before { width: 255px; }
+  .research-survey__stats.is-inview .survey-stat--2::before { width: 106px; }
+  .research-survey__stats.is-inview .survey-stat--3::before { width: 273px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .survey-stat::before {
+    transition: none;
   }
 }
 
