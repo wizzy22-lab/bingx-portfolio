@@ -662,8 +662,8 @@ section[id] {
   animation: review-card-in var(--duration-slow) var(--ease-out) backwards;
 }
 
-.research-community__cards.is-inview .review-card:nth-child(1) { animation-delay: 0.05s; }
-.research-community__cards.is-inview .review-card:nth-child(2) { animation-delay: 0.16s; }
+.research-community__cards.is-inview .review-card:nth-child(1) { animation-delay: 0.9s; }
+.research-community__cards.is-inview .review-card:nth-child(2) { animation-delay: 1s; }
 
 @keyframes review-card-in {
   from {
@@ -686,11 +686,11 @@ section[id] {
   animation: review-star-fill var(--duration-base) var(--ease-out) backwards;
 }
 
-.research-community__cards.is-inview .review-card__star:nth-child(1) { animation-delay: 0.32s; }
-.research-community__cards.is-inview .review-card__star:nth-child(2) { animation-delay: 0.4s; }
-.research-community__cards.is-inview .review-card__star:nth-child(3) { animation-delay: 0.48s; }
-.research-community__cards.is-inview .review-card__star:nth-child(4) { animation-delay: 0.56s; }
-.research-community__cards.is-inview .review-card__star:nth-child(5) { animation-delay: 0.64s; }
+.research-community__cards.is-inview .review-card__star:nth-child(1) { animation-delay: 1.45s; }
+.research-community__cards.is-inview .review-card__star:nth-child(2) { animation-delay: 1.53s; }
+.research-community__cards.is-inview .review-card__star:nth-child(3) { animation-delay: 1.61s; }
+.research-community__cards.is-inview .review-card__star:nth-child(4) { animation-delay: 1.69s; }
+.research-community__cards.is-inview .review-card__star:nth-child(5) { animation-delay: 1.77s; }
 
 @keyframes review-star-fill {
   from {
@@ -792,17 +792,18 @@ section[id] {
     align-self: flex-start;
     height: 160px;
   }
-  /* dashed connector runs from each card's left edge back to the image's right edge;
-     draws in (width 0 -> full) when the cards scroll into view */
+  /* dashed connector — anchored at the image-side end and draws toward the card
+     (width 0 -> full) when the cards scroll into view, before the cards appear */
   .review-card::before {
     content: '';
     position: absolute;
     top: 50%;
-    right: 100%;
     width: 0;
     border-top: 2px dashed var(--accent-yellow);
-    transition: width 0.8s var(--ease-out) 0.35s;
+    transition: width 0.8s var(--ease-out);
   }
+  .review-card:nth-child(1)::before { left: -178px; }
+  .review-card:nth-child(2)::before { left: -97px; }
   .research-community__cards.is-inview .review-card:nth-child(1)::before {
     width: 178px;
   }
