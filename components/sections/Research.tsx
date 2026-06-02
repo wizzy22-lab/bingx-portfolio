@@ -256,7 +256,7 @@ export default function Research() {
 
         {/* Insight Section (Figma 139:54) */}
         <div className="research-insight">
-          <div className="research-insight__groups">
+          <RevealOnView className="research-insight__groups">
             {INSIGHT_GROUPS.map((g) => (
               <article key={g.title} className={`insight-group insight-group--${g.variant}`}>
                 <h3 className="insight-group__title">{g.title}</h3>
@@ -268,7 +268,7 @@ export default function Research() {
                 ))}
               </article>
             ))}
-          </div>
+          </RevealOnView>
 
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
             insight
