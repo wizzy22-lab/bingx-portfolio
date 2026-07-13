@@ -12,37 +12,21 @@ import KeyFeatures from '@/components/sections/KeyFeatures';
 import UserTest from '@/components/sections/UserTest';
 import Reflection from '@/components/sections/Reflection';
 
-function Rule() {
-  return <hr className="section-rule" />;
-}
-
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Rule />
       <AboutService />
-      <Rule />
       <BeforeExperience />
-      <Rule />
       <Research />
-      <Rule />
       <Define />
-      <Rule />
       <FeatureCategorization />
-      <Rule />
       <Iteration />
-      <Rule />
       <Crazy8 />
-      <Rule />
       <InformationArchitecture />
-      <Rule />
       <WireframeDesignSystem />
-      <Rule />
       <KeyFeatures />
-      <Rule />
       <UserTest />
-      <Rule />
       <Reflection />
     </main>
   );
