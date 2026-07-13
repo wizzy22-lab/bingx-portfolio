@@ -1,6 +1,13 @@
 import RevealHeading from '@/components/RevealHeading';
 
-const TAGS = ['AI Agents', 'Crypto Trading', 'Decision UX'];
+const TAGS = [
+  'AI Agents',
+  'Crypto Trading',
+  'Decision UX',
+  'Fintech',
+  'Strategy Comparison',
+  'Explainable AI',
+];
 
 const META = [
   { label: 'ROLE', value: 'Product Designer' },

@@ -1,6 +1,13 @@
 import RevealHeading from '@/components/RevealHeading';
 
-const TAGS = ['AI 에이전트', '암호화폐 트레이딩', '의사결정 UX'];
+const TAGS = [
+  'AI 에이전트',
+  '암호화폐 트레이딩',
+  '의사결정 UX',
+  '핀테크',
+  '전략 비교',
+  '설명 가능한 AI',
+];
 
 const META = [
   { label: '역할', value: '프로덕트 디자이너' },
