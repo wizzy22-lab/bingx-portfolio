@@ -68,7 +68,7 @@ export default function KeyFeatures() {
         {/* Feature 2 — Clear next action (to be ← as is, mirrored) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            Clear next action to explore strategies
+            2. Clear next action to explore strategies
           </RevealHeading>
 
           <div className="kf__compare">
@@ -123,7 +123,7 @@ export default function KeyFeatures() {
         {/* Feature 3 — Familiar chat (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            Chat Feels Familiar and Easy to Use
+            3. Chat Feels Familiar and Easy to Use
           </RevealHeading>
 
           <div className="kf__compare">
@@ -175,7 +175,7 @@ export default function KeyFeatures() {
         {/* Feature 4 — Key information & performance flow (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            Key Information &amp; Performance Flow
+            4. Key Information &amp; Performance Flow
           </RevealHeading>
 
           <div className="kf__compare">
