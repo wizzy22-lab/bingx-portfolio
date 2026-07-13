@@ -6,7 +6,7 @@ const META = [
   { label: 'ROLE', value: 'Product Designer' },
   { label: 'SCOPE', value: 'Research · IA · Visual · Prototype · Usability Test' },
   { label: 'DURATION', value: '8 weeks' },
-  { label: 'TEAM', value: '2 Designer' },
+  { label: 'TEAM', value: '2 Designers' },
 ];
 
 export default function Hero() {
@@ -16,13 +16,14 @@ export default function Hero() {
         <div className="hero">
           <div>
             <RevealHeading level="h1" className="ds-display hero__title">
-              BingX
+              BingX /
               <br />
               AI Master
             </RevealHeading>
             <p className="ds-body-lg hero__subtitle">
-              Designing a decision structure for AI-driven crypto trading — so first-time
-              investors can choose an agent with confidence, not impressions.
+              A project redesigned around a decision-focused flow, helping users compare
+              and choose AI agents more clearly based on the investment philosophies of
+              legendary investors.
             </p>
             <div className="hero__tags">
               {TAGS.map((tag) => (
