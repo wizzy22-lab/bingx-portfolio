@@ -1,34 +1,59 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-const LINKS = [
-  { label: 'PROJECT', active: true },
-  { label: 'ABOUT', active: false },
-  { label: 'RESUME', active: false },
-] as const;
+import { NAV_BY_LOCALE, type Locale, type NavId } from '@/lib/nav';
 
 export default function Nav() {
   const pathname = usePathname();
-  const locale = pathname?.startsWith('/ko') ? 'ko' : 'en';
+  const locale: Locale = pathname?.startsWith('/ko') ? 'ko' : 'en';
+  const items = NAV_BY_LOCALE[locale];
   const homeHref = locale === 'ko' ? '/ko' : '/';
-  const role = locale === 'ko' ? '프로덕트 디자이너' : 'Product designer';
-  const krClass = locale === 'ko' ? ' ds-kr' : '';
+  const brand = locale === 'ko' ? 'BingX AI 마스터' : 'BingX AI Master';
+
+  const [active, setActive] = useState<NavId>('hero');
+
+  useEffect(() => {
+    const sections = items
+      .map((item) => document.getElementById(item.id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) {
+          setActive(visible[0].target.id as NavId);
+        }
+      },
+      {
+        rootMargin: '-30% 0% -60% 0%',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [items]);
+
+  const navLinkClass = `ds-nav-link${locale === 'ko' ? ' ds-kr' : ''}`;
 
   return (
-    <nav className="site-nav" aria-label="Primary navigation">
-      <Link href={homeHref} className={`site-nav__brand${krClass}`}>
-        <span className="site-nav__brand-name">wizzy</span>
-        <span className="site-nav__brand-role">{role}</span>
+    <nav className="site-nav" aria-label="Section navigation">
+      <Link href={homeHref} className={`site-nav__brand${locale === 'ko' ? ' ds-kr' : ''}`}>
+        {brand}
       </Link>
       <div className="site-nav__links">
-        {LINKS.map((item) => (
+        {items.map((item) => (
           <a
-            key={item.label}
-            href={item.active ? homeHref : '#'}
-            className={`ds-nav-link${krClass}${item.active ? ' is-active' : ''}`}
-            aria-current={item.active ? 'page' : undefined}
+            key={item.id}
+            href={`#${item.id}`}
+            className={`${navLinkClass}${active === item.id ? ' is-active' : ''}`}
+            aria-current={active === item.id ? 'page' : undefined}
           >
             {item.label}
           </a>

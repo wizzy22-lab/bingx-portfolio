@@ -2655,8 +2655,8 @@ video.media-fill {
   z-index: var(--z-sticky);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: var(--space-8);
+  justify-content: space-between;
+  gap: var(--space-6);
   padding: var(--space-4) var(--space-6);
   background: rgba(20, 24, 26, 0.72);
   backdrop-filter: blur(12px);
@@ -2665,35 +2665,17 @@ video.media-fill {
 }
 
 .site-nav__brand {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
   color: var(--text-primary);
   text-decoration: none;
-  line-height: 1.35;
-  flex-shrink: 0;
-}
-
-.site-nav__brand-name {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0;
-}
-
-.site-nav__brand-role {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--text-tertiary);
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .site-nav__links {
   display: flex;
   gap: var(--space-6);
-  margin-left: auto;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
