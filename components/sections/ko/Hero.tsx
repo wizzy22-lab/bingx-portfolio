@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="hero">
           <div>
             <RevealHeading level="h1" className="ds-display hero__title">
-              BingX /
+              BingX
               <br />
               AI Master
             </RevealHeading>
