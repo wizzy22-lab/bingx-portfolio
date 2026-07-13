@@ -40,7 +40,7 @@ export default function AboutService() {
           investors.
         </p>
 
-        <p className="about__intro">Each agent differs in:</p>
+        <p className="about__intro">Each Agents</p>
 
         <div className="about__grid">
           {CRITERIA.map((c) => (
