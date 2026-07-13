@@ -9,12 +9,13 @@ export default function KeyFeatures() {
         {/* Feature 1 — Personalized Agents (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            Personalized Agents based on your preferences
+            1. Personalized Agents based on your preferences
           </RevealHeading>
 
           <div className="kf__compare">
             {/* as is — copy */}
             <div className="kf__copy">
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 Users had to explore all agents at once without clear comparison criteria.
               </p>
@@ -163,7 +164,7 @@ export default function KeyFeatures() {
 
             {/* to be — copy */}
             <div className="kf__copy">
-              <h3 className="kf__lead">Change chat ICON design &amp; Location</h3>
+              <h3 className="kf__lead">Changed chat icon design &amp; location</h3>
               <p className="kf__para">
                 Familiar messenger-style interaction patterns were applied, allowing users to
                 interact with the AI naturally without needing to learn a new system.

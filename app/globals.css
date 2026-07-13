@@ -2198,7 +2198,12 @@ video.media-fill {
   font-weight: 700;
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 560px;
+  max-width: 900px;
+}
+
+/* Problem caption above the "as is" copy */
+.kf__problem.ds-eyebrow {
+  color: var(--accent-red);
 }
 
 .kf__compare {
