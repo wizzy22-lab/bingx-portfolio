@@ -2243,53 +2243,6 @@ video.media-fill {
   margin-top: var(--space-40);
 }
 
-.kf__label {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  line-height: 14.4px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--text-accent-cool);
-  margin: 0 0 4px 0;
-}
-
-/* Step-indicator UI element placeholder (Figma Frame 3084, 758×42) */
-.kf__bar {
-  margin-top: var(--space-8);
-  width: 100%;
-  aspect-ratio: 758 / 42;
-  background: var(--bg-muted);
-  border: 1px dashed var(--border-default);
-  border-radius: 8px;
-}
-
-/* Supporting detail image placeholders (Figma Frames 3089 369×144, 3094 484×299) */
-.kf__detail {
-  width: 100%;
-  background: var(--bg-muted);
-  border: 1px dashed var(--border-default);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.kf__detail--wide {
-  aspect-ratio: 369 / 144;
-}
-
-.kf__detail--lg {
-  aspect-ratio: 484 / 299;
-}
-
-.kf__detail::after {
-  content: 'Image';
-  font-family: var(--font-sans);
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  color: var(--text-tertiary);
-}
-
 .kf__phone {
   margin: 0;
   display: flex;

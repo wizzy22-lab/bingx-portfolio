@@ -70,7 +70,6 @@ export default function KeyFeatures() {
           <RevealHeading level="h2" className="ds-h2 kf__title">
             Clear next action to explore strategies
           </RevealHeading>
-          <div className="kf__bar" aria-hidden />
 
           <div className="kf__compare">
             {/* to be — copy */}
@@ -112,7 +111,7 @@ export default function KeyFeatures() {
 
             {/* as is — copy */}
             <div className="kf__copy">
-              <p className="kf__label">[ PROBLEM ]</p>
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 Users were struggling to understand which stage they were currently in and what
                 they were supposed to do next.
@@ -130,7 +129,7 @@ export default function KeyFeatures() {
           <div className="kf__compare">
             {/* as is — copy */}
             <div className="kf__copy">
-              <p className="kf__label">[ PROBLEM ]</p>
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 Users did not understand why they suddenly needed to interact with the AI, and
                 perceived the AI interaction itself as unfamiliar and complicated.
@@ -169,7 +168,6 @@ export default function KeyFeatures() {
                 Familiar messenger-style interaction patterns were applied, allowing users to
                 interact with the AI naturally without needing to learn a new system.
               </p>
-              <div className="kf__detail kf__detail--wide" aria-hidden />
             </div>
           </div>
         </article>
@@ -183,7 +181,7 @@ export default function KeyFeatures() {
           <div className="kf__compare">
             {/* as is — copy */}
             <div className="kf__copy">
-              <p className="kf__label">[ PROBLEM ]</p>
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 In the original AI Master experience, strategy comparison and performance review
                 were separated, causing frequent screen switching and interruptions in the
@@ -231,7 +229,6 @@ export default function KeyFeatures() {
                 As a result, users were able to compare strategies and review performance more
                 smoothly and confidently without unnecessary navigation.
               </p>
-              <div className="kf__detail kf__detail--lg" aria-hidden />
             </div>
           </div>
         </article>
