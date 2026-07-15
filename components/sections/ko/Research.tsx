@@ -1,349 +1,339 @@
 import RevealHeading from '@/components/RevealHeading';
+import RevealOnView from '@/components/RevealOnView';
+import ScrambleNumber from '@/components/ScrambleNumber';
 
-const PATTERNS = [
+const REVIEWS = [
   {
-    eyebrow: '패턴 01',
-    title: '성과는 전략이 아니다',
-    body: '사용자는 APY는 보지만 그 에이전트가 어떤 베팅을 하고 있는지는 알 수 없다.',
+    initial: '',
+    name: 'prithvisimi',
+    date: 'Jan 7',
+    stars: 2,
+    text: 'use to difficult not good interface',
   },
   {
-    eyebrow: '패턴 02',
-    title: '투자 기간이 보이지 않는다',
-    body: '"공격적", "보수적" 라벨은 보유 기간 없이 아무것도 의미하지 않는다.',
-  },
-  {
-    eyebrow: '패턴 03',
-    title: '신뢰는 숫자가 아니라 설명에서 온다',
-    body: '사용자는 결과가 좋았다는 사실보다, 왜 그렇게 행동했는지를 알고 싶어한다.',
+    initial: 'K',
+    name: 'kushalkumbhakar8',
+    date: 'Feb 2',
+    stars: 1,
+    text: "The interface feels too complex and hard to use. It's difficult to understand what to do.",
   },
 ];
 
-const QUOTES = [
+const SURVEY_STATS = [
   {
-    quote: '"그냥 숫자가 제일 큰 걸 골랐어요. 다른 뭘 봐야 할지 몰랐거든요."',
-    attribution: 'P02 · 28세 · 첫 암호화폐 사용자',
+    value: '43.5',
+    text: '많은 사용자가 서비스 안에 AI 기능이 있다는 사실조차 인지하지 못하고 있었다.',
   },
   {
-    quote: '"이름은 다들 개성 있어 보이는데, 카드는 다 똑같이 읽혀요."',
-    attribution: 'P04 · 33세 · 가벼운 트레이더',
+    value: '70',
+    text: '사용자들은 AI가 투자 수익을 완전히 자동화하기보다, 의사결정을 도와주기를 기대했다.',
   },
   {
-    quote: '"12개 중에서 추측하는 것보다, 저 같은 사람한테 맞는 걸 알려주면 좋겠어요."',
-    attribution: 'P05 · 41세 · 전 주식 투자자',
-  },
-];
-
-const CLUSTERS = [
-  {
-    eyebrow: '클러스터 01',
-    title: '비교가 병목이다',
-    body: '사용자에게 부족한 것은 에이전트가 아니라, 비교할 방법이다.',
-  },
-  {
-    eyebrow: '클러스터 02',
-    title: '확신은 행동 이전에 만들어진다',
-    body: '신뢰는 활성화 이후가 아니라, 선택 과정에서 형성된다.',
-  },
-  {
-    eyebrow: '클러스터 03',
-    title: '맥락 없는 숫자는 노이즈다',
-    body: '수익률과 MDD는 기준선이 주어질 때 비로소 쓸모 있어진다.',
+    value: '76.9',
+    text: '설명이 더 명확했다면 서비스를 사용할 의향이 있다고 응답했다.',
   },
 ];
 
-const CRITERIA = [
+const INSIGHT_GROUPS = [
   {
-    eyebrow: '평가 기준 01',
-    text: '제품이 사용자의 옵션 비교를 돕는가?',
+    variant: 'beginner',
+    title: '초급 사용자',
+    cards: [
+      {
+        title: '정보 과부하 · 구조적 혼란',
+        body: '초급 사용자들은 중요한 정보와 기능이 어디에 있는지 빠르게 파악하는 데 어려움을 겪었다. 복잡한 구조와 일관되지 않은 흐름이 탐색 피로를 키웠고, 경험 도중에 이탈하게 만들었다.',
+      },
+      {
+        title: 'AI 기능에 대한 제한적인 이해',
+        body: '초급 사용자들은 AI가 어떻게 추천을 만들어내고 판단을 내리는지 이해하기 어려워했다. 추천의 근거와 AI의 책임 범위가 불분명해질수록, 사용자들은 결과를 스스로 통제할 수 없다고 느끼는 경우가 많아졌다.',
+      },
+    ],
   },
   {
-    eyebrow: '평가 기준 02',
-    text: '단순한 데이터가 아니라 의사결정 구조를 제공하는가?',
-  },
-  {
-    eyebrow: '평가 기준 03',
-    text: '에이전트가 무엇을 했는지가 아니라, 왜 그렇게 행동했는지를 설명하는가?',
-  },
-];
-
-const COMPARE_ROWS = [
-  ['리스크 프로필 온보딩', '있음 — 다단계 설문', '없음'],
-  ['에이전트 나란히 비교', '제한적 (포트폴리오 2개)', '미지원'],
-  ['성과의 맥락화', 'S&P/지수와 벤치마킹', '단순 % 노출'],
-  ['의사결정 근거 노출', '포트폴리오별 전략 문서', '지표 리스트만'],
-];
-
-const EMPATHY = [
-  { label: 'THINK', body: '"이 중에서 진짜 나한테 돈을 벌어줄 게 뭘까?"', variant: '' },
-  {
-    label: 'FEEL',
-    body: 'AI에 설레면서도, 잘못된 선택으로 손실을 볼까 봐 불안하다.',
-    variant: ' ds-insight--yellow',
-  },
-  {
-    label: 'SAY',
-    body: '"저 같은 사람한테는 어떤 게 맞는지 그냥 알려주세요."',
-    variant: ' ds-insight--dark',
-  },
-  {
-    label: 'DO',
-    body: '리스트를 세 번 스크롤하고, 상세 페이지 두 개를 열어보고, 결국 하나도 고르지 않는다.',
-    variant: '',
+    variant: 'advanced',
+    title: '고급 사용자',
+    cards: [
+      {
+        title: 'AI 자동화에 대한 낮은 필요성',
+        body: '고급 사용자들은 이미 자신만의 거래 원칙과 리듬을 가지고 있었다. 시장을 읽고 스스로 판단을 내리는 과정 자체를 중요하게 여겼으며, AI 자동화를 거래에 대한 몰입감을 줄이는 요소로 받아들이는 경우가 많았다.',
+      },
+      {
+        title: '신뢰와 속도 중심의 거래 환경',
+        body: '고급 사용자들은 체결 속도, 시스템 안정성, 거래 환경의 신뢰성 같은 요소에 매우 민감했다. 작은 오류 하나도 곧바로 금전적 결과로 이어질 수 있기 때문에, 플랫폼 자체에 대한 신뢰가 거래 경험의 핵심 요소가 되었다.',
+      },
+    ],
   },
 ];
-
-const JOURNEY_IMPLICATIONS = [
-  '경험이 무너지는 지점은 끝이 아니라 "비교" 단계다.',
-  '에이전트를 더 추가하는 것은 이탈을 완화하는 것이 아니라 더 깊게 만든다.',
-  '리디자인은 "비교" 이전이 아니라, "비교" 안에 구조를 심어야 한다.',
-];
-
-function SubsectionHeader({
-  eyebrow,
-  title,
-  lede,
-}: {
-  eyebrow: string;
-  title: string;
-  lede?: string;
-}) {
-  return (
-    <header style={{ marginBottom: 'var(--space-12)' }}>
-      <p className="ds-eyebrow ds-eyebrow--accent-blue">{eyebrow}</p>
-      <RevealHeading
-        level="h3"
-        className="ds-h2"
-        style={{ margin: 'var(--space-4) 0 0 0', maxWidth: '820px' }}
-      >
-        {title}
-      </RevealHeading>
-      {lede && (
-        <p
-          className="ds-body-lg"
-          style={{
-            color: 'var(--text-secondary)',
-            margin: 'var(--space-6) 0 0 0',
-            maxWidth: '720px',
-          }}
-        >
-          {lede}
-        </p>
-      )}
-    </header>
-  );
-}
 
 export default function Research() {
   return (
     <section id="research" className="section">
       <div className="section-inner">
-        {/* 05-1 Secondary Research */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.1 · 리서치 · 2차 자료"
-            title="아무도 도와주지 않을 때, 사람들이 하는 말."
-            lede="r/CryptoCurrency와 BingX 커뮤니티 스레드 (Reddit, Discord, YouTube 댓글 약 120건)에서 반복적으로 등장하는 세 가지 불만 패턴이 드러났다."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <img
-              className="ds-media-placeholder media-fill"
-              data-aspect="16/9"
-              src="/images/research/community-reactions.png"
-              alt=""
-              aria-hidden
-            />
-            <figcaption className="ds-media__caption">
-              샘플 커뮤니티 댓글 — 9월부터 11월까지.
-            </figcaption>
-          </figure>
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {PATTERNS.map((p) => (
-              <article key={p.title} className="ds-insight ds-insight--dark">
-                <p className="ds-insight__eyebrow">{p.eyebrow}</p>
-                <h4 className="ds-insight__title">{p.title}</h4>
-                <p className="ds-insight__body">{p.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
+        {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
+        <div className="research-community">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
+            [ 03.1 — 2차 리서치 · 커뮤니티 ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-community__title">
+            커뮤니티 반응에서 혼란의 패턴이 반복적으로 드러났다
+          </RevealHeading>
 
-        {/* 05-2 Survey */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.2 · 리서치 · 설문 (n = 64)"
-            title="거래가 시작되기도 전에 자신감이 무너진다."
-          />
-          <div className="ds-stat-grid">
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">68</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                현재 리스트 화면에서는 에이전트를 구분하기 어렵다고 답함
-              </p>
-            </div>
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">72</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                활성화 전에 "선택을 도와주는" 단계를 원함
-              </p>
-            </div>
-            <div className="ds-stat-grid__cell">
-              <div className="ds-stat-grid__number">
-                <span className="ds-stat-grid__number-value">54</span>
-                <span className="ds-stat-grid__number-suffix">%</span>
-              </div>
-              <hr className="ds-stat-grid__divider" />
-              <p className="ds-stat-grid__label">
-                이전에 AI 트레이딩 제품의 온보딩 중간에 이탈한 경험이 있음
-              </p>
-            </div>
-          </div>
-          <figure className="ds-media ds-media--full" style={{ marginTop: 'var(--space-12)' }}>
-            <img
-              className="ds-media-placeholder media-fill"
-              data-aspect="16/9"
-              src="/images/research/survey.png"
-              alt=""
-              aria-hidden
-            />
-            <figcaption className="ds-media__caption">
-              단계별 자가응답 확신도, 1–5 척도.
-            </figcaption>
-          </figure>
-        </div>
+          <div className="research-community__layout">
+            <figure className="research-community__collage">
+              <img
+                className="research-community__collage-img media-fill"
+                src="/images/research/community-reactions.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-community__collage-caption">
+                [커뮤니티 반응 - Reddit · Google Reviews · App Store Reviews]
+              </figcaption>
+            </figure>
 
-        {/* 05-3 Interview */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.3 · 리서치 · 인터뷰 (n = 6)"
-            title="사용자의 입에서 나온 말."
-          />
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {QUOTES.map((q) => (
-              <blockquote key={q.attribution} className="ds-pull-quote">
-                <p className="ds-pull-quote__quote">{q.quote}</p>
-                <p className="ds-pull-quote__attribution">{q.attribution}</p>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-
-        {/* 05-4 Affinity Mapping */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.4 · 리서치 · 친화도 매핑"
-            title="140여 개 관찰을 세 가지 주제로 묶기."
-            lede="2차·설문·인터뷰에서 모은 발화와 행동을 한 보드 위에서 그룹핑했다. 세 가지 클러스터가 드러났다."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <video
-              className="ds-media-placeholder media-fill"
-              data-aspect="16/9"
-              src="/videos/team-affinity.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              aria-hidden
-            />
-            <figcaption className="ds-media__caption">
-              친화도 보드 — 리서치 정리에서 도출한 스티키 노트 클러스터링.
-            </figcaption>
-          </figure>
-          <div className="ds-impact-grid ds-impact-grid--3col-pattern">
-            {CLUSTERS.map((c) => (
-              <article key={c.title} className="ds-insight ds-insight--dark">
-                <p className="ds-insight__eyebrow">{c.eyebrow}</p>
-                <h4 className="ds-insight__title">{c.title}</h4>
-                <p className="ds-insight__body">{c.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* 05-5 Competitive Analysis */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.5 · 리서치 · 경쟁사 분석"
-            title="AI 마스터가 지금 어디에 있고, 어디로 가야 하는가."
-          />
-          <ul className="ds-criteria-list">
-            {CRITERIA.map((c) => (
-              <li key={c.eyebrow} className="ds-criteria-list__item">
-                <span className="ds-criteria-list__dot" aria-hidden="true" />
-                <p className="ds-criteria-list__eyebrow">{c.eyebrow}</p>
-                <p className="ds-criteria-list__text">{c.text}</p>
-              </li>
-            ))}
-          </ul>
-          <table className="compare-table" aria-label="경쟁사 비교">
-            <thead>
-              <tr>
-                <th scope="col">기준</th>
-                <th scope="col">일반 로보 어드바이저</th>
-                <th scope="col">BingX AI 마스터 · 현재</th>
-              </tr>
-            </thead>
-            <tbody>
-              {COMPARE_ROWS.map((row, i) => (
-                <tr key={i}>
-                  <td>{row[0]}</td>
-                  <td>{row[1]}</td>
-                  <td>{row[2]}</td>
-                </tr>
+            <RevealOnView className="research-community__cards">
+              {REVIEWS.map((r) => (
+                <article key={r.name} className="review-card">
+                  <header className="review-card__head">
+                    <div className="review-card__avatar" aria-hidden>
+                      {r.initial}
+                    </div>
+                    <div className="review-card__meta">
+                      <span className="review-card__name">{r.name}</span>
+                      <span className="review-card__date">{r.date}</span>
+                    </div>
+                  </header>
+                  <div
+                    className="review-card__stars"
+                    role="img"
+                    aria-label={`${r.stars} out of 5 stars`}
+                  >
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <span
+                        key={n}
+                        className={
+                          n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="review-card__text">{r.text}</p>
+                </article>
               ))}
-            </tbody>
-          </table>
+            </RevealOnView>
+          </div>
+
+          <p className="research-community__closing">
+            사용자들은 서비스를 어떻게 사용해야 하는지 이해하는 데 어려움을 겪고 있었다.
+          </p>
         </div>
 
-        {/* 05-6 Empathy Map */}
-        <div style={{ marginBottom: 'var(--space-30)' }}>
-          <SubsectionHeader
-            eyebrow="05.6 · 리서치 · 공감 지도"
-            title="에이전트를 처음 고르는 사용자의 머릿속."
-          />
-          <div className="ds-impact-grid ds-impact-grid--4col">
-            {EMPATHY.map((q) => (
-              <article key={q.label} className={`ds-insight${q.variant}`}>
-                <p className="ds-insight__eyebrow">{q.label}</p>
-                <p className="ds-insight__body" style={{ marginTop: 'var(--space-4)' }}>
-                  {q.body}
-                </p>
-              </article>
-            ))}
+        {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
+        <div className="research-survey">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
+            [ 03.2 — 2차 리서치 · 설문 ]
+          </p>
+          <p className="research-survey__intro">
+            이러한 문제가 사용자 전반에서 일관되게 나타나는지 확인하기 위해 설문을 진행했다.
+            [위지 확인: n=?]
+          </p>
+
+          <div className="research-survey__layout">
+            <figure className="research-survey__collage">
+              <img
+                className="research-survey__collage-img media-fill"
+                src="/images/research/survey.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-survey__collage-caption">
+                [설문 결과 - AI 트레이딩 기능에 대한 사용자 인식]
+              </figcaption>
+            </figure>
+
+            <RevealOnView className="research-survey__stats">
+              {SURVEY_STATS.map((s, i) => (
+                <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
+                  <p className="survey-stat__number">
+                    <ScrambleNumber
+                      className="survey-stat__value"
+                      value={s.value}
+                      delay={800 + i * 100}
+                      duration={1200}
+                    />
+                    <span className="survey-stat__suffix">%</span>
+                  </p>
+                  <p className="survey-stat__text">{s.text}</p>
+                </div>
+              ))}
+            </RevealOnView>
+          </div>
+
+          <p className="research-survey__closing">
+            사용자들은 AI 자체를 거부한 것이 아니라, 그 목적과 사용 흐름, 결과를 해석하는
+            방법을 충분히 이해하지 못해 기능 사용을 망설이고 있었다.
+          </p>
+          <p className="research-survey__closing">
+            그러나 설문만으로는 이러한 반응이 왜 나타나는지 명확하게 설명하기 어려웠다. 특히
+            거래 경험 수준이 다른 사용자들이 AI Master를 어떻게 다르게 인식하는지 이해할
+            필요가 있었다.
+          </p>
+        </div>
+
+        {/* 04 Primary Research — Interview (Figma 133:54) */}
+        <div className="research-primary">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
+            [ 04 — 1차 리서치 · 인터뷰 ]
+          </p>
+          <p className="research-primary__intro">
+            거래 경험에 따라 AI Master에 대한 인식이 어떻게 달라지는지 이해하기 위해 사용자
+            4명(초급 2명, 고급 2명)을 인터뷰했다. 어떻게 에이전트를 선택했는지, AI가 무엇을
+            해주길 기대했는지, 그리고 어디에서 망설였는지를 물었다.
+          </p>
+          <div className="research-duo research-duo--interview">
+            <figure className="research-duo__figure">
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/beginner-user.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-duo__caption">[ 인터뷰 — 초급 사용자 (n=2) · 원격 ]</figcaption>
+            </figure>
+            <figure className="research-duo__figure">
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/advanced-user.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-duo__caption">[ 인터뷰 — 고급 사용자 (n=2) · 원격 ]</figcaption>
+            </figure>
           </div>
         </div>
 
-        {/* 05-7 Journey Map */}
-        <div>
-          <SubsectionHeader
-            eyebrow="05.7 · 리서치 · 여정 지도"
-            title="비교가 시작되어야 할 자리에서 확신이 떨어진다."
-          />
-          <figure className="ds-media ds-media--full" style={{ marginBottom: 'var(--space-12)' }}>
-            <img
-              className="ds-media-placeholder media-fill"
-              data-aspect="16/9"
-              src="/images/define/user-journey.png"
-              alt=""
-              aria-hidden
-            />
-            <figcaption className="ds-media__caption">
-              발견 → 탐색 → 비교 → 결정 → 활성화 단계별 감정 여정.
-            </figcaption>
-          </figure>
-          <ul className="ds-research-finding__implication-list">
-            {JOURNEY_IMPLICATIONS.map((i) => (
-              <li key={i}>{i}</li>
+        {/* 05 Analysis (Figma 133:54) */}
+        <div className="research-analysis">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
+            [ 05 — 분석 ]
+          </p>
+          <p className="research-analysis__intro">
+            인터뷰를 분석한 결과, 사용자들은 서로 다르게 표현했지만 비슷한 감정적·행동적
+            패턴이 반복적으로 나타났다. 이러한 패턴을 더 잘 구조화하기 위해, 사용자 발화를
+            분류하고 컬러 코딩 과정을 통해 유사한 맥락끼리 묶었다.
+          </p>
+          <div className="research-duo research-duo--analysis">
+            <figure className="research-duo__figure">
+              <img
+                className="research-duo__img media-fill"
+                src="/images/research/color-coding.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-duo__caption">[ 컬러 코딩 — 사용자 발화 그룹핑 ]</figcaption>
+            </figure>
+            <figure className="research-duo__figure">
+              <video
+                className="research-duo__img media-fill"
+                src="/videos/team-affinity.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
+              <figcaption className="research-duo__caption">[ 친화도 매핑 — 팀 세션 ]</figcaption>
+            </figure>
+          </div>
+          <p className="research-analysis__closing">
+            인터뷰에 대한 컬러 코딩과 친화도 매핑을 통해, 사용자들이 거래 경험 수준에 따라
+            AI Master를 완전히 다른 방식으로 인식하고 있다는 것을 발견했다.
+          </p>
+        </div>
+
+        {/* Insight Section (Figma 139:54) */}
+        <div className="research-insight">
+          <RevealOnView className="research-insight__groups">
+            {INSIGHT_GROUPS.map((g) => (
+              <article key={g.title} className={`insight-group insight-group--${g.variant}`}>
+                <h3 className="insight-group__title">{g.title}</h3>
+                {g.cards.map((c) => (
+                  <div key={c.title} className="insight-group__card">
+                    <h4 className="insight-group__card-title">{c.title}</h4>
+                    <p className="insight-group__card-body">{c.body}</p>
+                  </div>
+                ))}
+              </article>
             ))}
-          </ul>
+          </RevealOnView>
+
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
+            insight
+          </p>
+          <p className="research-insight__closing">
+            그 결과, AI Master는 초급 사용자에게는 지나치게 복잡하게 느껴졌고, 고급
+            사용자에게는 충분히 강한 동기를 제공하지 못했다.
+          </p>
+          <p className="research-insight__closing">
+            특히 많은 고급 사용자들은 거래하는 행위 자체를 즐겼기 때문에, 애초에 AI의 개입을
+            원하지 않았다.
+          </p>
+          <p className="research-insight__closing research-insight__closing--lead">
+            따라서 이 프로젝트는 초급 사용자가{' '}
+            <span className="research-insight__highlight">
+              전략 거래를 더 쉽게 이해하고 자신 있게 경험에 진입하도록 돕는 데
+            </span>{' '}
+            초점을 맞췄다.
+          </p>
+        </div>
+
+        {/* 06 Competitor Research (Figma 147:74) */}
+        <div className="research-competitor">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
+            [ 06 — 경쟁사 리서치 ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-competitor__title">
+            다른 투자 서비스들은 의사결정을
+            <br />
+            <span className="research-competitor__highlight">단계별로 안내했지만</span>, AI
+            Master는 그렇지 않았다
+          </RevealHeading>
+
+          <div className="research-competitor__layout">
+            <figure className="research-competitor__figure">
+              <img
+                className="research-competitor__img media-fill"
+                src="/images/research/competitor-research.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="research-competitor__caption">
+                [투자 플랫폼별 의사결정 프레임워크 비교
+                <br />
+                Source : Carmignac · Robo-advisor · Fund Service Interfaces]
+              </figcaption>
+            </figure>
+
+            <div className="research-competitor__copy">
+              <p>
+                로보 어드바이저와 펀드 플랫폼은 투자 선호도, 옵션 비교, 최종 의사결정 흐름을
+                단계별로 안내했다. 또한 기대 수익률, 리스크 수준, 투자 기간과 같은 명확한
+                의사결정 기준을 중심으로 설계되어, 사용자가 더 확신을 가지고 선택할 수 있도록
+                도왔다.
+              </p>
+              <p>
+                반면 AI Master는 투자자 페르소나를 통해 전략을 제시했을 뿐, 비교 기준을 추천
+                흐름과 명확하게 연결하지 못했다. 그 결과 사용자들은 논리적인 전략 비교보다는
+                이미지나 분위기 같은 인상에 더 의존하게 되었다.
+              </p>
+              <p>
+                그러나 실제 돈이 개입되는 순간, 이 불분명한 의사결정 구조는 빠르게 불안으로
+                바뀌었고, 많은 사용자가 최종 결정 단계에 이르기 전에 이탈했다.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

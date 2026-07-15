@@ -1,55 +1,75 @@
-import SectionHeader from '@/components/SectionHeader';
+import RevealHeading from '@/components/RevealHeading';
 
 const WORKED = [
-  '세 가지 질문 인테이크는 빠르게 느껴졌고, 장벽처럼 느껴지지 않았다.',
-  '나란히 비교 화면에서, 테스터들이 "이제 알겠다"는 반응을 보였다.',
-  'MDD를 평이한 언어로 설명한 것이 % 단독 표기보다 더 명확하게 읽혔다.',
+  '단계별 흐름이 이해하기 더 쉬워졌다',
+  '전략 비교가 더 명확하고 구조적으로 느껴졌다',
+  '현재 상태와 다음 행동에 대한 이해가 향상되었다',
+  '불필요한 화면 전환이 줄어들었다',
+  '전반적인 탐색 흐름이 더 안정적으로 느껴졌다',
 ];
 
 const DIDNT = [
-  '테스터 두 명은 포트폴리오 규모에 대한 네 번째 질문을 원했다.',
-  '"전체 카탈로그 건너뛰기" 링크는 첫 패스에서 놓치기 쉬웠다.',
-  '거래 로그 주석이 첫 읽기에서 법조문처럼 느껴졌다 — 카피 보완 필요.',
+  '일부 아이콘은 즉각적으로 직관적이지 않았다',
+  '사용자들이 전략 상세 영역을 해석하느라 잠시 멈추는 경우가 있었다',
 ];
 
 export default function UserTest() {
   return (
-    <section className="section">
+    <section id="final" className="section ut">
       <div className="section-inner">
-        <SectionHeader
-          eyebrow="사용성 테스트 (n = 8)"
-          title="시스템 사용성 척도(SUS)로 측정."
-          level="h1"
-        />
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — 사용자 테스트 ]</p>
+        <RevealHeading level="h2" className="ds-h2 ut__title">
+          사용자들은 의사결정 흐름을
+          <br />
+          이전보다 더 명확하게 탐색할 수 있었다
+        </RevealHeading>
 
-        <div
-          className="ds-stat-standalone"
-          style={{ margin: '0 auto var(--space-20) auto' }}
-        >
-          <div className="ds-stat-standalone__number">
-            <span>88</span>
+        <div className="ut__top">
+          {/* Left: usability test visual (Figma 634×476) */}
+          <img
+            className="ut__media ut__media--tall media-fill"
+            src="/images/user-test/user-test.jpg"
+            alt=""
+            aria-hidden
+          />
+
+          {/* Right: summary + supporting visual (Figma 634×159) */}
+          <div className="ut__summary">
+            <p className="ut__para">
+              리디자인은 SUS 88점(n=8)을 기록했다 — 상위 15%, &ldquo;Excellent&rdquo; 등급이다.
+            </p>
+            <p className="ut__para">
+              사용성 테스트 결과, [위지 확인: X of 8 / X% task completion] 전략 탐색부터 실행까지
+              큰 어려움 없이 진행할 수 있었다.
+            </p>
+            <p className="ut__para">
+              특히 단계별 구조와 흐름 안내는 초급 사용자가 현재 상태와 다음 행동을 더 잘
+              이해하도록 도왔다.
+            </p>
+            <img
+              className="ut__media ut__media--wide media-fill"
+              src="/images/user-test/sus-score.png"
+              alt=""
+              aria-hidden
+            />
           </div>
-          <hr className="ds-stat-standalone__divider" />
-          <p className="ds-stat-standalone__label">SUS 점수</p>
-          <p className="ds-stat-standalone__caption">
-            상위 15% — SUS 기준으로 "Excellent" 등급.
-          </p>
         </div>
 
-        <div className="ds-need-pain-grid">
-          <article className="ds-insight">
-            <p className="ds-insight__eyebrow">잘된 점</p>
-            <ul className="ds-numbered-step__list" style={{ marginTop: 'var(--space-6)' }}>
-              {WORKED.map((w) => (
-                <li key={w}>{w}</li>
+        <div className="ut__cards">
+          <article className="ut__card">
+            <h3 className="ut__card-title">잘된 점</h3>
+            <ul className="ut__list">
+              {WORKED.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
-          <article className="ds-insight ds-insight--dark">
-            <p className="ds-insight__eyebrow">아쉬운 점</p>
-            <ul className="ds-numbered-step__list" style={{ marginTop: 'var(--space-6)' }}>
-              {DIDNT.map((d) => (
-                <li key={d}>{d}</li>
+
+          <article className="ut__card ut__card--muted">
+            <h3 className="ut__card-title">아쉬운 점</h3>
+            <ul className="ut__list">
+              {DIDNT.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
