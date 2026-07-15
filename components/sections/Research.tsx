@@ -137,7 +137,7 @@ export default function Research() {
           </p>
           <p className="research-survey__intro">
             To verify whether these issues were consistently occurring across users, a survey
-            was conducted. [위지 확인: n=?]
+            was conducted (n=22).
           </p>
 
           <div className="research-survey__layout">

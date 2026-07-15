@@ -136,8 +136,7 @@ export default function Research() {
             [ 03.2 — 2차 리서치 · 설문 ]
           </p>
           <p className="research-survey__intro">
-            이러한 문제가 사용자 전반에서 일관되게 나타나는지 확인하기 위해 설문을 진행했다.
-            [위지 확인: n=?]
+            이러한 문제가 사용자 전반에서 일관되게 나타나는지 확인하기 위해 설문을 진행했다 (n=22).
           </p>
 
           <div className="research-survey__layout">

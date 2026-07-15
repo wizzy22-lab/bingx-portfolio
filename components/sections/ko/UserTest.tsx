@@ -36,11 +36,11 @@ export default function UserTest() {
           {/* Right: summary + supporting visual (Figma 634×159) */}
           <div className="ut__summary">
             <p className="ut__para">
-              리디자인은 SUS 88점(n=8)을 기록했다 — 상위 15%, &ldquo;Excellent&rdquo; 등급이다.
+              리디자인은 SUS 88점(n=5)을 기록했다 — 상위 15%, &ldquo;Excellent&rdquo; 등급이다.
             </p>
             <p className="ut__para">
-              사용성 테스트 결과, [위지 확인: X of 8 / X% task completion] 전략 탐색부터 실행까지
-              큰 어려움 없이 진행할 수 있었다.
+              사용성 테스트 결과, 참가자 5명 전원(100%)이 전략 탐색부터 실행까지
+              큰 어려움 없이 플로우를 완료했다.
             </p>
             <p className="ut__para">
               특히 단계별 구조와 흐름 안내는 초급 사용자가 현재 상태와 다음 행동을 더 잘

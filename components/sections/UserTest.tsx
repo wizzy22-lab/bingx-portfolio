@@ -36,10 +36,10 @@ export default function UserTest() {
           {/* Right: summary + supporting visual (Figma 634×159) */}
           <div className="ut__summary">
             <p className="ut__para">
-              The redesign scored SUS 88 (n=8) — top 15%, an &ldquo;Excellent&rdquo; grade.
+              The redesign scored SUS 88 (n=5) — top 15%, an &ldquo;Excellent&rdquo; grade.
             </p>
             <p className="ut__para">
-              Usability testing showed that [위지 확인: X of 8 / X% task completion] from
+              Usability testing showed that all 5 participants (100%) completed the flow from
               strategy exploration to execution without major difficulties.
             </p>
             <p className="ut__para">
