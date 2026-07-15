@@ -4,14 +4,14 @@ import RevealOnView from '@/components/RevealOnView';
 const PROBLEMS = [
   {
     number: '01.',
-    title: 'No Personalized Starting Point',
+    title: 'No personalized starting point',
     intro: 'Users had to explore all strategies without a clear starting point based on their preferences.',
     bullets: [] as string[],
     outro: '',
   },
   {
     number: '02.',
-    title: 'Unclear Recommendation Flow',
+    title: 'Unclear recommendation flow',
     intro: 'Users struggled to understand:',
     bullets: [
       'why strategies were recommended',
@@ -22,7 +22,7 @@ const PROBLEMS = [
   },
   {
     number: '03.',
-    title: 'Hard to Compare Strategies',
+    title: 'Hard to compare strategies',
     intro: 'Users found it difficult to quickly compare:',
     bullets: ['strategy differences', 'risk levels', 'key performance information'],
     outro: 'across multiple agents.',
@@ -37,7 +37,7 @@ export default function BeforeExperience() {
           [ 02 — Current Experience ]
         </p>
         <RevealHeading level="h2" className="ds-h2 experience__title">
-          Users struggled to understand How the AI agents actually worked.
+          Users struggled to understand how the AI agents actually worked.
         </RevealHeading>
         <p className="experience__lede">
           Users were able to recognize the AI avatars through familiar investor imagery, but
@@ -54,7 +54,7 @@ export default function BeforeExperience() {
               aria-hidden
             />
             <figcaption className="experience__analysis-caption">
-              [ Current Experience Analysis -Existing AI Master Flow &amp; Interface Review ]
+              [ Current Experience Analysis — Existing AI Master Flow &amp; Interface Review ]
             </figcaption>
           </figure>
 

@@ -15,12 +15,12 @@ export default function Define() {
         {/* 07.1 Empathy Map (Figma 149:1121) */}
         <div className="define-sub">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
-            [ 07.1 — Define - Empathy map]
+            [ 07.1 — Define · Empathy Map ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            Users Relied on Impressions
+            Users relied on impressions
             <br />
-            Rather Than Clear Understanding
+            rather than clear understanding
           </RevealHeading>
           <figure className="define-sub__figure">
             <img
@@ -46,7 +46,7 @@ export default function Define() {
         {/* 07.2 User Journey (Figma 151:84) */}
         <div className="define-sub">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
-            [ 07.2 — Define - User journey]
+            [ 07.2 — Define · User Journey ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-sub__title">
             Users were experiencing even greater
@@ -89,12 +89,12 @@ export default function Define() {
       <section id="define-hmw" className="section define-hmw">
         <div className="section-inner">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-hmw__eyebrow">
-            [ 07.3 — Define - HMW]
+            [ 07.3 — Define · HMW ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-hmw__title">
-            Key Questions for Reducing Beginner Users&rsquo;
+            Key questions for reducing beginner users&rsquo;
             <br />
-            Confusion, Decision Difficulty, and Anxiety
+            confusion, decision difficulty, and anxiety
           </RevealHeading>
           <p className="define-hmw__intro">
             Through the problem statement, we identified that beginner users expected AI to feel

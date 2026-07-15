@@ -14,6 +14,7 @@ const META = [
   { label: 'SCOPE', value: 'Research · IA · Visual · Prototype · Usability Test' },
   { label: 'DURATION', value: '8 weeks' },
   { label: 'TEAM', value: '2 Designers' },
+  { label: 'MY ROLE', value: '[위지 확인: 예 — Research design · IA · Onboarding & comparison flow UI]' },
 ];
 
 export default function Hero() {

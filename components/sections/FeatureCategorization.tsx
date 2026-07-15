@@ -2,10 +2,10 @@ import RevealHeading from '@/components/RevealHeading';
 
 export default function FeatureCategorization() {
   return (
-    <section id="feature-categorization" className="section featcat">
+    <section id="ideation" className="section featcat">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow featcat__eyebrow">
-          [ 08.1 — Feature categorization &amp; prioritization]
+          [ 08.1 — Feature Categorization &amp; Prioritization ]
         </p>
         <RevealHeading level="h2" className="ds-h2 featcat__title">
           We first organized the feature flows

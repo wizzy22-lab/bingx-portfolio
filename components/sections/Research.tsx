@@ -37,7 +37,7 @@ const SURVEY_STATS = [
 const INSIGHT_GROUPS = [
   {
     variant: 'beginner',
-    title: 'Beginner Users',
+    title: 'Beginner users',
     cards: [
       {
         title: 'Information Overload · Structural Confusion',
@@ -51,7 +51,7 @@ const INSIGHT_GROUPS = [
   },
   {
     variant: 'advanced',
-    title: 'Advanced Users',
+    title: 'Advanced users',
     cards: [
       {
         title: 'Low Need for AI Automation',
@@ -72,10 +72,10 @@ export default function Research() {
         {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
         <div className="research-community">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
-            [ 03.1 — secondary research - Community source]
+            [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            Community Reactions Revealed Repeated Patterns of Confusion
+            Community reactions revealed repeated patterns of confusion
           </RevealHeading>
 
           <div className="research-community__layout">
@@ -133,11 +133,11 @@ export default function Research() {
         {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
         <div className="research-survey">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
-            [ 03.2 — secondary research - Survey]
+            [ 03.2 — Secondary Research · Survey ]
           </p>
           <p className="research-survey__intro">
             To verify whether these issues were consistently occurring across users, a survey
-            was conducted.
+            was conducted. [위지 확인: n=?]
           </p>
 
           <div className="research-survey__layout">
@@ -186,10 +186,12 @@ export default function Research() {
         {/* 04 Primary Research — Interview (Figma 133:54) */}
         <div className="research-primary">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
-            [ 04 — Primary research - interview]
+            [ 04 — Primary Research · Interviews ]
           </p>
           <p className="research-primary__intro">
-            Interviews were conducted separately with beginner and advanced users.
+            We interviewed 4 users (2 beginners, 2 advanced) to understand how perception of AI
+            Master differed by trading experience. We asked how they chose an agent, what they
+            expected the AI to do, and where they hesitated.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
@@ -199,7 +201,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[Beginner users - ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Beginner users (n=2) · remote ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <img
@@ -208,7 +210,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[Advance User - ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Advanced users (n=2) · remote ]</figcaption>
             </figure>
           </div>
         </div>
@@ -216,7 +218,7 @@ export default function Research() {
         {/* 05 Analysis (Figma 133:54) */}
         <div className="research-analysis">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
-            [ 05 — Analysis]
+            [ 05 — Analysis ]
           </p>
           <p className="research-analysis__intro">
             After analyzing the interviews, we found that although users expressed themselves
@@ -232,7 +234,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[Beginner users]</figcaption>
+              <figcaption className="research-duo__caption">[ Color Coding — Grouping User Statements ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <video
@@ -244,7 +246,7 @@ export default function Research() {
                 playsInline
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[Advance User]</figcaption>
+              <figcaption className="research-duo__caption">[ Affinity Mapping — Team Session ]</figcaption>
             </figure>
           </div>
           <p className="research-analysis__closing">
@@ -292,13 +294,13 @@ export default function Research() {
         {/* 06 Competitor Research (Figma 147:74) */}
         <div className="research-competitor">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
-            [ 06 — Competitor research]
+            [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            Other Investment Services Guided
+            Other investment services guided
             <br />
-            <span className="research-competitor__highlight">Decisions Step-by-Step</span>, but
-            AI Master Did Not
+            <span className="research-competitor__highlight">decisions step-by-step</span>, but
+            AI Master did not
           </RevealHeading>
 
           <div className="research-competitor__layout">

@@ -51,6 +51,11 @@ export default function Reflection() {
         </div>
 
         <p className="refl__closing">
+          If this were live, the metric I&rsquo;d watch is activation conversion — whether a
+          clearer decision structure actually turns exploration into a first trade.
+        </p>
+
+        <p className="refl__closing">
           This project was part of a broader exploration into human trust, autonomy, and AI
           decision-making systems.
         </p>

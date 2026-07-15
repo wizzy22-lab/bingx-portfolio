@@ -1,9 +1,9 @@
 export default function WireframeDesignSystem() {
   return (
-    <section id="wireframe-design-system" className="section wds">
+    <section id="design" className="section wds">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow wds__eyebrow">
-          [ 08.5 — Wireframe &amp; design system ]
+          [ 08.5 — Wireframe &amp; Design System ]
         </p>
 
         <div className="wds__panels">

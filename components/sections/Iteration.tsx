@@ -16,7 +16,7 @@ export default function Iteration() {
     <section id="iteration" className="section iteration">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow iteration__eyebrow">
-          [ 08.2 — Iteration]
+          [ 08.2 — Iteration ]
         </p>
         <RevealHeading level="h2" className="ds-h2 iteration__title">
           The moment users started manually adjusting strategies,
@@ -34,9 +34,7 @@ export default function Iteration() {
               aria-hidden
             />
             <figcaption className="iteration__caption">
-              [ Comparing Decision Frameworks Across Investment Platforms
-              <br />
-              Source: Carmignac · Robo-advisor · Fund Service Interfaces ]
+              [ Reframing Control — Redefining the Solution Direction Based on Research ]
             </figcaption>
           </figure>
 
@@ -72,6 +70,13 @@ export default function Iteration() {
                 <li key={x}>{x}</li>
               ))}
             </ul>
+
+            <p className="iteration__para">
+              <span className="iteration__hl">
+                Control was redefined: not adjusting the strategy directly, but knowing who is
+                deciding — and when to step in.
+              </span>
+            </p>
           </div>
         </div>
       </div>

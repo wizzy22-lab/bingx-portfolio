@@ -2,22 +2,22 @@ import RevealHeading from '@/components/RevealHeading';
 
 const CRITERIA = [
   {
-    title: '1. Investment Style',
+    title: '1. Investment style',
     body: 'Invest conservatively for stability\nvs\ninvest more aggressively\nfor higher returns.',
     icon: '/icons/about/investment-style.png',
   },
   {
-    title: '2. Risk Tolerance',
+    title: '2. Risk tolerance',
     body: 'A measure of how much risk you are willing to take when investing.',
     icon: '/icons/about/risk-tolerance.png',
   },
   {
-    title: '3. Market Interpretation',
+    title: '3. Market interpretation',
     body: 'The way users understand and evaluate investment information when making decisions.',
     icon: '/icons/about/market-interpretation.png',
   },
   {
-    title: '4. Trading Strategy',
+    title: '4. Trading strategy',
     body: 'An investment approach that determines when to buy and when to sell.',
     icon: '/icons/about/trading-strategy.png',
   },

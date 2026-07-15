@@ -15,13 +15,13 @@ const DIDNT = [
 
 export default function UserTest() {
   return (
-    <section id="user-test" className="section ut">
+    <section id="final" className="section ut">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
         <RevealHeading level="h2" className="ds-h2 ut__title">
-          Users Could Navigate the Decision Flow
+          Users could navigate the decision flow
           <br />
-          More Clearly Than Before
+          more clearly than before
         </RevealHeading>
 
         <div className="ut__top">
@@ -36,7 +36,10 @@ export default function UserTest() {
           {/* Right: summary + supporting visual (Figma 634×159) */}
           <div className="ut__summary">
             <p className="ut__para">
-              Usability testing showed that most users were able to complete the flow from
+              The redesign scored SUS 88 (n=8) — top 15%, an &ldquo;Excellent&rdquo; grade.
+            </p>
+            <p className="ut__para">
+              Usability testing showed that [위지 확인: X of 8 / X% task completion] from
               strategy exploration to execution without major difficulties.
             </p>
             <p className="ut__para">

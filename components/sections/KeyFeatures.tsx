@@ -9,7 +9,7 @@ export default function KeyFeatures() {
         {/* Feature 1 — Personalized Agents (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            1. Personalized Agents based on your preferences
+            1. Personalized agent recommendation
           </RevealHeading>
 
           <div className="kf__compare">
@@ -52,10 +52,10 @@ export default function KeyFeatures() {
 
             {/* to be — copy */}
             <div className="kf__copy">
-              <h3 className="kf__lead">Added a personalized onboarding flow.</h3>
               <p className="kf__para">
-                The experience was redesigned to first identify the user&rsquo;s investment
-                tendencies and then recommend only the most relevant agents.
+                A personalized onboarding flow was added. The experience was redesigned to first
+                identify the user&rsquo;s investment tendencies and then recommend only the most
+                relevant agents.
               </p>
               <p className="kf__para">
                 This reduced unnecessary exploration and helped users begin comparing and selecting
@@ -68,32 +68,18 @@ export default function KeyFeatures() {
         {/* Feature 2 — Clear next action (to be ← as is, mirrored) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            2. Clear next action to explore strategies
+            2. Current step visibility
           </RevealHeading>
 
           <div className="kf__compare">
-            {/* to be — copy */}
+            {/* as is — copy */}
             <div className="kf__copy">
-              <h3 className="kf__lead">Current Step Visibility</h3>
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                A structure was added to clearly communicate the current stage and next action,
-                helping users continue exploring strategies without losing track of the flow.
+                Users were struggling to understand which stage they were currently in and what
+                they were supposed to do next.
               </p>
             </div>
-
-            {/* to be — phone (Figma 300×649) */}
-            <figure className="kf__phone kf__phone--tobe">
-              <span className="kf__pill kf__pill--accent">to be</span>
-              <video
-                className="kf__screen media-fill"
-                src="/videos/feature-2-to-be.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                aria-hidden
-              />
-            </figure>
 
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
@@ -109,12 +95,26 @@ export default function KeyFeatures() {
               />
             </figure>
 
-            {/* as is — copy */}
+            {/* to be — phone (Figma 300×649) */}
+            <figure className="kf__phone kf__phone--tobe">
+              <span className="kf__pill kf__pill--accent">to be</span>
+              <video
+                className="kf__screen media-fill"
+                src="/videos/feature-2-to-be.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                aria-hidden
+              />
+            </figure>
+
+            {/* to be — copy */}
             <div className="kf__copy">
-              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                Users were struggling to understand which stage they were currently in and what
-                they were supposed to do next.
+                A clear step structure was introduced to communicate the current stage and next
+                action, helping users continue exploring strategies without losing track of the
+                flow.
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function KeyFeatures() {
         {/* Feature 3 — Familiar chat (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            3. Chat Feels Familiar and Easy to Use
+            3. Familiar chat interaction
           </RevealHeading>
 
           <div className="kf__compare">
@@ -163,10 +163,10 @@ export default function KeyFeatures() {
 
             {/* to be — copy */}
             <div className="kf__copy">
-              <h3 className="kf__lead">Changed chat icon design &amp; location</h3>
               <p className="kf__para">
-                Familiar messenger-style interaction patterns were applied, allowing users to
-                interact with the AI naturally without needing to learn a new system.
+                The chat icon&rsquo;s design and location were changed. Familiar messenger-style
+                interaction patterns were applied, allowing users to interact with the AI
+                naturally without needing to learn a new system.
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function KeyFeatures() {
         {/* Feature 4 — Key information & performance flow (as is → to be) */}
         <article className="kf__feature">
           <RevealHeading level="h2" className="ds-h2 kf__title">
-            4. Key Information &amp; Performance Flow
+            4. Comparison &amp; performance in one flow
           </RevealHeading>
 
           <div className="kf__compare">
@@ -223,11 +223,11 @@ export default function KeyFeatures() {
 
             {/* to be — copy */}
             <div className="kf__copy">
-              <h3 className="kf__lead">Prioritized Key Information for Strategy Comparison</h3>
-              <h3 className="kf__lead">Performance &amp; Charts Within the Same Flow</h3>
               <p className="kf__para">
-                As a result, users were able to compare strategies and review performance more
-                smoothly and confidently without unnecessary navigation.
+                Key information for strategy comparison was prioritized, and performance and
+                charts were brought within the same flow. As a result, users were able to compare
+                strategies and review performance more smoothly and confidently without
+                unnecessary navigation.
               </p>
             </div>
           </div>

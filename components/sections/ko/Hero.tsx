@@ -14,6 +14,7 @@ const META = [
   { label: '범위', value: '리서치 · IA · 비주얼 · 프로토타입 · 사용성 테스트' },
   { label: '기간', value: '8주' },
   { label: '팀', value: '디자이너 2명' },
+  { label: '기여', value: '[위지 확인: 예 — 리서치 설계 · IA · 온보딩/비교 플로우 UI]' },
 ];
 
 export default function Hero() {
