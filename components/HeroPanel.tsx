@@ -20,6 +20,7 @@ export default function HeroPanel(copy: HeroCopy) {
   const riskPillRef = useRef<HTMLSpanElement>(null);
   const strategyPillRef = useRef<HTMLSpanElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const [active, setActive] = useState(false);
@@ -115,12 +116,99 @@ export default function HeroPanel(copy: HeroCopy) {
     return () => window.clearTimeout(id);
   }, [active, played, reducedMotion]);
 
+  // Pointer-driven 3D tilt + reactive glow on the phone mockup. The cursor's
+  // offset from the panel centre sets target rotations/glow, and an rAF loop
+  // eases the phone toward them (raw pointer values jitter; the lerp smooths it).
+  // Skipped for reduced-motion and coarse (touch) pointers, where the phone
+  // stays flat and the glow rests at its calm default.
+  useEffect(() => {
+    if (reducedMotion) return;
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const panel = panelRef.current;
+    const phone = phoneRef.current;
+    if (!panel || !phone) return;
+
+    const MAX_DEG = 8; // subtle 3D swing
+    // target vs current, lerped each frame
+    let tx = 0,
+      ty = 0,
+      tg = 0; // targets: rotY, rotX, glow strength (0..1)
+    let cx = 0,
+      cy = 0,
+      cg = 0; // current
+    let sx = 0.5,
+      sy = 0.4; // sheen position (0..1), targets tracked directly
+    let raf = 0;
+    let running = false;
+
+    const apply = () => {
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.12;
+      cg += (tg - cg) * 0.12;
+      phone.style.setProperty('--ry', `${cx.toFixed(2)}deg`);
+      phone.style.setProperty('--rx', `${cy.toFixed(2)}deg`);
+      phone.style.setProperty('--glow', cg.toFixed(3));
+      phone.style.setProperty('--gx', `${(cx / MAX_DEG) * 40}%`);
+      phone.style.setProperty('--sx', `${(sx * 100).toFixed(1)}%`);
+      phone.style.setProperty('--sy', `${(sy * 100).toFixed(1)}%`);
+      // Keep easing until settled, then park the loop.
+      const settled =
+        Math.abs(tx - cx) < 0.01 &&
+        Math.abs(ty - cy) < 0.01 &&
+        Math.abs(tg - cg) < 0.005;
+      if (settled) {
+        running = false;
+        return;
+      }
+      raf = window.requestAnimationFrame(apply);
+    };
+
+    const kick = () => {
+      if (running) return;
+      running = true;
+      raf = window.requestAnimationFrame(apply);
+    };
+
+    const onMove = (e: PointerEvent) => {
+      const r = panel.getBoundingClientRect();
+      const nx = (e.clientX - r.left) / r.width - 0.5; // -0.5..0.5
+      const ny = (e.clientY - r.top) / r.height - 0.5;
+      tx = nx * 2 * MAX_DEG; // mouse X → rotateY
+      ty = -ny * 2 * (MAX_DEG * 0.6); // mouse Y → gentler rotateX
+      tg = 1 - Math.min(1, Math.hypot(nx, ny) * 1.6); // brighter near centre/phone
+
+      // Sheen tracks the cursor relative to the phone itself.
+      const pr = phone.getBoundingClientRect();
+      sx = Math.min(1, Math.max(0, (e.clientX - pr.left) / pr.width));
+      sy = Math.min(1, Math.max(0, (e.clientY - pr.top) / pr.height));
+      kick();
+    };
+
+    const onLeave = () => {
+      tx = 0;
+      ty = 0;
+      tg = 0;
+      sx = 0.5;
+      sy = 0.4;
+      kick();
+    };
+
+    panel.addEventListener('pointermove', onMove);
+    panel.addEventListener('pointerleave', onLeave);
+    return () => {
+      panel.removeEventListener('pointermove', onMove);
+      panel.removeEventListener('pointerleave', onLeave);
+      window.cancelAnimationFrame(raf);
+    };
+  }, [reducedMotion]);
+
   const isKr = copy.locale === 'ko';
   const hasWires = geo !== null && geo.wires.length > 0;
 
   return (
     <section id="hero" className="hero-section">
-      <div className={`hero-panel${active ? ' is-in' : ''}`}>
+      <div className={`hero-panel${active ? ' is-in' : ''}`} ref={panelRef}>
         <img
           className="hero-panel__bg"
           src="/images/hero/hero-background.png"
@@ -206,17 +294,21 @@ export default function HeroPanel(copy: HeroCopy) {
 
             {/* Phone — onboarding clip */}
             <div className="hero-phone" ref={phoneRef}>
-              <video
-                ref={videoRef}
-                className="hero-phone__video"
-                poster="/images/hero/phone-poster.png"
-                muted
-                playsInline
-                preload="metadata"
-                aria-label={copy.videoLabel}
-              >
-                <source src="/videos/feature-1-to-be.mp4" type="video/mp4" />
-              </video>
+              <span className="hero-phone__glow" aria-hidden />
+              <div className="hero-phone__tilt">
+                <video
+                  ref={videoRef}
+                  className="hero-phone__video"
+                  poster="/images/hero/phone-poster.png"
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label={copy.videoLabel}
+                >
+                  <source src="/videos/feature-1-to-be.mp4" type="video/mp4" />
+                </video>
+                <span className="hero-phone__sheen" aria-hidden />
+              </div>
             </div>
 
             {/* Connector wires (desktop only) */}

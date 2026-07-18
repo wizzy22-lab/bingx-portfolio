@@ -249,21 +249,64 @@ section[id] {
   box-shadow: 0 6px 20px rgba(43, 107, 255, 0.35);
 }
 
-/* Phone */
+/* Phone — pointer-reactive 3D tilt + blue-light glow.
+   JS writes --ry/--rx (tilt), --glow (0..1 hover strength),
+   --gx (glow horizontal shift), --sx/--sy (sheen position). */
 .hero-phone {
+  position: relative;
   width: min(300px, 82%);
   margin-inline: auto;
-  padding: 6px;
-  border-radius: 42px;
-  background: linear-gradient(160deg, #1b2740, #0a0e16);
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 0 60px rgba(43, 107, 255, 0.14);
+  perspective: 1100px;
+  --ry: 0deg;
+  --rx: 0deg;
+  --glow: 0;
+  --gx: 0%;
+  --sx: 50%;
+  --sy: 40%;
 }
 @media (min-width: 1024px) {
   .hero-phone {
     width: min(300px, 100%);
     justify-self: end;
   }
+}
+
+/* Bottom lighting — a blue radial pool under the phone that brightens
+   and lifts as the cursor nears (driven by --glow / --gx). */
+.hero-phone__glow {
+  position: absolute;
+  left: 50%;
+  bottom: -14%;
+  width: 150%;
+  height: 60%;
+  transform: translate(calc(-50% + var(--gx)), 0)
+    scale(calc(1 + var(--glow) * 0.18));
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(43, 107, 255, calc(0.22 + var(--glow) * 0.4)) 0%,
+    rgba(43, 107, 255, calc(0.08 + var(--glow) * 0.16)) 42%,
+    transparent 72%
+  );
+  filter: blur(18px);
+  opacity: calc(0.55 + var(--glow) * 0.45);
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity var(--duration-slow) var(--ease-out);
+}
+
+/* Tilt wrapper — carries the frame chrome so the sheen tilts with it. */
+.hero-phone__tilt {
+  position: relative;
+  padding: 6px;
+  border-radius: 42px;
+  background: linear-gradient(160deg, #1b2740, #0a0e16);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 calc(60px + var(--glow) * 50px)
+      rgba(43, 107, 255, calc(0.14 + var(--glow) * 0.26));
+  transform: rotateY(var(--ry)) rotateX(var(--rx));
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow var(--duration-slow) var(--ease-out);
 }
 .hero-phone__video {
   display: block;
@@ -272,6 +315,22 @@ section[id] {
   object-fit: cover;
   border-radius: 36px;
   background: #05070a;
+}
+
+/* Specular sheen over the glass, following the cursor. */
+.hero-phone__sheen {
+  position: absolute;
+  inset: 6px;
+  border-radius: 36px;
+  pointer-events: none;
+  background: radial-gradient(
+    38% 30% at var(--sx) var(--sy),
+    rgba(255, 255, 255, calc(0.16 + var(--glow) * 0.14)) 0%,
+    transparent 60%
+  );
+  opacity: calc(0.5 + var(--glow) * 0.5);
+  mix-blend-mode: screen;
+  transition: opacity var(--duration-slow) var(--ease-out);
 }
 
 /* Connector wires (desktop only) */
@@ -344,6 +403,15 @@ section[id] {
   .hero-panel__bg {
     opacity: 1;
     transform: none;
+  }
+  /* Phone rests flat; glow holds a calm default (JS tracking is skipped). */
+  .hero-phone__tilt {
+    transform: none;
+    transition: none;
+  }
+  .hero-phone__glow,
+  .hero-phone__sheen {
+    transition: none;
   }
 }
 
