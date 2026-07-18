@@ -61,16 +61,20 @@ export default function HeroPanel(copy: HeroCopy) {
       const s = stage.getBoundingClientRect();
       const p = phone.getBoundingClientRect();
       const px = p.left - s.left; // phone left edge, stage-relative
+      const pTop = p.top - s.top;
+      const pBottom = pTop + p.height;
 
-      const build = (pill: HTMLElement | null, connY: number): Wire | null => {
+      // Each wire exits the selected pill's bottom, drops down, then runs
+      // right into the phone — always descending so the elbow points down.
+      const build = (pill: HTMLElement | null, drop: number): Wire | null => {
         if (!pill) return null;
         const b = pill.getBoundingClientRect();
         const x1 = b.left - s.left + b.width / 2;
         const y1 = b.bottom - s.top;
-        const yT = connY;
-        const goingDown = yT >= y1;
+        // Clamp the horizontal run to sit within the phone's height.
+        const yT = Math.min(Math.max(y1 + drop, pTop + 24), pBottom - 24);
         const r = Math.min(12, Math.abs(yT - y1) / 2);
-        const vy = goingDown ? yT - r : yT + r;
+        const vy = yT - r;
         const cornerX = x1 + r;
         const d = `M ${x1.toFixed(1)} ${y1.toFixed(1)} L ${x1.toFixed(1)} ${vy.toFixed(
           1,
@@ -80,9 +84,8 @@ export default function HeroPanel(copy: HeroCopy) {
         return { d };
       };
 
-      const pTop = p.top - s.top;
-      const w1 = build(riskPillRef.current, pTop + p.height * 0.4);
-      const w2 = build(strategyPillRef.current, pTop + p.height * 0.6);
+      const w1 = build(riskPillRef.current, 48);
+      const w2 = build(strategyPillRef.current, 48);
 
       setGeo({
         w: s.width,
