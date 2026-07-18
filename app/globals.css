@@ -111,6 +111,242 @@ section[id] {
   }
 }
 
+/* =============================================================
+   Hero panel — redesign (background art + config chips + phone)
+   ============================================================= */
+.hero-section {
+  padding-block: var(--space-14) var(--space-20);
+  padding-inline: var(--space-4);
+}
+@media (min-width: 768px) {
+  .hero-section {
+    padding-block: var(--space-16) var(--space-30);
+    padding-inline: var(--space-8);
+  }
+}
+
+.hero-panel {
+  position: relative;
+  isolation: isolate;
+  max-width: 1600px;
+  margin-inline: auto;
+  border-radius: var(--radius-card-lg);
+  overflow: hidden;
+  background: #05070a;
+  padding: clamp(var(--space-8), 4vw, var(--space-20));
+}
+
+.hero-panel__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: -1;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.2s var(--ease-out), transform 1.6s var(--ease-out);
+}
+.hero-panel.is-in .hero-panel__bg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-panel__inner {
+  position: relative;
+}
+
+/* Stage — three logical zones (lead / config / phone) */
+.hero-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .hero-stage {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr) minmax(0, 0.8fr);
+    gap: var(--space-8);
+    align-items: center;
+    min-height: 600px;
+  }
+}
+
+/* Lead */
+.hero-lead__title,
+.ds-kr .hero-lead__title.ds-display {
+  margin: 0 0 var(--space-8) 0;
+  font-family: var(--font-sans);
+  font-size: clamp(48px, 6vw, var(--text-display-size));
+  line-height: 1.02;
+  letter-spacing: var(--text-display-letter-spacing);
+}
+.hero-lead__subtitle {
+  color: var(--text-primary);
+  margin: 0 0 var(--space-8) 0;
+  max-width: 440px;
+}
+.hero-lead__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  max-width: 440px;
+}
+.hero-lead .ds-tag {
+  background: rgba(10, 14, 20, 0.4);
+}
+
+/* Config — preference chip groups */
+.hero-config {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+@media (min-width: 1024px) {
+  .hero-config {
+    padding-block: var(--space-8);
+  }
+}
+.hero-config__label {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--text-tertiary);
+}
+.hero-chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: var(--border-thin) solid rgba(255, 255, 255, 0.07);
+}
+.hero-chip {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.3;
+  color: #97a1b0;
+  white-space: nowrap;
+  transition: color var(--duration-slow) var(--ease-out),
+    background var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-spring);
+}
+.hero-chip.is-selected {
+  color: #f4f7ff;
+  background: transparent;
+  transform: scale(1);
+}
+.hero-panel.is-in .hero-chip.is-selected {
+  background: #2b6bff;
+  color: #ffffff;
+  transform: scale(1.02);
+  transition-delay: 0.25s;
+  box-shadow: 0 6px 20px rgba(43, 107, 255, 0.35);
+}
+
+/* Phone */
+.hero-phone {
+  width: min(300px, 82%);
+  margin-inline: auto;
+  padding: 6px;
+  border-radius: 42px;
+  background: linear-gradient(160deg, #1b2740, #0a0e16);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 60px rgba(43, 107, 255, 0.14);
+}
+@media (min-width: 1024px) {
+  .hero-phone {
+    width: min(300px, 100%);
+    justify-self: end;
+  }
+}
+.hero-phone__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 719 / 1556;
+  object-fit: cover;
+  border-radius: 36px;
+  background: #05070a;
+}
+
+/* Connector wires (desktop only) */
+.hero-wires {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+.hero-wires__path {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.6));
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.hero-panel.is-in .hero-wires__path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.9s var(--ease-out);
+  transition-delay: var(--wire-delay, 0.35s);
+}
+.hero-wires__dot {
+  fill: #bcd4ff;
+  filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.9));
+  opacity: 0;
+}
+.hero-panel.is-in .hero-wires__dot {
+  opacity: 1;
+  transition: opacity 0.4s ease 1.2s;
+}
+
+/* Meta */
+.hero-meta {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: var(--border-thin) solid var(--border-hairline);
+}
+@media (min-width: 768px) {
+  .hero-meta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.hero-meta__label {
+  margin: 0 0 var(--space-3) 0;
+}
+.hero-meta__value p {
+  margin: 0;
+  color: var(--text-primary);
+}
+.hero-meta__value p + p {
+  margin-top: var(--space-1);
+  color: var(--text-tertiary);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-panel__bg,
+  .hero-chip.is-selected,
+  .hero-wires__path {
+    transition: none !important;
+  }
+  .hero-panel__bg {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* About service — 4-criteria layout (Figma 39:274) */
 .about__eyebrow {
   display: block;
@@ -2655,13 +2891,36 @@ video.media-fill {
   z-index: var(--z-sticky);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-6);
   padding: var(--space-4) var(--space-6);
   background: rgba(20, 24, 26, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: var(--border-thin) solid var(--border-hairline);
+}
+
+/* Two crossfading nav layers: portfolio-level over the hero, section nav after. */
+.site-nav__main {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 40px;
+}
+.site-nav__layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--duration-base) var(--ease-default);
+}
+.site-nav__layer.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .site-nav__brand {
@@ -2671,6 +2930,27 @@ video.media-fill {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.site-nav__portfolio-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.site-nav__portfolio-name {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+.site-nav__portfolio-role {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--text-tertiary);
 }
 
 .site-nav__links {

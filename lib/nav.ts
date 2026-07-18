@@ -26,6 +26,37 @@ export type NavId = (typeof NAV_ITEMS)[number]['id'];
 
 export type Locale = 'en' | 'ko';
 
+/* Portfolio-level nav shown over the hero, linking back to the main site. */
+const PORTFOLIO_BASE = 'https://wizzy22-lab.github.io/Wizzy/';
+
+export const PORTFOLIO_NAV_BY_LOCALE: Record<
+  Locale,
+  {
+    brand: string;
+    role: string;
+    links: { label: string; href: string; active?: boolean }[];
+  }
+> = {
+  en: {
+    brand: 'wizzy',
+    role: 'Product designer',
+    links: [
+      { label: 'PROJECT', href: `${PORTFOLIO_BASE}#projects`, active: true },
+      { label: 'ABOUT', href: `${PORTFOLIO_BASE}#about` },
+      { label: 'RESUME', href: `${PORTFOLIO_BASE}assets/resume.pdf` },
+    ],
+  },
+  ko: {
+    brand: 'wizzy',
+    role: '프로덕트 디자이너',
+    links: [
+      { label: '프로젝트', href: `${PORTFOLIO_BASE}#projects`, active: true },
+      { label: '소개', href: `${PORTFOLIO_BASE}#about` },
+      { label: '이력서', href: `${PORTFOLIO_BASE}assets/resume.pdf` },
+    ],
+  },
+};
+
 export const NAV_BY_LOCALE: Record<Locale, ReadonlyArray<{ id: NavId; label: string }>> = {
   en: NAV_ITEMS,
   ko: NAV_ITEMS_KO,
