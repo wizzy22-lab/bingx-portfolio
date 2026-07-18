@@ -217,7 +217,7 @@ section[id] {
 }
 .hero-chips {
   display: inline-flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-1);
   padding: var(--space-1);
   border-radius: var(--radius-md);
