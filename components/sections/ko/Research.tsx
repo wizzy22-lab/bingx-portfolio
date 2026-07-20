@@ -91,9 +91,8 @@ export default function Research() {
             반응이 나타났습니다.
           </RevealHeading>
           <p className="research-community__intro">
-            Reddit, Google Reviews, App Store Reviews에서
-            <br />
-            AI 투자 기능과 인터페이스에 대한 사용자 반응을 살펴봤습니다.
+            Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
+            사용자 반응을 살펴봤습니다.
           </p>
 
           <div className="research-community__layout">

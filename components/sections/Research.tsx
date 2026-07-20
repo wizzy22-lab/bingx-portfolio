@@ -91,9 +91,8 @@ export default function Research() {
             &ldquo;I don&rsquo;t know how to use this.&rdquo;
           </RevealHeading>
           <p className="research-community__intro">
-            I looked at how users talked about AI investing features and interfaces
-            <br />
-            on Reddit, Google Reviews and App Store Reviews.
+            I looked at how users talked about AI investing on Reddit, Google Reviews and the
+            App Store.
           </p>
 
           <div className="research-community__layout">
