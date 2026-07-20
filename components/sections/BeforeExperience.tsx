@@ -43,9 +43,9 @@ export default function BeforeExperience() {
           [ 02 — Current Experience ]
         </p>
         <RevealHeading level="h2" className="ds-h2 experience__title">
-          It was hard to know where to start and what to choose,
+          It was unclear where to start, what to choose,
           <br />
-          or how much the AI takes over
+          and how far the AI takes over
         </RevealHeading>
         <p className="experience__lede">
           The existing screens offered many Masters and strategies, chat recommendations and

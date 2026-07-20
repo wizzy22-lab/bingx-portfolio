@@ -679,7 +679,7 @@ section[id] {
   font-weight: 700;
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 623px;
+  max-width: 800px;
 }
 
 .experience__lede {
@@ -808,7 +808,7 @@ section[id] {
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--accent-red);
   flex-shrink: 0;
 }
 
