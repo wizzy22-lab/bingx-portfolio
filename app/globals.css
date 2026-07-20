@@ -463,35 +463,35 @@ section[id] {
   line-height: 24px;
   color: var(--text-primary);
   text-align: center;
-  margin: 80px 0 88px 0;
+  /* Deliberate gap — the title and lede reveal on scroll before this drops in. */
+  margin: 240px 0 88px 0;
 }
 
 .about__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about__criterion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 35px;
+/* Condition → result, sitting above the term cards. */
+.about__flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about__icon {
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about__icon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.about__flow-step {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 27.2px;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  margin: 0 0 24px 0;
 }
 
 .about__card {
@@ -543,17 +543,6 @@ section[id] {
   white-space: pre-line;
 }
 
-.about__closing {
-  font-family: var(--font-kr);
-  font-size: 16px;
-  line-height: 27.2px;
-  font-weight: 400;
-  text-align: center;
-  color: var(--text-primary);
-  margin: 30px auto 0 auto;
-  max-width: 376px;
-}
-
 .about__final {
   font-family: var(--font-sans);
   font-size: 24px;
@@ -562,11 +551,11 @@ section[id] {
   font-weight: 400;
   color: var(--text-primary);
   text-align: center;
-  margin: 24px 0 0 0;
+  margin: 62px 0 0 0;
 }
 
 .about__highlight {
-  color: var(--accent-yellow);
+  color: var(--accent-blue);
   font-weight: 700;
 }
 
@@ -587,32 +576,10 @@ section[id] {
 }
 
 /* Idle float — icons gently bob, offset so they drift out of sync */
-@keyframes about-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-.about__icon-img {
-  animation: about-float 3.2s var(--ease-in-out) infinite;
-}
-
-.about__criterion:nth-child(1) .about__icon-img { animation-delay: 0s; }
-.about__criterion:nth-child(2) .about__icon-img { animation-delay: -0.8s; }
-.about__criterion:nth-child(3) .about__icon-img { animation-delay: -1.6s; }
-.about__criterion:nth-child(4) .about__icon-img { animation-delay: -2.4s; }
-
 @media (prefers-reduced-motion: reduce) {
   .reveal-h__inner {
     transform: none;
     transition: none;
-  }
-  .about__icon-img {
-    animation: none;
   }
   .about__card,
   .about__card:hover {
@@ -622,18 +589,14 @@ section[id] {
 }
 
 @media (min-width: 768px) {
-  .about__grid {
+  .about__grid,
+  .about__flow {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 40px;
   }
 }
 
-@media (min-width: 1024px) {
-  .about__grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-}
+
 
 @media (max-width: 767px) {
   .about__title,
@@ -653,7 +616,7 @@ section[id] {
 .ds-kr .about__card-title,
 .ds-kr .about__card-body,
 .ds-kr .about__intro,
-.ds-kr .about__closing,
+.ds-kr .about__flow-step,
 .ds-kr .about__final,
 .ds-kr .about__lede {
   font-family: var(--font-kr);

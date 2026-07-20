@@ -3,18 +3,11 @@ import RevealHeading from '@/components/RevealHeading';
 const CRITERIA = [
   {
     title: 'Master',
-    body: '특정 투자 성향과 철학을 대표하는 AI 투자 도우미',
-    icon: '/icons/about/investment-style.png',
+    body: ['특정 투자 성향과 철학을 대표하는', 'AI 투자 도우미'],
   },
   {
     title: '전략',
-    body: 'Master가 가진 구체적인 자동 매매 방식',
-    icon: '/icons/about/trading-strategy.png',
-  },
-  {
-    title: '투자금',
-    body: '선택한 전략을 실행하기 위해 투입하는 최소 금액 이상의 자금',
-    icon: '/icons/about/risk-tolerance.png',
+    body: ['Master가 가진 구체적인', '자동 매매 방식'],
   },
 ];
 
@@ -42,28 +35,40 @@ export default function AboutService() {
           여러 자동 매매 전략을 가지고 있습니다.
         </p>
 
+        <div className="about__flow">
+          <p className="about__flow-step">
+            사용자가 Master와 전략을 고르고
+            <br />
+            정해진 최소 금액 이상을 투입하면,
+          </p>
+          <p className="about__flow-step about__flow-step--result">
+            AI가 전략에 따라 자동으로 매수와 매도를 진행합니다.
+            <br />
+            마지막에는 포지션을 종료해 거래 결과를 확정합니다.
+          </p>
+        </div>
+
         <div className="about__grid">
           {CRITERIA.map((c) => (
-            <div key={c.title} className="about__criterion">
-              <div className="about__icon">
-                <img className="about__icon-img" src={c.icon} alt="" aria-hidden />
-              </div>
-              <article className="about__card">
-                <h3 className="about__card-title">{c.title}</h3>
-                <p className="about__card-body">{c.body}</p>
-              </article>
-            </div>
+            <article key={c.title} className="about__card">
+              <h3 className="about__card-title">{c.title}</h3>
+              <p className="about__card-body">
+                {c.body.map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < c.body.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            </article>
           ))}
         </div>
 
-        <p className="about__closing">
-          사용자가 Master와 전략을 고르고 정해진 최소 금액 이상을 투입하면, AI가 전략에 따라
-          자동으로 매수와 매도를 진행합니다. 마지막에는 포지션을 종료해 거래 결과를
-          확정합니다.
-        </p>
         <p className="about__final">
-          즉 사용자는 <span className="about__highlight">어떤 Master의 어떤 전략에 얼마를
-          맡길지</span> 결정하고, 이후의 실제 거래는 AI가 수행합니다.
+          즉 사용자는{' '}
+          <span className="about__highlight">어떤 Master의 어떤 전략에 얼마를 맡길지</span>{' '}
+          결정하고, 이후의 <span className="about__highlight">실제 거래는 AI</span>가
+          수행합니다.
         </p>
       </div>
     </section>
