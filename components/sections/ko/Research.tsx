@@ -8,58 +8,58 @@ const REVIEWS = [
     name: 'prithvisimi',
     date: 'Jan 7',
     stars: 2,
-    text: 'use to difficult not good interface',
+    text: '사용법이 너무 어렵고 인터페이스가 좋지 않습니다.',
   },
   {
     initial: 'K',
     name: 'kushalkumbhakar8',
     date: 'Feb 2',
     stars: 1,
-    text: "The interface feels too complex and hard to use. It's difficult to understand what to do.",
+    text: '인터페이스가 복잡해 무엇을 해야 할지 이해하기 어렵습니다.',
   },
 ];
 
 const SURVEY_STATS = [
   {
-    value: '43.5',
-    text: '많은 사용자가 서비스 안에 AI 기능이 있다는 사실조차 인지하지 못하고 있었다.',
+    value: '59.1',
+    text: '전체 22명 중 13명은 거래소의 AI 기능을 한 번도 사용하지 않았습니다. 이 중 10명은 기능을 알고도 사용하지 않았고, 3명은 기능의 존재를 몰랐습니다.',
   },
   {
-    value: '70',
-    text: '사용자들은 AI가 투자 수익을 완전히 자동화하기보다, 의사결정을 도와주기를 기대했다.',
+    value: '88.9',
+    text: 'AI 기능을 실제로 사용해본 9명 중 8명은 가장 불편한 점으로 ‘설명 부족’을 선택했습니다.',
   },
   {
     value: '76.9',
-    text: '설명이 더 명확했다면 서비스를 사용할 의향이 있다고 응답했다.',
+    text: 'AI 기능 미사용자 13명 중 10명은 기능이 개선된다면 사용해볼 의향이 있다고 답했습니다.',
   },
 ];
 
 const INSIGHT_GROUPS = [
   {
     variant: 'beginner',
-    title: '초급 사용자',
+    title: '초급 참여자',
     cards: [
       {
-        title: '정보 과부하 · 구조적 혼란',
-        body: '초급 사용자들은 중요한 정보와 기능이 어디에 있는지 빠르게 파악하는 데 어려움을 겪었다. 복잡한 구조와 일관되지 않은 흐름이 탐색 피로를 키웠고, 경험 도중에 이탈하게 만들었다.',
+        title: '무엇을 봐야 할지 몰랐습니다',
+        body: '초급 참여자들은 어떤 정보가 중요한지, 자신에게 어떤 기능과 전략이 필요한지 판단하기 어려워했습니다. AI Master에서도 무엇을 기준으로 Master와 전략을 골라야 하는지 알 수 없어 여러 화면을 오가며 탐색했다고 말했습니다.',
       },
       {
-        title: 'AI 기능에 대한 제한적인 이해',
-        body: '초급 사용자들은 AI가 어떻게 추천을 만들어내고 판단을 내리는지 이해하기 어려워했다. 추천의 근거와 AI의 책임 범위가 불분명해질수록, 사용자들은 결과를 스스로 통제할 수 없다고 느끼는 경우가 많아졌다.',
+        title: 'AI가 어디까지 대신하는지 몰랐습니다',
+        body: 'AI가 추천만 해주는지, 실제 매수와 매도도 진행하는지, 전략은 언제 끝나는지 명확히 이해하기 어려워했습니다. 특히 실제 돈을 넣는 화면에 도달하면, 전략을 중지하는 방법과 투자금이 정산되는 시점에 대한 의문이 커졌습니다.',
       },
     ],
   },
   {
     variant: 'advanced',
-    title: '고급 사용자',
+    title: '고급 참여자',
     cards: [
       {
-        title: 'AI 자동화에 대한 낮은 필요성',
-        body: '고급 사용자들은 이미 자신만의 거래 원칙과 리듬을 가지고 있었다. 시장을 읽고 스스로 판단을 내리는 과정 자체를 중요하게 여겼으며, AI 자동화를 거래에 대한 몰입감을 줄이는 요소로 받아들이는 경우가 많았다.',
+        title: 'AI에게 맡길 필요를 느끼지 못했습니다',
+        body: '고급 참여자들은 이미 자신만의 거래 원칙과 방식을 가지고 있었습니다. 시장을 직접 해석하고 매수와 매도 시점을 판단하는 과정 자체를 거래의 중요한 가치로 보고 있었습니다.',
       },
       {
-        title: '신뢰와 속도 중심의 거래 환경',
-        body: '고급 사용자들은 체결 속도, 시스템 안정성, 거래 환경의 신뢰성 같은 요소에 매우 민감했다. 작은 오류 하나도 곧바로 금전적 결과로 이어질 수 있기 때문에, 플랫폼 자체에 대한 신뢰가 거래 경험의 핵심 요소가 되었다.',
+        title: '검증되지 않은 시스템에 돈을 맡기기 어려웠습니다',
+        body: '고급 참여자들은 체결 속도, 시스템 안정성, 거래 환경의 신뢰성을 중요하게 생각했습니다. 이들에게 AI Master는 편리한 자동화 도구라기보다 충분히 검증되지 않은 시스템에 판단과 자금을 맡기는 위험으로 받아들여졌습니다.',
       },
     ],
   },
@@ -75,8 +75,12 @@ export default function Research() {
             [ 03.1 — 2차 리서치 · 커뮤니티 ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            커뮤니티 반응에서 혼란의 패턴이 반복적으로 드러났다
+            앱 리뷰에서도 “어떻게 사용해야 할지 모르겠다”는 반응이 나타났습니다
           </RevealHeading>
+          <p className="research-community__intro">
+            Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
+            사용자 반응을 살펴봤습니다.
+          </p>
 
           <div className="research-community__layout">
             <figure className="research-community__collage">
@@ -126,7 +130,9 @@ export default function Research() {
           </div>
 
           <p className="research-community__closing">
-            사용자들은 서비스를 어떻게 사용해야 하는지 이해하는 데 어려움을 겪고 있었다.
+            리뷰에서 확인된 반응은 단순히 투자 전략이 어렵다는 문제에 그치지 않았습니다.
+            사용자는 서비스를 어디서 시작해야 하고, 어떤 순서로 이용해야 하는지도 이해하기
+            어려워하고 있었습니다.
           </p>
         </div>
 
@@ -135,8 +141,13 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
             [ 03.2 — 2차 리서치 · 설문 ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-survey__title">
+            AI 기능 경험자 9명 중 8명이 ‘설명 부족’을 불편으로 꼽았습니다
+          </RevealHeading>
           <p className="research-survey__intro">
-            이러한 문제가 사용자 전반에서 일관되게 나타나는지 확인하기 위해 설문을 진행했다 (n=22).
+            커뮤니티에서 확인한 혼란이 거래소 AI 기능의 사용 경험에서도 나타나는지 확인하기
+            위해, 암호화폐 거래소 앱 사용자 22명에게 AI 기반 기능의 이용 경험을 물었습니다.
+            여기에는 전략 추천, 카피 트레이딩, 리스크 분석과 같은 기능이 포함됐습니다.
           </p>
 
           <div className="research-survey__layout">
@@ -171,13 +182,13 @@ export default function Research() {
           </div>
 
           <p className="research-survey__closing">
-            사용자들은 AI 자체를 거부한 것이 아니라, 그 목적과 사용 흐름, 결과를 해석하는
-            방법을 충분히 이해하지 못해 기능 사용을 망설이고 있었다.
+            이 결과만으로 설명 부족이 미사용의 유일한 원인이라고 단정할 수는 없습니다. 다만 이
+            표본에서는 AI 기능의 목적과 작동 방식, 결과를 해석하는 방법에 대한 설명이 사용을
+            가로막는 장벽 중 하나일 가능성이 나타났습니다.
           </p>
           <p className="research-survey__closing">
-            그러나 설문만으로는 이러한 반응이 왜 나타나는지 명확하게 설명하기 어려웠다. 특히
-            거래 경험 수준이 다른 사용자들이 AI Master를 어떻게 다르게 인식하는지 이해할
-            필요가 있었다.
+            설문만으로는 사용자가 어떤 순간에 망설이고, 왜 거래를 시작하지 않는지 알 수
+            없었습니다. 그래서 사용자를 직접 만나 구체적인 경험을 물었습니다.
           </p>
         </div>
 
@@ -186,10 +197,14 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
             [ 04 — 1차 리서치 · 인터뷰 ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-primary__title">
+            초급·고급 사용자에게 AI 거래를 망설인 이유를 물었습니다
+          </RevealHeading>
           <p className="research-primary__intro">
-            거래 경험에 따라 AI Master에 대한 인식이 어떻게 달라지는지 이해하기 위해 사용자
-            4명(초급 2명, 고급 2명)을 인터뷰했다. 어떻게 에이전트를 선택했는지, AI가 무엇을
-            해주길 기대했는지, 그리고 어디에서 망설였는지를 물었다.
+            암호화폐 거래 경험이 적은 초급 사용자 2명과, 자신의 거래 원칙을 세워 직접 거래하는
+            고급 사용자 2명을 인터뷰했습니다. AI Master 또는 유사한 AI 트레이딩 기능을 이용한
+            경험, 에이전트와 전략을 고른 기준, AI가 무엇을 해주길 기대했는지, 어디에서 거래를
+            망설였는지를 물었습니다.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
