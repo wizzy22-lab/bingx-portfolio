@@ -360,18 +360,16 @@ export default function Research() {
             [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            Other services ask about your style first,
+            Other services ask your style and risk first,
             <br />
-            then compare products on the same criteria
+            then line up return, risk and horizon side by side
           </RevealHeading>
           <p className="research-competitor__intro">
-            Robo-advisors and fund services start with a handful of questions to establish a
-            user&rsquo;s investing experience and the level of risk they can tolerate.
-          </p>
-          <p className="research-competitor__intro">
-            They then let users compare products on identical criteria — expected return, downside
-            risk, investment horizon — so that even a first-time investor understands what to look
-            at before deciding.
+            Robo-advisors and fund services ask first how you want to invest and what risk
+            you take.
+            <br />
+            They then show each product&rsquo;s return, risk and horizon in one format, so
+            differences read easily.
           </p>
 
           <div className="research-competitor__layout">
@@ -391,18 +389,23 @@ export default function Research() {
 
             <div className="research-competitor__copy">
               <p>
-                AI Master and robo-advisors serve different products and different users. But in
-                explaining unfamiliar investment options to a first-time visitor and helping them
-                choose something that fits their style, they are solving the same problem.
+                AI Master and robo-advisors serve different products and users.
+                <br />
+                But in explaining unfamiliar options to a first-time visitor and helping
+                <br />
+                them choose something that fits, they solve the same problem.
               </p>
               <p>
-                The existing AI Master, by contrast, led with investor characters and strategies.
-                Users met a Master&rsquo;s image and persona before they had established their own
-                investment style or compared strategies on shared criteria.
+                The existing AI Master, by contrast, led with characters and strategies.
+                <br />
+                Users met a Master&rsquo;s image and persona before they had established
+                <br />
+                their own style or compared strategies on shared criteria.
               </p>
               <p>
-                As a result, rather than judging which strategy was closest to them, users started
-                exploring based on names they recognised or images that stood out.
+                So rather than judging which strategy was closest to them,
+                <br />
+                users started from names they recognised or images that stood out.
               </p>
             </div>
           </div>
