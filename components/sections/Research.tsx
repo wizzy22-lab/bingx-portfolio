@@ -42,15 +42,27 @@ const INSIGHT_GROUPS = [
       {
         title: 'They did not know what to look at',
         body: [
-          'Beginner participants found it hard to judge which information mattered and which features and strategies they actually needed.',
-          'In AI Master too, they had no criteria for choosing a Master or a strategy, so they said they moved back and forth across several screens while browsing.',
+          [
+            'Beginner participants found it hard to judge which information',
+            'mattered, and which features and strategies they actually needed.',
+          ],
+          [
+            'In AI Master too, they had no criteria for choosing a Master or a',
+            'strategy, so they moved back and forth across several screens.',
+          ],
         ],
       },
       {
         title: 'They did not know how far the AI goes',
         body: [
-          'It was unclear whether the AI only recommends, whether it also buys and sells, and when a strategy ends.',
-          'The doubts grew sharpest on the screen where real money is committed: how to stop a strategy, and when the capital would be settled.',
+          [
+            'It was unclear whether the AI only recommends, whether it also',
+            'buys and sells, and when a strategy ends.',
+          ],
+          [
+            'The doubts grew sharpest on the screen where real money is',
+            'committed: how to stop a strategy, and when capital is settled.',
+          ],
         ],
       },
     ],
@@ -62,14 +74,24 @@ const INSIGHT_GROUPS = [
       {
         title: 'They saw no need to hand things over to AI',
         body: [
-          'Advanced participants already had their own trading principles and methods. They treated reading the market and judging entry and exit points as a core part of the value of trading itself.',
+          [
+            'Advanced participants already had their own trading principles',
+            'and methods. They treated reading the market and judging entry',
+            'and exit points as a core part of what makes trading worthwhile.',
+          ],
         ],
       },
       {
-        title: 'They were reluctant to trust an unproven system with money',
+        title: 'They would not trust an unproven system',
         body: [
-          'Advanced participants cared about execution speed, system stability, and the reliability of the trading environment.',
-          'To them AI Master read less as a convenient automation tool and more as the risk of handing judgment and capital to a system that had not been proven.',
+          [
+            'Advanced participants cared about execution speed, system',
+            'stability, and the reliability of the trading environment.',
+          ],
+          [
+            'To them AI Master read less as a convenient automation tool than',
+            'as the risk of handing judgment and capital to an unproven system.',
+          ],
         ],
       },
     ],
@@ -301,7 +323,12 @@ export default function Research() {
                     <h4 className="insight-group__card-title">{c.title}</h4>
                     {c.body.map((para, i) => (
                       <p key={i} className="insight-group__card-body">
-                        {para}
+                        {para.map((line, j) => (
+                          <span key={j}>
+                            {line}
+                            {j < para.length - 1 && <br />}
+                          </span>
+                        ))}
                       </p>
                     ))}
                   </div>
