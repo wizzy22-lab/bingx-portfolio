@@ -523,6 +523,12 @@ section[id] {
 .about__sequence.is-inview .about__flow-step:nth-child(2) { animation-delay: 0.5s; }
 .about__sequence.is-inview .about__card:nth-child(2) { animation-delay: 0.7s; }
 
+/* The right column travels 20% slower, so the result settles after the condition. */
+.about__sequence.is-inview .about__flow-step:nth-child(2),
+.about__sequence.is-inview .about__card:nth-child(2) {
+  animation-duration: 480ms;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .about__sequence .about__flow-step,
   .about__sequence .about__card {
