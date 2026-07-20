@@ -244,7 +244,7 @@ section[id] {
   transform: scale(1);
 }
 .hero-panel.is-in .hero-chip.is-selected {
-  background: #2b6bff;
+  background: var(--accent-blue-point);
   color: #ffffff;
   transform: scale(1.02);
   transition-delay: 0.25s;
@@ -526,7 +526,7 @@ section[id] {
   line-height: 24px;
   letter-spacing: 0;
   font-weight: 600;
-  color: var(--accent-blue);
+  color: var(--accent-blue-point);
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
@@ -555,7 +555,7 @@ section[id] {
 }
 
 .about__highlight {
-  color: var(--accent-blue);
+  color: var(--accent-blue-point);
   font-weight: 700;
 }
 

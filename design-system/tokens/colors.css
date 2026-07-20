@@ -15,7 +15,8 @@
   --border-accent: #B1E0FF;
 
   --accent-yellow: #FDF89C;
-  --accent-blue: #B1E0FF;
+  --accent-blue: #B1E0FF; /* pale — bullets, hairline accents, hover borders */
+  --accent-blue-point: #2B6BFF; /* saturated point blue — emphasised terms, selected states */
   --accent-red: #E5392C;
 
   --card-cream: #CAEAFF; /* legacy name — actual color is light blue (was #F0EBE0 beige) */
