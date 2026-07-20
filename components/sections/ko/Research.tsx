@@ -41,11 +41,17 @@ const INSIGHT_GROUPS = [
     cards: [
       {
         title: '무엇을 봐야 할지 몰랐습니다',
-        body: '초급 참여자들은 어떤 정보가 중요한지, 자신에게 어떤 기능과 전략이 필요한지 판단하기 어려워했습니다. AI Master에서도 무엇을 기준으로 Master와 전략을 골라야 하는지 알 수 없어 여러 화면을 오가며 탐색했다고 말했습니다.',
+        body: [
+          '초급 참여자들은 어떤 정보가 중요한지, 자신에게 어떤 기능과 전략이 필요한지 판단하기 어려워했습니다.',
+          'AI Master에서도 무엇을 기준으로 Master와 전략을 골라야 하는지 알 수 없어 여러 화면을 오가며 탐색했다고 말했습니다.',
+        ],
       },
       {
         title: 'AI가 어디까지 대신하는지 몰랐습니다',
-        body: 'AI가 추천만 해주는지, 실제 매수와 매도도 진행하는지, 전략은 언제 끝나는지 명확히 이해하기 어려워했습니다. 특히 실제 돈을 넣는 화면에 도달하면, 전략을 중지하는 방법과 투자금이 정산되는 시점에 대한 의문이 커졌습니다.',
+        body: [
+          'AI가 추천만 해주는지, 실제 매수와 매도도 진행하는지, 전략은 언제 끝나는지 명확히 이해하기 어려워했습니다.',
+          '특히 실제 돈을 넣는 화면에 도달하면, 전략을 중지하는 방법과 투자금이 정산되는 시점에 대한 의문이 커졌습니다.',
+        ],
       },
     ],
   },
@@ -55,11 +61,16 @@ const INSIGHT_GROUPS = [
     cards: [
       {
         title: 'AI에게 맡길 필요를 느끼지 못했습니다',
-        body: '고급 참여자들은 이미 자신만의 거래 원칙과 방식을 가지고 있었습니다. 시장을 직접 해석하고 매수와 매도 시점을 판단하는 과정 자체를 거래의 중요한 가치로 보고 있었습니다.',
+        body: [
+          '고급 참여자들은 이미 자신만의 거래 원칙과 방식을 가지고 있었습니다. 시장을 직접 해석하고 매수와 매도 시점을 판단하는 과정 자체를 거래의 중요한 가치로 보고 있었습니다.',
+        ],
       },
       {
         title: '검증되지 않은 시스템에 돈을 맡기기 어려웠습니다',
-        body: '고급 참여자들은 체결 속도, 시스템 안정성, 거래 환경의 신뢰성을 중요하게 생각했습니다. 이들에게 AI Master는 편리한 자동화 도구라기보다 충분히 검증되지 않은 시스템에 판단과 자금을 맡기는 위험으로 받아들여졌습니다.',
+        body: [
+          '고급 참여자들은 체결 속도, 시스템 안정성, 거래 환경의 신뢰성을 중요하게 생각했습니다.',
+          '이들에게 AI Master는 편리한 자동화 도구라기보다, 충분히 검증되지 않은 시스템에 판단과 자금을 맡기는 위험으로 받아들여졌습니다.',
+        ],
       },
     ],
   },
@@ -72,7 +83,7 @@ export default function Research() {
         {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
         <div className="research-community">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
-            [ 03.1 — 2차 리서치 · 커뮤니티 ]
+            [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
             앱 리뷰에서도 “어떻게 사용해야 할지 모르겠다”는 반응이 나타났습니다
@@ -91,7 +102,7 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-community__collage-caption">
-                [커뮤니티 반응 - Reddit · Google Reviews · App Store Reviews]
+                [ Community Reactions — Reddit · Google Reviews · App Store Reviews ]
               </figcaption>
             </figure>
 
@@ -139,7 +150,7 @@ export default function Research() {
         {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
         <div className="research-survey">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
-            [ 03.2 — 2차 리서치 · 설문 ]
+            [ 03.2 — Secondary Research · Survey ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-survey__title">
             AI 기능 경험자 9명 중 8명이 ‘설명 부족’을 불편으로 꼽았습니다
@@ -159,7 +170,7 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-survey__collage-caption">
-                [설문 결과 - AI 트레이딩 기능에 대한 사용자 인식]
+                [ Survey Findings — User Perception of AI Trading Features ]
               </figcaption>
             </figure>
 
@@ -195,7 +206,7 @@ export default function Research() {
         {/* 04 Primary Research — Interview (Figma 133:54) */}
         <div className="research-primary">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
-            [ 04 — 1차 리서치 · 인터뷰 ]
+            [ 04 — Primary Research · Interviews ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-primary__title">
             초급·고급 사용자에게 AI 거래를 망설인 이유를 물었습니다
@@ -203,7 +214,7 @@ export default function Research() {
           <p className="research-primary__intro">
             암호화폐 거래 경험이 적은 초급 사용자 2명과, 자신의 거래 원칙을 세워 직접 거래하는
             고급 사용자 2명을 인터뷰했습니다. AI Master 또는 유사한 AI 트레이딩 기능을 이용한
-            경험, 에이전트와 전략을 고른 기준, AI가 무엇을 해주길 기대했는지, 어디에서 거래를
+            경험, Master와 전략을 고른 기준, AI가 무엇을 해주길 기대했는지, 어디에서 거래를
             망설였는지를 물었습니다.
           </p>
           <div className="research-duo research-duo--interview">
@@ -214,7 +225,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ 인터뷰 — 초급 사용자 (n=2) · 원격 ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Beginner Users (n=2) · Remote ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <img
@@ -223,7 +234,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ 인터뷰 — 고급 사용자 (n=2) · 원격 ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Advanced Users (n=2) · Remote ]</figcaption>
             </figure>
           </div>
         </div>
@@ -231,12 +242,15 @@ export default function Research() {
         {/* 05 Analysis (Figma 133:54) */}
         <div className="research-analysis">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
-            [ 05 — 분석 ]
+            [ 05 — Analysis ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-analysis__title">
+            초급 참여자는 이해하기 어려워했고, 고급 참여자는 AI에게 맡길 필요를 느끼지
+            못했습니다
+          </RevealHeading>
           <p className="research-analysis__intro">
-            인터뷰를 분석한 결과, 사용자들은 서로 다르게 표현했지만 비슷한 감정적·행동적
-            패턴이 반복적으로 나타났다. 이러한 패턴을 더 잘 구조화하기 위해, 사용자 발화를
-            분류하고 컬러 코딩 과정을 통해 유사한 맥락끼리 묶었다.
+            인터뷰에서 나온 말을 비슷한 내용끼리 묶어보니, 초급과 고급 참여자가 AI 거래를
+            망설이는 이유가 다르게 나타났습니다.
           </p>
           <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
@@ -246,7 +260,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ 컬러 코딩 — 사용자 발화 그룹핑 ]</figcaption>
+              <figcaption className="research-duo__caption">[ Color Coding — Grouping User Statements ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <video
@@ -258,13 +272,9 @@ export default function Research() {
                 playsInline
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ 친화도 매핑 — 팀 세션 ]</figcaption>
+              <figcaption className="research-duo__caption">[ Affinity Mapping — Team Session ]</figcaption>
             </figure>
           </div>
-          <p className="research-analysis__closing">
-            인터뷰에 대한 컬러 코딩과 친화도 매핑을 통해, 사용자들이 거래 경험 수준에 따라
-            AI Master를 완전히 다른 방식으로 인식하고 있다는 것을 발견했다.
-          </p>
         </div>
 
         {/* Insight Section (Figma 139:54) */}
@@ -276,7 +286,11 @@ export default function Research() {
                 {g.cards.map((c) => (
                   <div key={c.title} className="insight-group__card">
                     <h4 className="insight-group__card-title">{c.title}</h4>
-                    <p className="insight-group__card-body">{c.body}</p>
+                    {c.body.map((para, i) => (
+                      <p key={i} className="insight-group__card-body">
+                        {para}
+                      </p>
+                    ))}
                   </div>
                 ))}
               </article>
@@ -287,33 +301,41 @@ export default function Research() {
             insight
           </p>
           <p className="research-insight__closing">
-            그 결과, AI Master는 초급 사용자에게는 지나치게 복잡하게 느껴졌고, 고급
-            사용자에게는 충분히 강한 동기를 제공하지 못했다.
-          </p>
-          <p className="research-insight__closing">
-            특히 많은 고급 사용자들은 거래하는 행위 자체를 즐겼기 때문에, 애초에 AI의 개입을
-            원하지 않았다.
+            이번 인터뷰에서 초급 참여자에게는 AI 거래에 대한 관심보다 이해 장벽이 더 크게
+            나타났습니다. 반면 고급 참여자는 작동 방식을 이해하더라도 자동화 자체의 필요성을
+            낮게 평가했습니다.
           </p>
           <p className="research-insight__closing research-insight__closing--lead">
-            따라서 이 프로젝트는 초급 사용자가{' '}
+            이에 이번 프로젝트에서는{' '}
             <span className="research-insight__highlight">
-              전략 거래를 더 쉽게 이해하고 자신 있게 경험에 진입하도록 돕는 데
+              이해 장벽을 화면과 정보 구조로 개선할 가능성이 더 크게 관찰된 초급 사용자
             </span>{' '}
-            초점을 맞췄다.
+            를 우선 타깃으로 설정했습니다.
+          </p>
+          <p className="research-insight__closing">
+            다만 집단별 참여자가 2명인 탐색적 인터뷰이므로, 이는 시장 전체에 대한 결론이
+            아니라 후속 검증이 필요한 디자인 가설로 다뤘습니다.
           </p>
         </div>
 
         {/* 06 Competitor Research (Figma 147:74) */}
         <div className="research-competitor">
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
-            [ 06 — 경쟁사 리서치 ]
+            [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            다른 투자 서비스들은 의사결정을
-            <br />
-            <span className="research-competitor__highlight">단계별로 안내했지만</span>, AI
-            Master는 그렇지 않았다
+            다른 투자 서비스는 먼저 성향을 묻고,{' '}
+            <span className="research-competitor__highlight">같은 기준으로</span> 상품을
+            비교하게 했습니다
           </RevealHeading>
+          <p className="research-competitor__intro">
+            로보어드바이저와 펀드 서비스는 몇 가지 질문을 통해 사용자의 투자 경험과 감수할 수
+            있는 위험 수준을 먼저 파악했습니다.
+          </p>
+          <p className="research-competitor__intro">
+            이후 기대 수익, 손실 위험, 투자 기간처럼 동일한 기준으로 상품을 비교하게 하여,
+            처음 투자하는 사용자도 무엇을 보고 결정해야 하는지 이해할 수 있도록 안내했습니다.
+          </p>
 
           <div className="research-competitor__layout">
             <figure className="research-competitor__figure">
@@ -324,27 +346,26 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-competitor__caption">
-                [투자 플랫폼별 의사결정 프레임워크 비교
+                [ Comparing Decision Frameworks Across Investment Platforms
                 <br />
-                Source : Carmignac · Robo-advisor · Fund Service Interfaces]
+                Carmignac · Robo-advisor · Fund Service Interfaces ]
               </figcaption>
             </figure>
 
             <div className="research-competitor__copy">
               <p>
-                로보 어드바이저와 펀드 플랫폼은 투자 선호도, 옵션 비교, 최종 의사결정 흐름을
-                단계별로 안내했다. 또한 기대 수익률, 리스크 수준, 투자 기간과 같은 명확한
-                의사결정 기준을 중심으로 설계되어, 사용자가 더 확신을 가지고 선택할 수 있도록
-                도왔다.
+                AI Master와 로보어드바이저는 제공하는 상품과 사용자가 다릅니다. 하지만 처음 온
+                사용자에게 낯선 투자 옵션을 설명하고, 자신의 성향에 맞는 선택을 돕는다는
+                점에서는 같은 문제를 풀고 있었습니다.
               </p>
               <p>
-                반면 AI Master는 투자자 페르소나를 통해 전략을 제시했을 뿐, 비교 기준을 추천
-                흐름과 명확하게 연결하지 못했다. 그 결과 사용자들은 논리적인 전략 비교보다는
-                이미지나 분위기 같은 인상에 더 의존하게 되었다.
+                반면 기존 AI Master는 여러 투자자 캐릭터와 전략을 먼저 제시했습니다. 사용자는
+                자신의 투자 성향을 파악하거나 동일한 기준으로 전략을 비교하기 전에 Master의
+                이미지와 인상부터 마주했습니다.
               </p>
               <p>
-                그러나 실제 돈이 개입되는 순간, 이 불분명한 의사결정 구조는 빠르게 불안으로
-                바뀌었고, 많은 사용자가 최종 결정 단계에 이르기 전에 이탈했다.
+                그 결과 사용자는 어떤 전략이 자신과 가까운지 판단하기보다, 알고 있는 인물이나
+                눈에 띄는 이미지에 의존해 탐색을 시작했습니다.
               </p>
             </div>
           </div>

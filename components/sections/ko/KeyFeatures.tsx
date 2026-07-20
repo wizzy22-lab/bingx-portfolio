@@ -1,5 +1,7 @@
 import RevealHeading from '@/components/RevealHeading';
 
+const STEPS = ['Master 추천', '전략 선택', '투자금 확인', '전략 실행'];
+
 export default function KeyFeatures() {
   return (
     <section id="key-features" className="section kf">
@@ -17,10 +19,12 @@ export default function KeyFeatures() {
             <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                사용자는 명확한 비교 기준 없이 모든 에이전트를 한 번에 살펴봐야 했습니다.
+                사용자는 명확한 선택 기준 없이 7명의 Master와 그 안의 여러 전략을 직접 살펴봐야
+                했습니다.
               </p>
               <p className="kf__para">
-                그 결과, 실제 전략의 차이보다 이미지와 분위기에 의존해 결정을 내리고 있었습니다.
+                무엇을 기준으로 골라야 할지 알 수 없어, 익숙한 인물이나 눈에 띄는 이미지에
+                의존했습니다.
               </p>
             </div>
 
@@ -52,12 +56,22 @@ export default function KeyFeatures() {
             {/* to be — copy */}
             <div className="kf__copy">
               <p className="kf__para">
-                개인화된 온보딩 플로우를 추가했습니다. 먼저 사용자의 투자 성향을 파악한 뒤 가장 관련성
-                높은 에이전트만 추천하도록 경험을 재설계했습니다.
+                서비스를 시작할 때 감수할 수 있는 위험 수준인{' '}
+                <span className="kf__code">Risk Tolerance</span> 와 선호하는 투자 방식인{' '}
+                <span className="kf__code">Strategy Style</span> 을 먼저 물었습니다.
               </p>
               <p className="kf__para">
-                이를 통해 불필요한 탐색을 줄이고, 사용자가 전략을 더 쉽게 비교하고 선택하기 시작할 수
-                있도록 도왔습니다.
+                응답이 끝나면 여러 Master를 한꺼번에 보여주는 대신, 사용자의 투자 성향과 가장
+                가까운 Master 1명을 먼저 추천했습니다. 사용자는 추천된 Master의 화면으로 바로
+                이동해 그 Master가 가진 전략부터 살펴볼 수 있습니다.
+              </p>
+              <p className="kf__para">
+                첫 선택지를 7명에서 1명으로 줄여 탐색 부담을 낮추고, 사용자가 자신의 투자 성향과
+                연결된 기준을 가진 상태에서 전략을 살펴보도록 했습니다.
+              </p>
+              <p className="kf__para">
+                탐색을 없앤 것이 아니라, 다른 Master와 전략을 비교할 수 있는 첫 번째 기준을 제공한
+                것입니다.
               </p>
             </div>
           </div>
@@ -74,8 +88,8 @@ export default function KeyFeatures() {
             <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                사용자는 자신이 지금 어느 단계에 있는지, 그리고 다음에 무엇을 해야 하는지 이해하는 데
-                어려움을 겪고 있었습니다.
+                사용자는 자신이 지금 Master를 고르는 중인지, 전략을 선택하는 중인지, 실제 투자금을
+                맡기는 단계인지 이해하기 어려웠습니다.
               </p>
             </div>
 
@@ -110,8 +124,29 @@ export default function KeyFeatures() {
             {/* to be — copy */}
             <div className="kf__copy">
               <p className="kf__para">
-                현재 단계와 다음 행동을 전달하는 명확한 단계 구조를 도입해, 사용자가 흐름을 놓치지 않고
-                전략 탐색을 이어갈 수 있도록 했습니다.
+                화면 상단에 현재 위치와 다음 행동을 보여주는 단계 구조를 추가했습니다.
+              </p>
+              <ol className="ia__flow-steps kf__flow">
+                {STEPS.map((step) => (
+                  <li key={step} className="ia__flow-step">
+                    {step}
+                  </li>
+                ))}
+              </ol>
+              <p className="kf__para">
+                사용자는 자신이 지금 무엇을 결정하고 있는지 확인할 수 있고, 각 화면에서는{' '}
+                <span className="kf__code">전략 살펴보기</span>,{' '}
+                <span className="kf__code">투자금 확인하기</span>,{' '}
+                <span className="kf__code">전략 시작하기</span> 처럼 다음 행동을 구체적으로
+                안내받습니다.
+              </p>
+              <p className="kf__para">
+                투자금을 입력하는 마지막 단계에서는 앞서 정의한 AI의 자동화 범위와 전략 종료 방식을
+                다시 확인한 뒤 실행하도록 했습니다.
+              </p>
+              <p className="kf__para">
+                이를 통해 사용자는 여러 화면을 눌러보지 않아도 현재 위치와 다음 행동을 파악할 수
+                있습니다.
               </p>
             </div>
           </div>
@@ -128,8 +163,9 @@ export default function KeyFeatures() {
             <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                사용자는 왜 갑자기 AI와 상호작용해야 하는지 이해하지 못했고, AI와의 인터랙션 자체를
-                낯설고 복잡하게 느꼈습니다.
+                AI Master는 AI와 대화하며 전략을 추천받는 기능을 제공했습니다. 하지만 기존
+                화면에서는 채팅 아이콘의 형태와 위치, 대화가 시작되는 방식이 익숙한 메신저와 달라
+                채팅이 전략 추천의 진입점이라는 사실이 바로 드러나지 않았습니다.
               </p>
             </div>
 
@@ -161,9 +197,16 @@ export default function KeyFeatures() {
             {/* to be — copy */}
             <div className="kf__copy">
               <p className="kf__para">
-                채팅 아이콘의 디자인과 위치를 변경했습니다. 익숙한 메신저 스타일의 인터랙션 패턴을
-                적용해, 사용자가 새로운 시스템을 배울 필요 없이 AI와 자연스럽게 상호작용할 수 있도록
-                했습니다.
+                채팅 아이콘의 형태와 위치, 대화가 열리는 방식을 사용자가 이미 익숙한 메신저와
+                유사하게 변경했습니다.
+              </p>
+              <p className="kf__para">
+                사용자는 새로운 조작 방식을 배울 필요 없이 채팅을 열고 AI와 바로 대화를 시작할 수
+                있습니다.
+              </p>
+              <p className="kf__para">
+                이를 통해 채팅을 단순한 문의 기능이 아니라, 관심 있는 시장과 투자 방식에 관해
+                대화하며 전략을 추천받는 탐색 경로로 명확하게 보여줬습니다.
               </p>
             </div>
           </div>
@@ -180,11 +223,13 @@ export default function KeyFeatures() {
             <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                기존 AI Master 경험에서는 전략 비교와 성과 확인이 분리되어 있어, 화면을 자주 전환하게
-                되고 의사결정 흐름이 끊겼습니다.
+                기존 AI Master에서는 선택한 전략의 성과는 확인할 수 있었지만, 해당 전략이 거래하는
+                코인의 실제 가격 차트는 연결되어 있지 않았습니다.
               </p>
               <p className="kf__para">
-                핵심 정보 또한 흩어져 있어, 전략의 차이를 빠르게 비교하기 어려웠습니다.
+                전략의 성과를 실제 시장 움직임과 비교하려면 AI Master에서 나가 차트 목록에서 코인을
+                다시 찾아야 했습니다. 화면을 이동하는 과정에서 전략을 살펴보던 맥락도 함께
+                끊겼습니다.
               </p>
             </div>
 
@@ -219,9 +264,25 @@ export default function KeyFeatures() {
             {/* to be — copy */}
             <div className="kf__copy">
               <p className="kf__para">
-                전략 비교에 필요한 핵심 정보를 우선적으로 배치하고, 성과와 차트를 같은 플로우 안으로
-                가져왔습니다. 그 결과 사용자는 불필요한 화면 이동 없이 전략을 비교하고 성과를 더
-                매끄럽고 확신 있게 확인할 수 있었습니다.
+                전략 성과 차트와 해당 코인의 실제 가격 차트를 같은 화면에 배치하고, 좌우로 넘겨
+                확인할 수 있도록 구성했습니다.
+              </p>
+              <ul className="kf__list">
+                <li>
+                  <span className="kf__list-term">전략 성과 차트</span> — 해당 전략으로 투자금이
+                  어떻게 변했는지
+                </li>
+                <li>
+                  <span className="kf__list-term">코인 가격 차트</span> — 전략이 거래하는 코인의
+                  실제 시장 가격이 어떻게 움직였는지
+                </li>
+              </ul>
+              <p className="kf__para">
+                사용자는 AI Master를 벗어나지 않고 전략의 성과와 실제 시장 움직임을 연이어 비교할 수
+                있습니다.
+              </p>
+              <p className="kf__para">
+                전략 정보 탐색부터 성과 확인까지 하나의 흐름 안에서 이어지도록 했습니다.
               </p>
             </div>
           </div>

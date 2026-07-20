@@ -8,14 +8,14 @@ export default function Crazy8() {
           [ 08.3 — Crazy 8s ]
         </p>
         <RevealHeading level="h2" className="ds-h2 crazy8__title">
-          여러 레이아웃 방향을 탐색하고 가장 명확한 의사결정 플로우를 선택했습니다.
+          한 화면에서 비교되고, 다음 행동이 보이는 안을 선택했습니다
         </RevealHeading>
         <p className="crazy8__intro">
-          Crazy 8s를 통해 온보딩, 에이전트 추천, 전략 비교 플로우를 위한 다양한 인터랙션과 레이아웃
-          방향을 빠르게 탐색했습니다.
+          8분 동안 8개의 아이디어를 빠르게 그리는 Crazy 8s 방식으로 온보딩, Master 추천, 전략
+          선택, 실행 확인 화면의 여러 구조를 탐색했습니다.
           <br />
-          팀 투표 세션을 거쳐, 사용자가 전략을 더 쉽게 비교하고 평가할 수 있도록 돕는 최종 구조를
-          선택했습니다.
+          비교에 필요한 정보가 한 화면에서 읽히는지, 사용자가 다음에 해야 할 행동이 분명하게
+          보이는지를 중심으로 각 아이디어를 검토했습니다.
         </p>
 
         <div className="crazy8__panels">
@@ -31,7 +31,7 @@ export default function Crazy8() {
               aria-hidden
             />
             <figcaption className="crazy8__caption">
-              [ Generating Multiple Interaction Ideas Through Crazy 8 ]
+              [ Generating Multiple Interaction Ideas Through Crazy 8s ]
             </figcaption>
           </figure>
 
@@ -44,7 +44,7 @@ export default function Crazy8() {
               aria-hidden
             />
             <figcaption className="crazy8__caption">
-              [ Exploring Multiple Layout Directions Through Crazy 8s and Team Voting ]
+              [ Exploring Multiple Layout Directions Through Crazy 8s ]
             </figcaption>
           </figure>
         </div>

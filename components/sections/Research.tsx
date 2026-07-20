@@ -21,45 +21,56 @@ const REVIEWS = [
 
 const SURVEY_STATS = [
   {
-    value: '43.5',
-    text: 'Many users were not even aware that AI features existed in the service.',
+    value: '59.1',
+    text: '13 of the 22 respondents had never used an exchange’s AI features. Ten knew about them and chose not to; three did not know they existed.',
   },
   {
-    value: '70',
-    text: 'Users expected AI to support decision-making rather than fully automate investment profits.',
+    value: '88.9',
+    text: 'Of the 9 respondents who had actually used AI features, 8 named “not enough explanation” as their biggest pain point.',
   },
   {
     value: '76.9',
-    text: 'Users showed willingness to use the service if the explanations were clearer.',
+    text: '10 of the 13 non-users said they would be willing to try the features if they were improved.',
   },
 ];
 
 const INSIGHT_GROUPS = [
   {
     variant: 'beginner',
-    title: 'Beginner users',
+    title: 'Beginner participants',
     cards: [
       {
-        title: 'Information Overload · Structural Confusion',
-        body: 'Beginner users struggled to quickly identify where important information and features were located. The complex structure and inconsistent flows were increasing navigation fatigue and leading users to drop off during the experience.',
+        title: 'They did not know what to look at',
+        body: [
+          'Beginner participants found it hard to judge which information mattered and which features and strategies they actually needed.',
+          'In AI Master too, they had no criteria for choosing a Master or a strategy, so they said they moved back and forth across several screens while browsing.',
+        ],
       },
       {
-        title: 'Limited Understanding of AI Features',
-        body: "Beginner users struggled to understand how the AI generated recommendations and made decisions. As the reasoning behind the recommendations and the AI's responsibility boundaries became less clear, users increasingly felt that they had no control over the outcome.",
+        title: 'They did not know how far the AI goes',
+        body: [
+          'It was unclear whether the AI only recommends, whether it also buys and sells, and when a strategy ends.',
+          'The doubts grew sharpest on the screen where real money is committed: how to stop a strategy, and when the capital would be settled.',
+        ],
       },
     ],
   },
   {
     variant: 'advanced',
-    title: 'Advanced users',
+    title: 'Advanced participants',
     cards: [
       {
-        title: 'Low Need for AI Automation',
-        body: 'Advanced users already had their own trading principles and rhythms. They valued the process of reading the market and making decisions themselves, and often perceived AI automation as something that reduced their sense of engagement in trading.',
+        title: 'They saw no need to hand things over to AI',
+        body: [
+          'Advanced participants already had their own trading principles and methods. They treated reading the market and judging entry and exit points as a core part of the value of trading itself.',
+        ],
       },
       {
-        title: 'Trust and Speed-Oriented Trading Environment',
-        body: 'Advanced users were highly sensitive to factors such as execution speed, system stability, and the reliability of the trading environment. Because even small errors could directly impact financial outcomes, trust in the platform itself became a critical part of the trading experience.',
+        title: 'They were reluctant to trust an unproven system with money',
+        body: [
+          'Advanced participants cared about execution speed, system stability, and the reliability of the trading environment.',
+          'To them AI Master read less as a convenient automation tool and more as the risk of handing judgment and capital to a system that had not been proven.',
+        ],
       },
     ],
   },
@@ -75,8 +86,13 @@ export default function Research() {
             [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            Community reactions revealed repeated patterns of confusion
+            App reviews echoed the same reaction: &ldquo;I don&rsquo;t know how to use
+            this&rdquo;
           </RevealHeading>
+          <p className="research-community__intro">
+            I looked at how users talked about AI investing features and interfaces on Reddit,
+            Google Reviews and App Store Reviews.
+          </p>
 
           <div className="research-community__layout">
             <figure className="research-community__collage">
@@ -87,7 +103,7 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-community__collage-caption">
-                [Community Reactions - Reddit · Google Reviews · App Store Reviews]
+                [ Community Reactions — Reddit · Google Reviews · App Store Reviews ]
               </figcaption>
             </figure>
 
@@ -126,7 +142,9 @@ export default function Research() {
           </div>
 
           <p className="research-community__closing">
-            Users were struggling to understand how to use the service.
+            The reactions in these reviews went beyond &ldquo;investment strategies are
+            hard.&rdquo; Users also struggled to understand where to start in the service and in
+            what order to use it.
           </p>
         </div>
 
@@ -135,9 +153,15 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
             [ 03.2 — Secondary Research · Survey ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-survey__title">
+            8 of the 9 people who had used AI features named &ldquo;not enough
+            explanation&rdquo; as the pain point
+          </RevealHeading>
           <p className="research-survey__intro">
-            To verify whether these issues were consistently occurring across users, a survey
-            was conducted (n=22).
+            To see whether the confusion found in the community also showed up in actual use of
+            exchange AI features, I asked 22 crypto exchange app users about their experience
+            with AI-based features. That included strategy recommendations, copy trading and
+            risk analysis.
           </p>
 
           <div className="research-survey__layout">
@@ -149,7 +173,7 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-survey__collage-caption">
-                [Survey Findings - User Perception of AI Trading Features]
+                [ Survey Findings — User Perception of AI Trading Features ]
               </figcaption>
             </figure>
 
@@ -172,14 +196,14 @@ export default function Research() {
           </div>
 
           <p className="research-survey__closing">
-            Rather than rejecting AI itself, users were hesitating to use the feature because
-            they did not fully understand its purpose, usage flow, or how to interpret the
-            results.
+            These results alone cannot establish that missing explanation is the only reason
+            people do not use the features. Within this sample, though, explanation of what the
+            AI features are for, how they work and how to read their results emerged as one of
+            the barriers to use.
           </p>
           <p className="research-survey__closing">
-            However, the survey alone was not enough to clearly explain why these reactions
-            were occurring. In particular, it was necessary to understand how users with
-            different levels of trading experience perceived AI Master differently.
+            The survey could not tell me at which moment users hesitate, or why they never start
+            trading. So I met users directly and asked about their concrete experience.
           </p>
         </div>
 
@@ -188,10 +212,15 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
             [ 04 — Primary Research · Interviews ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-primary__title">
+            I asked beginner and advanced users why they hesitated over AI trading
+          </RevealHeading>
           <p className="research-primary__intro">
-            We interviewed 4 users (2 beginners, 2 advanced) to understand how perception of AI
-            Master differed by trading experience. We asked how they chose an agent, what they
-            expected the AI to do, and where they hesitated.
+            I interviewed two beginner users with little crypto trading experience and two
+            advanced users who trade by their own established principles. I asked about their
+            experience with AI Master or similar AI trading features, the criteria they used to
+            pick a Master and a strategy, what they expected the AI to do for them, and where
+            they hesitated over trading.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
@@ -201,7 +230,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ Interview — Beginner users (n=2) · remote ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Beginner Users (n=2) · Remote ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <img
@@ -210,7 +239,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">[ Interview — Advanced users (n=2) · remote ]</figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Advanced Users (n=2) · Remote ]</figcaption>
             </figure>
           </div>
         </div>
@@ -220,11 +249,13 @@ export default function Research() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
             [ 05 — Analysis ]
           </p>
+          <RevealHeading level="h2" className="ds-h2 research-analysis__title">
+            Beginners found it hard to understand; advanced users saw no need to hand things to
+            AI
+          </RevealHeading>
           <p className="research-analysis__intro">
-            After analyzing the interviews, we found that although users expressed themselves
-            differently, similar emotional and behavioral patterns repeatedly appeared. To
-            better structure these patterns, we categorized user statements and grouped
-            similar contexts together through a color-coding process.
+            Grouping what came up in the interviews by similarity showed that beginner and
+            advanced participants hesitated over AI trading for different reasons.
           </p>
           <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
@@ -249,11 +280,6 @@ export default function Research() {
               <figcaption className="research-duo__caption">[ Affinity Mapping — Team Session ]</figcaption>
             </figure>
           </div>
-          <p className="research-analysis__closing">
-            Through color coding and affinity mapping of the interviews, we found that users
-            perceived AI Master in completely different ways depending on their level of
-            trading experience.
-          </p>
         </div>
 
         {/* Insight Section (Figma 139:54) */}
@@ -265,7 +291,11 @@ export default function Research() {
                 {g.cards.map((c) => (
                   <div key={c.title} className="insight-group__card">
                     <h4 className="insight-group__card-title">{c.title}</h4>
-                    <p className="insight-group__card-body">{c.body}</p>
+                    {c.body.map((para, i) => (
+                      <p key={i} className="insight-group__card-body">
+                        {para}
+                      </p>
+                    ))}
                   </div>
                 ))}
               </article>
@@ -276,18 +306,21 @@ export default function Research() {
             insight
           </p>
           <p className="research-insight__closing">
-            As a result, AI Master felt overly complex for beginner users, while failing to
-            provide strong enough motivation for advanced users.
-          </p>
-          <p className="research-insight__closing">
-            In particular, many advanced users simply did not want AI involvement, because they
-            enjoyed the act of trading itself.
+            In these interviews the barrier for beginner participants was comprehension rather
+            than interest in AI trading. Advanced participants, by contrast, rated the need for
+            automation low even once they understood how it worked.
           </p>
           <p className="research-insight__closing research-insight__closing--lead">
-            Therefore, this project focused on helping beginner users{' '}
+            So this project set{' '}
             <span className="research-insight__highlight">
-              more easily understand strategy trading and confidently enter the experience.
-            </span>
+              beginner users, where the comprehension barrier looked most addressable through
+              screens and information structure
+            </span>{' '}
+            as the primary target.
+          </p>
+          <p className="research-insight__closing">
+            With only two participants per group, though, this was exploratory: I treated it as
+            a design hypothesis to validate later, not a conclusion about the whole market.
           </p>
         </div>
 
@@ -297,11 +330,18 @@ export default function Research() {
             [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            Other investment services guided
-            <br />
-            <span className="research-competitor__highlight">decisions step-by-step</span>, but
-            AI Master did not
+            Other investment services ask about your style first, then let you compare products{' '}
+            <span className="research-competitor__highlight">on the same criteria</span>
           </RevealHeading>
+          <p className="research-competitor__intro">
+            Robo-advisors and fund services start with a handful of questions to establish a
+            user&rsquo;s investing experience and the level of risk they can tolerate.
+          </p>
+          <p className="research-competitor__intro">
+            They then let users compare products on identical criteria — expected return, downside
+            risk, investment horizon — so that even a first-time investor understands what to look
+            at before deciding.
+          </p>
 
           <div className="research-competitor__layout">
             <figure className="research-competitor__figure">
@@ -312,30 +352,26 @@ export default function Research() {
                 aria-hidden
               />
               <figcaption className="research-competitor__caption">
-                [Comparing Decision Frameworks Across Investment Platforms
+                [ Comparing Decision Frameworks Across Investment Platforms
                 <br />
-                Source : Carmignac · Robo-advisor · Fund Service Interfaces]
+                Carmignac · Robo-advisor · Fund Service Interfaces ]
               </figcaption>
             </figure>
 
             <div className="research-competitor__copy">
               <p>
-                Robo-advisors and fund platforms guided users step by step through investment
-                preferences, option comparisons, and final decision-making flows. They were
-                also designed around clear decision criteria such as expected returns, risk
-                levels, and investment periods, helping users make choices with greater
-                confidence.
+                AI Master and robo-advisors serve different products and different users. But in
+                explaining unfamiliar investment options to a first-time visitor and helping them
+                choose something that fits their style, they are solving the same problem.
               </p>
               <p>
-                In contrast, AI Master presented strategies through investor personas, without
-                clearly connecting comparison criteria to the recommendation flow. As a result,
-                users relied more on impressions such as imagery and atmosphere rather than
-                making logical strategy comparisons.
+                The existing AI Master, by contrast, led with investor characters and strategies.
+                Users met a Master&rsquo;s image and persona before they had established their own
+                investment style or compared strategies on shared criteria.
               </p>
               <p>
-                However, once real money became involved, this unclear decision structure
-                quickly turned into anxiety, causing many users to drop off before reaching the
-                final decision stage.
+                As a result, rather than judging which strategy was closest to them, users started
+                exploring based on names they recognised or images that stood out.
               </p>
             </div>
           </div>

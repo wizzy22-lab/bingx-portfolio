@@ -1,14 +1,10 @@
 import RevealHeading from '@/components/RevealHeading';
 
-const UNDERSTAND = [
-  'who was currently making the decision',
-  'why the AI was taking action',
-  'and when they should step in',
-];
-
-const COMMUNICATE = [
-  'the decision-making flow at each stage',
-  'and the moments where user intervention was needed',
+const WANTED = [
+  'how far the AI handles things automatically',
+  'when and in what way a strategy ends',
+  'whether they can stop a strategy midway',
+  'how the capital is settled after it ends',
 ];
 
 export default function Iteration() {
@@ -19,13 +15,22 @@ export default function Iteration() {
           [ 08.2 — Iteration ]
         </p>
         <RevealHeading level="h2" className="ds-h2 iteration__title">
-          The moment users started manually adjusting strategies,
-          <br />
-          the core identity of AI Master began to lose clarity.
+          Letting users tune the strategy themselves dissolved the value of handing it to AI
         </RevealHeading>
+        <p className="iteration__intro">
+          Early on we explored letting users set the buy and sell conditions themselves, so they
+          could control how their own money moves.
+        </p>
+        <p className="iteration__intro">
+          But that approach put users back in the position of understanding and designing an
+          investment strategy. In the end it also weakened AI Master&rsquo;s core value —
+          &ldquo;the AI decides and trades on your behalf.&rdquo;
+        </p>
 
         <div className="iteration__body">
           {/* Left: solution-reframing diagram (Figma 634×476) */}
+          {/* TODO(figma): the reframe now lists four items (automation scope / how it ends /
+              stopping / settlement) — check the diagram matches */}
           <figure className="iteration__panel">
             <img
               className="iteration__img media-fill"
@@ -40,42 +45,40 @@ export default function Iteration() {
 
           {/* Right: reframing narrative */}
           <div className="iteration__text">
-            <p className="iteration__para">
-              During the early ideation phase, we explored allowing users to directly adjust
-              detailed strategy settings to address the lack of user control. However, this
-              approach weakened the core experience of AI Master — the idea that{' '}
-              <span className="iteration__hl">
-                &ldquo;the AI makes decisions on behalf of the user.&rdquo;
-              </span>
-            </p>
-
-            <p className="iteration__label">Reframing Control &amp; Solution Iteration</p>
+            <p className="iteration__label">Redefining control</p>
 
             <p className="iteration__para">
-              After reviewing the research again, we found that users did not actually want to
-              directly modify strategies themselves. Instead, they wanted to understand:
+              Going back through the interviews, what beginner participants wanted was not the
+              authority to set every trading condition themselves.
             </p>
+            <p className="iteration__para">They wanted to know:</p>
             <ul className="iteration__list">
-              {UNDERSTAND.map((x) => (
+              {WANTED.map((x) => (
                 <li key={x}>{x}</li>
               ))}
             </ul>
 
             <p className="iteration__para">
-              As a result, rather than increasing manual control settings, the solution was
-              redesigned to more clearly communicate:
+              So instead of adding more settings, the final execution screen explains up front
+              that the AI buys, sells and closes the position automatically according to the
+              strategy.
             </p>
-            <ul className="iteration__list">
-              {COMMUNICATE.map((x) => (
-                <li key={x}>{x}</li>
-              ))}
-            </ul>
+            <p className="iteration__para">
+              How to stop a strategy, and how capital is settled once it ends, are also
+              confirmable before execution.
+            </p>
+            <p className="iteration__para">
+              Without designing a trading strategy themselves, users can decide whether to
+              execute while understanding what happens to their money and when they can step in.
+            </p>
 
             <p className="iteration__para">
+              In this project we redefined control not as the ability to operate everything
+              manually, but as{' '}
               <span className="iteration__hl">
-                Control was redefined: not adjusting the strategy directly, but knowing who is
-                deciding — and when to step in.
+                the sense of being able to predict what the AI does and where you can intervene
               </span>
+              .
             </p>
           </div>
         </div>

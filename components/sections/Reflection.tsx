@@ -1,63 +1,71 @@
 import RevealHeading from '@/components/RevealHeading';
 
+const LESSONS = [
+  {
+    title: '01. In AI UX, an understandable process mattered more than the amount of automation',
+    paras: [
+      'Users were not asking the AI to simply do more on their behalf.',
+      'They wanted to know what the AI was doing with their money, in what order the trading proceeds, and when they could step in.',
+    ],
+  },
+  {
+    title: '02. A sense of control is not created by manual settings alone',
+    paras: [
+      'At first I assumed that giving users more settings would increase their sense of control.',
+      'But in an AI service, letting users predict what the AI does and when they can intervene turned out to be just as much a form of control as the range of things they can operate themselves.',
+    ],
+  },
+  {
+    title: '03. Trust in AI was tied to how the decision process is explained, not to features',
+    paras: [
+      'Beyond which Master and strategy the AI recommended, we had to explain why it recommended them, what it handles automatically once trading begins, and when the user can stop it.',
+      'Providing the right information at each uncertain moment was the precondition for a user handing money to the AI.',
+    ],
+  },
+];
+
 export default function Reflection() {
   return (
     <section id="reflection" className="section refl">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">[ 11 — Reflection ]</p>
         <RevealHeading level="h2" className="ds-h2 refl__title">
-          What I learned in this project
+          Letting people know what they handed over mattered more than having AI do more of it
         </RevealHeading>
 
         <div className="refl__cards">
-          <article className="refl__card">
-            <h3 className="refl__card-title">
-              01. In AI UX, what mattered most was not &ldquo;more automation,&rdquo; but a flow
-              users could understand.
-            </h3>
-            <p className="refl__para">
-              Users did not simply want AI to make decisions for them. They wanted to understand:
-            </p>
-            <ul className="refl__list">
-              <li>what was currently happening</li>
-              <li>who was making the decision</li>
-              <li>and when they should intervene</li>
-            </ul>
-          </article>
-
-          <article className="refl__card">
-            <h3 className="refl__card-title">
-              02. A sense of control came less from &ldquo;direct manipulation&rdquo; and more from
-              &ldquo;feeling informed.&rdquo;
-            </h3>
-            <p className="refl__para">
-              At first, we explored giving users more configuration options. However, the core
-              experience of AI Master was not about designing strategies directly, but about
-              choosing and delegating judgment to the AI.
-            </p>
-          </article>
-
-          <article className="refl__card">
-            <h3 className="refl__card-title">
-              03. Trust in AI services was built not through features, but through how decision
-              structures were explained.
-            </h3>
-            <p className="refl__para">
-              Through this project, we learned that UX in AI services goes beyond improving
-              usability. It is also about helping users understand and trust the decision-making
-              flow, even in moments of uncertainty.
-            </p>
-          </article>
+          {LESSONS.map((lesson) => (
+            <article key={lesson.title} className="refl__card">
+              <h3 className="refl__card-title">{lesson.title}</h3>
+              {lesson.paras.map((para, i) => (
+                <p key={i} className="refl__para">
+                  {para}
+                </p>
+              ))}
+            </article>
+          ))}
         </div>
 
         <p className="refl__closing">
-          If this were live, the metric I&rsquo;d watch is activation conversion — whether a
-          clearer decision structure actually turns exploration into a first trade.
+          This research was exploratory: 22 survey respondents, 4 interviewees and 5 usability
+          test participants. The interviews in particular had only two participants per group and
+          included experience with comparable AI trading features, so I have not generalised the
+          patterns found into characteristics of the market as a whole.
         </p>
 
         <p className="refl__closing">
-          This project was part of a broader exploration into human trust, autonomy, and AI
-          decision-making systems.
+          If this shipped, the first metric I would watch is the{' '}
+          <span className="refl__hl">activation rate</span>.
+        </p>
+
+        <p className="refl__closing">
+          Here, activation rate means the share of users who start setting their investment style
+          and go on to select a Master and a strategy and complete their first strategy execution.
+        </p>
+
+        <p className="refl__closing">
+          That metric would tell me whether clearer recommendation criteria and pre-execution
+          explanation actually convert exploration into a first trade.
         </p>
 
         <div className="refl__cta">

@@ -4,28 +4,35 @@ import RevealOnView from '@/components/RevealOnView';
 const PROBLEMS = [
   {
     number: '01.',
-    title: 'No personalized starting point',
-    intro: 'Users had to explore all strategies without a clear starting point based on their preferences.',
-    bullets: [] as string[],
-    outro: '',
+    title: 'There was no basis for choosing a Master',
+    paras: [
+      'Users had to work through seven Masters and the many strategies inside them without any clear criteria.',
+      'Even when they picked a familiar or interesting Master, it was hard to judge whether a strategy’s risk level and trading approach suited them. Interview participants said they tapped through several strategies and then gave up without understanding the differences.',
+    ],
   },
   {
     number: '02.',
-    title: 'Unclear recommendation flow',
-    intro: 'Users struggled to understand:',
-    bullets: [
-      'why strategies were recommended',
-      'what the AI was doing',
-      'what would happen next',
+    title: 'The current step and what happens after execution were unclear',
+    paras: [
+      'Users struggled to tell whether they were choosing a Master, selecting a strategy, or actually committing their money.',
+      'Even after reaching the screen for entering the minimum investment, it was never fully explained whether the AI also closes the final position on top of buying and selling, when the strategy ends, or how the capital is settled.',
     ],
-    outro: '',
   },
   {
     number: '03.',
-    title: 'Hard to compare strategies',
-    intro: 'Users found it difficult to quickly compare:',
-    bullets: ['strategy differences', 'risk levels', 'key performance information'],
-    outro: 'across multiple agents.',
+    title: 'Chat did not read as the starting point for recommendations',
+    paras: [
+      'AI Master offered a way to get strategy recommendations by chatting with the AI. But on the existing screens the shape and placement of the chat icon, and the way a conversation opened, differed from familiar messengers.',
+      'Nothing on screen made it clear whether chat was a simple support feature or the main entry point for exploring and being recommended strategies.',
+    ],
+  },
+  {
+    number: '04.',
+    title: 'Strategy performance and real coin prices lived on separate screens',
+    paras: [
+      'AI Master showed the performance of a selected strategy, but the actual price chart of the coin that strategy traded was not connected to it.',
+      'To check the market price, users had to leave AI Master and find the coin again in the chart list. That detour also broke the flow of browsing strategies.',
+    ],
   },
 ];
 
@@ -37,15 +44,21 @@ export default function BeforeExperience() {
           [ 02 — Current Experience ]
         </p>
         <RevealHeading level="h2" className="ds-h2 experience__title">
-          Users struggled to understand how the AI agents actually worked.
+          It was hard to know what to choose, where you were, and what happens after you commit
+          your money
         </RevealHeading>
         <p className="experience__lede">
-          Users were able to recognize the AI avatars through familiar investor imagery, but
-          the service later introduced unfamiliar AI interaction patterns, making the overall
-          experience difficult to understand.
+          AI Master offered two ways in: getting a strategy recommendation through chat, or
+          browsing the Master list directly.
+        </p>
+        <p className="experience__lede">
+          But on the existing screens, neither entry point explained the criteria for judging a
+          strategy or the trading process as a whole.
         </p>
 
         <div className="experience__layout">
+          {/* TODO(figma): problem 03 is now about the chat entry point — the collage needs to
+              include the chat icon / conversation screen for the claim to hold up */}
           <figure className="experience__analysis">
             <img
               className="experience__analysis-img media-fill"
@@ -66,26 +79,16 @@ export default function BeforeExperience() {
                   <h3 className="experience__title-h3">{p.title}</h3>
                 </header>
                 <blockquote className="experience__quote">
-                  <span className="experience__quote-intro">{p.intro}</span>
-                  {p.bullets.length > 0 && (
-                    <ul className="experience__quote-list">
-                      {p.bullets.map((b) => (
-                        <li key={b}>{b}</li>
-                      ))}
-                    </ul>
-                  )}
-                  {p.outro && <span className="experience__quote-outro">{p.outro}</span>}
+                  {p.paras.map((para, i) => (
+                    <span key={i} className="experience__quote-intro">
+                      {para}
+                    </span>
+                  ))}
                 </blockquote>
               </article>
             ))}
           </RevealOnView>
         </div>
-
-        <p className="experience__closing">
-          As a result, users were choosing agents based more on impression than strategy, and
-          were dropping off at the final execution stage because they did not fully understand
-          how the AI worked.
-        </p>
       </div>
     </section>
   );

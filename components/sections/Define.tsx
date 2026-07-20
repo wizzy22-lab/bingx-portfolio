@@ -1,10 +1,15 @@
 import RevealHeading from '@/components/RevealHeading';
 
+const PATHS = [
+  'Chatting with the AI to get a strategy recommendation',
+  'Picking a Master they were interested in and browsing its strategies directly',
+];
+
 const HMW = [
-  'How might we help beginner users easily understand the current step and the overall trading flow?',
-  'How might we help beginner users start trading with a clear understanding of how the AI features work?',
-  'How might we help users compare strategies and AI recommendations more clearly?',
-  'How might we provide AI features while still helping users maintain a sense of control?',
+  'How might we help beginner users choose a Master based on their own investment style?',
+  'How might we help users understand the current step, the next action, and how far the AI automates on their behalf?',
+  'How might we help users start a conversation with the AI and get a recommendation without learning a new interaction pattern?',
+  'How might we let users compare strategy performance against real coin prices without leaving the screen?',
 ];
 
 export default function Define() {
@@ -18,10 +23,13 @@ export default function Define() {
             [ 07.1 — Define · Empathy Map ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            Users relied on impressions
-            <br />
-            rather than clear understanding
+            Users needed criteria for judging a strategy more than they needed a
+            Master&rsquo;s image
           </RevealHeading>
+          <p className="define-sub__intro">
+            I pulled what users said and did across the interviews and community research into a
+            single empathy map.
+          </p>
           <figure className="define-sub__figure">
             <img
               className="define-sub__img media-fill"
@@ -29,17 +37,23 @@ export default function Define() {
               alt=""
               aria-hidden
             />
-            <figcaption className="define-sub__caption">[empathy mapping]</figcaption>
+            <figcaption className="define-sub__caption">
+              [ Empathy Mapping — Based on Interview &amp; Community Findings ]
+            </figcaption>
           </figure>
           <p className="define-sub__closing">
-            Users were not clearly understanding the differences between strategies. Instead,
-            they perceived agents through impression-based cues such as{' '}
-            <span className="define-sub__hl">&ldquo;aggressive&rdquo;</span> or{' '}
-            <span className="define-sub__hl">&ldquo;stable.&rdquo;</span> Because there were no
-            clear comparison criteria, many users relied on image and atmosphere when making
-            decisions. As they reached the actual execution stage, users often experienced{' '}
-            <span className="define-sub__hl">hesitation</span> and{' '}
-            <span className="define-sub__hl">uncertainty</span>.
+            Without clearly understanding the differences between strategies, users took in
+            Masters through impressions like{' '}
+            <span className="define-sub__hl">&lsquo;aggressive&rsquo;</span> or{' '}
+            <span className="define-sub__hl">&lsquo;stable&rsquo;</span>.
+          </p>
+          <p className="define-sub__closing">
+            But at the point of committing real money, an image or an impression was not enough
+            to decide on. They needed{' '}
+            <span className="define-sub__hl define-sub__hl--bold">
+              criteria that connected a strategy to their own situation
+            </span>{' '}
+            — the risk they could tolerate, the trading approach they preferred.
           </p>
         </div>
 
@@ -49,10 +63,22 @@ export default function Define() {
             [ 07.2 — Define · User Journey ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            Users were experiencing even greater
-            <br />
-            confusion and uncertainty after execution.
+            There were two paths through the service, and uncertainty spiked on both right
+            before execution
           </RevealHeading>
+          <p className="define-sub__intro">
+            Users could explore strategies in two ways.
+          </p>
+          <ol className="define-sub__list">
+            {PATHS.map((path, i) => (
+              <li key={i} className="define-sub__list-item">
+                <span className="define-sub__list-num">{String(i + 1).padStart(2, '0')}.</span>
+                <span>{path}</span>
+              </li>
+            ))}
+          </ol>
+          {/* TODO(figma): 07.2 now describes two paths (chat / direct browse) merging at
+              strategy selection — replace if the journey map still shows a single linear flow */}
           <figure className="define-sub__figure">
             <img
               className="define-sub__img media-fill"
@@ -60,15 +86,26 @@ export default function Define() {
               alt=""
               aria-hidden
             />
-            <figcaption className="define-sub__caption">[user journey]</figcaption>
+            <figcaption className="define-sub__caption">
+              [ User Journey — Entry to Strategy Execution and Exit ]
+            </figcaption>
           </figure>
           <p className="define-sub__closing">
-            Beginner users entered the service expecting the AI to manage everything from entry
-            to exit automatically. However, after execution, users struggled to understand{' '}
+            On the chat path, neither the fact that chat was the starting point for
+            recommendations nor how to hold the conversation was made clear.
+          </p>
+          <p className="define-sub__closing">
+            On the direct path, it was hard to judge which of the many Masters and strategies to
+            choose.
+          </p>
+          <p className="define-sub__closing">
+            Both paths met at the step of selecting a strategy and entering an amount. At that
+            point users could not tell{' '}
             <span className="define-sub__hl define-sub__hl--bold">
-              what the AI was currently doing, which parts were fully automated, and what
-              decisions still required user involvement.
+              how far the AI trades automatically, when the strategy ends, or how the capital is
+              settled
             </span>
+            .
           </p>
         </div>
       </div>
@@ -92,15 +129,12 @@ export default function Define() {
             [ 07.3 — Define · HMW ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-hmw__title">
-            Key questions for reducing beginner users&rsquo;
-            <br />
-            confusion, decision difficulty, and anxiety
+            What users wanted to know was where to start, what to choose, and what happens after
+            they commit their money
           </RevealHeading>
           <p className="define-hmw__intro">
-            Through the problem statement, we identified that beginner users expected AI to feel
-            easier to understand and trust. We then reorganized user feedback through a user
-            story-based approach, which led to four key questions most closely connected to the
-            project direction.
+            I turned the problems found so far into questions to be answered on the actual
+            screens.
           </p>
           <ol className="define-hmw__grid">
             {HMW.map((q, i) => (

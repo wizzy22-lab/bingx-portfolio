@@ -3,7 +3,7 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 const COPY: HeroCopy = {
   locale: 'en',
   subtitle:
-    'A project redesigned around a decision-focused flow, helping users compare and choose AI agents more clearly based on the investment philosophies of legendary investors.',
+    'A redesign that lets users start either by chatting for a recommendation or by browsing the Master that matches their investment style, then understand everything from strategy selection to automated buying, selling and position exit before handing the investment over to AI.',
   tags: [
     'AI Agents',
     'Crypto Trading',

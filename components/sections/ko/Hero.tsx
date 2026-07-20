@@ -3,7 +3,7 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 const COPY: HeroCopy = {
   locale: 'ko',
   subtitle:
-    '어떤 AI 전략에 돈을 맡겨야 할지 막막한 사용자를 위해, 투자 성향에 맞는 Master를 먼저 추천하고 전략 선택부터 자동 매수·매도·포지션 종료까지의 과정을 이해할 수 있도록 재설계한 프로젝트',
+    '대화로 전략을 추천받거나 투자 성향에 맞는 Master에서 탐색을 시작하고, 전략 선택부터 자동 매수·매도·포지션 종료까지의 과정을 이해한 뒤 AI에게 투자를 맡기도록 재설계한 프로젝트',
   tags: [
     'AI 에이전트',
     '암호화폐 트레이딩',

@@ -23,7 +23,7 @@ export default function AboutService() {
     <section id="about" className="section">
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
-          [ 01 — about Service ]
+          [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
           대화로 추천받거나 직접 고른 전략에 돈을 맡기면, AI가 거래를 진행합니다

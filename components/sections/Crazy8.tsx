@@ -8,14 +8,15 @@ export default function Crazy8() {
           [ 08.3 — Crazy 8s ]
         </p>
         <RevealHeading level="h2" className="ds-h2 crazy8__title">
-          We explored multiple layout directions and selected the clearest decision flow.
+          We picked the direction that compares on one screen and shows the next action
         </RevealHeading>
         <p className="crazy8__intro">
-          Through Crazy 8s, we rapidly explored various interaction and layout directions for
-          onboarding, agent recommendations, and strategy comparison flows.
+          Using Crazy 8s — eight ideas sketched in eight minutes — we explored several structures
+          for onboarding, Master recommendation, strategy selection and the execution
+          confirmation screen.
           <br />
-          After team voting sessions, we selected the final structure that best helped users
-          compare and evaluate strategies more easily.
+          We reviewed each idea against whether the information needed for comparison reads on a
+          single screen, and whether the next action is obvious to the user.
         </p>
 
         <div className="crazy8__panels">
@@ -31,7 +32,7 @@ export default function Crazy8() {
               aria-hidden
             />
             <figcaption className="crazy8__caption">
-              [ Generating Multiple Interaction Ideas Through Crazy 8 ]
+              [ Generating Multiple Interaction Ideas Through Crazy 8s ]
             </figcaption>
           </figure>
 
@@ -44,7 +45,7 @@ export default function Crazy8() {
               aria-hidden
             />
             <figcaption className="crazy8__caption">
-              [ Exploring Multiple Layout Directions Through Crazy 8s and Team Voting ]
+              [ Exploring Multiple Layout Directions Through Crazy 8s ]
             </figcaption>
           </figure>
         </div>

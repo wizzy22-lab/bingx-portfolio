@@ -2,24 +2,19 @@ import RevealHeading from '@/components/RevealHeading';
 
 const CRITERIA = [
   {
-    title: '1. Investment style',
-    body: 'Invest conservatively for stability\nvs\ninvest more aggressively\nfor higher returns.',
+    title: 'Master',
+    body: 'An AI investing guide that represents a specific investment style and philosophy',
     icon: '/icons/about/investment-style.png',
   },
   {
-    title: '2. Risk tolerance',
-    body: 'A measure of how much risk you are willing to take when investing.',
-    icon: '/icons/about/risk-tolerance.png',
-  },
-  {
-    title: '3. Market interpretation',
-    body: 'The way users understand and evaluate investment information when making decisions.',
-    icon: '/icons/about/market-interpretation.png',
-  },
-  {
-    title: '4. Trading strategy',
-    body: 'An investment approach that determines when to buy and when to sell.',
+    title: 'Strategy',
+    body: 'The concrete automated trading method a Master offers',
     icon: '/icons/about/trading-strategy.png',
+  },
+  {
+    title: 'Capital',
+    body: 'The funds — at or above a set minimum — committed to run the chosen strategy',
+    icon: '/icons/about/risk-tolerance.png',
   },
 ];
 
@@ -31,16 +26,19 @@ export default function AboutService() {
           [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
-          An <span className="about__highlight">AI investment agent service</span>,<br />
-          powered by world-renowned investment philosophies.
+          Commit money to a strategy you were recommended or picked yourself, and the AI trades
+          it for you
         </RevealHeading>
         <p className="about__lede">
-          AI Master is an AI trading service where users can choose between different AI
-          agents based on the investment philosophies and strategy styles of well-known
-          investors.
+          AI Master is a service where AI trades automatically according to the strategy a user
+          selects. Users can chat with the AI to get a strategy recommendation, or pick a Master
+          they are interested in and browse the strategies inside it.
         </p>
 
-        <p className="about__intro">Each Agents</p>
+        <p className="about__intro">
+          The service holds seven Masters, each representing a different investment style, and
+          every Master in turn holds several automated trading strategies.
+        </p>
 
         <div className="about__grid">
           {CRITERIA.map((c) => (
@@ -57,13 +55,16 @@ export default function AboutService() {
         </div>
 
         <p className="about__closing">
-          Each agent was designed with different approaches, and users had to choose the
-          MASTER  that best matched their investment style.
+          Once a user picks a Master and a strategy and commits at least the required minimum,
+          the AI buys and sells automatically according to that strategy. Finally it closes the
+          position, settling the outcome of the trade.
         </p>
         <p className="about__final">
-          In other words, users had to decide which{' '}
-          <span className="about__highlight">investment philosophy</span> they wanted to
-          follow.
+          In other words, the user decides{' '}
+          <span className="about__highlight">
+            which strategy of which Master to commit how much to
+          </span>
+          , and the AI carries out the actual trading from there.
         </p>
       </div>
     </section>
