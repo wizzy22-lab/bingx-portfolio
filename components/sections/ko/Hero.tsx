@@ -3,8 +3,9 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 const COPY: HeroCopy = {
   locale: 'ko',
   subtitle: [
-    '자신에게 맞는 Master와 전략을 쉽게 고르고,',
-    'AI가 매수부터 포지션 종료까지 자동으로 처리한다는 점을 이해한 뒤 투자를 맡기도록 재설계한 프로젝트',
+    '자신에게 맞는 Master와 전략을 쉽게 고르고, AI가 매수부터',
+    '포지션 종료까지 자동으로 처리한다는 점을 이해한 뒤 투자를',
+    '맡기도록 재설계한 프로젝트',
   ],
   tags: [
     'AI 에이전트',

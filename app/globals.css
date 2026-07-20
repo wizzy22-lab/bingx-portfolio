@@ -1569,7 +1569,7 @@ section[id] {
   font-weight: 400;
   color: var(--text-primary);
   text-align: center;
-  max-width: 520px;
+  max-width: 600px;
   margin: 24px auto 0 auto;
 }
 
@@ -1577,7 +1577,7 @@ section[id] {
   font-size: 20px;
   line-height: 28px;
   color: var(--text-primary);
-  max-width: 773px;
+  max-width: 940px;
 }
 
 .research-insight__highlight {

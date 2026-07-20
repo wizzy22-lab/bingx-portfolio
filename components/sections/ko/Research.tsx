@@ -342,16 +342,15 @@ export default function Research() {
             insight
           </p>
           <p className="research-insight__closing">
-            이번 인터뷰에서 초급 참여자에게는 AI 거래에 대한 관심보다 이해 장벽이 더 크게
-            나타났습니다. 반면 고급 참여자는 작동 방식을 이해하더라도 자동화 자체의 필요성을
-            낮게 평가했습니다.
+            초급 참여자는 AI 거래에 관심은 있었지만, 사용법과 작동 방식을 이해하기
+            어려워했습니다.
+            <br />
+            반면 고급 참여자는 작동 방식을 알아도 AI에게 거래를 맡길 필요를 크게 느끼지
+            못했습니다.
           </p>
           <p className="research-insight__closing research-insight__closing--lead">
-            이에 이번 프로젝트에서는{' '}
-            <span className="research-insight__highlight">
-              이해 장벽을 화면과 정보 구조로 개선할 가능성이 더 크게 관찰된 초급 사용자
-            </span>{' '}
-            를 우선 타깃으로 설정했습니다.
+            따라서 사용법과 AI의 작동 방식을 더 쉽게 설명하면 문제를 줄일 수 있다고 본 초급
+            사용자를 우선 타깃으로 정했습니다.
           </p>
           <p className="research-insight__closing">
             다만 집단별 참여자가 2명인 탐색적 인터뷰이므로, 이는 시장 전체에 대한 결론이

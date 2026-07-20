@@ -3,8 +3,9 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 const COPY: HeroCopy = {
   locale: 'en',
   subtitle: [
-    'Pick the Master and strategy that suit you, easily,',
-    'then hand over the investment knowing the AI runs it from the first buy through closing the position',
+    'A redesign that makes picking the right Master and',
+    'strategy easy, and shows that the AI runs it all',
+    'from the first buy to closing the position.',
   ],
   tags: [
     'AI Agents',
