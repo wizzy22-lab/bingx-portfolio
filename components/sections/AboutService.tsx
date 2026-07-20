@@ -26,13 +26,16 @@ export default function AboutService() {
           [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
-          Commit money to a strategy you were recommended or picked yourself, and the AI trades
-          it for you
+          A crypto trading service where you pick a legendary investor&rsquo;s strategy
+          <br />
+          and hand the trading over to AI
         </RevealHeading>
         <p className="about__lede">
           AI Master is a service where AI trades automatically according to the strategy a user
-          selects. Users can chat with the AI to get a strategy recommendation, or pick a Master
-          they are interested in and browse the strategies inside it.
+          selects.
+          <br />
+          Users can chat with the AI to get a strategy recommendation, or pick a Master they are
+          interested in and browse the strategies inside it.
         </p>
 
         <p className="about__intro">

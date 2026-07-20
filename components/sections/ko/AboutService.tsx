@@ -26,10 +26,13 @@ export default function AboutService() {
           [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
-          대화로 추천받거나 직접 고른 전략에 돈을 맡기면, AI가 거래를 진행합니다
+          투자 거장의 전략을 선택해
+          <br />
+          AI에게 자동 거래를 맡기는 암호화폐 트레이딩 서비스
         </RevealHeading>
         <p className="about__lede">
           AI Master는 사용자가 선택한 전략에 따라 AI가 자동으로 거래하는 서비스입니다.
+          <br />
           사용자는 AI와 대화하며 전략을 추천받거나, 관심 있는 Master를 직접 선택해 그 안의
           전략을 살펴볼 수 있습니다.
         </p>
