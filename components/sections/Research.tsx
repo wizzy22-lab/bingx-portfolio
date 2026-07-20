@@ -86,9 +86,9 @@ export default function Research() {
             [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            App reviews echoed the same reaction:
+            Communities and app reviews alike
             <br />
-            &ldquo;I don&rsquo;t know how to use this.&rdquo;
+            said the service was hard to figure out
           </RevealHeading>
           <p className="research-community__intro">
             I looked at how users talked about AI investing on Reddit, Google Reviews and the

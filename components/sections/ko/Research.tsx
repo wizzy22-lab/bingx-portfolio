@@ -86,9 +86,9 @@ export default function Research() {
             [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            앱 리뷰에서도 “어떻게 사용해야 할지 모르겠다”는
+            커뮤니티와 앱 리뷰에서도
             <br />
-            반응이 나타났습니다.
+            사용법을 이해하기 어렵다는 반응이 나타났습니다
           </RevealHeading>
           <p className="research-community__intro">
             Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
