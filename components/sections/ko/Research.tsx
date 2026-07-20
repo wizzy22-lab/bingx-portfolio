@@ -86,11 +86,14 @@ export default function Research() {
             [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            앱 리뷰에서도 “어떻게 사용해야 할지 모르겠다”는 반응이 나타났습니다
+            앱 리뷰에서도 “어떻게 사용해야 할지 모르겠다”는
+            <br />
+            반응이 나타났습니다.
           </RevealHeading>
           <p className="research-community__intro">
-            Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
-            사용자 반응을 살펴봤습니다.
+            Reddit, Google Reviews, App Store Reviews에서
+            <br />
+            AI 투자 기능과 인터페이스에 대한 사용자 반응을 살펴봤습니다.
           </p>
 
           <div className="research-community__layout">
@@ -142,6 +145,7 @@ export default function Research() {
 
           <p className="research-community__closing">
             리뷰에서 확인된 반응은 단순히 투자 전략이 어렵다는 문제에 그치지 않았습니다.
+            <br />
             사용자는 서비스를 어디서 시작해야 하고, 어떤 순서로 이용해야 하는지도 이해하기
             어려워하고 있었습니다.
           </p>
@@ -153,11 +157,16 @@ export default function Research() {
             [ 03.2 — Secondary Research · Survey ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-survey__title">
-            AI 기능 경험자 9명 중 8명이 ‘설명 부족’을 불편으로 꼽았습니다
+            AI 기능 경험자 9명 중 8명이 ‘설명 부족’을
+            <br />
+            불편으로 꼽았습니다
           </RevealHeading>
           <p className="research-survey__intro">
             커뮤니티에서 확인한 혼란이 거래소 AI 기능의 사용 경험에서도 나타나는지 확인하기
-            위해, 암호화폐 거래소 앱 사용자 22명에게 AI 기반 기능의 이용 경험을 물었습니다.
+            위해,
+            <br />
+            암호화폐 거래소 앱 사용자 22명에게 AI 기반 기능의 이용 경험을 물었습니다.
+            <br />
             여기에는 전략 추천, 카피 트레이딩, 리스크 분석과 같은 기능이 포함됐습니다.
           </p>
 
@@ -193,9 +202,10 @@ export default function Research() {
           </div>
 
           <p className="research-survey__closing">
-            이 결과만으로 설명 부족이 미사용의 유일한 원인이라고 단정할 수는 없습니다. 다만 이
-            표본에서는 AI 기능의 목적과 작동 방식, 결과를 해석하는 방법에 대한 설명이 사용을
-            가로막는 장벽 중 하나일 가능성이 나타났습니다.
+            설명 부족만이 AI 기능을 사용하지 않은 이유라고 단정할 수는 없습니다.
+            <br />
+            다만 AI가 무엇을 하고 결과를 어떻게 봐야 하는지 알기 어려운 점은, 사용을 망설이게
+            하는 이유 중 하나로 보였습니다.
           </p>
           <p className="research-survey__closing">
             설문만으로는 사용자가 어떤 순간에 망설이고, 왜 거래를 시작하지 않는지 알 수
@@ -209,13 +219,16 @@ export default function Research() {
             [ 04 — Primary Research · Interviews ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-primary__title">
-            초급·고급 사용자에게 AI 거래를 망설인 이유를 물었습니다
+            암호화폐 거래 경험이 다른 사용자 4명에게
+            <br />
+            AI 거래를 망설인 이유를 물었습니다
           </RevealHeading>
           <p className="research-primary__intro">
-            암호화폐 거래 경험이 적은 초급 사용자 2명과, 자신의 거래 원칙을 세워 직접 거래하는
-            고급 사용자 2명을 인터뷰했습니다. AI Master 또는 유사한 AI 트레이딩 기능을 이용한
-            경험, Master와 전략을 고른 기준, AI가 무엇을 해주길 기대했는지, 어디에서 거래를
-            망설였는지를 물었습니다.
+            암호화폐 거래 경험이 있는 사용자 4명을 인터뷰했습니다. 거래 경험 횟수에 따라 초급
+            참여자 2명과
+            <br />
+            고급 참여자 2명으로 나누어, AI 거래를 받아들이는 방식과 망설이는 지점을
+            비교했습니다.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
@@ -245,12 +258,14 @@ export default function Research() {
             [ 05 — Analysis ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-analysis__title">
-            초급 참여자는 이해하기 어려워했고, 고급 참여자는 AI에게 맡길 필요를 느끼지
-            못했습니다
+            초급 참여자는 이해하기 어려워했고, 고급 참여자는
+            <br />
+            AI에게 맡길 필요를 느끼지 못했습니다
           </RevealHeading>
           <p className="research-analysis__intro">
-            인터뷰에서 나온 말을 비슷한 내용끼리 묶어보니, 초급과 고급 참여자가 AI 거래를
-            망설이는 이유가 다르게 나타났습니다.
+            인터뷰에서 나온 말을 비슷한 내용끼리 묶어보니,
+            <br />
+            초급과 고급 참여자가 AI 거래를 망설이는 이유가 다르게 나타났습니다.
           </p>
           <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
@@ -324,9 +339,9 @@ export default function Research() {
             [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            다른 투자 서비스는 먼저 성향을 묻고,{' '}
-            <span className="research-competitor__highlight">같은 기준으로</span> 상품을
-            비교하게 했습니다
+            다른 투자 서비스는 먼저 성향을 묻고, 같은 기준으로
+            <br />
+            상품을 비교하게 했습니다
           </RevealHeading>
           <p className="research-competitor__intro">
             로보어드바이저와 펀드 서비스는 몇 가지 질문을 통해 사용자의 투자 경험과 감수할 수

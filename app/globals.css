@@ -936,7 +936,7 @@ section[id] {
   color: var(--text-primary);
   text-align: center;
   margin: 24px auto 0 auto;
-  max-width: 442px;
+  max-width: 680px;
 }
 
 .ds-kr .research-community__closing {
@@ -1382,7 +1382,7 @@ section[id] {
 }
 
 .research-primary__intro {
-  max-width: 539px;
+  max-width: 640px;
 }
 
 .research-analysis__intro {

@@ -86,12 +86,14 @@ export default function Research() {
             [ 03.1 — Secondary Research · Community ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-community__title">
-            App reviews echoed the same reaction: &ldquo;I don&rsquo;t know how to use
-            this&rdquo;
+            App reviews echoed the same reaction:
+            <br />
+            &ldquo;I don&rsquo;t know how to use this.&rdquo;
           </RevealHeading>
           <p className="research-community__intro">
-            I looked at how users talked about AI investing features and interfaces on Reddit,
-            Google Reviews and App Store Reviews.
+            I looked at how users talked about AI investing features and interfaces
+            <br />
+            on Reddit, Google Reviews and App Store Reviews.
           </p>
 
           <div className="research-community__layout">
@@ -142,9 +144,10 @@ export default function Research() {
           </div>
 
           <p className="research-community__closing">
-            The reactions in these reviews went beyond &ldquo;investment strategies are
-            hard.&rdquo; Users also struggled to understand where to start in the service and in
-            what order to use it.
+            The reactions in these reviews went beyond &ldquo;investment strategies are hard.&rdquo;
+            <br />
+            Users also struggled to understand where to start in the service, and in what order
+            to use it.
           </p>
         </div>
 
@@ -154,14 +157,16 @@ export default function Research() {
             [ 03.2 — Secondary Research · Survey ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-survey__title">
-            8 of the 9 people who had used AI features named &ldquo;not enough
-            explanation&rdquo; as the pain point
+            8 of 9 who had used AI features named
+            <br />
+            &ldquo;not enough explanation&rdquo; as the pain point
           </RevealHeading>
           <p className="research-survey__intro">
-            To see whether the confusion found in the community also showed up in actual use of
-            exchange AI features, I asked 22 crypto exchange app users about their experience
-            with AI-based features. That included strategy recommendations, copy trading and
-            risk analysis.
+            To see whether the confusion found in the community also showed up in actual use,
+            <br />
+            I asked 22 crypto exchange app users about their experience with AI-based features.
+            <br />
+            That included strategy recommendations, copy trading and risk analysis.
           </p>
 
           <div className="research-survey__layout">
@@ -196,10 +201,10 @@ export default function Research() {
           </div>
 
           <p className="research-survey__closing">
-            These results alone cannot establish that missing explanation is the only reason
-            people do not use the features. Within this sample, though, explanation of what the
-            AI features are for, how they work and how to read their results emerged as one of
-            the barriers to use.
+            Missing explanation alone cannot account for why people do not use AI features.
+            <br />
+            But not knowing what the AI does, or how to read its results, looked like one of the
+            things holding them back.
           </p>
           <p className="research-survey__closing">
             The survey could not tell me at which moment users hesitate, or why they never start
@@ -213,14 +218,16 @@ export default function Research() {
             [ 04 — Primary Research · Interviews ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-primary__title">
-            I asked beginner and advanced users why they hesitated over AI trading
+            I asked four users of differing experience
+            <br />
+            why they hesitated over AI trading
           </RevealHeading>
           <p className="research-primary__intro">
-            I interviewed two beginner users with little crypto trading experience and two
-            advanced users who trade by their own established principles. I asked about their
-            experience with AI Master or similar AI trading features, the criteria they used to
-            pick a Master and a strategy, what they expected the AI to do for them, and where
-            they hesitated over trading.
+            I interviewed four users with crypto trading experience, split by how much
+            <br />
+            they had traded: two beginners and two advanced. I compared how each group
+            <br />
+            took to AI trading and where they hesitated.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
@@ -250,12 +257,14 @@ export default function Research() {
             [ 05 — Analysis ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-analysis__title">
-            Beginners found it hard to understand; advanced users saw no need to hand things to
-            AI
+            Beginners struggled to understand it;
+            <br />
+            advanced users saw no need for AI
           </RevealHeading>
           <p className="research-analysis__intro">
-            Grouping what came up in the interviews by similarity showed that beginner and
-            advanced participants hesitated over AI trading for different reasons.
+            Grouping what came up in the interviews by similarity showed that
+            <br />
+            beginner and advanced participants hesitated for different reasons.
           </p>
           <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
@@ -330,8 +339,9 @@ export default function Research() {
             [ 06 — Competitor Research ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-            Other investment services ask about your style first, then let you compare products{' '}
-            <span className="research-competitor__highlight">on the same criteria</span>
+            Other services ask about your style first,
+            <br />
+            then compare products on the same criteria
           </RevealHeading>
           <p className="research-competitor__intro">
             Robo-advisors and fund services start with a handful of questions to establish a
