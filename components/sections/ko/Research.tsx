@@ -349,12 +349,11 @@ export default function Research() {
             못했습니다.
           </p>
           <p className="research-insight__closing research-insight__closing--lead">
-            따라서 사용법과 AI의 작동 방식을 더 쉽게 설명하면 문제를 줄일 수 있다고 본 초급
-            사용자를 우선 타깃으로 정했습니다.
-          </p>
-          <p className="research-insight__closing">
-            다만 집단별 참여자가 2명인 탐색적 인터뷰이므로, 이는 시장 전체에 대한 결론이
-            아니라 후속 검증이 필요한 디자인 가설로 다뤘습니다.
+            따라서{' '}
+            <span className="research-insight__highlight">
+              사용법과 AI의 작동 방식을 더 쉽게 설명하면 문제를 줄일 수 있다고 본 초급 사용자
+            </span>
+            를 우선 타깃으로 정했습니다.
           </p>
         </div>
 

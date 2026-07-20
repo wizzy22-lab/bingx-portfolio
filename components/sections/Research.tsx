@@ -346,12 +346,11 @@ export default function Research() {
             Advanced users understood it and still saw little need for it.
           </p>
           <p className="research-insight__closing research-insight__closing--lead">
-            So we made beginner users the primary target — clearer explanation should shrink
-            the problem.
-          </p>
-          <p className="research-insight__closing">
-            With only two participants per group, though, this was exploratory: I treated it as
-            a design hypothesis to validate later, not a conclusion about the whole market.
+            So we made{' '}
+            <span className="research-insight__highlight">
+              beginner users, whose problem clearer explanation should shrink,
+            </span>{' '}
+            the primary target.
           </p>
         </div>
 

@@ -1582,6 +1582,7 @@ section[id] {
 
 .research-insight__highlight {
   color: var(--accent-yellow);
+  font-weight: 600;
 }
 
 .ds-kr .insight-group__card-body,
