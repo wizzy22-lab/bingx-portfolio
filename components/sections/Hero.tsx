@@ -2,8 +2,10 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 
 const COPY: HeroCopy = {
   locale: 'en',
-  subtitle:
-    'A redesign that lets users start either by chatting for a recommendation or by browsing the Master that matches their investment style, then understand everything from strategy selection to automated buying, selling and position exit before handing the investment over to AI.',
+  subtitle: [
+    'Pick the Master and strategy that suit you, easily,',
+    'then hand over the investment knowing the AI runs it from the first buy through closing the position',
+  ],
   tags: [
     'AI Agents',
     'Crypto Trading',

@@ -14,7 +14,7 @@ const PROBLEMS = [
   },
   {
     number: '02.',
-    title: ['What follows a recommendation was unclear'],
+    title: ['What came after a recommendation'],
     lines: [
       'Even once a strategy was recommended — by chat or',
       'by browsing Masters — it was hard to tell why, how',
@@ -25,7 +25,7 @@ const PROBLEMS = [
   },
   {
     number: '03.',
-    title: ['Strategy and performance could not be', 'compared together'],
+    title: ['Strategy and performance sat apart'],
     lines: [
       'Each Master scattered its strategies’ risk levels',
       'and performance, so differences were slow to read.',

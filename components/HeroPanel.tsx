@@ -4,7 +4,8 @@ import { useEffect, useRef, useState, type CSSProperties } from 'react';
 
 export type HeroCopy = {
   locale: 'en' | 'ko';
-  subtitle: string;
+  /* One entry per rendered line. */
+  subtitle: string[];
   tags: string[];
   risk: { label: string; options: string[]; selected: number };
   strategy: { label: string; options: string[]; selected: number };
@@ -234,7 +235,12 @@ export default function HeroPanel(copy: HeroCopy) {
                 </span>
               </h1>
               <p className={`ds-body-lg hero-lead__subtitle${isKr ? ' ds-kr' : ''}`}>
-                {copy.subtitle}
+                {copy.subtitle.map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < copy.subtitle.length - 1 && <br />}
+                  </span>
+                ))}
               </p>
               <div className="hero-lead__tags">
                 {copy.tags.map((tag) => (
