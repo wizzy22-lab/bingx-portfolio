@@ -689,7 +689,7 @@ section[id] {
   font-weight: 400;
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 564px;
+  max-width: 660px;
 }
 
 .experience__layout {
@@ -742,7 +742,7 @@ section[id] {
   background: var(--bg-surface);
   border: 1px solid transparent;
   border-radius: 16px;
-  padding: 16px 40px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -808,7 +808,7 @@ section[id] {
   font-size: 20px;
   line-height: 24px;
   font-weight: 600;
-  color: var(--accent-red);
+  color: var(--text-primary);
   flex-shrink: 0;
 }
 
@@ -819,7 +819,6 @@ section[id] {
   letter-spacing: 0;
   font-weight: 600;
   color: var(--accent-red);
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -836,26 +835,9 @@ section[id] {
   flex-direction: column;
 }
 
-.experience__quote-list {
-  margin: 0;
-  padding-left: 1.2em;
-  list-style: disc;
-}
-
-.experience__closing {
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: var(--text-primary);
-  text-align: center;
-  max-width: 791px;
-  margin: 40px auto 0 auto;
-}
-
 @media (min-width: 1024px) {
   .experience__layout {
-    grid-template-columns: minmax(0, 796fr) minmax(0, 472fr);
+    grid-template-columns: minmax(0, 768fr) minmax(0, 500fr);
     gap: 12px;
     align-items: start;
   }
@@ -873,13 +855,8 @@ section[id] {
 .ds-kr .experience__title,
 .ds-kr .experience__title.ds-h2,
 .ds-kr .experience__lede,
-.ds-kr .experience__quote,
-.ds-kr .experience__closing {
-  font-family: var(--font-kr);
-}
-
 .ds-kr .experience__quote {
-  gap: 12px;
+  font-family: var(--font-kr);
 }
 
 /* 03.1 Secondary Research — Community Source (Figma 124:54) */
@@ -3229,10 +3206,6 @@ video.media-fill {
 .experience__lede + .experience__lede {
   margin-top: 12px;
 }
-.experience__cards.is-inview .experience__card:nth-child(4) {
-  animation-delay: 0.29s;
-}
-
 /* 06 — intro paragraphs above the two-column layout */
 .research-competitor__intro {
   font-family: var(--font-sans);
