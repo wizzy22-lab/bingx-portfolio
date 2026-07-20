@@ -244,7 +244,7 @@ section[id] {
   transform: scale(1);
 }
 .hero-panel.is-in .hero-chip.is-selected {
-  background: var(--accent-blue-point);
+  background: var(--accent-blue);
   color: #ffffff;
   transform: scale(1.02);
   transition-delay: 0.25s;
@@ -494,6 +494,43 @@ section[id] {
   margin: 0 0 24px 0;
 }
 
+/* Scroll-in: the two columns arrive in reading order —
+   condition → its card, then result → its card. */
+@keyframes about-sequence-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about__sequence .about__flow-step,
+.about__sequence .about__card {
+  opacity: 0;
+}
+
+.about__sequence.is-inview .about__flow-step,
+.about__sequence.is-inview .about__card {
+  opacity: 1;
+  animation: about-sequence-in var(--duration-slow) var(--ease-out) backwards;
+}
+
+.about__sequence.is-inview .about__flow-step:nth-child(1) { animation-delay: 0.05s; }
+.about__sequence.is-inview .about__card:nth-child(1) { animation-delay: 0.25s; }
+.about__sequence.is-inview .about__flow-step:nth-child(2) { animation-delay: 0.5s; }
+.about__sequence.is-inview .about__card:nth-child(2) { animation-delay: 0.7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .about__sequence .about__flow-step,
+  .about__sequence .about__card {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 .about__card {
   width: 100%;
   background: var(--bg-surface);
@@ -526,7 +563,7 @@ section[id] {
   line-height: 24px;
   letter-spacing: 0;
   font-weight: 600;
-  color: var(--accent-blue-point);
+  color: var(--accent-blue);
   text-transform: uppercase;
   white-space: nowrap;
   margin: 0;
@@ -555,7 +592,7 @@ section[id] {
 }
 
 .about__highlight {
-  color: var(--accent-blue-point);
+  color: var(--accent-blue);
   font-weight: 700;
 }
 
@@ -2582,7 +2619,8 @@ video.media-fill {
 }
 
 .kf__pill--accent {
-  color: var(--text-on-cream);
+  /* near-black on the saturated blue is only ~3.8:1 — white reads instead */
+  color: var(--card-white);
   background: var(--accent-blue);
   border-color: var(--accent-blue);
 }

@@ -1,4 +1,5 @@
 import RevealHeading from '@/components/RevealHeading';
+import RevealOnView from '@/components/RevealOnView';
 
 const CRITERIA = [
   {
@@ -36,34 +37,37 @@ export default function AboutService() {
           every Master in turn holds several automated trading strategies.
         </p>
 
-        <div className="about__flow">
-          <p className="about__flow-step">
-            Once a user picks a Master and a strategy
-            <br />
-            and commits at least the required minimum,
-          </p>
-          <p className="about__flow-step about__flow-step--result">
-            the AI buys and sells automatically according to that strategy.
-            <br />
-            Finally it closes the position, settling the outcome of the trade.
-          </p>
-        </div>
+        {/* Reveals column by column on scroll: condition → Master, then result → Strategy. */}
+        <RevealOnView className="about__sequence">
+          <div className="about__flow">
+            <p className="about__flow-step">
+              Once a user picks a Master and a strategy
+              <br />
+              and commits at least the required minimum,
+            </p>
+            <p className="about__flow-step about__flow-step--result">
+              the AI buys and sells automatically according to that strategy.
+              <br />
+              Finally it closes the position, settling the outcome of the trade.
+            </p>
+          </div>
 
-        <div className="about__grid">
-          {CRITERIA.map((c) => (
-            <article key={c.title} className="about__card">
-              <h3 className="about__card-title">{c.title}</h3>
-              <p className="about__card-body">
-                {c.body.map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    {i < c.body.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
-            </article>
-          ))}
-        </div>
+          <div className="about__grid">
+            {CRITERIA.map((c) => (
+              <article key={c.title} className="about__card">
+                <h3 className="about__card-title">{c.title}</h3>
+                <p className="about__card-body">
+                  {c.body.map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < c.body.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
+              </article>
+            ))}
+          </div>
+        </RevealOnView>
 
         <p className="about__final">
           In other words, the user decides{' '}

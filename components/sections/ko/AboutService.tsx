@@ -1,4 +1,5 @@
 import RevealHeading from '@/components/RevealHeading';
+import RevealOnView from '@/components/RevealOnView';
 
 const CRITERIA = [
   {
@@ -35,34 +36,37 @@ export default function AboutService() {
           여러 자동 매매 전략을 가지고 있습니다.
         </p>
 
-        <div className="about__flow">
-          <p className="about__flow-step">
-            사용자가 Master와 전략을 고르고
-            <br />
-            정해진 최소 금액 이상을 투입하면,
-          </p>
-          <p className="about__flow-step about__flow-step--result">
-            AI가 전략에 따라 자동으로 매수와 매도를 진행합니다.
-            <br />
-            마지막에는 포지션을 종료해 거래 결과를 확정합니다.
-          </p>
-        </div>
+        {/* Reveals column by column on scroll: condition → Master, then result → 전략. */}
+        <RevealOnView className="about__sequence">
+          <div className="about__flow">
+            <p className="about__flow-step">
+              사용자가 Master와 전략을 고르고
+              <br />
+              정해진 최소 금액 이상을 투입하면,
+            </p>
+            <p className="about__flow-step about__flow-step--result">
+              AI가 전략에 따라 자동으로 매수와 매도를 진행합니다.
+              <br />
+              마지막에는 포지션을 종료해 거래 결과를 확정합니다.
+            </p>
+          </div>
 
-        <div className="about__grid">
-          {CRITERIA.map((c) => (
-            <article key={c.title} className="about__card">
-              <h3 className="about__card-title">{c.title}</h3>
-              <p className="about__card-body">
-                {c.body.map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    {i < c.body.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
-            </article>
-          ))}
-        </div>
+          <div className="about__grid">
+            {CRITERIA.map((c) => (
+              <article key={c.title} className="about__card">
+                <h3 className="about__card-title">{c.title}</h3>
+                <p className="about__card-body">
+                  {c.body.map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < c.body.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
+              </article>
+            ))}
+          </div>
+        </RevealOnView>
 
         <p className="about__final">
           즉 사용자는{' '}
