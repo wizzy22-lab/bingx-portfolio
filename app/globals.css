@@ -1293,7 +1293,7 @@ section[id] {
   color: var(--text-primary);
   text-align: center;
   max-width: 940px;
-  margin: 24px auto 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .ds-kr .research-survey__intro,
@@ -1570,7 +1570,7 @@ section[id] {
   color: var(--text-primary);
   text-align: center;
   max-width: 600px;
-  margin: 24px auto 0 auto;
+  margin: 40px auto 0 auto;
 }
 
 .research-insight__closing--lead {
@@ -1676,7 +1676,7 @@ section[id] {
 }
 
 .research-competitor__copy p + p {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .ds-kr .research-competitor__copy {
@@ -1727,7 +1727,7 @@ section[id] {
 }
 
 .define-sub__figure {
-  margin: 24px 0 0 0;
+  margin: 40px 0 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -1978,7 +1978,7 @@ section[id] {
 }
 
 .featcat__panels {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -2065,7 +2065,7 @@ section[id] {
 }
 
 .iteration__body {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-10);
@@ -2226,7 +2226,7 @@ section[id] {
 }
 
 .crazy8__panels {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -2340,7 +2340,7 @@ video.media-fill {
 }
 
 .ia__body {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-10);
@@ -2468,7 +2468,7 @@ video.media-fill {
 }
 
 .wds__panels {
-  margin-top: 24px;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
@@ -2545,7 +2545,7 @@ video.media-fill {
 }
 
 .kf__compare {
-  margin-top: var(--space-12);
+  margin-top: var(--space-10);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-10);
@@ -2684,7 +2684,7 @@ video.media-fill {
 }
 
 .ut__top {
-  margin-top: var(--space-12);
+  margin-top: var(--space-10);
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-10);
@@ -3203,10 +3203,7 @@ video.media-fill {
    two-entry-path narrative (chat recommendation / direct browse).
    ============================================================= */
 
-/* 02 — second lede paragraph + 4th card reveal delay */
-.experience__lede + .experience__lede {
-  margin-top: 12px;
-}
+/* 02 — reveal delay for the last problem card */
 /* 06 — intro paragraphs above the two-column layout */
 .research-competitor__intro {
   font-family: var(--font-sans);
@@ -3218,7 +3215,7 @@ video.media-fill {
   margin: 24px 0 0 0;
 }
 .research-competitor__intro + .research-competitor__intro {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 /* 05 — insight card bodies are now multi-paragraph */
@@ -3238,7 +3235,7 @@ video.media-fill {
   margin: 24px auto 0 auto;
 }
 .define-sub__closing + .define-sub__closing {
-  margin-top: 12px;
+  margin-top: 40px;
 }
 .define-sub__list {
   list-style: none;
@@ -3265,7 +3262,7 @@ video.media-fill {
 
 /* 08.1 — the two criteria (understanding / trust) */
 .featcat__intro + .featcat__intro {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 .featcat__criteria {
   list-style: none;
@@ -3310,7 +3307,7 @@ video.media-fill {
   margin: 24px 0 0 0;
 }
 .iteration__intro + .iteration__intro {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 .iteration__body {
   align-items: start;
@@ -3388,7 +3385,7 @@ video.media-fill {
   margin: 24px 0 0 0;
 }
 .wds__intro + .wds__intro {
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 /* 09 — inline term chips and the chart bullet list */
