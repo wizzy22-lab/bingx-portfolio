@@ -6,10 +6,10 @@ const PATHS = [
 ];
 
 const HMW = [
-  '어떻게 하면 초급 사용자가 자신의 투자 성향을 기준으로 Master를 선택하도록 도울 수 있을까?',
-  '어떻게 하면 사용자가 현재 단계와 다음 행동, AI가 자동으로 처리하는 범위를 이해하도록 도울 수 있을까?',
-  '어떻게 하면 새로운 조작 방식을 배우지 않고도 AI와 대화를 시작해 전략을 추천받도록 도울 수 있을까?',
-  '어떻게 하면 전략 성과와 실제 코인 가격을 화면을 벗어나지 않고 비교하도록 도울 수 있을까?',
+  ['어떻게 하면 초급 사용자가 자신의', '투자 성향을 기준으로 Master를 선택하도록', '도울 수 있을까?'],
+  ['어떻게 하면 사용자가 현재 단계와 AI가', '자동으로 처리하는 범위를 이해하도록', '도울 수 있을까?'],
+  ['어떻게 하면 사용자가 AI의 추천을 익숙한 방식으로 확인하고 대화를 이어가도록', '도울 수 있을까?'],
+  ['어떻게 하면 전략 성과와 실제 코인 가격을 화면을 벗어나지 않고 비교하도록', '도울 수 있을까?'],
 ];
 
 export default function Define() {
@@ -126,17 +126,22 @@ export default function Define() {
             [ 07.3 — Define · HMW ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-hmw__title">
-            사용자가 알고 싶은 것은 어디서 시작하고, 무엇을 고르고, 돈을 맡긴 뒤 무슨 일이
-            일어나는지였습니다
+            Master와 전략을 고르고 투자금을 넣어 성과를 확인하기까지,
+            <br />
+            네 가지 질문으로 정리했습니다
           </RevealHeading>
-          <p className="define-hmw__intro">
-            앞에서 발견한 문제를 실제 화면에서 해결해야 할 질문으로 바꿨습니다.
-          </p>
           <ol className="define-hmw__grid">
             {HMW.map((q, i) => (
               <li key={i} className="define-hmw__card">
                 <span className="define-hmw__num">{String(i + 1).padStart(2, '0')}.</span>
-                <p className="define-hmw__q">{q}</p>
+                <p className="define-hmw__q">
+                  {q.map((line, j) => (
+                    <span key={j}>
+                      {line}
+                      {j < q.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
               </li>
             ))}
           </ol>

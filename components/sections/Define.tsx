@@ -6,10 +6,10 @@ const PATHS = [
 ];
 
 const HMW = [
-  'How might we help beginner users choose a Master based on their own investment style?',
-  'How might we help users understand the current step, the next action, and how far the AI automates on their behalf?',
-  'How might we help users start a conversation with the AI and get a recommendation without learning a new interaction pattern?',
-  'How might we let users compare strategy performance against real coin prices without leaving the screen?',
+  ['How might we help beginner users choose a Master based on their own investment style?'],
+  ['How might we help users understand the current step and how far the AI automates on their behalf?'],
+  ["How might we help users check the AI's recommendation in a familiar way and continue the conversation?"],
+  ['How might we let users compare strategy performance against real coin prices without leaving the screen?'],
 ];
 
 export default function Define() {
@@ -129,18 +129,22 @@ export default function Define() {
             [ 07.3 — Define · HMW ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-hmw__title">
-            What users wanted to know was where to start, what to choose, and what happens after
-            they commit their money
+            From picking a Master and a strategy to committing funds and checking performance,
+            <br />
+            I framed it as four questions
           </RevealHeading>
-          <p className="define-hmw__intro">
-            I turned the problems found so far into questions to be answered on the actual
-            screens.
-          </p>
           <ol className="define-hmw__grid">
             {HMW.map((q, i) => (
               <li key={i} className="define-hmw__card">
                 <span className="define-hmw__num">{String(i + 1).padStart(2, '0')}.</span>
-                <p className="define-hmw__q">{q}</p>
+                <p className="define-hmw__q">
+                  {q.map((line, j) => (
+                    <span key={j}>
+                      {line}
+                      {j < q.length - 1 && <br />}
+                    </span>
+                  ))}
+                </p>
               </li>
             ))}
           </ol>
