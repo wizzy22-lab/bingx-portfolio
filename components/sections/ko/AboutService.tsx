@@ -4,7 +4,7 @@ import RevealOnView from '@/components/RevealOnView';
 const CRITERIA = [
   {
     title: 'Master',
-    body: ['특정 투자 성향과 철학을 대표하는', 'AI 투자 도우미'],
+    body: ['특정 투자 성향과 철학을 대표하는', 'AI투자 도우미'],
   },
   {
     title: '전략',
@@ -36,21 +36,8 @@ export default function AboutService() {
           여러 자동 매매 전략을 가지고 있습니다.
         </p>
 
-        {/* Reveals column by column on scroll: condition → Master, then result → 전략. */}
+        {/* Figma order: the two term cards reveal first, then the process flow below them. */}
         <RevealOnView className="about__sequence">
-          <div className="about__flow">
-            <p className="about__flow-step">
-              사용자가 Master와 전략을 고르고
-              <br />
-              정해진 최소 금액 이상을 투입하면,
-            </p>
-            <p className="about__flow-step about__flow-step--result">
-              AI가 전략에 따라 자동으로 매수와 매도를 진행합니다.
-              <br />
-              마지막에는 포지션을 종료해 거래 결과를 확정합니다.
-            </p>
-          </div>
-
           <div className="about__grid">
             {CRITERIA.map((c) => (
               <article key={c.title} className="about__card">
@@ -65,6 +52,15 @@ export default function AboutService() {
                 </p>
               </article>
             ))}
+          </div>
+
+          <div className="about__flow">
+            <p className="about__flow-step">
+              사용자가 Master와 전략을 고르고 정해진 최소 금액 이상을 투입하면,
+            </p>
+            <p className="about__flow-step about__flow-step--result">
+              AI가 전략에 따라 자동으로 매수와 매도를 진행합니다
+            </p>
           </div>
         </RevealOnView>
 

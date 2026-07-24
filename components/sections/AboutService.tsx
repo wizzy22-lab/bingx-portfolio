@@ -37,21 +37,8 @@ export default function AboutService() {
           every Master in turn holds several automated trading strategies.
         </p>
 
-        {/* Reveals column by column on scroll: condition → Master, then result → Strategy. */}
+        {/* Figma order: the two term cards reveal first, then the process flow below them. */}
         <RevealOnView className="about__sequence">
-          <div className="about__flow">
-            <p className="about__flow-step">
-              Once a user picks a Master and a strategy
-              <br />
-              and commits at least the required minimum,
-            </p>
-            <p className="about__flow-step about__flow-step--result">
-              the AI buys and sells automatically according to that strategy.
-              <br />
-              Finally it closes the position, settling the outcome of the trade.
-            </p>
-          </div>
-
           <div className="about__grid">
             {CRITERIA.map((c) => (
               <article key={c.title} className="about__card">
@@ -66,6 +53,17 @@ export default function AboutService() {
                 </p>
               </article>
             ))}
+          </div>
+
+          <div className="about__flow">
+            <p className="about__flow-step">
+              Once a user picks a Master and a strategy
+              <br />
+              and commits at least the required minimum,
+            </p>
+            <p className="about__flow-step about__flow-step--result">
+              the AI buys and sells automatically according to that strategy.
+            </p>
           </div>
         </RevealOnView>
 

@@ -463,8 +463,9 @@ section[id] {
   line-height: 24px;
   color: var(--text-primary);
   text-align: center;
-  /* Deliberate gap — the title and lede reveal on scroll before this drops in. */
-  margin: 240px 0 88px 0;
+  /* Deliberate gap — the title and lede reveal on scroll before this drops in.
+     Bottom gap matches the Figma spacing from the intro to the term cards. */
+  margin: 240px 0 24px 0;
 }
 
 .about__grid {
@@ -475,13 +476,12 @@ section[id] {
   margin: 0 auto;
 }
 
-/* Condition → result, sitting above the term cards. */
+/* Process flow, sitting below the term cards (Figma order). Two lines,
+   tightly stacked and centered — no side-by-side columns. */
 .about__flow {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 56px auto 0;
+  text-align: center;
 }
 
 .about__flow-step {
@@ -491,7 +491,7 @@ section[id] {
   font-weight: 400;
   color: var(--text-primary);
   text-align: center;
-  margin: 0 0 24px 0;
+  margin: 0;
 }
 
 /* Scroll-in: the two columns arrive in reading order —
@@ -518,16 +518,11 @@ section[id] {
   animation: about-sequence-in var(--duration-slow) var(--ease-out) backwards;
 }
 
-.about__sequence.is-inview .about__flow-step:nth-child(1) { animation-delay: 0.05s; }
-.about__sequence.is-inview .about__card:nth-child(1) { animation-delay: 0.25s; }
-.about__sequence.is-inview .about__flow-step:nth-child(2) { animation-delay: 0.5s; }
-.about__sequence.is-inview .about__card:nth-child(2) { animation-delay: 0.7s; }
-
-/* The right column travels 20% slower, so the result settles after the condition. */
-.about__sequence.is-inview .about__flow-step:nth-child(2),
-.about__sequence.is-inview .about__card:nth-child(2) {
-  animation-duration: 480ms;
-}
+/* Cards reveal first (left → right), then the flow lines below them. */
+.about__sequence.is-inview .about__card:nth-child(1) { animation-delay: 0.05s; }
+.about__sequence.is-inview .about__card:nth-child(2) { animation-delay: 0.2s; }
+.about__sequence.is-inview .about__flow-step:nth-child(1) { animation-delay: 0.4s; }
+.about__sequence.is-inview .about__flow-step:nth-child(2) { animation-delay: 0.55s; }
 
 @media (prefers-reduced-motion: reduce) {
   .about__sequence .about__flow-step,
@@ -594,7 +589,7 @@ section[id] {
   font-weight: 400;
   color: var(--text-primary);
   text-align: center;
-  margin: 62px 0 0 0;
+  margin: 24px 0 0 0;
 }
 
 .about__highlight {
@@ -632,8 +627,7 @@ section[id] {
 }
 
 @media (min-width: 768px) {
-  .about__grid,
-  .about__flow {
+  .about__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
