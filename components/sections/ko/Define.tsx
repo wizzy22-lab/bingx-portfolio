@@ -23,7 +23,9 @@ export default function Define() {
             [ 07.1 — Define · Empathy Map ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            사용자에게는 Master의 이미지보다 전략을 판단할 기준이 필요했습니다
+            사용자에게는 Master의 이미지보다
+            <br />
+            전략을 판단할 기준이 필요했습니다
           </RevealHeading>
           <p className="define-sub__intro">
             인터뷰와 커뮤니티 리서치에서 확인한 사용자의 말과 행동을 한 장의 공감 지도로
