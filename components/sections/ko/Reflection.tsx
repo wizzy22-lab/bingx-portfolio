@@ -30,7 +30,9 @@ export default function Reflection() {
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">[ 11 — Reflection ]</p>
         <RevealHeading level="h2" className="ds-h2 refl__title">
-          AI가 더 많이 대신하는 것보다, 무엇을 맡겼는지 알게 하는 일이 중요했습니다
+          AI가 더 많이 대신하는 것보다,
+          <br />
+          무엇을 맡겼는지 알게 하는 일이 중요했습니다
         </RevealHeading>
 
         <div className="refl__cards">
