@@ -46,27 +46,6 @@ export default function Reflection() {
           ))}
         </div>
 
-        <p className="refl__closing">
-          이번 리서치는 설문 22명, 인터뷰 4명, 사용성 테스트 5명을 대상으로 한 탐색적
-          결과입니다. 특히 인터뷰는 집단별 참여자가 2명이고 유사한 AI 트레이딩 기능 경험도
-          포함되어 있어, 발견된 패턴을 전체 시장의 특성으로 일반화하지 않았습니다.
-        </p>
-
-        <p className="refl__closing">
-          실제로 출시된다면 가장 먼저 확인할 지표는{' '}
-          <span className="refl__hl">활성화 전환율</span> 입니다.
-        </p>
-
-        <p className="refl__closing">
-          여기서 활성화 전환율은 투자 성향 확인을 시작한 사용자 중, Master와 전략을 선택하고
-          첫 전략 실행까지 완료한 사용자의 비율을 의미합니다.
-        </p>
-
-        <p className="refl__closing">
-          이 지표를 통해 더 명확한 추천 기준과 실행 전 설명이 실제로 탐색을 첫 거래로
-          연결하는지 확인하고자 합니다.
-        </p>
-
         <div className="refl__cta">
           <a
             className="refl__link"
