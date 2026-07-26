@@ -50,7 +50,8 @@ export default function Define() {
           </p>
           <p className="define-sub__closing">
             하지만 실제 돈을 넣는 단계에서는 이미지나 인상만으로 결정할 수 없었습니다. 감수할
-            수 있는 위험 수준과 선호하는 투자 방식처럼,{' '}
+            수 있는 위험 수준과 선호하는 투자 방식처럼,
+            <br />
             <span className="define-sub__hl define-sub__hl--bold">
               자신의 상황과 연결해 전략을 판단할 기준
             </span>{' '}
