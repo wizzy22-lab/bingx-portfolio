@@ -64,7 +64,10 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
             [ 07.2 — Define · User Journey ]
           </p>
-          <RevealHeading level="h2" className="ds-h2 define-sub__title">
+          <RevealHeading
+            level="h2"
+            className="ds-h2 define-sub__title define-sub__title--nowrap"
+          >
             두 가지 탐색 경로가 있었지만, 모두 실행 전에 불확실성이 커졌습니다
           </RevealHeading>
           <p className="define-sub__intro">
