@@ -1,33 +1,35 @@
-:root {
-  --bg-page: #010104;
-  --bg-surface: #1E2225;
-  --bg-muted: #262B2E;
+/* =============================================================
+   Color tokens — single dark theme.
+   Six canonical tokens; everything else is an alias onto them so
+   existing call sites stay untouched. No saturated color exists in
+   the UI layer — image/video content keeps its own color.
+   ============================================================= */
 
-  --text-primary: #E8E8E5;
-  --text-secondary: #E0E2E2;
-  --text-tertiary: #6A7075;
-  --text-accent-warm: #FDF89C;
-  --text-accent-cool: #B1E0FF;
-  --text-on-cream: #0A0E0F;
+:root,
+html[data-theme='dark'] {
+  --bg: #1A1A1A;         /* page background */
+  --surface: #242423;    /* cards · code blocks · tables */
+  --text: #F5F5F2;       /* body */
+  --text-dim: #8B8B88;   /* secondary text */
+  --text-faint: #5C5C59; /* captions · meta */
+  --border: rgba(255, 255, 255, 0.08);
 
-  --border-hairline: rgba(245, 245, 240, 0.12);
-  --border-default: rgba(245, 245, 240, 0.20);
-  --border-accent: #B1E0FF;
+  /* ---- aliases ---- */
+  --bg-page: var(--bg);
+  --bg-surface: var(--surface);
+  --bg-muted: var(--surface);
 
-  --accent-yellow: #FDF89C;
-  --accent-blue: #2B6BFF;
-  --accent-red: #E5392C;
+  --text-primary: var(--text);
+  --text-secondary: var(--text);
+  --text-tertiary: var(--text-dim);
+  --text-on-cream: var(--text);
 
-  --card-cream: #CAEAFF; /* legacy name — actual color is light blue (was #F0EBE0 beige) */
-  --card-white: #FFFFFF;
+  --border-hairline: var(--border);
+  --border-default: var(--border);
+  --border-accent: var(--border);
 
-  --success: #7BD389;
-  --warning: #FDD17A;
-  --error: #FF7A85;
-  --info: #B1E0FF;
-
-  --success-bg: rgba(123, 211, 137, 0.12);
-  --warning-bg: rgba(253, 209, 122, 0.12);
-  --error-bg: rgba(255, 122, 133, 0.12);
-  --info-bg: rgba(177, 224, 255, 0.12);
+  /* Overlay scrims — neutral, derived from --bg */
+  --scrim: rgba(26, 26, 26, 0.72);
+  --scrim-strong: rgba(26, 26, 26, 0.9);
+  --shadow: rgba(0, 0, 0, 0.4);
 }

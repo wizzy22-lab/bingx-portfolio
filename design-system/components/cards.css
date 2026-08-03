@@ -3,14 +3,12 @@
    numbered-step · pull-quote · feature · stat (A standalone, B grid)
    ============================================================= */
 
-/* Shared signature mark — Playfair Italic emphasis word inside any card title.
-   MD §4: Playfair Italic letter-spacing always -0.05em.
-   KR override: Pretendard 700, normal style, letter-spacing -0.02em
-                (Korean cannot use italic — MD §4 hard rule). */
+/* Shared signature mark — italic emphasis word inside any card title.
+   KR override: normal style (Korean cannot use italic — MD §4 hard rule). */
 .ds-signature {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
-  letter-spacing: -0.05em;
+  letter-spacing: var(--ls-display);
   font-weight: var(--text-sig-28-weight);
 }
 
@@ -20,8 +18,8 @@
 html[data-lang="ko"] .ds-signature {
   font-family: var(--font-kr);
   font-style: normal;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-display);
 }
 
 /* In Korean locale, never render italic — Pretendard has no true italic and
@@ -63,10 +61,12 @@ html[data-lang="ko"] {
 .ds-kr .ds-body-lg,
 .ds-kr.ds-body,
 .ds-body.ds-kr,
-.ds-kr .ds-body,
+.ds-kr .ds-body { font-family: var(--font-kr); }
+
+/* Captions stay on the mono label family in both locales. */
 .ds-kr.ds-caption,
 .ds-caption.ds-kr,
-.ds-kr .ds-caption { font-family: var(--font-kr); }
+.ds-kr .ds-caption { font-family: var(--font-mono); }
 
 /* BEM-scoped equivalents for existing card titles —
    so cards auto-downscale without needing utility class. */
@@ -107,18 +107,18 @@ html[data-lang="ko"] {
 }
 
 .ds-numbered-step--cream {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
 }
 
 .ds-numbered-step__counter {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-size: var(--text-sig-48-size);
   line-height: var(--text-sig-48-line-height);
   letter-spacing: var(--text-sig-48-letter-spacing);
   font-weight: var(--text-sig-48-weight);
-  color: var(--accent-yellow);
+  color: var(--text);
   margin: 0;
   transition: color var(--duration-base) var(--ease-default);
 }
@@ -132,11 +132,11 @@ html[data-lang="ko"] {
 }
 
 .ds-numbered-step--cream:hover .ds-numbered-step__counter {
-  color: var(--accent-yellow);
+  color: var(--text);
 }
 
 .ds-numbered-step__caption {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -200,7 +200,7 @@ html[data-lang="ko"] {
   letter-spacing: var(--text-body-lg-letter-spacing);
   font-weight: var(--text-body-lg-weight);
   color: var(--text-primary);
-  border-left: var(--border-thick) solid var(--accent-yellow);
+  border-left: var(--border-thick) solid var(--border);
   padding-left: var(--space-6);
   margin: 0;
 }
@@ -234,7 +234,7 @@ html[data-lang="ko"] {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-numbered-step--cream .ds-numbered-step__list li {
@@ -321,7 +321,7 @@ html[data-lang="ko"] {
   justify-content: center;
   color: var(--text-tertiary);
   font-size: var(--text-caption-size);
-  font-family: monospace;
+  font-family: var(--font-mono);
   text-align: center;
   padding: var(--space-3);
 }
@@ -374,7 +374,7 @@ html[data-lang="ko"] {
 .ds-numbered-step.ds-kr .ds-numbered-step__title strong,
 .ds-numbered-step.ds-kr .ds-numbered-step__quote strong,
 .ds-numbered-step.ds-kr .ds-numbered-step__closing strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -384,7 +384,7 @@ html[data-lang="ko"] {
    ============================================================= */
 
 .ds-pull-quote {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
   border-radius: var(--radius-card-lg);
   padding: var(--space-8);
@@ -417,7 +417,7 @@ html[data-lang="ko"] {
 }
 
 .ds-pull-quote__attribution {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-caption-letter-spacing);
@@ -440,7 +440,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-pull-quote.ds-kr .ds-pull-quote__quote strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -491,7 +491,7 @@ html[data-lang="ko"] {
 }
 
 .ds-feature__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -503,7 +503,7 @@ html[data-lang="ko"] {
 }
 
 .ds-feature:hover .ds-feature__eyebrow {
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-feature__title {
@@ -547,7 +547,7 @@ html[data-lang="ko"] {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-feature__divider {
@@ -558,7 +558,7 @@ html[data-lang="ko"] {
 }
 
 .ds-feature__outcome {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-caption-letter-spacing);
@@ -584,7 +584,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-feature.ds-kr .ds-feature__title strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -594,7 +594,7 @@ html[data-lang="ko"] {
    ============================================================= */
 
 .ds-stat-standalone {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
   border-radius: var(--radius-card-lg);
   padding: var(--space-8);
@@ -610,7 +610,7 @@ html[data-lang="ko"] {
 }
 
 .ds-stat-standalone__number {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-size: var(--text-sig-stat-size);
   line-height: var(--text-sig-stat-line-height);
@@ -628,7 +628,7 @@ html[data-lang="ko"] {
   bottom: calc(var(--space-1) * -1);
   width: 0;
   height: var(--border-normal);
-  background: var(--accent-yellow);
+  background: var(--surface);
   transition: width var(--duration-fast) var(--ease-default);
 }
 
@@ -639,11 +639,11 @@ html[data-lang="ko"] {
 .ds-stat-standalone__divider {
   width: var(--space-10);
   height: var(--border-normal);
-  background: var(--accent-yellow);
+  background: var(--surface);
 }
 
 .ds-stat-standalone__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -654,7 +654,7 @@ html[data-lang="ko"] {
 }
 
 .ds-stat-standalone__caption {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-caption-letter-spacing);
@@ -676,7 +676,7 @@ html[data-lang="ko"] {
 
 .ds-stat-standalone.ds-kr .ds-stat-standalone__label,
 .ds-stat-standalone.ds-kr .ds-stat-standalone__caption {
-  font-family: var(--font-kr);
+  font-family: var(--font-mono);
 }
 
 
@@ -706,12 +706,12 @@ html[data-lang="ko"] {
 }
 
 .ds-stat-grid__cell:nth-child(3n+1) {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
 }
 
 .ds-stat-grid__cell:nth-child(3n+2) {
-  background: var(--accent-yellow);
+  background: var(--surface);
   color: var(--text-on-cream);
 }
 
@@ -728,7 +728,7 @@ html[data-lang="ko"] {
 }
 
 .ds-stat-grid__number-value {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-size: var(--text-sig-96-size);
   line-height: var(--text-sig-96-line-height);
@@ -750,7 +750,7 @@ html[data-lang="ko"] {
   bottom: calc(var(--space-1) * -1);
   width: 0;
   height: var(--border-normal);
-  background: var(--accent-blue);
+  background: var(--surface);
   transition: width var(--duration-fast) var(--ease-default);
 }
 
@@ -770,15 +770,14 @@ html[data-lang="ko"] {
   opacity: 0.2;
 }
 
-/* Cream-cell hover underline override — accent-blue is invisible on
-   light-blue card-cream (#CAEAFF). Use accent-yellow here only.
-   3n+2 (yellow cell) and 3n (dark surface) keep accent-blue default. */
+/* Hover underline — every cell reads on --surface now, so one rule covers
+   all three cell variants. */
 .ds-stat-grid__cell:nth-child(3n+1) .ds-stat-grid__number::after {
-  background: var(--accent-yellow);
+  background: var(--text-dim);
 }
 
 .ds-stat-grid__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -814,13 +813,13 @@ html[data-lang="ko"] {
 }
 
 .ds-research-finding__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
   font-weight: var(--text-eyebrow-weight);
   text-transform: uppercase;
-  color: var(--accent-blue);
+  color: var(--text);
   margin: 0;
 }
 
@@ -880,7 +879,7 @@ html[data-lang="ko"] {
 }
 
 .ds-research-finding__caption {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-caption-letter-spacing);
@@ -903,12 +902,14 @@ html[data-lang="ko"] {
 /* research-finding desktop max-width now applied at base */
 
 .ds-research-finding.ds-kr .ds-research-finding__title,
-.ds-research-finding.ds-kr .ds-research-finding__body,
-.ds-research-finding.ds-kr .ds-research-finding__caption {
+.ds-research-finding.ds-kr .ds-research-finding__body {
   font-family: var(--font-kr);
 }
+.ds-research-finding.ds-kr .ds-research-finding__caption {
+  font-family: var(--font-mono);
+}
 .ds-research-finding.ds-kr .ds-research-finding__title strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 /* ----- Compound-finding children ----- */
@@ -934,17 +935,17 @@ html[data-lang="ko"] {
 }
 
 .ds-research-finding__sub-heading {
-  font-family: var(--font-serif);          /* Playfair Display */
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-weight: 700;                        /* Bold */
+  font-family: var(--font-sans);
+  font-size: var(--fs-sub);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-body);
+  font-weight: var(--fw-medium);                        /* Bold */
   font-style: normal;
   color: var(--text-primary);
   margin: 0;                               /* Spacing handled by parent gap + heading-group wrapper */
 }
 
-/* No .ds-kr override — sub-headings always render English in Playfair */
+/* No .ds-kr override — sub-headings always render English */
 
 /* Heading group: tight pairing of h3 + body (Figma intra-group spec) */
 .ds-research-finding__heading-group {
@@ -985,7 +986,7 @@ html[data-lang="ko"] {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-research-finding__list li.ds-kr,
@@ -1081,7 +1082,7 @@ html[data-lang="ko"] {
   width: var(--space-2);
   height: var(--space-2);
   border-radius: 50%;
-  background: var(--accent-yellow);
+  background: var(--surface);
   position: absolute;
   top: 0;
   left: 0;
@@ -1095,7 +1096,7 @@ html[data-lang="ko"] {
 }
 
 .ds-criteria-list__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -1126,7 +1127,7 @@ html[data-lang="ko"] {
   bottom: calc(var(--space-1) * -1);
   width: 0;
   height: var(--border-normal);
-  background: var(--accent-blue);
+  background: var(--surface);
   transition: width var(--duration-fast) var(--ease-default);
 }
 
@@ -1189,7 +1190,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-criteria-list.ds-kr .ds-criteria-list__text strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -1225,7 +1226,7 @@ html[data-lang="ko"] {
 }
 
 .ds-before-after__col--after {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
 }
 
@@ -1234,7 +1235,7 @@ html[data-lang="ko"] {
 }
 
 .ds-before-after__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -1266,13 +1267,13 @@ html[data-lang="ko"] {
 }
 
 .ds-before-after__arrow {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-style: italic;
   font-size: var(--text-sig-64-size);
   line-height: var(--text-sig-64-line-height);
   letter-spacing: var(--text-sig-64-letter-spacing);
   font-weight: var(--text-sig-64-weight);
-  color: var(--accent-yellow);
+  color: var(--text);
   background: var(--bg-page);
   display: flex;
   align-items: center;
@@ -1314,7 +1315,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-before-after.ds-kr .ds-before-after__col--after .ds-before-after__text strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -1347,7 +1348,7 @@ html[data-lang="ko"] {
 }
 
 .ds-split-feature--cream {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
 }
 
@@ -1415,7 +1416,7 @@ html[data-lang="ko"] {
 }
 
 .ds-split-feature--dark:hover .ds-split-feature__content > .ds-eyebrow {
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-split-feature--cream .ds-split-feature__content > .ds-eyebrow {
@@ -1450,7 +1451,7 @@ html[data-lang="ko"] {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--accent-blue);
+  color: var(--text);
 }
 
 .ds-split-feature--cream .ds-split-feature__list li {
@@ -1474,7 +1475,7 @@ html[data-lang="ko"] {
 }
 
 .ds-split-feature--cream .ds-split-feature__outcome {
-  border-top-color: rgba(10, 14, 15, 0.15);
+  border-top-color: var(--border);
 }
 
 .ds-split-feature__outcome :is(p, .ds-body-lg) {
@@ -1536,7 +1537,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-split-feature.ds-kr .ds-split-feature__content :is(h1, h2, h3) strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 
@@ -1546,7 +1547,7 @@ html[data-lang="ko"] {
    ============================================================= */
 
 .ds-insight {
-  background: var(--card-cream);
+  background: var(--surface);
   color: var(--text-on-cream);
   border-radius: var(--radius-card-lg);
   padding: var(--space-8);
@@ -1561,7 +1562,7 @@ html[data-lang="ko"] {
 }
 
 .ds-insight--yellow {
-  background: var(--accent-yellow);
+  background: var(--surface);
 }
 
 .ds-insight--dark {
@@ -1584,7 +1585,7 @@ html[data-lang="ko"] {
   opacity: 0.6;
 }
 .ds-insight--dark .ds-eyebrow {
-  color: var(--accent-blue);
+  color: var(--text);
   opacity: 1;
 }
 
@@ -1604,7 +1605,7 @@ html[data-lang="ko"] {
   opacity: 1;
 }
 .ds-insight--dark .ds-numbered-step__list li::before {
-  color: var(--accent-blue);
+  color: var(--text);
   opacity: 1;
 }
 
@@ -1616,7 +1617,7 @@ html[data-lang="ko"] {
    already handled by global .ds-kr .ds-signature override. */
 
 .ds-insight__eyebrow {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
@@ -1662,7 +1663,7 @@ html[data-lang="ko"] {
   font-family: var(--font-kr);
 }
 .ds-insight.ds-kr .ds-insight__title strong {
-  font-weight: 700;
+  font-weight: var(--fw-medium);
 }
 
 /* ----- Need / Pain comparison grid -----
@@ -1751,24 +1752,24 @@ html[data-lang="ko"] {
    On --dark variant, eyebrow + title render in accent-blue. */
 .ds-impact-grid--4col .ds-insight__eyebrow,
 .ds-impact-grid--3col-pattern .ds-insight__eyebrow {
-  font-size: 18px;
-  line-height: 1.2;
-  letter-spacing: 0;
-  font-weight: 500;
+  font-size: var(--fs-sub);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-body);
+  font-weight: var(--fw-medium);
   text-transform: none;
   opacity: 1;
 }
 .ds-impact-grid--4col .ds-insight__title,
 .ds-impact-grid--3col-pattern .ds-insight__title {
-  font-size: 18px;
-  line-height: 1.4;
-  letter-spacing: 0;
-  font-weight: 500;
+  font-size: var(--fs-sub);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-body);
+  font-weight: var(--fw-medium);
 }
 .ds-impact-grid--4col .ds-insight__body,
 .ds-impact-grid--3col-pattern .ds-insight__body {
-  font-size: 16px;
-  line-height: 1.7;                     /* 27.2 — Figma spec */
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);                     /* 27.2 — Figma spec */
 }
 .ds-impact-grid--4col .ds-insight--dark,
 .ds-impact-grid--3col-pattern .ds-insight--dark {
@@ -1778,7 +1779,7 @@ html[data-lang="ko"] {
 .ds-impact-grid--4col .ds-insight--dark .ds-insight__title,
 .ds-impact-grid--3col-pattern .ds-insight--dark .ds-insight__eyebrow,
 .ds-impact-grid--3col-pattern .ds-insight--dark .ds-insight__title {
-  color: var(--accent-blue);
+  color: var(--text);
 }
 .ds-impact-grid--4col .ds-insight--dark .ds-insight__body,
 .ds-impact-grid--3col-pattern .ds-insight--dark .ds-insight__body {
@@ -1803,13 +1804,13 @@ html[data-lang="ko"] {
 }
 
 .ds-media__label {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-eyebrow-size);
   line-height: var(--text-eyebrow-line-height);
   letter-spacing: var(--text-eyebrow-letter-spacing);
   font-weight: var(--text-eyebrow-weight);
   text-transform: uppercase;
-  color: var(--accent-blue);
+  color: var(--text);
   margin: 0;
 }
 
@@ -1835,7 +1836,7 @@ html[data-lang="ko"] {
 }
 
 .ds-media__caption {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: var(--text-caption-size);
   line-height: var(--text-caption-line-height);
   letter-spacing: var(--text-caption-letter-spacing);
@@ -1875,5 +1876,5 @@ html[data-lang="ko"] {
 }
 
 .ds-media.ds-kr .ds-media__caption {
-  font-family: var(--font-kr);
+  font-family: var(--font-mono);
 }
