@@ -274,11 +274,13 @@ section[id] {
 }
 .hero-config__label {
   margin: 0 0 var(--space-3) 0;
-  font-family: var(--font-ui);
-  font-size: var(--fs-body);
-  letter-spacing: var(--ls-sub);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
   line-height: var(--lh-label);
-  color: var(--text-tertiary);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
 }
 .hero-chips {
   display: inline-flex;
@@ -484,8 +486,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .about__title,
@@ -782,8 +784,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -972,8 +976,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -1294,8 +1300,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -1488,8 +1496,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -1713,8 +1723,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -1766,8 +1778,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .define-sub__title,
@@ -1816,8 +1828,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 12px 0 0 0;
 }
@@ -1873,13 +1887,13 @@ section[id] {
 }
 
 .problem-statement__label {
-  font-family: var(--font-sans);
-  font-size: var(--fs-sub);
-  line-height: var(--lh-body);
-  font-weight: var(--fw-medium);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  font-weight: var(--fw-regular);
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--text-dim);
   margin: 0;
 }
 
@@ -1920,8 +1934,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .define-hmw__title,
@@ -2016,8 +2030,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .featcat__title,
@@ -2081,8 +2095,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 0;
 }
@@ -2113,8 +2129,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .iteration__title,
@@ -2168,8 +2184,10 @@ section[id] {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 0;
 }
@@ -2197,13 +2215,13 @@ section[id] {
 }
 
 .iteration__label {
-  font-family: var(--font-sans);
-  font-size: var(--fs-sub);
-  line-height: var(--lh-body);
-  font-weight: var(--fw-medium);
-  letter-spacing: var(--ls-body);
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-label);
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--text-dim);
   margin: 64px 0 12px 0;
 }
 
@@ -2264,8 +2282,8 @@ section[id] {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .crazy8__title,
@@ -2356,8 +2374,10 @@ video.media-fill {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 0;
 }
@@ -2388,8 +2408,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .ia__title,
@@ -2443,8 +2463,10 @@ video.media-fill {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 0;
 }
@@ -2528,8 +2550,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .wds__panels {
@@ -2571,8 +2593,10 @@ video.media-fill {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   text-align: center;
   margin: 0;
 }
@@ -2588,8 +2612,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .kf__title,
@@ -2604,9 +2628,9 @@ video.media-fill {
   max-width: 900px;
 }
 
-/* Problem caption above the "as is" copy */
+/* Problem caption above the "as is" copy — plain label tint, no lift. */
 .kf__problem.ds-eyebrow {
-  color: var(--text);
+  color: var(--text-dim);
 }
 
 .kf__compare {
@@ -2732,8 +2756,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .ut__title,
@@ -2887,8 +2911,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 .refl__title,
@@ -3023,9 +3047,8 @@ video.media-fill {
   }
 }
 
-/* All section eyebrows share one spec (Figma: Manrope / 14 / Medium / 120% /
-   letter-spacing 0 / no uppercase). Centralized to keep every section identical
-   and override the .ds-eyebrow defaults (12px / 14.4px / 1.32px / uppercase). */
+/* All section eyebrows share the one label step: mono / 0.8125rem / uppercase /
+   ls 0.08em / --text-dim. Centralized so every section reads identically. */
 .about__eyebrow,
 .experience__eyebrow,
 .research__eyebrow,
@@ -3048,8 +3071,8 @@ video.media-fill {
   display: block;
   font-size: var(--fs-label);
   line-height: var(--lh-label);
-  letter-spacing: var(--ls-body);
-  text-transform: none;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
 }
 
 /* Site navigation */
@@ -3397,9 +3420,11 @@ video.media-fill {
 .ia__flow-label {
   font-family: var(--font-mono);
   font-size: var(--fs-label);
-  line-height: var(--lh-body);
-  font-weight: var(--fw-medium);
-  color: var(--text);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  font-weight: var(--fw-regular);
+  text-transform: uppercase;
+  color: var(--text-dim);
   margin: 0 0 8px 0;
 }
 .ia__flow-steps {
@@ -3508,7 +3533,8 @@ video.media-fill {
   font-size: var(--fs-label);
   line-height: var(--lh-label);
   letter-spacing: var(--ls-label);
-  color: var(--text-tertiary);
+  text-transform: uppercase;
+  color: var(--text-dim);
 }
 .ut__closing {
   margin: var(--space-10) auto 0;
@@ -3529,22 +3555,11 @@ video.media-fill {
   margin-top: 12px;
 }
 
-/* KR font enforcement for the new blocks */
-.ds-kr .research-competitor__intro,
-.ds-kr .define-sub__intro,
-.ds-kr .define-sub__list-item,
-.ds-kr .featcat__criteria li,
-.ds-kr .iteration__intro,
-.ds-kr .ia__flow-label,
-.ds-kr .ia__flow-step,
-.ds-kr .wds__title,
-.ds-kr .wds__title.ds-h2,
-.ds-kr .wds__intro,
-.ds-kr .kf__code,
-.ds-kr .kf__list li,
-.ds-kr .ut__closing {
-  font-family: var(--font-kr);
-}
+/* The old KR font-enforcement block lived here. It forced --font-kr onto these
+   elements back when KR had its own family; now that --font-kr is just the sans
+   stack it was a no-op for the sans blocks and actively broke the three mono
+   ones (.ia__flow-label, .ia__flow-step, .kf__code), which rendered sans in KO
+   and mono in EN. Each rule keeps its own family — nothing to enforce. */
 
 @media (max-width: 767px) {
   .wds__title,

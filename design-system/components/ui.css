@@ -83,7 +83,7 @@
   letter-spacing: var(--text-eyebrow-letter-spacing);
   font-weight: var(--text-eyebrow-weight);
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-dim);
   background: transparent;
   border: var(--border-thin) solid var(--border-hairline);
   border-radius: var(--radius-xl);
@@ -289,12 +289,14 @@
   display: inline-block;
 }
 
+/* Vestigial names from the old accent palette. No saturated color survives in
+   the UI layer, so both now resolve to the label tint like every other eyebrow. */
 .ds-eyebrow--accent-yellow {
-  color: var(--text);
+  color: var(--text-dim);
 }
 
 .ds-eyebrow--accent-blue {
-  color: var(--text);
+  color: var(--text-dim);
 }
 
 .ds-eyebrow--primary {
@@ -312,7 +314,7 @@
 
 .ds-eyebrow.ds-kr {
   font-family: var(--font-mono);
-  letter-spacing: var(--ls-body);
+  letter-spacing: var(--ls-label);
 }
 
 
