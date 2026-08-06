@@ -29,6 +29,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
+        {/* Contentsquare UX analytics — this layout is shared by / and /ko,
+            so the tag lands on both locales. */}
+        <script src="https://t.contentsquare.net/uxa/c15c6a0ad1b24.js" defer />
       </head>
       <body>
         <SiteHeader />
