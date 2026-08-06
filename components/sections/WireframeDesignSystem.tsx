@@ -4,24 +4,31 @@ export default function WireframeDesignSystem() {
   return (
     <section id="design" className="section wds">
       <div className="section-inner">
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow wds__eyebrow">
-          [ 08.5 — Wireframe &amp; Design System ]
-        </p>
-        <RevealHeading level="h2" className="ds-h2 wds__title">
-          We validated the core flow as plain screens first, then settled it into one visual
-          system
-        </RevealHeading>
-        <p className="wds__intro">
-          We first reviewed the order of information and the movement between screens as simple
-          wireframes.
-        </p>
-        <p className="wds__intro">
-          Then we organised components and visual rules so that the current step, the reason for
-          a recommendation, strategy information and the pre-execution notice all read the same
-          way on every screen.
-        </p>
+        <div className="sec-split">
+          <div className="sec-split__aside">
+            <p className="ds-eyebrow ds-eyebrow--accent-yellow wds__eyebrow">
+              [ 08.5 — Wireframe &amp; Design System ]
+            </p>
+            <RevealHeading level="h2" className="ds-h2 wds__title">
+              We validated the core flow as plain screens first, then settled it into one visual
+              system
+            </RevealHeading>
+          </div>
 
-        <div className="wds__panels">
+          <div className="sec-split__main">
+            <p className="wds__intro">
+              We first reviewed the order of information and the movement between screens as simple
+              wireframes.
+            </p>
+            <p className="wds__intro">
+              Then we organised components and visual rules so that the current step, the reason for
+              a recommendation, strategy information and the pre-execution notice all read the same
+              way on every screen.
+            </p>
+          </div>
+        </div>
+
+        <div className="sec-break wds__panels">
           {/* Left: wireframe mockups (Figma Frame 121, 634×357) */}
           <figure className="wds__panel">
             <img

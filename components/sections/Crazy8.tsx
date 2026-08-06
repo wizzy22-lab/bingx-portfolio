@@ -4,22 +4,29 @@ export default function Crazy8() {
   return (
     <section id="crazy8" className="section crazy8">
       <div className="section-inner">
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow crazy8__eyebrow">
-          [ 08.3 — Crazy 8s ]
-        </p>
-        <RevealHeading level="h2" className="ds-h2 crazy8__title">
-          We picked the direction that compares on one screen and shows the next action
-        </RevealHeading>
-        <p className="crazy8__intro">
-          Using Crazy 8s — eight ideas sketched in eight minutes — we explored several structures
-          for onboarding, Master recommendation, strategy selection and the execution
-          confirmation screen.
-          <br />
-          We reviewed each idea against whether the information needed for comparison reads on a
-          single screen, and whether the next action is obvious to the user.
-        </p>
+        <div className="sec-split">
+          <div className="sec-split__aside">
+            <p className="ds-eyebrow ds-eyebrow--accent-yellow crazy8__eyebrow">
+              [ 08.3 — Crazy 8s ]
+            </p>
+            <RevealHeading level="h2" className="ds-h2 crazy8__title">
+              We picked the direction that compares on one screen and shows the next action
+            </RevealHeading>
+          </div>
 
-        <div className="crazy8__panels">
+          <div className="sec-split__main">
+            <p className="crazy8__intro">
+              Using Crazy 8s — eight ideas sketched in eight minutes — we explored several
+              structures for onboarding, Master recommendation, strategy selection and the execution
+              confirmation screen.
+              <br />
+              We reviewed each idea against whether the information needed for comparison reads on a
+              single screen, and whether the next action is obvious to the user.
+            </p>
+          </div>
+        </div>
+
+        <div className="sec-break crazy8__panels">
           {/* Left: Crazy 8 sketch video (Figma Frame 118, 634×357) */}
           <figure className="crazy8__panel">
             <video

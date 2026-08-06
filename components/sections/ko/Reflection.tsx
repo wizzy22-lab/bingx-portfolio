@@ -28,35 +28,43 @@ export default function Reflection() {
   return (
     <section id="reflection" className="section refl">
       <div className="section-inner">
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">[ 11 — Reflection ]</p>
-        <RevealHeading level="h2" className="ds-h2 refl__title">
-          AI가 더 많이 대신하는 것보다,
-          <br />
-          무엇을 맡겼는지 알게 하는 일이 중요했습니다
-        </RevealHeading>
+        <div className="sec-split">
+          <div className="sec-split__aside">
+            <p className="ds-eyebrow ds-eyebrow--accent-yellow refl__eyebrow">
+              [ 11 — Reflection ]
+            </p>
+            <RevealHeading level="h2" className="ds-h2 refl__title">
+              AI가 더 많이 대신하는 것보다,
+              <br />
+              무엇을 맡겼는지 알게 하는 일이 중요했습니다
+            </RevealHeading>
+          </div>
 
-        <div className="refl__cards">
-          {LESSONS.map((lesson) => (
-            <article key={lesson.title} className="refl__card">
-              <h3 className="refl__card-title">{lesson.title}</h3>
-              {lesson.paras.map((para, i) => (
-                <p key={i} className="refl__para">
-                  {para}
-                </p>
+          <div className="sec-split__main">
+            <div className="refl__cards">
+              {LESSONS.map((lesson) => (
+                <article key={lesson.title} className="refl__card">
+                  <h3 className="refl__card-title">{lesson.title}</h3>
+                  {lesson.paras.map((para, i) => (
+                    <p key={i} className="refl__para">
+                      {para}
+                    </p>
+                  ))}
+                </article>
               ))}
-            </article>
-          ))}
-        </div>
+            </div>
 
-        <div className="refl__cta">
-          <a
-            className="refl__link"
-            href="https://medium.com/@hazzysw/bingx-ai-master-app-revamp-chapter-03-how-anxiety-becomes-structured-5db6fc9ba9a9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Medium에서 전체 리서치 문서 보기 →
-          </a>
+            <div className="refl__cta">
+              <a
+                className="refl__link"
+                href="https://medium.com/@hazzysw/bingx-ai-master-app-revamp-chapter-03-how-anxiety-becomes-structured-5db6fc9ba9a9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Medium에서 전체 리서치 문서 보기 →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

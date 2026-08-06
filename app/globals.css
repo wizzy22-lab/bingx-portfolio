@@ -3792,3 +3792,401 @@ button.site-footer__item:hover {
     letter-spacing: var(--ls-heading);
   }
 }
+
+/* =============================================================
+   Section split — the two-column reading layout
+
+   Left rail   the section label and its H2, pinned under the fixed
+               header while its own body scrolls past.
+   Right rail  every paragraph, list and quote, left aligned at a
+               672px measure.
+   .sec-break  images, video and diagrams. They sit outside the grid
+               as siblings of it, so they run the full container
+               width and end the rail's sticky run — the pinned title
+               can never ride over a full-width visual.
+
+   Below 1024px the grid collapses and the same DOM order reads as a
+   single stack: label -> title -> body -> media.
+   ============================================================= */
+
+:root {
+  --split-rail: clamp(15rem, 26vw, 23.75rem);
+  --split-gap: clamp(2rem, 3.5vw, 4.5rem);
+  --split-measure: 672px;
+  /* 70px global nav + 38px anchor bar + 24px of air. */
+  --split-sticky-top: 132px;
+}
+
+.sec-split__main {
+  max-width: var(--split-measure);
+}
+
+.sec-split + .sec-split,
+.sec-split + .sec-break,
+.sec-break + .sec-split,
+.sec-break + .sec-break {
+  margin-top: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .sec-split {
+    display: grid;
+    grid-template-columns: var(--split-rail) minmax(0, 1fr);
+    column-gap: var(--split-gap);
+    align-items: start;
+  }
+
+  /* The grid area is the whole row, so the rail travels the height of
+     the body beside it. align-items: start gives it the room. */
+  .sec-split__aside {
+    position: sticky;
+    top: var(--split-sticky-top);
+  }
+
+  .sec-split__main {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  /* A split with nothing beside the rail keeps the rail in column 1. */
+  .sec-split > .sec-split__aside:only-child {
+    grid-column: 1;
+  }
+}
+
+/* ---- left rail ---- */
+
+.sec-split__aside > :first-child {
+  margin-top: 0;
+}
+
+.sec-split__aside .ds-eyebrow {
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+
+/* One heading step for every section title: 32px at full width, 400. */
+.sec-split__aside :is(h2, .ds-h2) {
+  font-family: var(--font-sans);
+  font-size: var(--fs-heading);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+  font-weight: var(--fw-regular);
+  color: var(--text-primary);
+  margin: var(--space-4) 0 0 0;
+  max-width: none;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.ds-kr .sec-split__aside :is(h2, .ds-h2) {
+  font-size: var(--fs-h2-kr);
+}
+
+/* ---- right rail ---- */
+
+.sec-split__main > :first-child {
+  margin-top: 0;
+}
+
+/* Section rules set their own measures and centring from when the copy
+   ran the full width. Inside the rail the column is the measure. */
+.sec-split__main :is(p, li, ol, ul, dl, dd, dt, blockquote, h3, h4, figcaption, span) {
+  text-align: left;
+}
+
+.sec-split__main :is(p, li, ol, ul, dl, dd, blockquote) {
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* ---- full-width breakout ---- */
+
+.sec-break > :first-child {
+  margin-top: 0;
+}
+
+/* =============================================================
+   Rhythm — one variable for the gap between sections, three for
+   the gaps inside one. Everything below reads from these, so the
+   page has a single place to tune its vertical spacing.
+   ============================================================= */
+
+:root {
+  --section-gap: clamp(120px, 14vh, 160px);
+  /* heading -> its body, body -> the next block, media -> whatever follows */
+  --stack-heading: 24px;
+  --stack-body: 40px;
+  --stack-media: 64px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-gap: 80px;
+  }
+}
+
+.section {
+  padding-block: var(--section-gap);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--section-gap);
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    padding-block: var(--section-gap);
+  }
+}
+
+/* Label -> title is fixed; it is the same beat in every rail. */
+.sec-split__aside :is(h2, .ds-h2) {
+  margin-top: var(--stack-heading);
+}
+
+.sec-split + .sec-split,
+.sec-split + .sec-break {
+  margin-top: var(--stack-body);
+}
+
+.sec-break + .sec-split,
+.sec-break + .sec-break {
+  margin-top: var(--stack-media);
+}
+
+/* =============================================================
+   Media frame — one matte for every screenshot, diagram and clip
+   in the body. The cool greys of an app capture read as floating
+   when they sit straight on the warm page, so each lands on a
+   --surface mat inside a hairline border. The image itself is
+   untouched: no filter, no blend, contained rather than cropped.
+
+   The hero panel sets its own full-bleed art and is not in here.
+   ============================================================= */
+
+:is(img, video, figure, div):is(
+    .media-frame,
+    .experience__analysis-img,
+    .research-community__collage-img,
+    .research-survey__collage-img,
+    .research-duo__img,
+    .research-competitor__img,
+    .define-sub__img,
+    .featcat__img,
+    .iteration__img,
+    .ia__placeholder,
+    .crazy8__media,
+    .wds__media,
+    .kf__screen,
+    .ut__media
+  ) {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+  padding: clamp(16px, 1.6vw, 24px);
+  /* Contained, not cropped — the frame must not eat an edge of the
+     capture, and nothing here touches the pixels themselves. */
+  object-fit: contain;
+}
+
+/* =============================================================
+   Copy — one measure, one leading, balanced headings.
+   ============================================================= */
+
+h1,
+h2,
+h3,
+.ds-display,
+.ds-h1,
+.ds-h2,
+.ds-h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* A title that still breaks to three lines in the rail steps down one
+   size rather than dominating the column. RevealHeading measures the
+   rendered line count and sets the attribute. */
+.sec-split__aside :is(h2, .ds-h2)[data-tight='true'],
+.ds-kr .sec-split__aside :is(h2, .ds-h2)[data-tight='true'] {
+  font-size: 1.5rem;
+}
+
+/* 672px and 1.7 for every paragraph in the reading column. */
+.sec-split__main {
+  line-height: 1.7;
+}
+
+.sec-split__main :is(p, li, dd, blockquote) {
+  line-height: 1.7;
+}
+
+.sec-split__main :is(p, li, dd, blockquote, ol, ul) + :is(p, li, dd, blockquote, ol, ul) {
+  margin-top: 1.2em;
+}
+
+/* Korean never breaks mid-word, in any locale wrapper. */
+[lang='ko'],
+.ds-kr,
+.ds-kr * {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Problem statement — one meaning unit per line, and only the line that
+   carries the finding sits at full contrast. */
+.problem-statement__inner {
+  max-width: 1280px;
+  text-align: left;
+}
+
+.problem-statement__body {
+  font-size: var(--fs-heading);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+.problem-statement__line {
+  margin: 0;
+  color: var(--text-dim);
+  font-weight: var(--fw-regular);
+}
+
+.problem-statement__line + .problem-statement__line {
+  margin-top: 1.2em;
+}
+
+.problem-statement__line--key {
+  color: var(--text);
+  font-weight: var(--fw-medium);
+}
+
+/* =============================================================
+   Card row — every 3-and-4-up grid of cards on the page runs on
+   the same box: one padding, one gap, one surface, one radius.
+   ============================================================= */
+
+.card-row,
+.about__grid,
+.define-hmw__grid,
+.research-insight__groups,
+.experience__cards,
+.refl__cards,
+.ut__cards,
+.featcat__panels,
+.crazy8__panels,
+.wds__panels,
+.research-duo {
+  gap: 20px;
+}
+
+.card-row > *,
+.about__card,
+.define-hmw__card,
+.insight-group,
+.experience__card,
+.refl__card,
+.ut__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card-lg);
+  padding: 24px;
+}
+
+/* The map opens at full size in a new tab; the anchor is only a wrapper,
+   so it must not introduce a line box of its own. */
+.ia__zoom {
+  display: block;
+  border-radius: var(--radius-card-lg);
+  outline-offset: 4px;
+  cursor: zoom-in;
+}
+
+.ia__zoom:hover .ia__placeholder {
+  border-color: var(--text-faint);
+}
+
+/* =============================================================
+   One alignment. Everything that used to be centred — pull quotes,
+   process statements, card copy, figure captions — now starts on
+   the same left edge as the reading column.
+   ============================================================= */
+
+.about__flow,
+.about__flow-step,
+.about__card,
+.about__card-title,
+.about__card-body,
+.experience__quote,
+.insight-group__card-body,
+.survey-stat__text,
+.research-insight__eyebrow,
+.research-community__closing,
+.experience__analysis-caption,
+.research-community__collage-caption,
+.research-survey__collage-caption,
+.research-duo__caption,
+.research-competitor__caption,
+.define-sub__caption,
+.featcat__caption,
+.iteration__caption,
+.ia__caption,
+.crazy8__caption,
+.wds__caption,
+.ut__caption {
+  text-align: left;
+}
+
+/* Centred copy also used to be centred as a block. */
+.about__grid,
+.about__flow {
+  margin-inline: 0;
+}
+
+:where(.about__card, .matrix-2x2 > div, .ds-stat-grid__cell) :where(p, li) {
+  margin-inline: 0;
+}
+
+/* A breakout runs the full container; its prose still keeps the measure. */
+.about__grid {
+  max-width: none;
+}
+
+.about__flow {
+  max-width: var(--split-measure);
+}
+
+/* With the PROBLEM copy moved up beside the title, the comparison runs
+   as-is screen · to-be screen · what changed. */
+@media (min-width: 1024px) {
+  .kf__compare--triple {
+    grid-template-columns: minmax(160px, 300px) minmax(160px, 340px) minmax(0, 1fr);
+    gap: var(--space-10);
+    align-items: center;
+  }
+}
+
+/* Where the reading column is itself a gapped stack, the gap already sets
+   the rhythm — the sibling margin above would stack on top of it. */
+.sec-split__main:is(
+    .kf__copy,
+    .ut__summary,
+    .refl__cards,
+    .experience__cards,
+    .research-community__cards,
+    .research-survey__stats
+  )
+  > * + * {
+  margin-top: 0;
+}
+
+.sec-split__main:is(.kf__copy, .ut__summary) {
+  gap: 1.2em;
+}

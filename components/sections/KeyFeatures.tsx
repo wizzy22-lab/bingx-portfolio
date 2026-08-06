@@ -6,28 +6,32 @@ export default function KeyFeatures() {
   return (
     <section id="key-features" className="section kf">
       <div className="section-inner">
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow kf__eyebrow">[ 09 — Key Features ]</p>
-
         {/* Feature 1 — Personalized Agents (as is → to be) */}
         <article className="kf__feature">
-          <RevealHeading level="h2" className="ds-h2 kf__title">
-            1. Personalized agent recommendation
-          </RevealHeading>
-
-          <div className="kf__compare">
-            {/* as is — copy */}
-            <div className="kf__copy">
-              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
-              <p className="kf__para">
-                Users had to work through seven Masters and the many strategies inside them with
-                no clear basis for choosing.
+          <div className="sec-split">
+            <div className="sec-split__aside">
+              <p className="ds-eyebrow ds-eyebrow--accent-yellow kf__eyebrow">
+                [ 09 — Key Features ]
               </p>
-              <p className="kf__para">
-                With no criteria to judge by, they fell back on names they recognised or images
-                that stood out.
-              </p>
+              <RevealHeading level="h2" className="ds-h2 kf__title">
+                1. Personalized agent recommendation
+              </RevealHeading>
             </div>
 
+            <div className="sec-split__main kf__copy">
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
+              <p className="kf__para">
+                Users had to work through seven Masters and the many strategies inside them with no
+                clear basis for choosing.
+              </p>
+              <p className="kf__para">
+                With no criteria to judge by, they fell back on names they recognised or images that
+                stood out.
+              </p>
+            </div>
+          </div>
+
+          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -62,16 +66,16 @@ export default function KeyFeatures() {
               </p>
               <p className="kf__para">
                 Once answered, instead of showing every Master at once, we recommend the single
-                Master closest to their investment style. Users go straight to that
-                Master&rsquo;s screen and start from the strategies it holds.
+                Master closest to their investment style. Users go straight to that Master&rsquo;s
+                screen and start from the strategies it holds.
               </p>
               <p className="kf__para">
                 Cutting the first choice from seven to one lowers the cost of exploring, and lets
                 users look at strategies while already holding criteria tied to their own style.
               </p>
               <p className="kf__para">
-                We did not remove exploration — we gave users a first yardstick for comparing
-                other Masters and strategies against.
+                We did not remove exploration — we gave users a first yardstick for comparing other
+                Masters and strategies against.
               </p>
             </div>
           </div>
@@ -79,20 +83,23 @@ export default function KeyFeatures() {
 
         {/* Feature 2 — Clear next action (to be ← as is, mirrored) */}
         <article className="kf__feature">
-          <RevealHeading level="h2" className="ds-h2 kf__title">
-            2. Current step visibility
-          </RevealHeading>
-
-          <div className="kf__compare">
-            {/* as is — copy */}
-            <div className="kf__copy">
-              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
-              <p className="kf__para">
-                Users struggled to tell whether they were choosing a Master, selecting a
-                strategy, or actually committing their money.
-              </p>
+          <div className="sec-split">
+            <div className="sec-split__aside">
+              <RevealHeading level="h2" className="ds-h2 kf__title">
+                2. Current step visibility
+              </RevealHeading>
             </div>
 
+            <div className="sec-split__main kf__copy">
+              <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
+              <p className="kf__para">
+                Users struggled to tell whether they were choosing a Master, selecting a strategy,
+                or actually committing their money.
+              </p>
+            </div>
+          </div>
+
+          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -124,8 +131,8 @@ export default function KeyFeatures() {
             {/* to be — copy */}
             <div className="kf__copy">
               <p className="kf__para">
-                We added a step structure at the top of the screen showing the current position
-                and the next action.
+                We added a step structure at the top of the screen showing the current position and
+                the next action.
               </p>
               <ol className="ia__flow-steps kf__flow">
                 {STEPS.map((step) => (
@@ -154,22 +161,25 @@ export default function KeyFeatures() {
 
         {/* Feature 3 — Familiar chat (as is → to be) */}
         <article className="kf__feature">
-          <RevealHeading level="h2" className="ds-h2 kf__title">
-            3. Familiar chat interaction
-          </RevealHeading>
+          <div className="sec-split">
+            <div className="sec-split__aside">
+              <RevealHeading level="h2" className="ds-h2 kf__title">
+                3. Familiar chat interaction
+              </RevealHeading>
+            </div>
 
-          <div className="kf__compare">
-            {/* as is — copy */}
-            <div className="kf__copy">
+            <div className="sec-split__main kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                AI Master offered strategy recommendations through conversation with the AI. But
-                on the existing screens the shape and placement of the chat icon, and the way a
+                AI Master offered strategy recommendations through conversation with the AI. But on
+                the existing screens the shape and placement of the chat icon, and the way a
                 conversation started, differed from familiar messengers — so it never read as the
                 entry point for recommendations.
               </p>
             </div>
+          </div>
 
+          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -202,8 +212,8 @@ export default function KeyFeatures() {
                 opens, to match the messengers users already know.
               </p>
               <p className="kf__para">
-                Users can open chat and start talking to the AI right away, without learning a
-                new interaction pattern.
+                Users can open chat and start talking to the AI right away, without learning a new
+                interaction pattern.
               </p>
               <p className="kf__para">
                 That framed chat not as a support feature, but clearly as a path for exploring —
@@ -216,17 +226,18 @@ export default function KeyFeatures() {
 
         {/* Feature 4 — Key information & performance flow (as is → to be) */}
         <article className="kf__feature">
-          <RevealHeading level="h2" className="ds-h2 kf__title">
-            4. Comparison &amp; performance in one flow
-          </RevealHeading>
+          <div className="sec-split">
+            <div className="sec-split__aside">
+              <RevealHeading level="h2" className="ds-h2 kf__title">
+                4. Comparison &amp; performance in one flow
+              </RevealHeading>
+            </div>
 
-          <div className="kf__compare">
-            {/* as is — copy */}
-            <div className="kf__copy">
+            <div className="sec-split__main kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
-                In the original AI Master you could see a selected strategy&rsquo;s performance,
-                but the actual price chart of the coin it traded was not connected to it.
+                In the original AI Master you could see a selected strategy&rsquo;s performance, but
+                the actual price chart of the coin it traded was not connected to it.
               </p>
               <p className="kf__para">
                 To compare performance against real market movement, users had to leave AI Master
@@ -234,7 +245,9 @@ export default function KeyFeatures() {
                 context they were building.
               </p>
             </div>
+          </div>
 
+          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -275,13 +288,13 @@ export default function KeyFeatures() {
                   moved under this strategy
                 </li>
                 <li>
-                  <span className="kf__list-term">Coin price</span> — how the real market price
-                  of the traded coin moved
+                  <span className="kf__list-term">Coin price</span> — how the real market price of
+                  the traded coin moved
                 </li>
               </ul>
               <p className="kf__para">
-                Users can compare a strategy&rsquo;s performance against real market movement
-                back to back, without leaving AI Master.
+                Users can compare a strategy&rsquo;s performance against real market movement back
+                to back, without leaving AI Master.
               </p>
               <p className="kf__para">
                 Browsing strategy information through to reviewing performance now runs in one

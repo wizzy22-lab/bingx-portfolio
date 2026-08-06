@@ -40,22 +40,29 @@ export default function BeforeExperience() {
   return (
     <section id="problem" className="section">
       <div className="section-inner">
-        <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
-          [ 02 — Current Experience ]
-        </p>
-        <RevealHeading level="h2" className="ds-h2 experience__title">
-          사용자는 어디서 시작하고 무엇을 골라야 하는지,
-          <br />
-          AI가 어디까지 대신하는지 알기 어려웠습니다
-        </RevealHeading>
-        <p className="experience__lede">
-          기존 화면에는 여러 Master와 전략, 채팅 추천, 거래 기능이 함께 제공됐습니다.
-          <br />
-          그러나 사용자가 무엇부터 확인하고 어떤 순서로 결정해야 하는지 알려주는 안내는
-          충분하지 않았습니다.
-        </p>
+        <div className="sec-split">
+          <div className="sec-split__aside">
+            <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
+              [ 02 — Current Experience ]
+            </p>
+            <RevealHeading level="h2" className="ds-h2 experience__title">
+              사용자는 어디서 시작하고 무엇을 골라야 하는지,
+              <br />
+              AI가 어디까지 대신하는지 알기 어려웠습니다
+            </RevealHeading>
+          </div>
 
-        <div className="experience__layout">
+          <div className="sec-split__main">
+            <p className="experience__lede">
+              기존 화면에는 여러 Master와 전략, 채팅 추천, 거래 기능이 함께 제공됐습니다.
+              <br />
+              그러나 사용자가 무엇부터 확인하고 어떤 순서로 결정해야 하는지 알려주는 안내는 충분하지
+              않았습니다.
+            </p>
+          </div>
+        </div>
+
+        <div className="sec-break">
           <figure className="experience__analysis">
             <img
               className="experience__analysis-img media-fill"
@@ -67,8 +74,10 @@ export default function BeforeExperience() {
               [ Current Experience Analysis — Existing AI Master Flow &amp; Interface Review ]
             </figcaption>
           </figure>
+        </div>
 
-          <RevealOnView className="experience__cards">
+        <div className="sec-split">
+          <RevealOnView className="sec-split__main experience__cards">
             {PROBLEMS.map((p) => (
               <article key={p.number} className="experience__card">
                 <header className="experience__head">
