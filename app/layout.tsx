@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Nav from '@/components/Nav';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 import '../design-system/index.css';
 import './globals.css';
 
@@ -16,12 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Font loading lives here, not in a stylesheet — see design-system/fonts.css. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Azeret+Mono:wght@400&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+        />
+      </head>
       <body>
-        <Nav />
+        <SiteHeader />
         {children}
-        <footer className="site-footer">
-          © 2026 BingX AI Master — Case Study. Designed by Hazzy.
-        </footer>
+        <SiteFooter />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 /* =============================================================
    UI Elements — DESIGN_SYSTEM.md Section 9
-   .ds-tag · .ds-btn · .ds-divider · .ds-eyebrow · .ds-nav-link
+   .ds-tag · .ds-btn · .ds-divider · .ds-eyebrow
    ============================================================= */
 
 
@@ -315,68 +315,6 @@
 .ds-eyebrow.ds-kr {
   font-family: var(--font-mono);
   letter-spacing: var(--ls-label);
-}
-
-
-/* =============================================================
-   .ds-nav-link  ·  uppercase, 3 states (default/hover/active)
-   ============================================================= */
-
-.ds-nav-link {
-  font-family: var(--font-mono);
-  font-size: var(--text-counter-size);
-  line-height: var(--text-counter-line-height);
-  letter-spacing: var(--text-eyebrow-letter-spacing);
-  font-weight: var(--text-eyebrow-weight);
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  text-decoration: none;
-  position: relative;
-  padding: var(--space-2) 0;
-  display: inline-block;
-  transition: color var(--duration-base) var(--ease-default);
-}
-
-@media (min-width: 768px) {
-  .ds-nav-link {
-    font-size: var(--fs-label);
-    line-height: var(--lh-body);
-  }
-}
-
-.ds-nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: var(--border-normal);
-  background: var(--text);
-  transition: width var(--duration-fast) var(--ease-default);
-}
-
-.ds-nav-link:hover {
-  color: var(--text-primary);
-}
-
-.ds-nav-link:hover::after {
-  width: 100%;
-}
-
-.ds-nav-link.is-active,
-.ds-nav-link[aria-current="page"] {
-  color: var(--text-primary);
-}
-
-.ds-nav-link.is-active::after,
-.ds-nav-link[aria-current="page"]::after {
-  width: 100%;
-  background: var(--text);
-}
-
-.ds-nav-link.ds-kr {
-  font-family: var(--font-mono);
-  letter-spacing: var(--ls-body);
 }
 
 

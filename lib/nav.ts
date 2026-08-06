@@ -1,3 +1,11 @@
+export type Locale = 'en' | 'ko';
+
+/* -------------------------------------------------------------
+   Case-page section anchors (the secondary bar under the global
+   nav). Labels are authored in the reading language only — the
+   bar never shows KO and EN side by side.
+   ------------------------------------------------------------- */
+
 export const NAV_ITEMS = [
   { id: 'hero', label: 'Intro' },
   { id: 'about', label: 'About' },
@@ -24,40 +32,90 @@ export const NAV_ITEMS_KO = [
 
 export type NavId = (typeof NAV_ITEMS)[number]['id'];
 
-export type Locale = 'en' | 'ko';
+export const NAV_BY_LOCALE: Record<Locale, ReadonlyArray<{ id: NavId; label: string }>> = {
+  en: NAV_ITEMS,
+  ko: NAV_ITEMS_KO,
+};
 
-/* Portfolio-level nav shown over the hero, linking back to the main site. */
-const PORTFOLIO_BASE = 'https://wizzy22-lab.github.io/Wizzy/';
+/* -------------------------------------------------------------
+   Global nav — the same one-line header the main portfolio runs.
+   This case study is deployed on its own host, so every link back
+   to the portfolio is absolute.
+   ------------------------------------------------------------- */
 
-export const PORTFOLIO_NAV_BY_LOCALE: Record<
+export const MAIN_SITE = 'https://wizzydesign.space';
+
+export const RESUME_URL: Record<Locale, string> = {
+  en: `${MAIN_SITE}/HaejiWi_ProductDesigner_Resume_EN.pdf`,
+  ko: `${MAIN_SITE}/HaejiWi_ProductDesigner_Resume_KO.pdf`,
+};
+
+export type GlobalNavLink = {
+  label: string;
+  href: string;
+  /* Off-site documents open in a new tab; everything else stays put. */
+  external?: boolean;
+};
+
+export const GLOBAL_NAV_BY_LOCALE: Record<
   Locale,
-  {
-    brand: string;
-    role: string;
-    links: { label: string; href: string; active?: boolean }[];
-  }
+  { home: string; links: GlobalNavLink[] }
 > = {
   en: {
-    brand: 'wizzy',
-    role: 'Product designer',
+    home: `${MAIN_SITE}/en`,
     links: [
-      { label: 'PROJECT', href: `${PORTFOLIO_BASE}#projects`, active: true },
-      { label: 'ABOUT', href: `${PORTFOLIO_BASE}#about` },
-      { label: 'RESUME', href: `${PORTFOLIO_BASE}assets/resume.pdf` },
+      { label: 'project', href: `${MAIN_SITE}/en#project` },
+      { label: 'about', href: `${MAIN_SITE}/en#about` },
+      { label: 'resume', href: RESUME_URL.en, external: true },
+      { label: 'contact', href: '#contact' },
     ],
   },
   ko: {
-    brand: 'wizzy',
-    role: '프로덕트 디자이너',
+    home: `${MAIN_SITE}/ko`,
     links: [
-      { label: '프로젝트', href: `${PORTFOLIO_BASE}#projects`, active: true },
-      { label: '소개', href: `${PORTFOLIO_BASE}#about` },
-      { label: '이력서', href: `${PORTFOLIO_BASE}assets/resume.pdf` },
+      { label: '프로젝트', href: `${MAIN_SITE}/ko#project` },
+      { label: '소개', href: `${MAIN_SITE}/ko#about` },
+      { label: '이력서', href: RESUME_URL.ko, external: true },
+      { label: '연락처', href: '#contact' },
     ],
   },
 };
 
-export const NAV_BY_LOCALE: Record<Locale, ReadonlyArray<{ id: NavId; label: string }>> = {
-  en: NAV_ITEMS,
-  ko: NAV_ITEMS_KO,
+/* -------------------------------------------------------------
+   Footer — same four columns as the main portfolio.
+   ------------------------------------------------------------- */
+
+export const EMAIL = 'hazzysw@gmail.com';
+export const LINKEDIN = 'https://www.linkedin.com/in/haeji-wi';
+
+export const FOOTER_COPY: Record<
+  Locale,
+  {
+    connect: string;
+    getInTouch: string;
+    location: string;
+    locationValue: string;
+    resume: string;
+    copied: string;
+    copyHint: string;
+  }
+> = {
+  en: {
+    connect: 'Connect',
+    getInTouch: 'Get in touch',
+    location: 'Location',
+    locationValue: 'Seoul, South Korea',
+    resume: 'Resume',
+    copied: 'Copied!',
+    copyHint: 'Copy email address',
+  },
+  ko: {
+    connect: '연결',
+    getInTouch: '연락하기',
+    location: '위치',
+    locationValue: '서울, 대한민국',
+    resume: '이력서',
+    copied: 'Copied!',
+    copyHint: '이메일 주소 복사',
+  },
 };

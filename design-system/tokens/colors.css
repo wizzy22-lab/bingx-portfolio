@@ -33,3 +33,15 @@ html[data-theme='dark'] {
   --scrim-strong: rgba(26, 26, 26, 0.9);
   --shadow: rgba(0, 0, 0, 0.4);
 }
+
+/* Light surface — the footer closes the page on it, same values the main
+   portfolio ships. Scoped to the element so the six canonical tokens (and
+   every alias built on them) re-resolve inside that subtree. */
+[data-theme='light'] {
+  --bg: #F5F7F2;
+  --surface: #EAECE7;
+  --text: #1E1E1E;
+  --text-dim: #747370;
+  --text-faint: #A3A19E;
+  --border: rgba(0, 0, 0, 0.08);
+}

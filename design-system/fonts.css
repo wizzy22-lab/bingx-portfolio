@@ -1,6 +1,9 @@
 /* Manrope 400/500 · Azeret Mono 400 · Pretendard (KR).
    These three are the only families loaded; every stack ends in
-   sans-serif or monospace, never a book face. */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+   sans-serif or monospace, never a book face.
+
+   They are fetched with <link> tags in app/layout.tsx rather than with
+   @import. Next.js concatenates every stylesheet into a single bundle,
+   and the @import rules landed after thousands of other rules — where
+   the CSS spec says they are ignored — so none of the three families
+   were actually being fetched. Keep the loading in the document head. */

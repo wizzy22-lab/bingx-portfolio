@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  /* Clears the fixed header: 70px global nav + 38px anchor bar. */
+  scroll-padding-top: 108px;
   /* The root carries the family so nothing can fall through to the UA default
      — that fallback was why unstyled copy and the footer rendered wrong. */
   font-family: var(--font-sans);
@@ -81,8 +82,13 @@ main :where(p, li, dd, blockquote, figcaption) {
   overflow-wrap: break-word;
 }
 
-section[id] {
-  scroll-margin-top: 80px;
+/* The header offset lives on html's scroll-padding-top alone — setting
+   scroll-margin-top here as well stacks the two and drops every target a
+   second header-height down the page. */
+
+/* The header is fixed, so the page content starts below both bars. */
+main {
+  padding-top: 108px;
 }
 
 .section {
@@ -3075,133 +3081,193 @@ video.media-fill {
   text-transform: uppercase;
 }
 
-/* Site navigation */
-.site-nav {
-  position: sticky;
+/* =============================================================
+   Global header — one 70px row carrying the portfolio nav, with
+   the case-study anchor bar (38px) riding the same translucent
+   surface directly beneath it. Values mirror the main portfolio.
+   ============================================================= */
+.site-header {
+  position: fixed;
+  inset-inline: 0;
   top: 0;
-  z-index: var(--z-sticky);
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-  padding: var(--space-4) var(--space-6);
-  background: var(--scrim);
+  z-index: 50;
+  background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: var(--border-thin) solid var(--border-hairline);
 }
 
-/* Two crossfading nav layers: portfolio-level over the hero, section nav after. */
-.site-nav__main {
-  position: relative;
-  flex: 1 1 auto;
-  min-height: 40px;
+/* Shared container geometry for both rows. */
+.site-header__inner,
+.case-anchors__inner,
+.site-footer__inner {
+  max-width: 1920px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 24px;
 }
-.site-nav__layer {
-  position: absolute;
-  inset: 0;
+@media (min-width: 768px) {
+  .site-header__inner,
+  .case-anchors__inner,
+  .site-footer__inner {
+    padding-inline: 64px;
+  }
+}
+@media (min-width: 1280px) {
+  .site-header__inner,
+  .case-anchors__inner,
+  .site-footer__inner {
+    padding-inline: 180px;
+  }
+}
+@media (min-width: 1536px) {
+  .site-header__inner,
+  .case-anchors__inner,
+  .site-footer__inner {
+    padding-inline: 360px;
+  }
+}
+
+.site-header__inner {
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+}
+
+.site-header__wordmark {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  text-transform: lowercase;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
   transition: opacity var(--duration-base) var(--ease-default);
 }
-.site-nav__layer.is-visible {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+.site-header__wordmark:hover {
+  opacity: 0.7;
 }
 
-.site-nav__brand {
-  color: var(--text-primary);
-  text-decoration: none;
-  letter-spacing: var(--ls-label);
-  font-size: var(--fs-label);
-  text-transform: uppercase;
-  font-weight: var(--fw-medium);
-}
-
-.site-nav__portfolio-brand {
+.site-header__right,
+.site-header__nav {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.site-nav__portfolio-name {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label);
-  font-weight: var(--fw-medium);
-  letter-spacing: var(--ls-label);
-  color: var(--text-primary);
-}
-.site-nav__portfolio-role {
-  font-family: var(--font-mono);
-  font-size: var(--fs-label);
-  letter-spacing: var(--ls-label);
-  color: var(--text-tertiary);
-}
-
-.site-nav__links {
-  display: flex;
-  gap: var(--space-6);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.site-nav__links::-webkit-scrollbar { display: none; }
-.site-nav__links a { scroll-snap-align: start; flex-shrink: 0; }
-
-@media (max-width: 767px) {
-  .site-nav__links { display: none; }
-}
-
-@media (min-width: 768px) {
-  .site-nav { padding: var(--space-4) var(--space-10); }
-}
-
-.site-nav__lang {
-  display: inline-flex;
   align-items: center;
-  gap: var(--space-1, 4px);
-  flex-shrink: 0;
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  .site-header__right,
+  .site-header__nav {
+    gap: 52px;
+  }
 }
 
-.site-nav__lang-btn {
-  font-family: var(--font-mono);
-  font-size: var(--text-counter-size);
-  line-height: var(--text-counter-line-height);
-  letter-spacing: var(--text-eyebrow-letter-spacing);
-  font-weight: var(--text-eyebrow-weight);
-  text-transform: uppercase;
-  color: var(--text-tertiary);
+.site-header__link {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: var(--text-dim);
   text-decoration: none;
-  padding: var(--space-2) var(--space-2);
+  white-space: nowrap;
   transition: color var(--duration-base) var(--ease-default);
 }
-
-.site-nav__lang-btn:hover {
-  color: var(--text-primary);
-}
-
-.site-nav__lang-btn.is-active,
-.site-nav__lang-btn[aria-current="true"] {
+.site-header__link:hover {
   color: var(--text);
 }
 
-.site-nav__lang-sep {
-  color: var(--text-tertiary);
-  font-size: var(--text-counter-size);
+/* The main site keeps all four links at every width, so this does too.
+   Below ~430px the row runs out of space; it scrolls inside the header
+   rather than dragging the whole page sideways. */
+.site-header__inner {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.site-header__inner::-webkit-scrollbar {
+  display: none;
+}
+.site-header__wordmark,
+.site-header__right {
+  flex-shrink: 0;
+}
+
+.site-header__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+}
+
+.site-header__lang-link {
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color var(--duration-base) var(--ease-default);
+}
+.site-header__lang-link:hover {
+  color: var(--text);
+}
+.site-header__lang-current {
+  color: var(--text);
+}
+.site-header__lang-sep {
+  color: var(--text-faint);
   user-select: none;
 }
 
-@media (min-width: 768px) {
-  .site-nav__lang-btn {
-    font-size: var(--fs-label);
-  }
+/* ---- case-study anchor bar ---------------------------------- */
+.case-anchors {
+  border-bottom: 1px solid var(--border);
+}
+
+.case-anchors__inner {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.case-anchors__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.case-anchors__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: nowrap;
+}
+
+.case-anchors__link {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color var(--duration-base) var(--ease-default);
+}
+.case-anchors__link:hover,
+.case-anchors__link.is-active {
+  color: var(--text);
+}
+
+/* Hangul has no case, but the mono stack falls back to Pretendard for it —
+   keep the tracking looser only where Azeret Mono actually renders. */
+.case-anchors__link:lang(ko) {
+  letter-spacing: 0.08em;
 }
 
 /* Section divider helper */
@@ -3277,13 +3343,160 @@ video.media-fill {
   text-align: center;
 }
 
-/* Site footer */
+/* =============================================================
+   Site footer — closes the page on the light surface, same four
+   columns and rhythm as the main portfolio.
+   ============================================================= */
 .site-footer {
-  padding: var(--space-16) var(--space-6);
-  text-align: center;
-  border-top: var(--border-thin) solid var(--border-hairline);
-  color: var(--text-tertiary);
+  width: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  padding-block: 128px 64px;
+}
+
+.site-footer__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media (min-width: 1024px) {
+  .site-footer__layout {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+  }
+}
+
+.site-footer__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 56px;
+}
+@media (min-width: 1024px) {
+  .site-footer__cols {
+    display: flex;
+    column-gap: 80px;
+  }
+}
+
+.site-footer__label {
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+}
+
+.site-footer__list {
+  list-style: none;
+  margin: 24px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-footer__item {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: opacity var(--duration-base) var(--ease-default);
+}
+a.site-footer__item:hover,
+button.site-footer__item:hover {
+  opacity: 0.7;
+}
+
+.site-footer__location {
+  margin: 24px 0 0 0;
+  max-width: none;
+}
+
+/* The email copies on click, so it is a button wearing a link's clothes. */
+.site-footer__copy {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.site-footer__email {
+  position: relative;
+  display: inline-block;
+}
+
+/* Out of flow, so the column keeps the width of the address alone. */
+.site-footer__copied {
+  position: absolute;
+  left: calc(100% + var(--space-2));
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: var(--font-mono);
   font-size: var(--fs-label);
+  line-height: var(--lh-label);
+  letter-spacing: var(--ls-label);
+  color: var(--text-faint);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-default);
+  pointer-events: none;
+}
+.site-footer__copied.is-visible {
+  opacity: 1;
+}
+
+.site-footer__mark {
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  .site-footer__mark {
+    text-align: right;
+  }
+}
+
+.site-footer__wordmark {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-transform: lowercase;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+  max-width: none;
+}
+
+.site-footer__copyright {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: none;
+  color: var(--text-dim);
+  margin: 20px 0 0 0;
+  max-width: none;
+}
+
+/* Screen-reader-only announcement for the copy confirmation. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
 }
 
 /* =============================================================
