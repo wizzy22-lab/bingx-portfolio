@@ -667,15 +667,25 @@ main {
   font-weight: var(--fw-medium);
 }
 
-/* Scroll reveal — headings slide up from behind a mask (Cuberto-style line reveal) */
+/* Scroll reveal — headings slide up from behind a mask (Cuberto-style line reveal).
+
+   The mask cannot use `overflow: hidden`. Its box is the line box, and at
+   --lh-display (1.1) and --lh-heading (1.25) the glyph ink box is taller than
+   that — so descenders were being sliced off (5px on the 56px display step).
+   Instead the clip box is the line box bled vertically by --reveal-bleed and
+   left unclipped horizontally. clip-path does not affect layout, so the
+   heading still measures exactly its content and cannot collide with the copy
+   beneath it. The resting offset carries the same bleed plus a hairline, so
+   the heading is still fully hidden before it slides up. */
 .reveal-h__mask {
+  --reveal-bleed: 0.3em;
   display: block;
-  overflow: hidden;
+  clip-path: inset(calc(var(--reveal-bleed) * -1) -100vw);
 }
 
 .reveal-h__inner {
   display: block;
-  transform: translateY(105%);
+  transform: translateY(calc(100% + var(--reveal-bleed) + 2px));
   transition: transform 0.85s var(--ease-out);
 }
 
