@@ -741,7 +741,10 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 800px;
+  /* Holds the authored break: the second line measures 1179px at the display
+     size, so 800px would fold it into three. Below the breakpoint the heading
+     drops to --fs-heading and wraps on its own. */
+  max-width: 1220px;
 }
 
 .experience__lede {
@@ -751,7 +754,9 @@ main {
   font-weight: var(--fw-regular);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 660px;
+  /* Holds the authored break: line 1 measures 840px, so the box has to clear
+     it or the copy re-wraps and the section reads as three lines. */
+  max-width: 880px;
 }
 
 .experience__layout {
@@ -941,7 +946,8 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 755px;
+  /* Holds the authored break: line 2 measures 993px at the display size. */
+  max-width: 1040px;
 }
 
 .research-community__layout {
@@ -1150,7 +1156,10 @@ main {
     margin-right: 72px;
   }
   .review-card {
-    width: 400px;
+    /* 420, not 400: the quoted review's first line measures 381px inside the
+       16px padding, and 400 clipped it onto a third line. Still inside the
+       481px column. */
+    width: 420px;
   }
   .review-card:nth-child(1) {
     align-self: flex-end;
@@ -1234,6 +1243,23 @@ main {
   color: var(--text-primary);
   margin: 24px 0 0 0;
   max-width: 800px;
+}
+
+/* Two of the three carry authored breaks that need more room than the shared
+   800px. Overridden per section so the analysis title keeps its own measure. */
+.research-survey__title,
+.research-survey__title.ds-h2 {
+  max-width: 1160px; /* line 2 measures 1115px */
+}
+
+.research-primary__title,
+.research-primary__title.ds-h2 {
+  max-width: 1100px; /* line 1 measures 1058px */
+}
+
+.research-analysis__title,
+.research-analysis__title.ds-h2 {
+  max-width: 1010px; /* line 1 measures 964px */
 }
 
 @media (max-width: 767px) {
@@ -1450,7 +1476,8 @@ main {
 }
 
 .research-primary__intro {
-  max-width: 640px;
+  /* Holds the authored break: line 2 measures 784px. */
+  max-width: 830px;
 }
 
 .research-analysis__intro {
@@ -1684,7 +1711,10 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 1040px;
+  /* Holds the authored break: line 2 measures 1239px, the widest heading on
+     the page. It fills the 1280px container almost exactly — there is no room
+     left, so this line cannot take more copy without dropping to three. */
+  max-width: 1270px;
 }
 
 .research-competitor__highlight {
@@ -1803,6 +1833,13 @@ main {
   white-space: nowrap;
 }
 
+/* For a define heading whose authored lines outrun the shared 760px. Scoped to
+   the one heading that needs it so the other sub-sections keep their measure. */
+.define-sub__title--wide,
+.define-sub__title--wide.ds-h2 {
+  max-width: 1180px; /* line 1 measures 1132px */
+}
+
 .define-sub__figure {
   margin: 40px 0 0 0;
   display: flex;
@@ -1885,7 +1922,8 @@ main {
 }
 
 .problem-statement__inner {
-  max-width: 1050px;
+  /* Holds the authored breaks: the longest of the three lines measures 1126px. */
+  max-width: 1180px;
   margin-inline: auto;
   text-align: center;
 }
@@ -1951,7 +1989,8 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 1040px;
+  /* Holds the authored breaks: line 2 measures 1187px. */
+  max-width: 1230px;
 }
 
 .define-hmw__intro {
@@ -2142,11 +2181,15 @@ main {
   font-family: var(--font-display);
   font-size: var(--fs-display);
   line-height: var(--lh-heading);
-  letter-spacing: var(--ls-display);
+  /* The only authored line on the page that outruns the container: at the
+     shared -0.02em it measures 1285px against a 1280px section. Tightening to
+     -0.03em brings it to ~1258px so the break holds; the alternative was
+     dropping the display size, which would break step with the other H2s. */
+  letter-spacing: -0.03em;
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 1010px;
+  max-width: 1270px;
 }
 
 .iteration__body {
@@ -3602,7 +3645,8 @@ button.site-footer__item:hover {
   line-height: var(--lh-body);
   font-weight: var(--fw-regular);
   color: var(--text-primary);
-  max-width: 760px;
+  /* Holds the authored break: the second intro's first line measures 767px. */
+  max-width: 800px;
   margin: 24px 0 0 0;
 }
 .iteration__intro + .iteration__intro {

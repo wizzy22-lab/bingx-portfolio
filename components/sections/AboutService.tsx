@@ -57,9 +57,8 @@ export default function AboutService() {
 
           <div className="about__flow">
             <p className="about__flow-step">
-              Once a user picks a Master and a strategy
-              <br />
-              and commits at least the required minimum,
+              Once a user picks a Master and a strategy and commits at least the required
+              minimum,
             </p>
             <p className="about__flow-step about__flow-step--result">
               the AI buys and sells automatically according to that strategy.
@@ -70,7 +69,9 @@ export default function AboutService() {
         <p className="about__final">
           In other words, the user decides{' '}
           <span className="about__highlight">
-            which strategy of which Master to commit how much to
+            which strategy of which Master to commit
+            <br />
+            how much to
           </span>
           , and <span className="about__highlight">the AI</span> carries out the actual trading
           from there.

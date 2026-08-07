@@ -22,9 +22,10 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
             [ 07.1 — Define · Empathy Map ]
           </p>
-          <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            Users needed criteria for judging a strategy more than they needed a
-            Master&rsquo;s image
+          <RevealHeading level="h2" className="ds-h2 define-sub__title define-sub__title--wide">
+            Users needed criteria for judging a strategy
+            <br />
+            more than they needed a Master&rsquo;s image
           </RevealHeading>
           <p className="define-sub__intro">
             I pulled what users said and did across the interviews and community research into a
@@ -42,18 +43,21 @@ export default function Define() {
             </figcaption>
           </figure>
           <p className="define-sub__closing">
-            Without clearly understanding the differences between strategies, users took in
-            Masters through impressions like{' '}
+            Without clearly understanding the differences between strategies,
+            <br />
+            Users took in Masters through impressions like{' '}
             <span className="define-sub__hl">&lsquo;aggressive&rsquo;</span> or{' '}
             <span className="define-sub__hl">&lsquo;stable&rsquo;</span>.
           </p>
           <p className="define-sub__closing">
             But at the point of committing real money, an image or an impression was not enough
-            to decide on. They needed{' '}
+            to decide on.
+            <br />
+            They needed{' '}
             <span className="define-sub__hl define-sub__hl--bold">
               criteria that connected a strategy to their own situation
-            </span>{' '}
-            — the risk they could tolerate, the trading approach they preferred.
+            </span>
+            <br />: the risk they could tolerate, the trading approach they preferred.
           </p>
         </div>
 
@@ -62,9 +66,12 @@ export default function Define() {
           <p className="ds-eyebrow ds-eyebrow--accent-yellow define-sub__eyebrow">
             [ 07.2 — Define · User Journey ]
           </p>
-          <RevealHeading level="h2" className="ds-h2 define-sub__title">
-            There were two paths through the service, and uncertainty spiked on both right
-            before execution
+          <RevealHeading level="h2" className="ds-h2 define-sub__title define-sub__title--wide">
+            There were two paths through the service,
+            <br />
+            and uncertainty spiked on
+            <br />
+            both right before execution
           </RevealHeading>
           <p className="define-sub__intro">
             Users could explore strategies in two ways.
@@ -99,11 +106,13 @@ export default function Define() {
             choose.
           </p>
           <p className="define-sub__closing">
-            Both paths met at the step of selecting a strategy and entering an amount. At that
-            point users could not tell{' '}
+            Both paths met at the step of selecting a strategy and entering an amount.
+            <br />
+            At that point users could not tell{' '}
             <span className="define-sub__hl define-sub__hl--bold">
-              how far the AI trades automatically, when the strategy ends, or how the capital is
-              settled
+              how far the AI trades automatically,
+              <br />
+              when the strategy ends, or how the capital is settled
             </span>
             .
           </p>
@@ -115,9 +124,11 @@ export default function Define() {
         <div className="problem-statement__inner">
           <p className="problem-statement__label">Problem statement</p>
           <p className="problem-statement__body">
-            Beginner users expected AI to make trading easier to start. However, AI Master was
-            demanding users to understand complex strategies and automation before trust and
-            understanding had been fully established.
+            Beginner users expected AI to make trading easier to start.
+            <br />
+            However, AI Master was demanding users to understand complex strategies
+            <br />
+            and automation before trust and understanding had been fully established.
           </p>
         </div>
       </aside>
@@ -129,7 +140,9 @@ export default function Define() {
             [ 07.3 — Define · HMW ]
           </p>
           <RevealHeading level="h2" className="ds-h2 define-hmw__title">
-            From picking a Master and a strategy to committing funds and checking performance,
+            From picking a Master and a strategy to
+            <br />
+            committing funds and checking performance,
             <br />
             I framed it as four questions
           </RevealHeading>

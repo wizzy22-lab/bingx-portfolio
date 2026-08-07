@@ -2,20 +2,21 @@ import RevealHeading from '@/components/RevealHeading';
 import RevealOnView from '@/components/RevealOnView';
 import ScrambleNumber from '@/components/ScrambleNumber';
 
+// `text` holds one entry per authored line, same shape the insight cards use.
 const REVIEWS = [
   {
     initial: '',
     name: 'prithvisimi',
     date: 'Jan 7',
     stars: 2,
-    text: 'use to difficult not good interface',
+    text: ['use to difficult not good interface'],
   },
   {
     initial: 'K',
     name: 'kushalkumbhakar8',
     date: 'Feb 2',
     stars: 1,
-    text: "The interface feels too complex and hard to use. It's difficult to understand what to do.",
+    text: ['The interface feels too complex and hard to', "use. It's difficult to understand what to do."],
   },
 ];
 
@@ -158,7 +159,14 @@ export default function Research() {
                       </span>
                     ))}
                   </div>
-                  <p className="review-card__text">{r.text}</p>
+                  <p className="review-card__text">
+                    {r.text.map((line, i) => (
+                      <span key={line}>
+                        {i > 0 && <br />}
+                        {line}
+                      </span>
+                    ))}
+                  </p>
                 </article>
               ))}
             </RevealOnView>
@@ -229,7 +237,9 @@ export default function Research() {
           </p>
           <p className="research-survey__closing">
             The survey could not tell me at which moment users hesitate, or why they never start
-            trading. So I met users directly and asked about their concrete experience.
+            trading.
+            <br />
+            So I met users directly and asked about their concrete experience.
           </p>
         </div>
 
@@ -244,11 +254,11 @@ export default function Research() {
             why they hesitated over AI trading
           </RevealHeading>
           <p className="research-primary__intro">
-            I interviewed four users with crypto trading experience, split by how much
+            I interviewed four users with crypto trading experience, split by how much they had
+            traded
             <br />
-            they had traded: two beginners and two advanced. I compared how each group
-            <br />
-            took to AI trading and where they hesitated.
+            : two beginners and two advanced. I compared how each group took to AI trading and
+            where they hesitated.
           </p>
           <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
@@ -278,9 +288,9 @@ export default function Research() {
             [ 05 — Analysis ]
           </p>
           <RevealHeading level="h2" className="ds-h2 research-analysis__title">
-            Beginners struggled to understand it;
+            Beginners struggled to understand it
             <br />
-            advanced users saw no need for AI
+            Advanced users saw no need for AI
           </RevealHeading>
           <p className="research-analysis__intro">
             Grouping what came up in the interviews by similarity showed that

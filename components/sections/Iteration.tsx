@@ -8,17 +8,23 @@ export default function Iteration() {
           [ 08.2 — Iteration ]
         </p>
         <RevealHeading level="h2" className="ds-h2 iteration__title">
-          Letting users tune the strategy themselves dissolved the value of handing it to AI
+          Letting users tune the strategy
+          <br />
+          themselves dissolved the value of handing it to AI
         </RevealHeading>
         <p className="iteration__intro">
           The first idea for building trust was to let users set the buy and sell conditions
-          themselves. We thought that if they could decide how their own money moves, their
-          anxiety would ease.
+          themselves.
+          <br />
+          We thought that if they could decide how their own money moves, their anxiety would
+          ease.
         </p>
         <p className="iteration__intro">
           But that approach put users back in the position of understanding and designing an
-          investment strategy. In the end it also weakened AI Master&rsquo;s core value — the AI
-          deciding and trading on the user&rsquo;s behalf.
+          investment strategy.
+          <br />
+          In the end it also weakened AI Master&rsquo;s core value — the AI deciding and trading
+          on the user&rsquo;s behalf.
         </p>
 
         <div className="iteration__body">
@@ -38,9 +44,13 @@ export default function Iteration() {
           {/* Right: reframing narrative */}
           <div className="iteration__text">
             <p className="iteration__para">
-              What beginner participants wanted was not more setup authority, but to know the
-              AI&rsquo;s judgment and when they could step in. So instead of manual settings, we
-              shifted toward showing who decides at each step and when the user can intervene.
+              What beginner participants wanted was not more setup authority,
+              <br />
+              but to know the AI&rsquo;s judgment and when they could step in.
+              <br />
+              So instead of manual settings, we shifted toward showing
+              <br />
+              who decides at each step and when the user can intervene.
             </p>
           </div>
         </div>
