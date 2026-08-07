@@ -20,8 +20,11 @@ export default function UserTest() {
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
         <RevealHeading level="h2" className="ds-h2 ut__title">
-          All 5 participants completed the core flow, but strategy details and some icons needed
-          more explanation
+          All 5 participants completed the core flow,
+          <br />
+          but strategy details and some icons
+          <br />
+          needed more explanation
         </RevealHeading>
 
         <div className="ut__top">

@@ -2821,7 +2821,8 @@ video.media-fill {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 760px;
+  /* Holds the authored breaks: line 1 measures 1096px. */
+  max-width: 1140px;
 }
 
 .ut__top {
