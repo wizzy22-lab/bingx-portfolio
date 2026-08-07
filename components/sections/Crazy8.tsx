@@ -8,15 +8,20 @@ export default function Crazy8() {
           [ 08.3 — Crazy 8s ]
         </p>
         <RevealHeading level="h2" className="ds-h2 crazy8__title">
-          We picked the direction that compares on one screen and shows the next action
+          We picked the direction that compares on
+          <br />
+          one screen and shows the next action
         </RevealHeading>
         <p className="crazy8__intro">
-          Using Crazy 8s — eight ideas sketched in eight minutes — we explored several structures
-          for onboarding, Master recommendation, strategy selection and the execution
-          confirmation screen.
+          Using Crazy 8s, eight ideas sketched in eight minutes.
           <br />
-          We reviewed each idea against whether the information needed for comparison reads on a
-          single screen, and whether the next action is obvious to the user.
+          We explored several structures for onboarding, Master recommendation, strategy selection
+          <br />
+          and the execution confirmation screen.
+          <br />
+          We reviewed each idea against whether the information needed for comparison
+          <br />
+          reads on a single screen, and whether the next action is obvious to the user.
         </p>
 
         <div className="crazy8__panels">

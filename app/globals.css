@@ -2342,7 +2342,8 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 720px;
+  /* Holds the authored break: line 1 measures 1091px. */
+  max-width: 1140px;
 }
 
 .crazy8__intro {
@@ -2351,7 +2352,8 @@ main {
   line-height: var(--lh-body);
   font-weight: var(--fw-regular);
   color: var(--text-primary);
-  max-width: 600px;
+  /* Holds the authored break: line 2 measures 671px. */
+  max-width: 710px;
   margin: 24px 0 0 0;
 }
 
@@ -2468,7 +2470,8 @@ video.media-fill {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 820px;
+  /* Holds the authored break: line 2 measures 986px. */
+  max-width: 1030px;
 }
 
 .ia__body {

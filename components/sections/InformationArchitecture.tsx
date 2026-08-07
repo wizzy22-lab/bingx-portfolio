@@ -21,7 +21,9 @@ export default function InformationArchitecture() {
           [ 08.4 — Information Architecture ]
         </p>
         <RevealHeading level="h2" className="ds-h2 ia__title">
-          Two different ways of exploring, connected into one path to execution
+          Two different ways of exploring,
+          <br />
+          connected into one path to execution
         </RevealHeading>
 
         <div className="ia__body">
