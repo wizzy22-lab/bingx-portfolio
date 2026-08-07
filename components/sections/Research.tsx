@@ -235,30 +235,22 @@ export default function Research() {
 
         {/* 04 Primary Research — Interview (Figma 133:54) */}
         <div className="research-primary">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
-                [ 04 — Primary Research · Interviews ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-primary__title">
-                I asked four users of differing experience
-                <br />
-                why they hesitated over AI trading
-              </RevealHeading>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-primary__intro">
-                I interviewed four users with crypto trading experience, split by how much
-                <br />
-                they had traded: two beginners and two advanced. I compared how each group
-                <br />
-                took to AI trading and where they hesitated.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break research-duo research-duo--interview">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
+            [ 04 — Primary Research · Interviews ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-primary__title">
+            I asked four users of differing experience
+            <br />
+            why they hesitated over AI trading
+          </RevealHeading>
+          <p className="research-primary__intro">
+            I interviewed four users with crypto trading experience, split by how much
+            <br />
+            they had traded: two beginners and two advanced. I compared how each group
+            <br />
+            took to AI trading and where they hesitated.
+          </p>
+          <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
               <img
                 className="research-duo__img media-fill"
@@ -266,9 +258,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Interview — Beginner Users (n=2) · Remote ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Beginner Users (n=2) · Remote ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <img
@@ -277,37 +267,27 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Interview — Advanced Users (n=2) · Remote ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Advanced Users (n=2) · Remote ]</figcaption>
             </figure>
           </div>
         </div>
 
         {/* 05 Analysis (Figma 133:54) */}
         <div className="research-analysis">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
-                [ 05 — Analysis ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-analysis__title">
-                Beginners struggled to understand it;
-                <br />
-                advanced users saw no need for AI
-              </RevealHeading>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-analysis__intro">
-                Grouping what came up in the interviews by similarity showed that
-                <br />
-                beginner and advanced participants hesitated for different reasons.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break research-duo research-duo--analysis">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
+            [ 05 — Analysis ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-analysis__title">
+            Beginners struggled to understand it;
+            <br />
+            advanced users saw no need for AI
+          </RevealHeading>
+          <p className="research-analysis__intro">
+            Grouping what came up in the interviews by similarity showed that
+            <br />
+            beginner and advanced participants hesitated for different reasons.
+          </p>
+          <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
               <img
                 className="research-duo__img media-fill"
@@ -315,9 +295,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Color Coding — Grouping User Statements ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Color Coding — Grouping User Statements ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <video
@@ -329,16 +307,14 @@ export default function Research() {
                 playsInline
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Affinity Mapping — Team Session ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Affinity Mapping — Team Session ]</figcaption>
             </figure>
           </div>
         </div>
 
         {/* Insight Section (Figma 139:54) */}
         <div className="research-insight">
-          <RevealOnView className="sec-break research-insight__groups">
+          <RevealOnView className="research-insight__groups">
             {INSIGHT_GROUPS.map((g) => (
               <article key={g.title} className={`insight-group insight-group--${g.variant}`}>
                 <h3 className="insight-group__title">{g.title}</h3>
@@ -361,28 +337,21 @@ export default function Research() {
             ))}
           </RevealOnView>
 
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
-                insight
-              </p>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-insight__closing">
-                Beginners were interested in AI trading but struggled with how to use it.
-                <br />
-                Advanced users understood it and still saw little need for it.
-              </p>
-              <p className="research-insight__closing research-insight__closing--lead">
-                So we made{' '}
-                <span className="research-insight__highlight">
-                  beginner users, whose problem clearer explanation should shrink,
-                </span>{' '}
-                the primary target.
-              </p>
-            </div>
-          </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
+            insight
+          </p>
+          <p className="research-insight__closing">
+            Beginners were interested in AI trading but struggled with how to use it.
+            <br />
+            Advanced users understood it and still saw little need for it.
+          </p>
+          <p className="research-insight__closing research-insight__closing--lead">
+            So we made{' '}
+            <span className="research-insight__highlight">
+              beginner users, whose problem clearer explanation should shrink,
+            </span>{' '}
+            the primary target.
+          </p>
         </div>
 
         {/* 06 Competitor Research (Figma 147:74) */}

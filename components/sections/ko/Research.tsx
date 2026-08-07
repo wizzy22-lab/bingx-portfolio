@@ -236,30 +236,22 @@ export default function Research() {
 
         {/* 04 Primary Research — Interview (Figma 133:54) */}
         <div className="research-primary">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
-                [ 04 — Primary Research · Interviews ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-primary__title">
-                암호화폐 거래 경험이 다른 사용자 4명에게
-                <br />
-                AI 거래를 망설인 이유를 물었습니다
-              </RevealHeading>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-primary__intro">
-                암호화폐 거래 경험이 있는 사용자 4명을 인터뷰했습니다. 거래 경험 횟수에 따라 초급
-                참여자 2명과
-                <br />
-                고급 참여자 2명으로 나누어, AI 거래를 받아들이는 방식과 망설이는 지점을
-                비교했습니다.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break research-duo research-duo--interview">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-primary__eyebrow">
+            [ 04 — Primary Research · Interviews ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-primary__title">
+            암호화폐 거래 경험이 다른 사용자 4명에게
+            <br />
+            AI 거래를 망설인 이유를 물었습니다
+          </RevealHeading>
+          <p className="research-primary__intro">
+            암호화폐 거래 경험이 있는 사용자 4명을 인터뷰했습니다. 거래 경험 횟수에 따라 초급
+            참여자 2명과
+            <br />
+            고급 참여자 2명으로 나누어, AI 거래를 받아들이는 방식과 망설이는 지점을
+            비교했습니다.
+          </p>
+          <div className="research-duo research-duo--interview">
             <figure className="research-duo__figure">
               <img
                 className="research-duo__img media-fill"
@@ -267,9 +259,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Interview — Beginner Users (n=2) · Remote ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Beginner Users (n=2) · Remote ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <img
@@ -278,37 +268,27 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Interview — Advanced Users (n=2) · Remote ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Interview — Advanced Users (n=2) · Remote ]</figcaption>
             </figure>
           </div>
         </div>
 
         {/* 05 Analysis (Figma 133:54) */}
         <div className="research-analysis">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
-                [ 05 — Analysis ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-analysis__title">
-                초급 참여자는 이해하기 어려워했고, 고급 참여자는
-                <br />
-                AI에게 맡길 필요를 느끼지 못했습니다
-              </RevealHeading>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-analysis__intro">
-                인터뷰에서 나온 말을 비슷한 내용끼리 묶어보니,
-                <br />
-                초급과 고급 참여자가 AI 거래를 망설이는 이유가 다르게 나타났습니다.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break research-duo research-duo--analysis">
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-analysis__eyebrow">
+            [ 05 — Analysis ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-analysis__title">
+            초급 참여자는 이해하기 어려워했고, 고급 참여자는
+            <br />
+            AI에게 맡길 필요를 느끼지 못했습니다
+          </RevealHeading>
+          <p className="research-analysis__intro">
+            인터뷰에서 나온 말을 비슷한 내용끼리 묶어보니,
+            <br />
+            초급과 고급 참여자가 AI 거래를 망설이는 이유가 다르게 나타났습니다.
+          </p>
+          <div className="research-duo research-duo--analysis">
             <figure className="research-duo__figure">
               <img
                 className="research-duo__img media-fill"
@@ -316,9 +296,7 @@ export default function Research() {
                 alt=""
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Color Coding — Grouping User Statements ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Color Coding — Grouping User Statements ]</figcaption>
             </figure>
             <figure className="research-duo__figure">
               <video
@@ -330,16 +308,14 @@ export default function Research() {
                 playsInline
                 aria-hidden
               />
-              <figcaption className="research-duo__caption">
-                [ Affinity Mapping — Team Session ]
-              </figcaption>
+              <figcaption className="research-duo__caption">[ Affinity Mapping — Team Session ]</figcaption>
             </figure>
           </div>
         </div>
 
         {/* Insight Section (Figma 139:54) */}
         <div className="research-insight">
-          <RevealOnView className="sec-break research-insight__groups">
+          <RevealOnView className="research-insight__groups">
             {INSIGHT_GROUPS.map((g) => (
               <article key={g.title} className={`insight-group insight-group--${g.variant}`}>
                 <h3 className="insight-group__title">{g.title}</h3>
@@ -362,30 +338,23 @@ export default function Research() {
             ))}
           </RevealOnView>
 
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
-                insight
-              </p>
-            </div>
-
-            <div className="sec-split__main">
-              <p className="research-insight__closing">
-                초급 참여자는 AI 거래에 관심은 있었지만, 사용법과 작동 방식을 이해하기
-                어려워했습니다.
-                <br />
-                반면 고급 참여자는 작동 방식을 알아도 AI에게 거래를 맡길 필요를 크게 느끼지
-                못했습니다.
-              </p>
-              <p className="research-insight__closing research-insight__closing--lead">
-                따라서{' '}
-                <span className="research-insight__highlight">
-                  사용법과 AI의 작동 방식을 더 쉽게 설명하면 문제를 줄일 수 있다고 본 초급 사용자
-                </span>
-                를 우선 타깃으로 정했습니다.
-              </p>
-            </div>
-          </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-insight__eyebrow">
+            insight
+          </p>
+          <p className="research-insight__closing">
+            초급 참여자는 AI 거래에 관심은 있었지만, 사용법과 작동 방식을 이해하기
+            어려워했습니다.
+            <br />
+            반면 고급 참여자는 작동 방식을 알아도 AI에게 거래를 맡길 필요를 크게 느끼지
+            못했습니다.
+          </p>
+          <p className="research-insight__closing research-insight__closing--lead">
+            따라서{' '}
+            <span className="research-insight__highlight">
+              사용법과 AI의 작동 방식을 더 쉽게 설명하면 문제를 줄일 수 있다고 본 초급 사용자
+            </span>
+            를 우선 타깃으로 정했습니다.
+          </p>
         </div>
 
         {/* 06 Competitor Research (Figma 147:74) */}

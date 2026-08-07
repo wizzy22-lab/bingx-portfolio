@@ -16,36 +16,29 @@ export default function AboutService() {
   return (
     <section id="about" className="section">
       <div className="section-inner">
-        <div className="sec-split">
-          <div className="sec-split__aside">
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
-              [ 01 — About Service ]
-            </p>
-            <RevealHeading level="h2" className="ds-h2 about__title">
-              A crypto trading service where you pick a legendary investor&rsquo;s strategy
-              <br />
-              and hand the trading over to AI
-            </RevealHeading>
-          </div>
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
+          [ 01 — About Service ]
+        </p>
+        <RevealHeading level="h2" className="ds-h2 about__title">
+          A crypto trading service where you pick a legendary investor&rsquo;s strategy
+          <br />
+          and hand the trading over to AI
+        </RevealHeading>
+        <p className="about__lede">
+          AI Master is a service where AI trades automatically according to the strategy a user
+          selects.
+          <br />
+          Users can chat with the AI to get a strategy recommendation, or pick a Master they are
+          interested in and browse the strategies inside it.
+        </p>
 
-          <div className="sec-split__main">
-            <p className="about__lede">
-              AI Master is a service where AI trades automatically according to the strategy a user
-              selects.
-              <br />
-              Users can chat with the AI to get a strategy recommendation, or pick a Master they are
-              interested in and browse the strategies inside it.
-            </p>
-
-            <p className="about__intro">
-              The service holds seven Masters, each representing a different investment style, and
-              every Master in turn holds several automated trading strategies.
-            </p>
-          </div>
-        </div>
+        <p className="about__intro">
+          The service holds seven Masters, each representing a different investment style, and
+          every Master in turn holds several automated trading strategies.
+        </p>
 
         {/* Figma order: the two term cards reveal first, then the process flow below them. */}
-        <RevealOnView className="sec-break about__sequence">
+        <RevealOnView className="about__sequence">
           <div className="about__grid">
             {CRITERIA.map((c) => (
               <article key={c.title} className="about__card">
@@ -74,18 +67,14 @@ export default function AboutService() {
           </div>
         </RevealOnView>
 
-        <div className="sec-split">
-          <div className="sec-split__main">
-            <p className="about__final">
-              In other words, the user decides{' '}
-              <span className="about__highlight">
-                which strategy of which Master to commit how much to
-              </span>
-              , and <span className="about__highlight">the AI</span> carries out the actual trading
-              from there.
-            </p>
-          </div>
-        </div>
+        <p className="about__final">
+          In other words, the user decides{' '}
+          <span className="about__highlight">
+            which strategy of which Master to commit how much to
+          </span>
+          , and <span className="about__highlight">the AI</span> carries out the actual trading
+          from there.
+        </p>
       </div>
     </section>
   );

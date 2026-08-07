@@ -16,35 +16,28 @@ export default function AboutService() {
   return (
     <section id="about" className="section">
       <div className="section-inner">
-        <div className="sec-split">
-          <div className="sec-split__aside">
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
-              [ 01 — About Service ]
-            </p>
-            <RevealHeading level="h2" className="ds-h2 about__title">
-              투자 거장의 전략을 선택해
-              <br />
-              AI에게 자동 거래를 맡기는 암호화폐 트레이딩 서비스
-            </RevealHeading>
-          </div>
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow about__eyebrow">
+          [ 01 — About Service ]
+        </p>
+        <RevealHeading level="h2" className="ds-h2 about__title">
+          투자 거장의 전략을 선택해
+          <br />
+          AI에게 자동 거래를 맡기는 암호화폐 트레이딩 서비스
+        </RevealHeading>
+        <p className="about__lede">
+          AI Master는 사용자가 선택한 전략에 따라 AI가 자동으로 거래하는 서비스입니다.
+          <br />
+          사용자는 AI와 대화하며 전략을 추천받거나, 관심 있는 Master를 직접 선택해 그 안의
+          전략을 살펴볼 수 있습니다.
+        </p>
 
-          <div className="sec-split__main">
-            <p className="about__lede">
-              AI Master는 사용자가 선택한 전략에 따라 AI가 자동으로 거래하는 서비스입니다.
-              <br />
-              사용자는 AI와 대화하며 전략을 추천받거나, 관심 있는 Master를 직접 선택해 그 안의
-              전략을 살펴볼 수 있습니다.
-            </p>
-
-            <p className="about__intro">
-              서비스 안에는 서로 다른 투자 성향을 대표하는 7명의 Master가 있고, 각 Master는 다시
-              여러 자동 매매 전략을 가지고 있습니다.
-            </p>
-          </div>
-        </div>
+        <p className="about__intro">
+          서비스 안에는 서로 다른 투자 성향을 대표하는 7명의 Master가 있고, 각 Master는 다시
+          여러 자동 매매 전략을 가지고 있습니다.
+        </p>
 
         {/* Figma order: the two term cards reveal first, then the process flow below them. */}
-        <RevealOnView className="sec-break about__sequence">
+        <RevealOnView className="about__sequence">
           <div className="about__grid">
             {CRITERIA.map((c) => (
               <article key={c.title} className="about__card">
@@ -71,16 +64,12 @@ export default function AboutService() {
           </div>
         </RevealOnView>
 
-        <div className="sec-split">
-          <div className="sec-split__main">
-            <p className="about__final">
-              즉 사용자는{' '}
-              <span className="about__highlight">어떤 Master의 어떤 전략에 얼마를 맡길지</span>{' '}
-              결정하고, 이후의 <span className="about__highlight">실제 거래는 AI</span>가
-              수행합니다.
-            </p>
-          </div>
-        </div>
+        <p className="about__final">
+          즉 사용자는{' '}
+          <span className="about__highlight">어떤 Master의 어떤 전략에 얼마를 맡길지</span>{' '}
+          결정하고, 이후의 <span className="about__highlight">실제 거래는 AI</span>가
+          수행합니다.
+        </p>
       </div>
     </section>
   );
