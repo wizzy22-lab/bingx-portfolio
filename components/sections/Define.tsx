@@ -98,8 +98,9 @@ export default function Define() {
             </figcaption>
           </figure>
           <p className="define-sub__closing">
-            On the chat path, neither the fact that chat was the starting point for
-            recommendations nor how to hold the conversation was made clear.
+            On the chat path, neither the fact that chat was the starting point for recommendations
+            <br />
+            nor how to hold the conversation was made clear.
           </p>
           <p className="define-sub__closing">
             On the direct path, it was hard to judge which of the many Masters and strategies to
