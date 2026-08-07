@@ -8,17 +8,21 @@ export default function WireframeDesignSystem() {
           [ 08.5 — Wireframe &amp; Design System ]
         </p>
         <RevealHeading level="h2" className="ds-h2 wds__title">
-          We validated the core flow as plain screens first, then settled it into one visual
-          system
+          We validated the core flow
+          <br />
+          as plain screens first,
+          <br />
+          then settled it into one visual system
         </RevealHeading>
         <p className="wds__intro">
           We first reviewed the order of information and the movement between screens as simple
           wireframes.
         </p>
         <p className="wds__intro">
-          Then we organised components and visual rules so that the current step, the reason for
-          a recommendation, strategy information and the pre-execution notice all read the same
-          way on every screen.
+          Then we organised components and visual rules so that the current step, the reason for a
+          recommendation,
+          <br />
+          strategy information and the pre-execution notice all read the same way on every screen.
         </p>
 
         <div className="wds__panels">

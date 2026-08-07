@@ -2675,7 +2675,9 @@ video.media-fill {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 900px;
+  /* All four feature titles sit on one line. The longest is 4. at 1070px,
+     then 1. at 1011px; 2. and 3. clear it easily. */
+  max-width: 1110px;
 }
 
 /* Problem caption above the "as is" copy — plain label tint, no lift. */
@@ -3721,7 +3723,8 @@ button.site-footer__item:hover {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 800px;
+  /* Holds the authored break: line 3 measures 960px. */
+  max-width: 1010px;
 }
 .wds__intro {
   font-family: var(--font-sans);
@@ -3729,7 +3732,8 @@ button.site-footer__item:hover {
   line-height: var(--lh-body);
   font-weight: var(--fw-regular);
   color: var(--text-primary);
-  max-width: 760px;
+  /* Holds the authored break: the second intro line 1 measures 787px. */
+  max-width: 830px;
   margin: 24px 0 0 0;
 }
 .wds__intro + .wds__intro {
