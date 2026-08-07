@@ -18,58 +18,50 @@ export default function UserTest() {
   return (
     <section id="final" className="section ut">
       <div className="section-inner">
-        <div className="sec-split">
-          <div className="sec-split__aside">
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
-            <RevealHeading level="h2" className="ds-h2 ut__title">
-              참여자 5명 모두 핵심 과정을 완료했지만, 세부 전략과 일부 아이콘은 더 설명이
-              필요했습니다
-            </RevealHeading>
-          </div>
-        </div>
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
+        <RevealHeading level="h2" className="ds-h2 ut__title">
+          참여자 5명 모두 핵심 과정을 완료했지만, 세부 전략과 일부 아이콘은 더 설명이
+          필요했습니다
+        </RevealHeading>
 
-        {/* Usability test visual (Figma 634×476) */}
-        <div className="sec-break">
+        <div className="ut__top">
+          {/* Left: usability test visual (Figma 634×476) */}
           <img
             className="ut__media ut__media--tall media-fill"
             src="/images/user-test/user-test.jpg"
             alt=""
             aria-hidden
           />
-        </div>
 
-        {/* Summary + supporting visual (Figma 634×159) */}
-        <div className="sec-split">
-          <div className="sec-split__main ut__summary">
+          {/* Right: summary + supporting visual (Figma 634×159) */}
+          <div className="ut__summary">
             <p className="ut__para">
-              리디자인 프로토타입을 이용해 투자 성향을 입력하고, Master를 추천받아 전략을 선택한 뒤
-              실행 전 정보를 확인하는 핵심 과정을 테스트했습니다.
+              리디자인 프로토타입을 이용해 투자 성향을 입력하고, Master를 추천받아 전략을
+              선택한 뒤 실행 전 정보를 확인하는 핵심 과정을 테스트했습니다.
             </p>
             <p className="ut__para">
               사용성 테스트 참여자 5명 모두 전략 탐색부터 실행 확인까지의 과정을 완료했습니다.
             </p>
             <p className="ut__para">
-              리디자인은 시스템의 전반적인 사용 편의성을 0점에서 100점 사이로 평가하는 SUS(System
-              Usability Scale · 시스템 사용성 척도)에서 평균 88점을 기록했습니다(n=5).
+              리디자인은 시스템의 전반적인 사용 편의성을 0점에서 100점 사이로 평가하는
+              SUS(System Usability Scale · 시스템 사용성 척도)에서 평균 88점을
+              기록했습니다(n=5).
             </p>
+            <figure className="ut__figure">
+              <img
+                className="ut__media ut__media--wide media-fill"
+                src="/images/user-test/sus-score.png"
+                alt=""
+                aria-hidden
+              />
+              <figcaption className="ut__caption">
+                [ User Test Results — Task Completion &amp; SUS ]
+              </figcaption>
+            </figure>
           </div>
         </div>
 
-        <div className="sec-break">
-          <figure className="ut__figure">
-            <img
-              className="ut__media ut__media--wide media-fill"
-              src="/images/user-test/sus-score.png"
-              alt=""
-              aria-hidden
-            />
-            <figcaption className="ut__caption">
-              [ User Test Results — Task Completion &amp; SUS ]
-            </figcaption>
-          </figure>
-        </div>
-
-        <div className="sec-break ut__cards">
+        <div className="ut__cards">
           <article className="ut__card">
             <h3 className="ut__card-title">확인된 점</h3>
             <ul className="ut__list">
@@ -89,14 +81,10 @@ export default function UserTest() {
           </article>
         </div>
 
-        <div className="sec-split">
-          <div className="sec-split__main">
-            <p className="ut__closing">
-              참여자가 5명인 탐색적 테스트이므로, SUS와 태스크 완료 결과는 제품 성과를 확정하는
-              지표가 아니라 후속 개선 방향을 확인하는 참고값으로 해석했습니다.
-            </p>
-          </div>
-        </div>
+        <p className="ut__closing">
+          참여자가 5명인 탐색적 테스트이므로, SUS와 태스크 완료 결과는 제품 성과를 확정하는
+          지표가 아니라 후속 개선 방향을 확인하는 참고값으로 해석했습니다.
+        </p>
       </div>
     </section>
   );

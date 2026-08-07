@@ -104,27 +104,20 @@ export default function Research() {
       <div className="section-inner">
         {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
         <div className="research-community">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
-                [ 03.1 — Secondary Research · Community ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-community__title">
-                Communities and app reviews alike
-                <br />
-                said the service was hard to figure out
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
+            [ 03.1 — Secondary Research · Community ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-community__title">
+            Communities and app reviews alike
+            <br />
+            said the service was hard to figure out
+          </RevealHeading>
+          <p className="research-community__intro">
+            I looked at how users talked about AI investing on Reddit, Google Reviews and the
+            App Store.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-community__intro">
-                I looked at how users talked about AI investing on Reddit, Google Reviews and the
-                App Store.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-community__layout">
             <figure className="research-community__collage">
               <img
                 className="research-community__collage-img media-fill"
@@ -136,80 +129,68 @@ export default function Research() {
                 [ Community Reactions — Reddit · Google Reviews · App Store Reviews ]
               </figcaption>
             </figure>
-          </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main">
-              <RevealOnView className="research-community__cards">
-                {REVIEWS.map((r) => (
-                  <article key={r.name} className="review-card">
-                    <header className="review-card__head">
-                      <div className="review-card__avatar" aria-hidden>
-                        {r.initial}
-                      </div>
-                      <div className="review-card__meta">
-                        <span className="review-card__name">{r.name}</span>
-                        <span className="review-card__date">{r.date}</span>
-                      </div>
-                    </header>
-                    <div
-                      className="review-card__stars"
-                      role="img"
-                      aria-label={`${r.stars} out of 5 stars`}
-                    >
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <span
-                          key={n}
-                          className={
-                            n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
-                          }
-                        >
-                          ★
-                        </span>
-                      ))}
+            <RevealOnView className="research-community__cards">
+              {REVIEWS.map((r) => (
+                <article key={r.name} className="review-card">
+                  <header className="review-card__head">
+                    <div className="review-card__avatar" aria-hidden>
+                      {r.initial}
                     </div>
-                    <p className="review-card__text">{r.text}</p>
-                  </article>
-                ))}
-              </RevealOnView>
-
-              <p className="research-community__closing">
-                The reactions in these reviews went beyond &ldquo;investment strategies are
-                hard.&rdquo;
-                <br />
-                Users also struggled to understand where to start in the service, and in what order
-                to use it.
-              </p>
-            </div>
+                    <div className="review-card__meta">
+                      <span className="review-card__name">{r.name}</span>
+                      <span className="review-card__date">{r.date}</span>
+                    </div>
+                  </header>
+                  <div
+                    className="review-card__stars"
+                    role="img"
+                    aria-label={`${r.stars} out of 5 stars`}
+                  >
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <span
+                        key={n}
+                        className={
+                          n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="review-card__text">{r.text}</p>
+                </article>
+              ))}
+            </RevealOnView>
           </div>
+
+          <p className="research-community__closing">
+            The reactions in these reviews went beyond &ldquo;investment strategies are hard.&rdquo;
+            <br />
+            Users also struggled to understand where to start in the service, and in what order
+            to use it.
+          </p>
         </div>
 
         {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
         <div className="research-survey">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
-                [ 03.2 — Secondary Research · Survey ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-survey__title">
-                8 of 9 who had used AI features named
-                <br />
-                &ldquo;not enough explanation&rdquo; as the pain point
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
+            [ 03.2 — Secondary Research · Survey ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-survey__title">
+            8 of 9 who had used AI features named
+            <br />
+            &ldquo;not enough explanation&rdquo; as the pain point
+          </RevealHeading>
+          <p className="research-survey__intro">
+            To see whether the confusion found in the community also showed up in actual use,
+            <br />
+            I asked 22 crypto exchange app users about their experience with AI-based features.
+            <br />
+            That included strategy recommendations, copy trading and risk analysis.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-survey__intro">
-                To see whether the confusion found in the community also showed up in actual use,
-                <br />
-                I asked 22 crypto exchange app users about their experience with AI-based features.
-                <br />
-                That included strategy recommendations, copy trading and risk analysis.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-survey__layout">
             <figure className="research-survey__collage">
               <img
                 className="research-survey__collage-img media-fill"
@@ -221,39 +202,35 @@ export default function Research() {
                 [ Survey Findings — User Perception of AI Trading Features ]
               </figcaption>
             </figure>
+
+            <RevealOnView className="research-survey__stats">
+              {SURVEY_STATS.map((s, i) => (
+                <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
+                  <p className="survey-stat__number">
+                    <ScrambleNumber
+                      className="survey-stat__value"
+                      value={s.value}
+                      delay={800 + i * 100}
+                      duration={1200}
+                    />
+                    <span className="survey-stat__suffix">%</span>
+                  </p>
+                  <p className="survey-stat__text">{s.text}</p>
+                </div>
+              ))}
+            </RevealOnView>
           </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main">
-              <RevealOnView className="research-survey__stats">
-                {SURVEY_STATS.map((s, i) => (
-                  <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
-                    <p className="survey-stat__number">
-                      <ScrambleNumber
-                        className="survey-stat__value"
-                        value={s.value}
-                        delay={800 + i * 100}
-                        duration={1200}
-                      />
-                      <span className="survey-stat__suffix">%</span>
-                    </p>
-                    <p className="survey-stat__text">{s.text}</p>
-                  </div>
-                ))}
-              </RevealOnView>
-
-              <p className="research-survey__closing">
-                Missing explanation alone cannot account for why people do not use AI features.
-                <br />
-                But not knowing what the AI does, or how to read its results, looked like one of the
-                things holding them back.
-              </p>
-              <p className="research-survey__closing">
-                The survey could not tell me at which moment users hesitate, or why they never start
-                trading. So I met users directly and asked about their concrete experience.
-              </p>
-            </div>
-          </div>
+          <p className="research-survey__closing">
+            Missing explanation alone cannot account for why people do not use AI features.
+            <br />
+            But not knowing what the AI does, or how to read its results, looked like one of the
+            things holding them back.
+          </p>
+          <p className="research-survey__closing">
+            The survey could not tell me at which moment users hesitate, or why they never start
+            trading. So I met users directly and asked about their concrete experience.
+          </p>
         </div>
 
         {/* 04 Primary Research — Interview (Figma 133:54) */}
@@ -410,30 +387,23 @@ export default function Research() {
 
         {/* 06 Competitor Research (Figma 147:74) */}
         <div className="research-competitor">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
-                [ 06 — Competitor Research ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-                Other services ask your style and risk first,
-                <br />
-                then line up return, risk and horizon side by side
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
+            [ 06 — Competitor Research ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-competitor__title">
+            Other services ask your style and risk first,
+            <br />
+            then line up return, risk and horizon side by side
+          </RevealHeading>
+          <p className="research-competitor__intro">
+            Robo-advisors and fund services ask first how you want to invest and what risk
+            you take.
+            <br />
+            They then show each product&rsquo;s return, risk and horizon in one format, so
+            differences read easily.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-competitor__intro">
-                Robo-advisors and fund services ask first how you want to invest and what risk you
-                take.
-                <br />
-                They then show each product&rsquo;s return, risk and horizon in one format, so
-                differences read easily.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-competitor__layout">
             <figure className="research-competitor__figure">
               <img
                 className="research-competitor__img media-fill"
@@ -447,10 +417,8 @@ export default function Research() {
                 Carmignac · Robo-advisor · Fund Service Interfaces ]
               </figcaption>
             </figure>
-          </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main research-competitor__copy">
+            <div className="research-competitor__copy">
               <p>
                 AI Master and robo-advisors serve different products and users.
                 <br />

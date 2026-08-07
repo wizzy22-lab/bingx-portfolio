@@ -4124,23 +4124,14 @@ p {
 .about__card,
 .about__card-title,
 .about__card-body,
-.experience__quote,
 .insight-group__card-body,
-.survey-stat__text,
 .research-insight__eyebrow,
-.research-community__closing,
-.experience__analysis-caption,
-.research-community__collage-caption,
-.research-survey__collage-caption,
 .research-duo__caption,
-.research-competitor__caption,
 .define-sub__caption,
 .featcat__caption,
-.iteration__caption,
 .ia__caption,
 .crazy8__caption,
-.wds__caption,
-.ut__caption {
+.wds__caption {
   text-align: left;
 }
 
@@ -4163,30 +4154,22 @@ p {
   max-width: var(--split-measure);
 }
 
-/* With the PROBLEM copy moved up beside the title, the comparison runs
-   as-is screen · to-be screen · what changed. */
-@media (min-width: 1024px) {
-  .kf__compare--triple {
-    grid-template-columns: minmax(160px, 300px) minmax(160px, 340px) minmax(0, 1fr);
-    gap: var(--space-10);
-    align-items: center;
-  }
-}
+/* =============================================================
+   Restored composite blocks — the sections where a figure and its
+   cards belong side by side in one grid, so they were put back to
+   the layout they had before the two-column pass.
 
-/* Where the reading column is itself a gapped stack, the gap already sets
-   the rhythm — the sibling margin above would stack on top of it. */
-.sec-split__main:is(
-    .kf__copy,
-    .ut__summary,
-    .refl__cards,
-    .experience__cards,
-    .research-community__cards,
-    .research-survey__stats
-  )
-  > * + * {
-  margin-top: 0;
-}
+   They carry the rhythm variables, not the split: their own rules
+   already give heading 24 and body 40, and this closes the set by
+   giving whatever follows the block the media step.
+   ============================================================= */
 
-.sec-split__main:is(.kf__copy, .ut__summary) {
-  gap: 1.2em;
+.experience__layout + *,
+.research-community__layout + *,
+.research-survey__layout + *,
+.research-competitor__layout + *,
+.iteration__body + *,
+.ut__top + *,
+.kf__compare + * {
+  margin-top: var(--stack-media);
 }

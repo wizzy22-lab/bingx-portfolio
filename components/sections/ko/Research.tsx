@@ -104,27 +104,20 @@ export default function Research() {
       <div className="section-inner">
         {/* 03.1 Secondary Research — Community Source (Figma 124:54) */}
         <div className="research-community">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
-                [ 03.1 — Secondary Research · Community ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-community__title">
-                커뮤니티와 앱 리뷰에서도
-                <br />
-                사용법을 이해하기 어렵다는 반응이 나타났습니다
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-community__eyebrow">
+            [ 03.1 — Secondary Research · Community ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-community__title">
+            커뮤니티와 앱 리뷰에서도
+            <br />
+            사용법을 이해하기 어렵다는 반응이 나타났습니다
+          </RevealHeading>
+          <p className="research-community__intro">
+            Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
+            사용자 반응을 살펴봤습니다.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-community__intro">
-                Reddit, Google Reviews, App Store Reviews에서 AI 투자 기능과 인터페이스에 대한
-                사용자 반응을 살펴봤습니다.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-community__layout">
             <figure className="research-community__collage">
               <img
                 className="research-community__collage-img media-fill"
@@ -136,80 +129,69 @@ export default function Research() {
                 [ Community Reactions — Reddit · Google Reviews · App Store Reviews ]
               </figcaption>
             </figure>
-          </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main">
-              <RevealOnView className="research-community__cards">
-                {REVIEWS.map((r) => (
-                  <article key={r.name} className="review-card">
-                    <header className="review-card__head">
-                      <div className="review-card__avatar" aria-hidden>
-                        {r.initial}
-                      </div>
-                      <div className="review-card__meta">
-                        <span className="review-card__name">{r.name}</span>
-                        <span className="review-card__date">{r.date}</span>
-                      </div>
-                    </header>
-                    <div
-                      className="review-card__stars"
-                      role="img"
-                      aria-label={`${r.stars} out of 5 stars`}
-                    >
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <span
-                          key={n}
-                          className={
-                            n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
-                          }
-                        >
-                          ★
-                        </span>
-                      ))}
+            <RevealOnView className="research-community__cards">
+              {REVIEWS.map((r) => (
+                <article key={r.name} className="review-card">
+                  <header className="review-card__head">
+                    <div className="review-card__avatar" aria-hidden>
+                      {r.initial}
                     </div>
-                    <p className="review-card__text">{r.text}</p>
-                  </article>
-                ))}
-              </RevealOnView>
-
-              <p className="research-community__closing">
-                리뷰에서 확인된 반응은 단순히 투자 전략이 어렵다는 문제에 그치지 않았습니다.
-                <br />
-                사용자는 서비스를 어디서 시작해야 하고, 어떤 순서로 이용해야 하는지도 이해하기
-                어려워하고 있었습니다.
-              </p>
-            </div>
+                    <div className="review-card__meta">
+                      <span className="review-card__name">{r.name}</span>
+                      <span className="review-card__date">{r.date}</span>
+                    </div>
+                  </header>
+                  <div
+                    className="review-card__stars"
+                    role="img"
+                    aria-label={`${r.stars} out of 5 stars`}
+                  >
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <span
+                        key={n}
+                        className={
+                          n <= r.stars ? 'review-card__star is-filled' : 'review-card__star'
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="review-card__text">{r.text}</p>
+                </article>
+              ))}
+            </RevealOnView>
           </div>
+
+          <p className="research-community__closing">
+            리뷰에서 확인된 반응은 단순히 투자 전략이 어렵다는 문제에 그치지 않았습니다.
+            <br />
+            사용자는 서비스를 어디서 시작해야 하고, 어떤 순서로 이용해야 하는지도 이해하기
+            어려워하고 있었습니다.
+          </p>
         </div>
 
         {/* 03.2 Secondary Research — Survey (Figma 129:54) */}
         <div className="research-survey">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
-                [ 03.2 — Secondary Research · Survey ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-survey__title">
-                AI 기능 경험자 9명 중 8명이 ‘설명 부족’을
-                <br />
-                불편으로 꼽았습니다
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-survey__eyebrow">
+            [ 03.2 — Secondary Research · Survey ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-survey__title">
+            AI 기능 경험자 9명 중 8명이 ‘설명 부족’을
+            <br />
+            불편으로 꼽았습니다
+          </RevealHeading>
+          <p className="research-survey__intro">
+            커뮤니티에서 확인한 혼란이 거래소 AI 기능의 사용 경험에서도 나타나는지 확인하기
+            위해,
+            <br />
+            암호화폐 거래소 앱 사용자 22명에게 AI 기반 기능의 이용 경험을 물었습니다.
+            <br />
+            여기에는 전략 추천, 카피 트레이딩, 리스크 분석과 같은 기능이 포함됐습니다.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-survey__intro">
-                커뮤니티에서 확인한 혼란이 거래소 AI 기능의 사용 경험에서도 나타나는지 확인하기
-                위해,
-                <br />
-                암호화폐 거래소 앱 사용자 22명에게 AI 기반 기능의 이용 경험을 물었습니다.
-                <br />
-                여기에는 전략 추천, 카피 트레이딩, 리스크 분석과 같은 기능이 포함됐습니다.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-survey__layout">
             <figure className="research-survey__collage">
               <img
                 className="research-survey__collage-img media-fill"
@@ -221,39 +203,35 @@ export default function Research() {
                 [ Survey Findings — User Perception of AI Trading Features ]
               </figcaption>
             </figure>
+
+            <RevealOnView className="research-survey__stats">
+              {SURVEY_STATS.map((s, i) => (
+                <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
+                  <p className="survey-stat__number">
+                    <ScrambleNumber
+                      className="survey-stat__value"
+                      value={s.value}
+                      delay={800 + i * 100}
+                      duration={1200}
+                    />
+                    <span className="survey-stat__suffix">%</span>
+                  </p>
+                  <p className="survey-stat__text">{s.text}</p>
+                </div>
+              ))}
+            </RevealOnView>
           </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main">
-              <RevealOnView className="research-survey__stats">
-                {SURVEY_STATS.map((s, i) => (
-                  <div key={s.value} className={`survey-stat survey-stat--${i + 1}`}>
-                    <p className="survey-stat__number">
-                      <ScrambleNumber
-                        className="survey-stat__value"
-                        value={s.value}
-                        delay={800 + i * 100}
-                        duration={1200}
-                      />
-                      <span className="survey-stat__suffix">%</span>
-                    </p>
-                    <p className="survey-stat__text">{s.text}</p>
-                  </div>
-                ))}
-              </RevealOnView>
-
-              <p className="research-survey__closing">
-                설명 부족만이 AI 기능을 사용하지 않은 이유라고 단정할 수는 없습니다.
-                <br />
-                다만 AI가 무엇을 하고 결과를 어떻게 봐야 하는지 알기 어려운 점은, 사용을 망설이게
-                하는 이유 중 하나로 보였습니다.
-              </p>
-              <p className="research-survey__closing">
-                설문만으로는 사용자가 어떤 순간에 망설이고, 왜 거래를 시작하지 않는지 알 수
-                없었습니다. 그래서 사용자를 직접 만나 구체적인 경험을 물었습니다.
-              </p>
-            </div>
-          </div>
+          <p className="research-survey__closing">
+            설명 부족만이 AI 기능을 사용하지 않은 이유라고 단정할 수는 없습니다.
+            <br />
+            다만 AI가 무엇을 하고 결과를 어떻게 봐야 하는지 알기 어려운 점은, 사용을 망설이게
+            하는 이유 중 하나로 보였습니다.
+          </p>
+          <p className="research-survey__closing">
+            설문만으로는 사용자가 어떤 순간에 망설이고, 왜 거래를 시작하지 않는지 알 수
+            없었습니다. 그래서 사용자를 직접 만나 구체적인 경험을 물었습니다.
+          </p>
         </div>
 
         {/* 04 Primary Research — Interview (Figma 133:54) */}
@@ -412,30 +390,23 @@ export default function Research() {
 
         {/* 06 Competitor Research (Figma 147:74) */}
         <div className="research-competitor">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
-                [ 06 — Competitor Research ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 research-competitor__title">
-                다른 투자 서비스는 원하는 투자 방식과 감수할 수 있는 위험을 먼저 묻고,
-                <br />
-                상품별 예상 수익·위험도·투자 기간을 나란히 보여줬습니다
-              </RevealHeading>
-            </div>
+          <p className="ds-eyebrow ds-eyebrow--accent-yellow research-competitor__eyebrow">
+            [ 06 — Competitor Research ]
+          </p>
+          <RevealHeading level="h2" className="ds-h2 research-competitor__title">
+            다른 투자 서비스는 원하는 투자 방식과 감수할 수 있는 위험을 먼저 묻고,
+            <br />
+            상품별 예상 수익·위험도·투자 기간을 나란히 보여줬습니다
+          </RevealHeading>
+          <p className="research-competitor__intro">
+            로보어드바이저 펀드 서비스는 사용자가 원하는 투자 방식과 감수할 수 있는 위험
+            수준을 먼저 물었습니다.
+            <br />
+            이후 각 상품의 예상 수익, 위험도, 투자 기간을 같은 위치와 형식으로 보여줘 차이를
+            쉽게 비교할 수 있도록 했습니다.
+          </p>
 
-            <div className="sec-split__main">
-              <p className="research-competitor__intro">
-                로보어드바이저 펀드 서비스는 사용자가 원하는 투자 방식과 감수할 수 있는 위험 수준을
-                먼저 물었습니다.
-                <br />
-                이후 각 상품의 예상 수익, 위험도, 투자 기간을 같은 위치와 형식으로 보여줘 차이를
-                쉽게 비교할 수 있도록 했습니다.
-              </p>
-            </div>
-          </div>
-
-          <div className="sec-break">
+          <div className="research-competitor__layout">
             <figure className="research-competitor__figure">
               <img
                 className="research-competitor__img media-fill"
@@ -449,10 +420,8 @@ export default function Research() {
                 Carmignac · Robo-advisor · Fund Service Interfaces ]
               </figcaption>
             </figure>
-          </div>
 
-          <div className="sec-split">
-            <div className="sec-split__main research-competitor__copy">
+            <div className="research-competitor__copy">
               <p>
                 AI Master와 로보어드바이저는 제공하는 상품과 사용자가 다릅니다.
                 <br />

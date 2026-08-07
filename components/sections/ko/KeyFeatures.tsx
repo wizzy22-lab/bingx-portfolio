@@ -6,19 +6,17 @@ export default function KeyFeatures() {
   return (
     <section id="key-features" className="section kf">
       <div className="section-inner">
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow kf__eyebrow">[ 09 — Key Features ]</p>
+
         {/* Feature 1 — Personalized Agents (as is → to be) */}
         <article className="kf__feature">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <p className="ds-eyebrow ds-eyebrow--accent-yellow kf__eyebrow">
-                [ 09 — Key Features ]
-              </p>
-              <RevealHeading level="h2" className="ds-h2 kf__title">
-                1. 개인화된 에이전트 추천
-              </RevealHeading>
-            </div>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            1. 개인화된 에이전트 추천
+          </RevealHeading>
 
-            <div className="sec-split__main kf__copy">
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 사용자는 명확한 선택 기준 없이 7명의 Master와 그 안의 여러 전략을 직접 살펴봐야
@@ -29,9 +27,7 @@ export default function KeyFeatures() {
                 의존했습니다.
               </p>
             </div>
-          </div>
 
-          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -65,9 +61,9 @@ export default function KeyFeatures() {
                 <span className="kf__code">Strategy Style</span> 을 먼저 물었습니다.
               </p>
               <p className="kf__para">
-                응답이 끝나면 여러 Master를 한꺼번에 보여주는 대신, 사용자의 투자 성향과 가장 가까운
-                Master 1명을 먼저 추천했습니다. 사용자는 추천된 Master의 화면으로 바로 이동해 그
-                Master가 가진 전략부터 살펴볼 수 있습니다.
+                응답이 끝나면 여러 Master를 한꺼번에 보여주는 대신, 사용자의 투자 성향과 가장
+                가까운 Master 1명을 먼저 추천했습니다. 사용자는 추천된 Master의 화면으로 바로
+                이동해 그 Master가 가진 전략부터 살펴볼 수 있습니다.
               </p>
               <p className="kf__para">
                 첫 선택지를 7명에서 1명으로 줄여 탐색 부담을 낮추고, 사용자가 자신의 투자 성향과
@@ -83,23 +79,20 @@ export default function KeyFeatures() {
 
         {/* Feature 2 — Clear next action (to be ← as is, mirrored) */}
         <article className="kf__feature">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <RevealHeading level="h2" className="ds-h2 kf__title">
-                2. 현재 단계 가시성
-              </RevealHeading>
-            </div>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            2. 현재 단계 가시성
+          </RevealHeading>
 
-            <div className="sec-split__main kf__copy">
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 사용자는 자신이 지금 Master를 고르는 중인지, 전략을 선택하는 중인지, 실제 투자금을
                 맡기는 단계인지 이해하기 어려웠습니다.
               </p>
             </div>
-          </div>
 
-          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -161,14 +154,13 @@ export default function KeyFeatures() {
 
         {/* Feature 3 — Familiar chat (as is → to be) */}
         <article className="kf__feature">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <RevealHeading level="h2" className="ds-h2 kf__title">
-                3. 익숙한 채팅 인터랙션
-              </RevealHeading>
-            </div>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            3. 익숙한 채팅 인터랙션
+          </RevealHeading>
 
-            <div className="sec-split__main kf__copy">
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 AI Master는 AI와 대화하며 전략을 추천받는 기능을 제공했습니다. 하지만 기존
@@ -176,9 +168,7 @@ export default function KeyFeatures() {
                 채팅이 전략 추천의 진입점이라는 사실이 바로 드러나지 않았습니다.
               </p>
             </div>
-          </div>
 
-          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>
@@ -224,14 +214,13 @@ export default function KeyFeatures() {
 
         {/* Feature 4 — Key information & performance flow (as is → to be) */}
         <article className="kf__feature">
-          <div className="sec-split">
-            <div className="sec-split__aside">
-              <RevealHeading level="h2" className="ds-h2 kf__title">
-                4. 비교와 성과를 하나의 플로우로
-              </RevealHeading>
-            </div>
+          <RevealHeading level="h2" className="ds-h2 kf__title">
+            4. 비교와 성과를 하나의 플로우로
+          </RevealHeading>
 
-            <div className="sec-split__main kf__copy">
+          <div className="kf__compare">
+            {/* as is — copy */}
+            <div className="kf__copy">
               <p className="ds-eyebrow kf__problem">[ PROBLEM ]</p>
               <p className="kf__para">
                 기존 AI Master에서는 선택한 전략의 성과는 확인할 수 있었지만, 해당 전략이 거래하는
@@ -243,9 +232,7 @@ export default function KeyFeatures() {
                 끊겼습니다.
               </p>
             </div>
-          </div>
 
-          <div className="sec-break kf__compare kf__compare--triple">
             {/* as is — phone (Figma 240×519) */}
             <figure className="kf__phone kf__phone--asis">
               <span className="kf__pill">as is</span>

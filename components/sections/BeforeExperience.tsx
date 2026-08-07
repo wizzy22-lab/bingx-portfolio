@@ -39,29 +39,22 @@ export default function BeforeExperience() {
   return (
     <section id="problem" className="section">
       <div className="section-inner">
-        <div className="sec-split">
-          <div className="sec-split__aside">
-            <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
-              [ 02 — Current Experience ]
-            </p>
-            <RevealHeading level="h2" className="ds-h2 experience__title">
-              It was unclear where to start, what to choose,
-              <br />
-              and how far the AI takes over
-            </RevealHeading>
-          </div>
+        <p className="ds-eyebrow ds-eyebrow--accent-yellow experience__eyebrow">
+          [ 02 — Current Experience ]
+        </p>
+        <RevealHeading level="h2" className="ds-h2 experience__title">
+          It was unclear where to start, what to choose,
+          <br />
+          and how far the AI takes over
+        </RevealHeading>
+        <p className="experience__lede">
+          The existing screens offered many Masters and strategies, chat recommendations and
+          trading features all at once.
+          <br />
+          But nothing guided users on what to check first, or in what order to decide.
+        </p>
 
-          <div className="sec-split__main">
-            <p className="experience__lede">
-              The existing screens offered many Masters and strategies, chat recommendations and
-              trading features all at once.
-              <br />
-              But nothing guided users on what to check first, or in what order to decide.
-            </p>
-          </div>
-        </div>
-
-        <div className="sec-break">
+        <div className="experience__layout">
           <figure className="experience__analysis">
             <img
               className="experience__analysis-img media-fill"
@@ -73,10 +66,8 @@ export default function BeforeExperience() {
               [ Current Experience Analysis — Existing AI Master Flow &amp; Interface Review ]
             </figcaption>
           </figure>
-        </div>
 
-        <div className="sec-split">
-          <RevealOnView className="sec-split__main experience__cards">
+          <RevealOnView className="experience__cards">
             {PROBLEMS.map((p) => (
               <article key={p.number} className="experience__card">
                 <header className="experience__head">
