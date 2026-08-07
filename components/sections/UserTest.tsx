@@ -1,17 +1,26 @@
 import RevealHeading from '@/components/RevealHeading';
 
+// Each entry holds one item per authored line, same shape the review cards use.
 const WORKED = [
-  'All 5 of 5 participants completed the core flow end to end.',
-  'They understood the order — set your investment style first, then get a Master recommended.',
-  'The step indicator at the top let them locate their position and next action.',
-  'On the pre-execution screen they confirmed the scope of automated buying, selling and position exit.',
-  'They checked strategy performance and coin price without leaving the strategy screen.',
+  ['All 5 of 5 participants completed the core flow end to end.'],
+  ['They understood the order — set your investment style first,', 'then get a Master recommended.'],
+  ['The step indicator at the top let them locate their position and next action.'],
+  [
+    'On the pre-execution screen they confirmed',
+    'the scope of automated buying, selling and position exit.',
+  ],
+  [
+    'They checked strategy performance and coin price',
+    'without leaving the strategy screen.',
+  ],
 ];
 
 const DIDNT = [
-  'The meaning of some feature icons was not obvious on first sight.',
-  'Participants paused to interpret the strategy detail information.',
-  'The order and wording of explanations needs further work so beginners can absorb specialist investment information faster.',
+  ['The meaning of some feature icons was not obvious on first sight.'],
+  ['Participants paused to interpret the strategy detail information.'],
+  [
+    'The order and wording of explanations needs further work so beginners can absorb specialist investment information faster.',
+  ],
 ];
 
 export default function UserTest() {
@@ -44,12 +53,14 @@ export default function UserTest() {
               information shown before execution.
             </p>
             <p className="ut__para">
-              All five usability test participants completed the flow from browsing strategies
-              through to the execution confirmation.
+              All five usability test participants completed the flow
+              <br />
+              from browsing strategies through to the execution confirmation.
             </p>
             <p className="ut__para">
-              The redesign scored an average of 88 on the SUS (System Usability Scale), which
-              rates overall ease of use from 0 to 100 (n=5).
+              The redesign scored an average of 88 on the SUS (System Usability Scale),
+              <br />
+              which rates overall ease of use from 0 to 100 (n=5).
             </p>
             <figure className="ut__figure">
               <img
@@ -70,7 +81,14 @@ export default function UserTest() {
             <h3 className="ut__card-title">What held up</h3>
             <ul className="ut__list">
               {WORKED.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item[0]}>
+                  {item.map((line, i) => (
+                    <span key={line}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </li>
               ))}
             </ul>
           </article>
@@ -79,7 +97,14 @@ export default function UserTest() {
             <h3 className="ut__card-title">What to improve next</h3>
             <ul className="ut__list">
               {DIDNT.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item[0]}>
+                  {item.map((line, i) => (
+                    <span key={line}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </li>
               ))}
             </ul>
           </article>
