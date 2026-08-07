@@ -62,18 +62,6 @@ a:not([class]):hover {
   text-decoration-color: var(--text);
 }
 
-/* Measure — body copy caps at 640px. Zero-specificity on the element side, so
-   any component that already sets its own max-width keeps it. Media and
-   figures are untouched. */
-main :where(p, li, dd, blockquote, figcaption) {
-  max-width: var(--measure);
-}
-
-/* Centred containers keep their copy centred at the capped measure. */
-:where(.about__card, .matrix-2x2 > div, .ds-stat-grid__cell) :where(p, li) {
-  margin-inline: auto;
-}
-
 /* Korean must not break mid-word. */
 .ds-kr,
 [lang='ko'],
