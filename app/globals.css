@@ -2977,7 +2977,8 @@ video.media-fill {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 760px;
+  /* Holds the authored breaks: line 3 measures 855px. */
+  max-width: 900px;
 }
 
 .refl__cards {
@@ -3044,7 +3045,8 @@ video.media-fill {
 
 .refl__closing {
   margin: var(--space-10) auto 0;
-  max-width: 820px;
+  /* Holds the authored breaks: line 2 measures 914px. */
+  max-width: 960px;
   text-align: center;
   font-family: var(--font-sans);
   font-size: var(--fs-body);
