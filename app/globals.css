@@ -3584,12 +3584,20 @@ button.site-footer__item:hover {
   max-width: 902px;
   margin: 24px auto 0 auto;
 }
+/* Flush left against the section edge, in line with the heading above it,
+   rather than centred like the other sub-section intros. */
+.define-sub__intro--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
 .define-sub__closing + .define-sub__closing {
   margin-top: 40px;
 }
 .define-sub__list {
   list-style: none;
-  margin: 16px auto 0 auto;
+  /* Left-flush, matching the intro it follows. */
+  margin: 16px 0 0 0;
   padding: 0;
   max-width: 640px;
   display: flex;

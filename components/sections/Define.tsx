@@ -73,7 +73,7 @@ export default function Define() {
             <br />
             both right before execution
           </RevealHeading>
-          <p className="define-sub__intro">
+          <p className="define-sub__intro define-sub__intro--left">
             Users could explore strategies in two ways.
           </p>
           <ol className="define-sub__list">
