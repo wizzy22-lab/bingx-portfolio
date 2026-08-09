@@ -34,7 +34,7 @@ export default function WireframeDesignSystem() {
               alt=""
               aria-hidden
             />
-            <figcaption className="wds__caption">[ Wireframe — Key Decision Flow ]</figcaption>
+            <figcaption className="wds__caption">[ User Flow Map — full decision flow ]</figcaption>
           </figure>
 
           {/* Right: design system showcase (Figma Frame 120, 634×357) */}
