@@ -523,7 +523,9 @@ main {
   text-align: left;
   /* Deliberate gap — the title and lede reveal on scroll before this drops in.
      Bottom gap matches the Figma spacing from the intro to the term cards. */
-  margin: 240px 0 24px 0;
+  /* 40px, not 240: at 240 this single gap ran ten times every other gap in
+     the section and read as a break between two sections. */
+  margin: var(--space-10) 0 24px 0;
 }
 
 .about__grid {
@@ -1455,7 +1457,9 @@ main {
 
 /* 04 Primary Research — Interview + 05 Analysis (Figma 133:54) */
 .research-primary {
-  margin-bottom: 32px;
+  /* Matches the other five research sub-blocks; at 32px this one ran into
+     05 Analysis and the two read as a single block. */
+  margin-bottom: var(--space-30);
 }
 
 .research-analysis {
