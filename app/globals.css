@@ -531,11 +531,13 @@ main {
   grid-template-columns: 1fr;
   gap: var(--space-6);
   max-width: 1000px;
-  margin: 0 auto;
+  /* Left-flush, not centred: the cards start on the same edge as the lede
+     and the heading above them. */
+  margin: 0;
 }
 
 /* Process flow, sitting below the term cards (Figma order). Two lines,
-   tightly stacked and centered — no side-by-side columns. */
+   tightly stacked — no side-by-side columns. */
 .about__flow {
   max-width: 1000px;
   margin: 56px 0 0;
