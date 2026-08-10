@@ -30,6 +30,10 @@
   /* Section titles sit a clear step below the hero display so the page has a
      top line; shared by both locales. 24px on mobile, 36px from ~1200px up. */
   --fs-section-title: clamp(1.5rem, 3vw, 2.25rem);
+  /* Emphasis line under a section title — closing statements, card titles.
+     Needs its own step: at --fs-heading it came within 4px of the title and
+     the two read as the same size. 24px desktop. */
+  --fs-subhead: clamp(1.25rem, 2vw, 1.5rem);
   --fs-sub: 1.125rem;
   --fs-body: 1rem;
   --fs-label: 0.8125rem;

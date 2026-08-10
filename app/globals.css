@@ -672,7 +672,7 @@ main {
 
 .about__final {
   font-family: var(--font-sans);
-  font-size: var(--fs-heading);
+  font-size: var(--fs-subhead);
   line-height: var(--lh-heading);
   letter-spacing: var(--ls-body);
   font-weight: var(--fw-regular);
@@ -3030,7 +3030,7 @@ video.media-fill {
 
 .refl__card-title {
   font-family: var(--font-sans);
-  font-size: var(--fs-heading);
+  font-size: var(--fs-subhead);
   line-height: var(--lh-heading);
   font-weight: var(--fw-medium);
   letter-spacing: var(--ls-body);
