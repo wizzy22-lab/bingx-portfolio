@@ -3,9 +3,9 @@ import HeroPanel, { type HeroCopy } from '@/components/HeroPanel';
 const COPY: HeroCopy = {
   locale: 'ko',
   subtitle: [
-    '자신에게 맞는 Master와 전략을 쉽게 고르고, AI가 매수부터',
-    '포지션 종료까지 자동으로 처리한다는 점을 이해한 뒤 투자를',
-    '맡기도록 재설계한 프로젝트',
+    '자신에게 맞는 Master와 전략을 쉽게 고르고,',
+    'AI가 매수부터 포지션 종료까지 자동으로 처리한다는 점을',
+    '이해한 뒤 투자를 맡기도록 재설계한 프로젝트',
   ],
   tags: [
     'AI 에이전트',
@@ -27,7 +27,10 @@ const COPY: HeroCopy = {
   },
   meta: [
     { label: '역할', lines: ['프로덕트 디자이너', '리서치부터 최종 디자인과 검증까지 전 과정 참여'] },
-    { label: '범위', lines: ['리서치 · 정보 구조 · 비주얼 디자인 · 프로토타입 · 사용성 테스트'] },
+    {
+      label: '범위',
+      lines: [['리서치 · 정보 구조 · 비주얼 디자인', '프로토타입 · 사용성 테스트']],
+    },
     { label: '기간', lines: ['8주'] },
     { label: '팀', lines: ['디자이너 2명'] },
   ],

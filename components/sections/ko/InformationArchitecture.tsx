@@ -43,8 +43,9 @@ export default function InformationArchitecture() {
           <div className="ia__text">
             <p className="ia__para">사용자가 전략을 찾는 방식을 하나로 통일하지 않았습니다.</p>
             <p className="ia__para">
-              AI와 대화하며 추천받고 싶은 사용자와, 자신의 투자 성향을 기준으로 직접 살펴보고
-              싶은 사용자를 위해 두 가지 경로를 유지했습니다.
+              AI와 대화하며 추천받고 싶은 사용자와, 자신의 투자 성향을 기준으로
+              <br />
+              직접 살펴보고 싶은 사용자를 위해 두 가지 경로를 유지했습니다.
             </p>
 
             {FLOWS.map((flow) => (
@@ -73,8 +74,9 @@ export default function InformationArchitecture() {
             </div>
 
             <p className="ia__para">
-              채팅과 직접 탐색 중 어느 방식을 선택하더라도, 실행 전에는 AI가 하는 일과
-              사용자의 개입 범위를 동일하게 확인하도록 구성했습니다.
+              채팅과 직접 탐색 중 어느 방식을 선택하더라도, 실행 전에는
+              <br />
+              AI가 하는 일과 사용자의 개입 범위를 동일하게 확인하도록 구성했습니다.
             </p>
           </div>
         </div>

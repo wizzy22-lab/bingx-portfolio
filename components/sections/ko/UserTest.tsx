@@ -36,8 +36,9 @@ export default function UserTest() {
           {/* Right: summary + supporting visual (Figma 634×159) */}
           <div className="ut__summary">
             <p className="ut__para">
-              리디자인 프로토타입을 이용해 투자 성향을 입력하고, Master를 추천받아 전략을
-              선택한 뒤 실행 전 정보를 확인하는 핵심 과정을 테스트했습니다.
+              리디자인 프로토타입을 이용해 투자 성향을 입력하고, Master를 추천받아
+              <br />
+              전략을 선택한 뒤 실행 전 정보를 확인하는 핵심 과정을 테스트했습니다.
             </p>
             <p className="ut__para">
               사용성 테스트 참여자 5명 모두 전략 탐색부터 실행 확인까지의 과정을 완료했습니다.

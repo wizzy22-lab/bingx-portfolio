@@ -4,11 +4,11 @@ import RevealOnView from '@/components/RevealOnView';
 const CRITERIA = [
   {
     title: 'Master',
-    body: ['특정 투자 성향과 철학을 대표하는', 'AI투자 도우미'],
+    body: ['특정 투자 성향과 철학을 대표하는 AI투자 도우미'],
   },
   {
     title: '전략',
-    body: ['Master가 가진 구체적인', '자동 매매 방식'],
+    body: ['Master가 가진 구체적인 자동 매매 방식'],
   },
 ];
 
@@ -20,9 +20,9 @@ export default function AboutService() {
           [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
-          투자 거장의 전략을 선택해
+          투자 거장의 전략을 선택해 AI에게 자동 거래를
           <br />
-          AI에게 자동 거래를 맡기는 암호화폐 트레이딩 서비스
+          맡기는 암호화폐 트레이딩 서비스
         </RevealHeading>
         <p className="about__lede">
           AI Master는 사용자가 선택한 전략에 따라 AI가 자동으로 거래하는 서비스입니다.
