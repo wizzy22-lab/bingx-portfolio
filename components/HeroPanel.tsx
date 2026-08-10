@@ -9,7 +9,9 @@ export type HeroCopy = {
   tags: string[];
   risk: { label: string; options: string[]; selected: number };
   strategy: { label: string; options: string[]; selected: number };
-  meta: { label: string; lines: string[] }[];
+  /* One entry per rendered paragraph; a nested array is one paragraph
+     broken across several lines. */
+  meta: { label: string; lines: (string | string[])[] }[];
   videoLabel: string;
 };
 
@@ -360,7 +362,12 @@ export default function HeroPanel(copy: HeroCopy) {
                 <div className={`hero-meta__value${isKr ? ' ds-kr' : ''}`}>
                   {row.lines.map((line, i) => (
                     <p key={i} className="ds-body">
-                      {line}
+                      {(Array.isArray(line) ? line : [line]).map((part, j, all) => (
+                        <span key={j}>
+                          {part}
+                          {j < all.length - 1 && <br />}
+                        </span>
+                      ))}
                     </p>
                   ))}
                 </div>

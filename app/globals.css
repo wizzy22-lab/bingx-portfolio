@@ -222,12 +222,28 @@ main {
   gap: var(--space-12);
   align-items: start;
 }
+/* Explicit three columns: lead text / config graphic / fixed-width phone.
+   The phone track is a fixed 300px so it can never be pushed into — or over —
+   the config column, and every track carries min-width: 0 so a wide child
+   (the chip rows) wraps inside its track instead of overflowing across it. */
 @media (min-width: 1024px) {
   .hero-stage {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr) minmax(0, 0.8fr);
+    grid-template-columns: minmax(280px, 1.05fr) minmax(0, 1.15fr) 300px;
     gap: var(--space-8);
     align-items: center;
     min-height: 600px;
+  }
+  .hero-lead,
+  .hero-config,
+  .hero-phone {
+    min-width: 0;
+  }
+}
+/* From 1280 up the lead track is held wide enough for the longest authored
+   subtitle line, so the hand-placed breaks are the only breaks. */
+@media (min-width: 1280px) {
+  .hero-stage {
+    grid-template-columns: minmax(420px, 1.05fr) minmax(0, 1.15fr) 300px;
   }
 }
 
@@ -266,6 +282,15 @@ main {
     padding-block: var(--space-8);
   }
 }
+/* The tightest desktop band: even wrapped, the chip rows want more room than
+   the middle track has. Shrink only the config graphic so it stays whole. */
+@media (min-width: 1024px) and (max-width: 1279.98px) {
+  .hero-config {
+    transform: scale(0.9);
+    transform-origin: left center;
+    width: calc(100% / 0.9);
+  }
+}
 .hero-config__label {
   margin: 0 0 var(--space-3) 0;
   font-family: var(--font-mono);
@@ -276,9 +301,12 @@ main {
   text-transform: uppercase;
   color: var(--text-dim);
 }
+/* Chips wrap onto a second row rather than overflowing the config column —
+   no chip is ever clipped by, or hidden behind, the phone. */
 .hero-chips {
   display: inline-flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  max-width: 100%;
   gap: var(--space-1);
   padding: var(--space-1);
   border-radius: var(--radius-md);
