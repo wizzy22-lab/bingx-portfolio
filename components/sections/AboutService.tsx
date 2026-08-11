@@ -20,7 +20,9 @@ export default function AboutService() {
           [ 01 — About Service ]
         </p>
         <RevealHeading level="h2" className="ds-h2 about__title">
-          A crypto trading service where you pick a legendary investor&rsquo;s strategy
+          A crypto trading service
+          <br />
+          where you pick a legendary investor&rsquo;s strategy
           <br />
           and hand the trading over to AI
         </RevealHeading>
@@ -33,8 +35,9 @@ export default function AboutService() {
         </p>
 
         <p className="about__intro">
-          The service holds seven Masters, each representing a different investment style, and
-          every Master in turn holds several automated trading strategies.
+          The service holds seven Masters, each representing a different investment style,
+          <br />
+          and every Master in turn holds several automated trading strategies.
         </p>
 
         {/* Figma order: the two term cards reveal first, then the process flow below them. */}

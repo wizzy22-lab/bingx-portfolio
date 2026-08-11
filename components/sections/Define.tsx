@@ -69,9 +69,7 @@ export default function Define() {
           <RevealHeading level="h2" className="ds-h2 define-sub__title define-sub__title--wide">
             There were two paths through the service,
             <br />
-            and uncertainty spiked on
-            <br />
-            both right before execution
+            and uncertainty spiked on both right before execution
           </RevealHeading>
           <p className="define-sub__intro">
             Users could explore strategies in two ways.

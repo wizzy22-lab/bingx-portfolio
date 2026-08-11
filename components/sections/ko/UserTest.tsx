@@ -20,8 +20,9 @@ export default function UserTest() {
       <div className="section-inner">
         <p className="ds-eyebrow ds-eyebrow--accent-yellow ut__eyebrow">[ 10 — User Test ]</p>
         <RevealHeading level="h2" className="ds-h2 ut__title">
-          참여자 5명 모두 핵심 과정을 완료했지만, 세부 전략과 일부 아이콘은 더 설명이
-          필요했습니다
+          참여자 5명 모두 핵심 과정을 완료했지만,
+          <br />
+          세부 전략과 일부 아이콘은 더 설명이 필요했습니다
         </RevealHeading>
 
         <div className="ut__top">

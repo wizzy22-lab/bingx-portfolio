@@ -2119,7 +2119,9 @@ main {
   font-weight: var(--fw-medium);
   color: var(--text-primary);
   margin: 24px 0 0 0;
-  max-width: 860px;
+  /* Wide enough to hold this title on the single line it is written as —
+     860px was tuned back when section titles were 56px. */
+  max-width: 980px;
 }
 
 .featcat__intro {

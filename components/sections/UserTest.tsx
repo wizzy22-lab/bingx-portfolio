@@ -31,9 +31,7 @@ export default function UserTest() {
         <RevealHeading level="h2" className="ds-h2 ut__title">
           All 5 participants completed the core flow,
           <br />
-          but strategy details and some icons
-          <br />
-          needed more explanation
+          but strategy details and some icons needed more explanation
         </RevealHeading>
 
         <div className="ut__top">

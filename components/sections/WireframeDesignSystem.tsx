@@ -8,9 +8,7 @@ export default function WireframeDesignSystem() {
           [ 08.5 — Wireframe &amp; Design System ]
         </p>
         <RevealHeading level="h2" className="ds-h2 wds__title">
-          We validated the core flow
-          <br />
-          as plain screens first,
+          We validated the core flow as plain screens first,
           <br />
           then settled it into one visual system
         </RevealHeading>
