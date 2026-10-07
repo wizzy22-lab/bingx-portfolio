@@ -56,7 +56,7 @@ export default function SiteHeader() {
       <div className="site-header__bar">
         <div className="site-header__inner">
           <a className="site-header__wordmark" href={global.home}>
-            wizzy
+            haeji
           </a>
 
           <div className="site-header__right">
