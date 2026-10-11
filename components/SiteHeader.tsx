@@ -3,7 +3,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import MobileMenu from '@/components/MobileMenu';
 import {
+  BRAND_NAME,
   GLOBAL_NAV_BY_LOCALE,
   NAV_BY_LOCALE,
   type Locale,
@@ -56,7 +58,7 @@ export default function SiteHeader() {
       <div className="site-header__bar">
         <div className="site-header__inner">
           <a className="site-header__wordmark" href={global.home}>
-            haeji
+            {BRAND_NAME}
           </a>
 
           <div className="site-header__right">
@@ -75,30 +77,14 @@ export default function SiteHeader() {
               ))}
             </nav>
 
-            <div className="site-header__lang" role="group" aria-label="Language">
-              {locale === 'en' ? (
-                <span className="site-header__lang-current" aria-current="true">
-                  EN
-                </span>
-              ) : (
-                <Link href="/" hrefLang="en" className="site-header__lang-link">
-                  EN
-                </Link>
-              )}
-              <span className="site-header__lang-sep" aria-hidden="true">
-                /
-              </span>
-              {locale === 'ko' ? (
-                <span className="site-header__lang-current" aria-current="true">
-                  KO
-                </span>
-              ) : (
-                <Link href="/ko" hrefLang="ko" className="site-header__lang-link">
-                  KO
-                </Link>
-              )}
-            </div>
+            <LangToggle locale={locale} />
           </div>
+
+          {/* Below 1024px the links don't fit — see `MobileMenu`, which
+              carries the same links and toggle. */}
+          <MobileMenu links={global.links} label={global.menu}>
+            <LangToggle locale={locale} />
+          </MobileMenu>
         </div>
       </div>
 
@@ -119,5 +105,33 @@ export default function SiteHeader() {
         </div>
       </div>
     </header>
+  );
+}
+
+function LangToggle({ locale }: { locale: Locale }) {
+  return (
+    <div className="site-header__lang" role="group" aria-label="Language">
+      {locale === 'en' ? (
+        <span className="site-header__lang-current" aria-current="true">
+          EN
+        </span>
+      ) : (
+        <Link href="/" hrefLang="en" className="site-header__lang-link">
+          EN
+        </Link>
+      )}
+      <span className="site-header__lang-sep" aria-hidden="true">
+        /
+      </span>
+      {locale === 'ko' ? (
+        <span className="site-header__lang-current" aria-current="true">
+          KO
+        </span>
+      ) : (
+        <Link href="/ko" hrefLang="ko" className="site-header__lang-link">
+          KO
+        </Link>
+      )}
+    </div>
   );
 }

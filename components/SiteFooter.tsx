@@ -7,6 +7,7 @@ import {
   FOOTER_COPY,
   LINKEDIN,
   RESUME_URL,
+  BRAND_NAME,
   type Locale,
 } from '@/lib/nav';
 
@@ -114,9 +115,9 @@ export default function SiteFooter() {
 
           <div className="site-footer__mark">
             <p aria-hidden="true" className="site-footer__wordmark">
-              wizzy
+              {BRAND_NAME}
             </p>
-            <p className="site-footer__copyright">© 2026 wizzy</p>
+            <p className="site-footer__copyright">© 2026 {BRAND_NAME}</p>
           </div>
         </div>
       </div>

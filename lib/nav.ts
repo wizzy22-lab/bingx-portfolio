@@ -43,12 +43,17 @@ export const NAV_BY_LOCALE: Record<Locale, ReadonlyArray<{ id: NavId; label: str
    to the portfolio is absolute.
    ------------------------------------------------------------- */
 
-export const MAIN_SITE = 'https://wizzydesign.space';
+export const MAIN_SITE = 'https://www.wizzydesign.space';
 
+/* The main site's own file names — the KO one is Hangul, so it is
+   percent-encoded here exactly as the browser would request it. */
 export const RESUME_URL: Record<Locale, string> = {
-  en: `${MAIN_SITE}/HaejiWi_ProductDesigner_Resume_EN.pdf`,
-  ko: `${MAIN_SITE}/HaejiWi_ProductDesigner_Resume_KO.pdf`,
+  en: `${MAIN_SITE}/HeajiWi_UXUIDesigner_Resume.pdf`,
+  ko: `${MAIN_SITE}/${encodeURIComponent('위해지_UXUI디자이너_이력서.pdf')}`,
 };
+
+/* The name the main site shows — lowercased by the wordmark's CSS. */
+export const BRAND_NAME = 'Heaji Wi';
 
 export type GlobalNavLink = {
   label: string;
@@ -59,9 +64,10 @@ export type GlobalNavLink = {
 
 export const GLOBAL_NAV_BY_LOCALE: Record<
   Locale,
-  { home: string; links: GlobalNavLink[] }
+  { menu: string; home: string; links: GlobalNavLink[] }
 > = {
   en: {
+    menu: 'Menu',
     home: `${MAIN_SITE}/en`,
     links: [
       { label: 'project', href: `${MAIN_SITE}/en#project` },
@@ -71,6 +77,7 @@ export const GLOBAL_NAV_BY_LOCALE: Record<
     ],
   },
   ko: {
+    menu: '메뉴',
     home: `${MAIN_SITE}/ko`,
     links: [
       { label: '프로젝트', href: `${MAIN_SITE}/ko#project` },

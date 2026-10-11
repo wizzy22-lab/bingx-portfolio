@@ -3247,26 +3247,78 @@ video.media-fill {
   color: var(--text-dim);
   text-decoration: none;
   white-space: nowrap;
-  transition: color var(--duration-base) var(--ease-default);
+  transition: opacity var(--duration-base) var(--ease-default);
 }
 .site-header__link:hover {
-  color: var(--text);
+  opacity: 0.7;
 }
 
-/* The main site keeps all four links at every width, so this does too.
-   Below ~430px the row runs out of space; it scrolls inside the header
-   rather than dragging the whole page sideways. */
-.site-header__inner {
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.site-header__inner::-webkit-scrollbar {
-  display: none;
-}
 .site-header__wordmark,
 .site-header__right {
   flex-shrink: 0;
+}
+
+/* Below 1024px the four links and the toggle don't fit beside the mark
+   (531px in the widest locale), so — as on main — they fold behind a
+   button and the bar keeps only the mark and that button. */
+.site-header__right {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .site-header__right {
+    display: flex;
+  }
+  .site-header__mobile {
+    display: none;
+  }
+}
+
+/* Wider than the glyph so the tap target clears 44px; the negative
+   margin keeps the glyph itself on the bar's right edge. */
+.site-header__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: opacity var(--duration-base) var(--ease-default);
+}
+.site-header__menu-btn:hover {
+  opacity: 0.7;
+}
+
+/* Drops from under the 70px bar, against the fixed header. Opaque rather
+   than the bar's translucent fill, so the list stays readable over
+   whatever is behind it — the anchor bar included. */
+.site-header__panel {
+  position: absolute;
+  inset-inline: 0;
+  top: 70px;
+  z-index: 1;
+  padding: 8px 24px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+.site-header__panel[hidden] {
+  display: none;
+}
+.site-header__panel-nav {
+  display: flex;
+  flex-direction: column;
+}
+.site-header__panel-nav .site-header__link {
+  padding-block: 12px;
+}
+.site-header__panel-lang {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
 .site-header__lang {
